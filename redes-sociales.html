@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manual de Redes Sociales | Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-base.css" />
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <!-- Header -->
+    <header class="bg-[#f4faff]/90 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/10">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+            <div class="text-xl font-bold text-secondary flex items-center gap-2">
+                <span class="material-symbols-outlined">hub</span>
+                Módulo 2: Conexión Ética
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index.html">Inicio</a>
+                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index2.html">Temas</a>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-8 py-16">
+        <!-- Breadcrumb -->
+        <nav class="text-xs font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-2 mb-12">
+            <a href="index2.html">Manual</a>
+            <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+            <span class="text-secondary">Uso de Redes Sociales</span>
+        </nav>
+        <!-- Hero -->
+        <section class="mb-24">
+            <h1 class="text-5xl md:text-8xl font-black text-secondary tracking-tighter leading-[0.9] mb-8">
+                Tu Vida,<br />Tu Marca,<br /><span class="text-on-surface">Tu Decisión.</span>
+            </h1>
+            <p class="text-xl text-on-surface-variant leading-relaxed max-w-3xl">
+                Las redes sociales no son gratis: pagas con tu información personal. Aprende a controlar el flujo de tus
+                datos y a proteger tu bienestar emocional de los algoritmos y el acoso.
+            </p>
+        </section>
+        <!-- Section: Algoritmos y Datos -->
+        <section class="mb-32 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div
+                class="md:col-span-12 p-12 bg-surface-container rounded-[3rem] border border-outline-variant/10 shadow-sm relative overflow-hidden group">
+                <div class="relative z-10 max-w-2xl">
+                    <h2 class="text-3xl font-bold text-secondary mb-6 italic">El Negocio de los Datos</h2>
+                    <p class="text-on-surface-variant leading-relaxed mb-8">
+                        Cada "like", cada búsqueda y cada segundo que pasas viendo un video es analizado para crear un
+                        perfil psicológico sobre ti. Esto se llama **Data Harvesting**.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-secondary">explore</span>
+                            <div>
+                                <p class="font-bold">Metadata de Fotos (EXIF)</p>
+                                <p class="text-sm opacity-70">Tus fotos guardan las coordenadas exactas de donde fueron
+                                    tomadas. Compártelas solo en perfiles privados.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <span class="material-symbols-outlined text-secondary">psychology</span>
+                            <div>
+                                <p class="font-bold">Economía de la Atención</p>
+                                <p class="text-sm opacity-70">Las apps están diseñadas para ser adictivas. El "infinite
+                                    scroll" evita que tu cerebro registre el paso del tiempo.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="absolute right-0 top-0 h-full w-1/3 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <span class="material-symbols-outlined text-[400px]" data-icon="share">share</span>
+                </div>
+            </div>
+        </section>
+        <!-- Section: Riesgos Sociales -->
+        <section class="mb-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-secondary tracking-tight">Riesgos y Soluciones</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Grooming -->
+                <div
+                    class="p-10 bg-white rounded-3xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all border-l-8 border-l-error">
+                    <h4 class="text-xl font-bold text-error mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">warning</span>
+                        Grooming y Acose Digital
+                    </h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Adultos que fingen ser jóvenes para
+                        ganar tu confianza. Nunca aceptes solicitudes de desconocidos y mucho menos accedas a encuentros
+                        presenciales o envío de contenido íntimo.</p>
+                    <p class="text-xs font-bold text-error uppercase tracking-widest">Protocolo: Bloquear y Reportar de
+                        inmediato.</p>
+                </div>
+                <!-- Cyberbullying -->
+                <div
+                    class="p-10 bg-white rounded-3xl border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all border-l-8 border-l-secondary">
+                    <h4 class="text-xl font-bold text-secondary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">diversity_1</span>
+                        Cyberbullying
+                    </h4>
+                    <p class="text-sm text-on-surface-variant leading-relaxed mb-6">El acoso digital tiene efectos
+                        reales en la salud mental. Si eres testigo o víctima, el silencio es el aliado del acosador.
+                    </p>
+                    <p class="text-xs font-bold text-secondary uppercase tracking-widest">Protocolo: Guarda pruebas y
+                        avisa a un tutor.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Content: Digital Footprint -->
+        <section class="mb-32">
+            <div
+                class="bg-secondary text-on-secondary p-12 md:p-20 rounded-[4rem] flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold mb-6">Tu Huella Digital es Eterna</h2>
+                    <p class="text-xl opacity-80 leading-relaxed mb-8">
+                        Lo que borras en internet no siempre desaparece. Capturas de pantalla, cachés y servidores de
+                        respaldo pueden guardar tus errores para siempre. Piensa antes de publicar: ¿Esto me hará sentir
+                        orgulloso en 5 años?
+                    </p>
+                    <div class="inline-flex items-center gap-4 bg-white/10 p-4 rounded-2xl border border-white/20">
+                        <span class="material-symbols-outlined">history</span>
+                        <span class="text-sm font-bold">Cada publicación construye tu reputación futura.</span>
+                    </div>
+                </div>
+                <div
+                    class="w-64 aspect-square bg-white rounded-full flex items-center justify-center shadow-2xl shrink-0 scale-110">
+                    <span class="material-symbols-outlined text-[100px] text-secondary"
+                        data-icon="fingerprint">fingerprint</span>
+                </div>
+            </div>
+        </section>
+        <!-- interactive Quiz -->
+        <section class="mb-32">
+            <div
+                class="max-w-3xl mx-auto bg-surface-container-high p-12 rounded-[3.5rem] border border-secondary/10 shadow-inner">
+                <h3 class="text-2xl font-black text-secondary mb-8 text-center uppercase tracking-widest">Test de
+                    Privacidad</h3>
+                <div class="space-y-6">
+                    <div
+                        class="flex items-center justify-between p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/5">
+                        <span class="font-bold text-sm">¿Revisas quién puede ver tus historias?</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-secondary text-on-secondary rounded-lg text-xs font-bold transition-all hover:scale-105">SÍ</button>
+                            <button
+                                class="px-4 py-2 bg-surface text-secondary border border-secondary/30 rounded-lg text-xs font-bold transition-all">NO</button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/5">
+                        <span class="font-bold text-sm">¿Sabes qué apps tienen acceso a tu micrófono?</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-secondary text-on-secondary rounded-lg text-xs font-bold transition-all hover:scale-105">SÍ</button>
+                            <button
+                                class="px-4 py-2 bg-surface text-secondary border border-secondary/30 rounded-lg text-xs font-bold transition-all">NO</button>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center justify-between p-6 bg-white rounded-2xl shadow-sm border border-outline-variant/5">
+                        <span class="font-bold text-sm">¿Aceptas desconocidos si tienen amigos en común?</span>
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 bg-surface text-secondary border border-secondary/30 rounded-lg text-xs font-bold transition-all">SÍ</button>
+                            <button
+                                class="px-4 py-2 bg-error text-on-error rounded-lg text-xs font-bold transition-all hover:scale-105">NUNCA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-secondary text-on-secondary py-20 px-8 rounded-t-[4rem]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h4 class="text-3xl font-black mb-4">Antonio Lemus Pérez</h4>
+                <p class="opacity-70 max-w-sm italic">Cumaná, Sucre. Educando para una ciudadanía digital responsable.
+                </p>
+            </div>
+            <div class="flex flex-col items-end gap-4">
+                <div class="text-[10px] font-black uppercase tracking-[0.5em] opacity-40">Desarrollo Institucional 2026
+                </div>
+                <div class="flex gap-4">
+                    <div
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs">
+                        EC</div>
+                    <div
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs">
+                        HG</div>
+                    <div
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs">
+                        JG</div>
+                    <div
+                        class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center font-bold text-xs">
+                        LR</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

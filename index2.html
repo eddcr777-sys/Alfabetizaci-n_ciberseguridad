@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manual | Alfabetización Digital - Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-base.css" />
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-[#f4faff]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+            <div class="text-2xl font-black text-[#004D40] tracking-tighter">Alfabetización Digital</div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-[#111d23]/60 font-medium hover:text-[#004D40] transition-all duration-300"
+                    href="index.html">Inicio</a>
+                <a class="text-[#004D40] border-b-2 border-[#004D40] font-bold pb-1 hover:text-[#004D40] transition-all duration-300"
+                    href="index2.html">Manual</a>
+                <a href="index3.html">
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold scale-102 active:scale-98 transition-transform duration-200">Modo
+                        Accesible</button>
+                </a>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined" data-icon="menu">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative pt-16 pb-24 px-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div
+                class="inline-flex items-center gap-3 bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full mb-8">
+                <div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                <span class="text-sm font-semibold tracking-tight">Módulos de Aprendizaje</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-6">
+                Temas de <br />Seguridad Digital.
+            </h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Selecciona uno de los siguientes módulos para comenzar tu manual. Hemos diseñado cada sección pensando
+                en los desafíos que enfrentas diariamente como estudiante.
+            </p>
+        </div>
+    </header>
+    <!-- Themes Grid Section -->
+    <section class="bg-surface-container-low py-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <!-- Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Topic Card: Protección de Cuentas -->
+                <div
+                    class="md:col-span-2 group relative bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-10 items-center overflow-hidden hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
+                    <div class="flex-1 order-2 md:order-1">
+                        <div class="inline-flex items-center justify-center p-4 bg-primary-fixed rounded-2xl mb-8">
+                            <span class="material-symbols-outlined text-primary text-4xl" data-icon="security"
+                                style="font-variation-settings: 'FILL' 1;">security</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Protección de Cuentas</h3>
+                        <p class="text-on-surface-variant leading-relaxed text-lg mb-6">La primera línea de defensa.
+                            Aprende sobre el factor de doble autenticación (2FA) y cómo crear contraseñas que nadie
+                            pueda adivinar.</p>
+                        <a href="proteccion-cuentas.html">
+                            <button
+                                class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all">Iniciar
+                                Módulo</button>
+                        </a>
+                    </div>
+                    <div
+                        class="w-full md:w-2/5 aspect-video md:aspect-square order-1 md:order-2 bg-primary/5 rounded-3xl flex items-center justify-center">
+                        <span class="material-symbols-outlined text-8xl text-primary/20"
+                            data-icon="vpn_key">vpn_key</span>
+                    </div>
+                </div>
+                <!-- Topic Card: Redes Sociales -->
+                <div
+                    class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
+                    <div
+                        class="inline-flex items-center justify-center p-4 bg-secondary-container rounded-2xl mb-8 w-fit">
+                        <span class="material-symbols-outlined text-secondary text-4xl" data-icon="share"
+                            style="font-variation-settings: 'FILL' 1;">share</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-primary mb-4">Uso de Redes</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-auto">Configura tu privacidad correctamente y
+                        aprende qué información es seguro compartir y qué debe permanecer privado.</p>
+                    <a href="redes-sociales.html" class="mt-8 w-full">
+                        <button
+                            class="w-full py-3 bg-surface-container-high rounded-xl text-primary font-bold hover:bg-primary/10 transition-all">Explorar
+                            Privacidad</button>
+                    </a>
+                </div>
+                <!-- Topic Card: Phishing -->
+                <a class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10"
+                    href="index4.html">
+                    <div class="inline-flex items-center justify-center p-4 bg-tertiary-fixed rounded-2xl mb-8 w-fit">
+                        <span class="material-symbols-outlined text-tertiary text-4xl" data-icon="phishing"
+                            style="font-variation-settings: 'FILL' 1;">phishing</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-primary mb-4">Riesgos de Phishing</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-auto">¡Cuidado con el anzuelo! Aprende a
+                        identificar correos, mensajes y links sospechosos que intentan robar tu información.</p>
+                    <div class="mt-8 pt-8 border-t border-outline-variant/10">
+                        <span class="text-sm font-bold text-tertiary uppercase tracking-widest">Módulo Crítico</span>
+                    </div>
+                </a>
+                <!-- Topic Card: Videojuegos -->
+                <div
+                    class="md:col-span-2 group relative bg-primary-container p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-10 items-center overflow-hidden">
+                    <div class="flex-1 text-on-primary-container">
+                        <div
+                            class="inline-flex items-center justify-center p-4 bg-primary-fixed-dim/20 rounded-2xl mb-8">
+                            <span class="material-symbols-outlined text-primary-fixed text-4xl"
+                                data-icon="sports_esports"
+                                style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+                        </div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Sobreexposición en Juegos</h3>
+                        <p class="opacity-90 leading-relaxed text-lg mb-6">Los videojuegos son divertidos, pero la
+                            sobreexposición y los chats con desconocidos pueden ser peligrosos. Aprende a jugar seguro.
+                        </p>
+                        <a href="videojuegos.html">
+                            <button
+                                class="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-primary transition-all">Guía
+                                del Gamer Seguro</button>
+                        </a>
+                    </div>
+                    <div class="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 opacity-10">
+                        <span class="material-symbols-outlined text-[120px] text-white"
+                            data-icon="videogame_asset">videogame_asset</span>
+                    </div>
+                </div>
+                <!-- Topic Card: Piratería -->
+                <div
+                    class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
+                    <div class="inline-flex items-center justify-center p-4 bg-error-container rounded-2xl mb-8 w-fit">
+                        <span class="material-symbols-outlined text-error text-4xl" data-icon="dangerous"
+                            style="font-variation-settings: 'FILL' 1;">dangerous</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-primary mb-4">Software Pirata</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-auto">Descargar "cracks" o programas piratas es
+                        la forma más fácil de infectar tu PC con virus y troyanos. Evita el riesgo.</p>
+                    <a href="software-pirata.html" class="mt-8 w-full">
+                        <button class="w-full py-3 bg-error text-on-error rounded-xl font-bold">Ver Peligros</button>
+                    </a>
+                </div>
+                <!-- Topic Card: Protocolo -->
+                <div
+                    class="md:col-span-3 bg-secondary-container p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10 border border-secondary/20">
+                    <div class="flex-1">
+                        <h3 class="text-3xl font-bold text-on-secondary-container mb-4">¿Qué hacer si te atacan?</h3>
+                        <p class="text-on-secondary-fixed-variant text-lg">Si has sido víctima de un hackeo o sospechas
+                            de una estafa, mantén la calma. Aquí tienes los pasos a seguir de inmediato.</p>
+                    </div>
+                    <a href="protocolo-ayuda.html">
+                        <button
+                            class="bg-secondary text-on-secondary px-10 py-5 rounded-2xl font-black text-xl shadow-xl hover:scale-105 transition-all">PROTOCOLO
+                            DE ACCIÓN</button>
+                    </a>
+                </div>
+                <!-- Full Guide CTA -->
+                <div
+                    class="md:col-span-3 bg-primary text-on-primary p-12 rounded-[3.5rem] mt-12 flex flex-col md:flex-row items-center justify-between gap-8 border-4 border-primary-container shadow-2xl">
+                    <div class="flex-1">
+                        <h3 class="text-4xl font-black mb-4">¿Buscas la Guía Técnica Completa?</h3>
+                        <p class="text-primary-fixed-dim text-xl leading-relaxed">Accede a nuestra enciclopedia
+                            estructurada con toda la información sobre ciberseguridad, ataques comunes y soluciones
+                            avanzadas.</p>
+                    </div>
+                    <a href="guia-completa.html">
+                        <button
+                            class="bg-white text-primary px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all shadow-xl">
+                            ABRIR GUÍA COMPLETA
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Shell -->
+    <footer class="bg-[#e9f6fd] dark:bg-[#111d23] w-full py-16 mt-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+            <div class="flex flex-col gap-6">
+                <div class="text-xl font-bold text-[#004D40] dark:text-[#e9f6fd]">Antonio Lemus Pérez</div>
+                <p class="font-public-sans text-sm leading-relaxed text-[#111d23]/70 dark:text-[#e9f6fd]/70">
+                    Cumaná, Estado Sucre. Formando el futuro tecnológico de nuestra nación.
+                </p>
+            </div>
+            <div class="flex flex-col gap-6 md:col-span-2">
+                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Desarrolladores del Proyecto</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            EC</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Elvis Cordova</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            HG</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Henyer Guipe</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            JG</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Jesus Giraldo</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            LR</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Luis Ruiz</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Estatus</h4>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-2xl text-primary"
+                        data-icon="verified_user">verified_user</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-on-surface-variant">Manual Oficial
+                        2026</span>
+                </div>
+                <p class="text-xs text-[#111d23]/50 dark:text-[#e9f6fd]/50">
+                    © 2026 CE Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+                <p class="text-[10px] text-[#111d23]/30 dark:text-[#e9f6fd]/30 mt-2 italic">
+                    Proyecto desarrollado por alumnos de la Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russian" (UPTOS CR).
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

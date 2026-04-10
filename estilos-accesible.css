@@ -1,0 +1,19 @@
+/* Estilos Modo Accesible - The Secure Arboretum */
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+/* Neurodivergent High Contrast Overrides */
+.nd-mode {
+    background-color: #ffffff !important;
+    color: #111d23 !important;
+}
+
+.nd-border {
+    border: 3px dashed #003608 !important;
+}
+
+.nd-spacing {
+    margin-bottom: 2rem !important;
+}

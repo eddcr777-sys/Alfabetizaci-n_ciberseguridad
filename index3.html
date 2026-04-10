@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Modo Accesible | Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-accesible.css" />
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+    <!-- TopNavBar -->
+    <nav class="bg-[#f4faff]/70 dark:bg-[#111d23]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+            <div class="text-2xl font-black text-[#004D40] dark:text-[#e9f6fd] tracking-tighter">
+                Manual Antonio Lemus Pérez
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#111d23]/60 dark:text-[#e9f6fd]/60 font-medium hover:text-[#004D40] dark:hover:text-[#ffffff] transition-all duration-300"
+                    href="index.html">Inicio</a>
+                <a class="text-[#004D40] dark:text-[#e9f6fd] border-b-2 border-[#004D40] dark:border-[#e9f6fd] font-bold pb-1 hover:text-[#004D40] dark:hover:text-[#ffffff] transition-all duration-300"
+                    href="index2.html">Temas</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index4.html">
+                    <button
+                        class="nd-border px-6 py-2 bg-primary-container text-on-primary-container font-bold rounded-xl scale-102 active:scale-98 transition-transform duration-200">
+                        Modo Normal
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-4xl mx-auto px-8 py-16">
+        <!-- Header Section -->
+        <header class="nd-spacing text-center border-b-4 border-primary pb-8">
+            <h1 class="font-headline text-5xl font-extrabold text-primary mb-4 leading-tight">¿Qué es el Phishing?</h1>
+            <p class="text-2xl leading-relaxed text-on-surface">Aprende a protegerte de los correos falsos de forma
+                sencilla.</p>
+        </header>
+        <!-- Awareness Pulse -->
+        <div class="flex items-center gap-4 bg-secondary-container p-6 rounded-xl nd-spacing nd-border">
+            <span class="relative flex h-4 w-4">
+                <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed-dim opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+            </span>
+            <p class="font-bold text-xl text-on-secondary-container">Consejo: Nunca des tu contraseña por correo
+                electrónico o mensajes.</p>
+        </div>
+        <!-- Content Blocks -->
+        <section class="space-y-12">
+            <div class="bg-surface-container-lowest p-10 rounded-xl nd-border">
+                <div class="flex items-start gap-6">
+                    <span class="material-symbols-outlined text-5xl text-primary" data-icon="mail">mail</span>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">1. Los Mensajes Falsos</h2>
+                        <p class="text-xl leading-relaxed">
+                            A veces recibes mensajes que dicen ser de tu banco, de juegos o de redes sociales. Pero son
+                            falsos. Quieren engañarte para robar tu información personal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-surface-container-lowest p-10 rounded-xl nd-border">
+                <div class="flex items-start gap-6">
+                    <span class="material-symbols-outlined text-5xl text-primary" data-icon="warning">warning</span>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">2. Señales de Peligro</h2>
+                        <ul class="list-disc ml-6 space-y-4 text-xl">
+                            <li>Te piden que hagas algo muy rápido (urgencia).</li>
+                            <li>El mensaje tiene errores de ortografía.</li>
+                            <li>Te piden tu contraseña o datos secretos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-surface-container-lowest p-10 rounded-xl nd-border">
+                <div class="flex items-start gap-6">
+                    <span class="material-symbols-outlined text-5xl text-primary"
+                        data-icon="check_circle">check_circle</span>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">3. Qué debes hacer</h2>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+                                <span class="font-black text-2xl text-primary">A</span>
+                                <span class="text-xl">No hagas clic en ningún botón o mensaje extraño.</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+                                <span class="font-black text-2xl text-primary">B</span>
+                                <span class="text-xl">Borra el mensaje de inmediato.</span>
+                            </div>
+                            <div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-lg">
+                                <span class="font-black text-2xl text-primary">C</span>
+                                <span class="text-xl">Avisa a tus padres o profesores si tienes dudas.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="mt-16 text-center">
+            <a href="index2.html">
+                <button
+                    class="bg-primary text-on-primary text-2xl font-bold px-12 py-6 rounded-xl nd-border hover:scale-105 transition-transform">
+                    ¡Entendido, volver al manual!
+                </button>
+            </a>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#e9f6fd] dark:bg-[#111d23] w-full py-16 mt-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+            <div class="col-span-1 md:col-span-2">
+                <div class="text-xl font-bold text-[#004D40] dark:text-[#e9f6fd] mb-4">Antonio Lemus Pérez</div>
+                <p class="text-[#111d23]/70 dark:text-[#e9f6fd]/70 font-public-sans text-sm leading-relaxed max-w-xs">
+                    © 2026 Proyecto Manual de Alfabetización Digital. Creado por:
+                </p>
+                <div class="mt-4 grid grid-cols-2 gap-2 text-xs font-bold text-primary">
+                    <span>Elvis Cordova</span>
+                    <span>Henyer Guipe</span>
+                    <span>Jesus Giraldo</span>
+                    <span>Luis Ruiz</span>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Enlaces</span>
+                <a class="text-[#111d23]/70 dark:text-[#e9f6fd]/70 underline transition-all"
+                    href="index.html">Inicio</a>
+                <a class="text-[#111d23]/70 dark:text-[#e9f6fd]/70 underline transition-all"
+                    href="index2.html">Temas</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <span class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Estatus</span>
+                <p class="text-sm text-on-surface-variant">Manual Validado 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

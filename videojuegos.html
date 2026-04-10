@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gaming Seguro | Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-base.css" />
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Header -->
+    <header class="bg-[#f4faff]/90 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/10">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+            <div class="text-xl font-bold text-primary flex items-center gap-2">
+                <span class="material-symbols-outlined">sports_esports</span>
+                Módulo 4: Gamificación Segura
+            </div>
+            <nav class="hidden md:flex gap-6">
+                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index.html">Inicio</a>
+                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index2.html">Temas</a>
+            </nav>
+        </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-8 py-16">
+        <!-- Breadcrumb -->
+        <nav class="text-xs font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-2 mb-12">
+            <a href="index2.html">Manual</a>
+            <span class="material-symbols-outlined text-[10px]">chevron_right</span>
+            <span class="text-primary">Videojuegos y Sobreexposición</span>
+        </nav>
+        <!-- Hero -->
+        <section class="mb-24 text-center">
+            <h1 class="text-6xl md:text-9xl font-black text-primary tracking-tighter leading-none mb-8">
+                Juega,<br />Gana,<br /><span class="text-on-surface">Protégete.</span>
+            </h1>
+            <p class="text-xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
+                El mundo de los videojuegos es una red global. Cada partida es una interacción social y técnica. Aprende
+                a disfrutar sin caer en estafas, sobreexposición o adicciones digitales.
+            </p>
+        </section>
+        <!-- Deep Content: Overexposure -->
+        <section class="mb-32">
+            <div
+                class="bg-surface-container p-12 rounded-[3.5rem] border border-outline-variant/10 shadow-sm relative overflow-hidden group">
+                <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold text-primary mb-6">El Riesgo de la Sobreexposición</h2>
+                        <p class="text-on-surface-variant leading-relaxed mb-8">
+                            Pasar horas excesivas conectado no solo afecta tu salud física, sino que aumenta tu
+                            vulnerabilidad digital. Entre más tiempo pases en línea, más datos generas y más expuesto
+                            estás a comunidades tóxicas.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-center p-4 bg-white rounded-2xl shadow-sm">
+                                <span class="material-symbols-outlined text-primary">visibility_off</span>
+                                <p class="text-sm font-bold">Doxing: No reveles tu ciudad o colegio.</p>
+                            </div>
+                            <div class="flex gap-4 items-center p-4 bg-white rounded-2xl shadow-sm">
+                                <span class="material-symbols-outlined text-primary">mic_off</span>
+                                <p class="text-sm font-bold">Micrófono: Evita ruidos de tu casa de fondo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary/5 p-8 rounded-[2rem] border border-primary/10">
+                        <h4 class="font-bold mb-4 text-center">Protocolo de Identidad</h4>
+                        <ol class="space-y-4 text-sm">
+                            <li class="flex gap-2">
+                                <span class="text-primary font-black">1.</span>
+                                <span><strong>Nickname Neutro:</strong> Sin nombre real ni año de nacimiento.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-primary font-black">2.</span>
+                                <span><strong>Avatar Genérico:</strong> No uses fotos reales de perfil.</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-primary font-black">3.</span>
+                                <span><strong>Filtros de Chat:</strong> Activa siempre los filtros de lenguaje
+                                    ofensivo.</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Scams and In-Game Safety -->
+        <section class="mb-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-primary">Estafas Comunes en Juegos</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 bg-white rounded-3xl border border-outline-variant/10 shadow-sm hover:border-primary transition-all">
+                    <h4 class="font-bold text-secondary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">payments</span>
+                        Monedas "Gratis"
+                    </h4>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">Páginas que prometen Robux, V-Bucks o
+                        Gemas gratis son 100% estafas. Buscan robar tu cuenta o infectarte con malware.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-3xl border border-outline-variant/10 shadow-sm hover:border-primary transition-all">
+                    <h4 class="font-bold text-secondary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">swap_calls</span>
+                        Intercambios Falsos
+                    </h4>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">El "Skin Gambling" o intercambio fuera de
+                        la plataforma oficial casi siempre termina en robo de inventario.</p>
+                </div>
+                <div
+                    class="p-8 bg-white rounded-3xl border border-outline-variant/10 shadow-sm hover:border-primary transition-all">
+                    <h4 class="font-bold text-secondary mb-4 flex items-center gap-2">
+                        <span class="material-symbols-outlined">download</span>
+                        Mods e Inyectores
+                    </h4>
+                    <p class="text-xs text-on-surface-variant leading-relaxed">Descargar "cheats" o mods de sitios
+                        extraños instala troyanos que roban tus sesiones de Discord y Steam.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Deep Awareness: Psychologic Impact -->
+        <section class="mb-32">
+            <div
+                class="bg-primary text-on-primary p-12 md:p-20 rounded-[4rem] flex flex-col md:flex-row items-center gap-12 relative overflow-hidden">
+                <div class="flex-1 relative z-10">
+                    <h2 class="text-4xl font-bold mb-6">El Bienestar Gaming</h2>
+                    <p class="text-xl opacity-80 leading-relaxed mb-8">
+                        El gaming debe ser una herramienta de desarrollo cognitivo y social positivo. Si el juego te
+                        causa ansiedad, ira o descuido de tus estudios en el **Antonio Lemus Pérez**, es momento de
+                        aplicar la regla de los **30 minutos**: tómate un descanso, hidrátate y desconéctate.
+                    </p>
+                    <div class="flex gap-4">
+                        <span
+                            class="px-5 py-2 bg-white/10 rounded-full text-xs font-bold border border-white/20">Equilibrio
+                            Académico</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-full text-xs font-bold border border-white/20">Salud
+                            Visual</span>
+                    </div>
+                </div>
+                <div class="relative w-72 aspect-square shrink-0 hidden lg:block">
+                    <div class="absolute inset-0 bg-white/20 blur-3xl rounded-full"></div>
+                    <span
+                        class="material-symbols-outlined text-[150px] absolute inset-0 flex items-center justify-center opacity-40">health_and_safety</span>
+                </div>
+            </div>
+        </section>
+        <!-- mini quiz interactive -->
+        <section
+            class="max-w-2xl mx-auto mb-32 bg-surface-container-low p-12 rounded-[3.5rem] border-2 border-primary/5">
+            <h3 class="text-xl font-black text-center mb-8 uppercase tracking-widest text-primary">Check de Salud Gamer
+            </h3>
+            <div class="space-y-4">
+                <button
+                    class="w-full text-left p-6 bg-white rounded-2xl flex items-center justify-between border-2 border-transparent hover:border-primary transition-all group">
+                    <span class="font-bold">¿Tienes contraseñas diferentes para cada plataforma?</span>
+                    <span
+                        class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+                </button>
+                <button
+                    class="w-full text-left p-6 bg-white rounded-2xl flex items-center justify-between border-2 border-transparent hover:border-primary transition-all group">
+                    <span class="font-bold">¿Sabes cómo reportar acoso en tus juegos favoritos?</span>
+                    <span
+                        class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+                </button>
+                <button
+                    class="w-full text-left p-6 bg-white rounded-2xl flex items-center justify-between border-2 border-transparent hover:border-primary transition-all group">
+                    <span class="font-bold">¿Tienes horarios definidos para no afectar tus estudios?</span>
+                    <span
+                        class="material-symbols-outlined opacity-0 group-hover:opacity-100 transition-opacity">check</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary text-on-primary py-16 px-8 rounded-t-[4rem]">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <h4 class="text-2xl font-black mb-2">CE Antonio Lemus Pérez</h4>
+                <p class="opacity-60 text-sm">Cumaná, Venezuela. Innovación y Seguridad.</p>
+            </div>
+            <div class="text-right">
+                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-4">Firmado por los
+                    Desarrolladores</p>
+                <div class="flex gap-4 font-black text-xs">
+                    <span>CORDOVA</span>
+                    <span>GUIPE</span>
+                    <span>GIRALDO</span>
+                    <span>RUIZ</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

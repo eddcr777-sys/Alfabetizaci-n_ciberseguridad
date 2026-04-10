@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manual Técnico | UPTOS CR | Antonio Lemus Pérez</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'IBM Plex Sans', sans-serif; line-height: 1.6; color: #1a202c; background-color: #ffffff; }
+    h1, h2, h3, h4 { color: #1a4d33; font-weight: 700; border-bottom: 1px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+    h1 { border-bottom: 4px solid #1a4d33; font-size: 2rem; margin-top: 0; line-height: 1.2; }
+    p { margin-bottom: 1.25rem; font-size: 1rem; color: #2d3748; text-align: justify; }
+    .toc { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 4px; margin-bottom: 3rem; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc li { margin-bottom: 0.5rem; font-size: 0.9rem; }
+    .toc a { color: #1a4d33; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .section-block { margin-bottom: 4rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #cbd5e0; padding: 0.75rem; text-align: left; }
+    th { background: #edf2f7; font-weight: 700; color: #2d3748; }
+    .note { background: #fffaf0; border-left: 5px solid #ed8936; padding: 1rem; margin: 1.5rem 0; font-style: italic; }
+    .university-seal { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #666; margin-bottom: 0.5rem; }
+    footer { background: #1a4d33; color: white; padding: 4rem 2rem; margin-top: 6rem; }
+</style>
+</head>
+<body class="p-4 md:p-12 lg:p-20">
+<header class="max-w-[900px] mx-auto mb-16 text-center md:text-left">
+<p class="university-seal">Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russian" (UPTOS CR)</p>
+<h1>Propuesta de Alfabetización Digital para la Prevención de Riesgos en Internet Dirigido a Estudiantes del L.B. Antonio Lemus Pérez, Cumaná 2025-2026</h1>
+<p class="mt-4 text-slate-500 italic">Documento Técnico de Capacitación y Concientización Digital.</p>
+<div class="mt-8">
+    <a href="index.html" class="text-sm font-bold text-[#1a4d33] border-b-2 border-[#1a4d33] pb-1 cursor-pointer">← Volver al Inicio</a>
+</div>
+</header>
+<nav class="toc max-w-[900px] mx-auto">
+<h4 class="mt-0 mb-4 border-none text-sm uppercase tracking-widest text-slate-500">Índice del Contenido</h4>
+<ul>
+<li><a href="#introduccion">I. Introducción y Justificación</a></li>
+<li><a href="#fundamentos">II. Fundamentos de Ciberseguridad Institucional</a></li>
+<li><a href="#amenazas">III. Catálogo Avanzado de Amenazas (Malware, Phishing, Ingeniería Social)</a></li>
+<li><a href="#proteccion">IV. Estrategias de Defensa y Protección Proactiva</a></li>
+<li><a href="#privacidad">V. Privacidad en Entornos Sociales y Gaming</a></li>
+<li><a href="#legalidad">VI. Marco Legal Venezolano y Ética Digital</a></li>
+<li><a href="#glosario">VII. Apéndice: Glosario de Conceptos Técnicos</a></li>
+</ul>
+</nav>
+<main>
+<section id="introduccion" class="section-block">
+<h2>I. Introducción y Justificación</h2>
+<p>
+            La presente propuesta técnica surge como una respuesta académica y necesaria ante la creciente exposición de la comunidad estudiantil del **L.B. Antonio Lemus Pérez** a los riesgos inherentes del ciberespacio. Como estudiantes de la **UPTOS CR**, hemos identificado que el conocimiento técnico es el pilar fundamental para mitigar ataques que comprometen no solo la información personal, sino la integridad psicológica de los jóvenes.
+        </p>
+<div class="note">
+            Este manual no es solo una guía de uso, sino un marco teórico diseñado para comprender el "por qué" de las amenazas y cómo operan técnicamente.
+        </div>
+</section>
+<section id="fundamentos" class="section-block">
+<h2>II. Fundamentos de Ciberseguridad Institucional</h2>
+<p>
+            La seguridad de la información se basa en asegurar niveles óptimos de tres pilares: Confidencialidad, Integridad y Disponibilidad (Tríada CIA). En una institución educativa, esto implica proteger desde las notas académicas hasta la identidad de los alumnos.
+        </p>
+<h3 class="text-lg">Seguridad en la Transmisión de Datos</h3>
+<p>
+            Toda comunicación digital debe ser evaluada bajo la seguridad de sus protocolos. El uso de **HTTPS** garantiza que la información viaje cifrada desde el dispositivo del alumno hasta el servidor, impidiendo ataques de tipo "Man-in-the-Middle" (MITM).
+        </p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Riesgo</th>
+<th>Mitigación Técanica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WiFi Pública</td>
+<td>Robo de Sesión</td>
+<td>Uso de VPN y cifrado WPA3.</td>
+</tr>
+<tr>
+<td>Protocolo HTTP</td>
+<td>Sniffing</td>
+<td>Forzar el uso de certificados SSL/TLS.</td>
+</tr>
+<tr>
+<td>Routers Caseros</td>
+<td>Acceso Remoto</td>
+<td>Desactivar WPS y cambiar claves de administración.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="amenazas" class="section-block">
+<h2>III. Catálogo Avanzado de Amenazas</h2>
+<h3 class="text-lg">Malware Técnico: Más allá de los Virus</h3>
+<p>
+            El malware moderno se divide en categorías según su comportamiento. En el ámbito escolar, los más peligrosos son:
+        </p>
+<ul class="list-disc ml-6 space-y-3 text-sm">
+<li><strong>Evasión por Rootkit:</strong> Software que se oculta en el núcleo del sistema operativo para que ni el usuario ni el antivirus detecten su presencia.</li>
+<li><strong>Minería Involuntaria (Cryptojacking):</strong> Uso del procesador del alumno para generar criptomonedas, causando lentitud y daños físicos por calor.</li>
+<li><strong>Ransomware:</strong> El cifrado forzoso de archivos para extorsión económica, usualmente propagado por programas "cracked".</li>
+</ul>
+<h3 class="text-lg">Ingeniería Social Moderna</h3>
+<p>
+            No se trata de hackear el sistema, sino de hackear al usuario. El Phishing ha evolucionado al **Spear Phishing**, donde el atacante usa datos reales de la institución (nombres de profesores o directivos) para que el correo parezca legítimo y el alumno entregue su clave.
+        </p>
+</section>
+<section id="proteccion" class="section-block">
+<h2>IV. Estrategias de Defensa y Protección Proactiva</h2>
+<p>
+            La mejor defensa es una combinación de buenas prácticas y herramientas robustas. Recomendamos la implementación de:
+        </p>
+<ul class="list-decimal ml-6 space-y-3 text-sm">
+<li><strong>Autenticación Multifactor (MFA):</strong> El uso de aplicaciones generadoras de códigos (OTP) en lugar de SMS, eliminando el riesgo de SIM Swapping.</li>
+<li><strong>Gestores de Contraseñas de Cero Conocimiento:</strong> Herramientas que cifran localmente la base de datos de claves, asegurando que ni el propio proveedor tenga acceso a ellas.</li>
+<li><strong>Cifrado de Unidad Completa:</strong> Uso de BitLocker o VeraCrypt para que, en caso de robo físico del equipo, los datos sigan siendo ilegibles.</li>
+</ul>
+</section>
+<section id="privacidad" class="section-block">
+<h2>V. Privacidad en Entornos Sociales y Gaming</h2>
+<p>
+            La sobreexposición en redes sociales alimenta el **Data Harvesting**. Cada publicación entrega metadatos (EXIF) que revelan la ubicación GPS exacta del estudiante. En los videojuegos, el riesgo de **Doxing** es alto tras altercados en chats públicos, llevando el acoso del mundo virtual al real.
+        </p>
+<div class="note">
+            Consejo: Limite los permisos de las Apps. Una aplicación de linterna o un juego simple no requiere permiso para leer sus contactos o conocer su ubicación exacta.
+        </div>
+</section>
+<section id="legalidad" class="section-block">
+<h2>VI. Marco Legal Venezolano y Ética Digital</h2>
+<p>
+            En Venezuela, la **Ley Especial contra los Delitos Informáticos** tipifica acciones como el acceso indebido, el sabotaje y la revelación de datos como delitos penales. Los estudiantes del L.B. Antonio Lemus Pérez deben entender que el anonimato en internet es una ilusión y que sus actos digitales tienen responsabilidad civil y penal.
+        </p>
+</section>
+</main>
+<footer class="text-center">
+<div class="max-w-[900px] mx-auto text-sm">
+<p class="font-bold mb-4">EQUIPO DE TRABAJO (UPTOS CR):</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+    <span>ELVIS CORDOVA</span>
+    <span>HENYER GUIPE</span>
+    <span>JESUS GIRALDO</span>
+    <span>LUIS RUIZ</span>
+</div>
+<p class="opacity-60">© 2026 Proyecto de Alfabetización Digital Institucional.</p>
+<p class="opacity-60">Cumaná, Estado Sucre, Venezuela.</p>
+</div>
+</footer>
+</body></html>

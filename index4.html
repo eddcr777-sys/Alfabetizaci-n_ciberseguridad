@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Phishing | Alfabetización Digital - Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-phishing.css" />
+</head>
+
+<body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <header class="bg-[#f4faff]/70 dark:bg-[#111d23]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+            <div class="text-2xl font-black text-[#004D40] dark:text-[#e9f6fd] tracking-tighter">
+                Antonio Lemus Pérez
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-[#111d23]/60 dark:text-[#e9f6fd]/60 font-medium hover:text-[#004D40] dark:hover:text-[#ffffff] transition-all duration-300"
+                    href="index.html">Inicio</a>
+                <a class="text-[#004D40] dark:text-[#e9f6fd] border-b-2 border-[#004D40] dark:border-[#e9f6fd] font-bold pb-1 transition-all duration-300"
+                    href="index2.html">Manual</a>
+            </nav>
+            <a href="index3.html">
+                <button
+                    class="bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold scale-102 active:scale-98 transition-transform duration-200">
+                    Modo Accesible
+                </button>
+            </a>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-8 py-16">
+        <!-- Breadcrumb & Awareness Pulse -->
+        <div class="flex items-center gap-4 mb-8">
+            <span
+                class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-wider flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary-fixed-dim awareness-pulse"></span>
+                ALERTA ACTIVA
+            </span>
+            <nav class="text-sm text-on-surface-variant flex items-center gap-2">
+                <a class="hover:underline" href="index2.html">Temas</a>
+                <span class="material-symbols-outlined text-xs">chevron_right</span>
+                <span class="text-on-surface font-semibold">Phishing</span>
+            </nav>
+        </div>
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-24">
+            <div class="md:col-span-7">
+                <h1 class="text-6xl md:text-8xl font-extrabold text-primary tracking-tighter leading-none mb-8">
+                    Phishing:<br />El Anzuelo Digital.
+                </h1>
+                <p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    Aprende a identificar correos y enlaces extraños. Tu información es valiosa, no permitas que te
+                    engañen con mensajes falsos.
+                </p>
+            </div>
+            <div class="md:col-span-5 relative">
+                <div
+                    class="aspect-square rounded-full bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
+                    <img alt="Seguridad Digital"
+                        class="w-full h-full object-cover rounded-full mix-blend-multiply opacity-80"
+                        data-alt="Cybersecurity icon of a fish hook capturing a secure digital envelope in a deep green tech matrix"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZTLXya0WjjW4vCpu4rpUf0Ly_tUZ1x_BlXsIVh6_rBObkhLj4j6b_MEJkPaX_XjLYAlucE27PJCigLYYCDw8-GK_ar_7ss--7kiqg4qM0HOiW9kj4Tq3MCX7rxfQGDv6LjBDRMtkQxaIbT1WMdqh89JAJUfJuELCXwBeJd-it7lHrjE-zuz7Y689bI6e5pG75FtfIgB8qtdkLjJpEuCJXvZCBBUFY1KaYsNqfJKJVjnhZwloNKZ8CMA7kOZGAVeWmeA3kO4U-BzM" />
+                </div>
+            </div>
+        </section>
+        <!-- Content Grid: Bento Style -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+            <!-- Card 1: Definition -->
+            <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-6">¿Qué es y por qué es peligroso?</h2>
+                    <p class="text-lg leading-relaxed text-on-surface-variant mb-8">
+                        El Phishing es una técnica de engaño que usan los ciberdelincuentes para robar tus datos. Se
+                        hacen pasar por personas o empresas en las que confías para que les entregues tus contraseñas o
+                        datos bancarios.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-primary text-3xl">link_off</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Links Extraños</h4>
+                                <p class="text-sm text-on-surface-variant">Nunca hagas clic en enlaces que lleguen de
+                                    números o correos desconocidos.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
+                            <span class="material-symbols-outlined text-primary text-3xl">warning</span>
+                            <div>
+                                <h4 class="font-bold text-on-surface">Urgencia Falsa</h4>
+                                <p class="text-sm text-on-surface-variant">Desconfía de mensajes que digan "Tu cuenta
+                                    será cerrada ya".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2: Interactive Test -->
+            <div class="bg-primary text-on-primary rounded-xl p-10 flex flex-col">
+                <span class="material-symbols-outlined text-5xl mb-6">contact_support</span>
+                <h3 class="text-2xl font-bold mb-4 leading-tight">Pon a prueba tu instinto</h3>
+                <p class="text-on-primary-container text-lg mb-8 leading-relaxed">
+                    Si recibes un correo de "Netflix" pidiendo tu tarjeta pero el remitente es "seguridad@gmail.com",
+                    ¿qué haces?
+                </p>
+                <div class="mt-auto space-y-4">
+                    <button
+                        class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-primary-fixed transition-all">Reportar
+                        y Borrar</button>
+                    <button
+                        class="w-full py-3 border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all">Abrir
+                        para ver qué pasa</button>
+                </div>
+            </div>
+        </section>
+        <!-- Quiz Section -->
+        <section class="max-w-4xl mx-auto mb-24">
+            <div class="text-center mb-12">
+                <span class="text-primary font-black uppercase tracking-[0.2em] text-sm">Resumen de Seguridad</span>
+                <h2 class="text-4xl font-extrabold text-on-surface mt-2 tracking-tight">Reglas de Oro contra el Phishing
+                </h2>
+            </div>
+            <div
+                class="bg-white border border-outline-variant/20 rounded-2xl p-8 md:p-12 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">no_accounts</span>
+                    </div>
+                    <p class="text-on-surface-variant font-medium">No respondas mensajes pidiendo datos personales.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">alternate_email</span>
+                    </div>
+                    <p class="text-on-surface-variant font-medium">Verifica siempre la dirección del remitente.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">lock_clock</span>
+                    </div>
+                    <p class="text-on-surface-variant font-medium">Accede a tus cuentas solo desde sitios oficiales.</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-primary">psychology_alt</span>
+                    </div>
+                    <p class="text-on-surface-variant font-medium">Usa el sentido común: si parece sospechoso, lo es.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer Shell -->
+    <footer class="bg-[#e9f6fd] dark:bg-[#111d23] w-full py-16 mt-auto">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
+            <div class="flex flex-col gap-6">
+                <div class="text-xl font-bold text-[#004D40] dark:text-[#e9f6fd]">Antonio Lemus Pérez</div>
+                <p class="font-public-sans text-sm leading-relaxed text-[#111d23]/70 dark:text-[#e9f6fd]/70">
+                    Cumaná, Estado Sucre. Formando el futuro tecnológico de nuestra nación.
+                </p>
+            </div>
+            <div class="flex flex-col gap-6 md:col-span-2">
+                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Desarrolladores del Proyecto</h4>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            EC</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Elvis Cordova</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            HG</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Henyer Guipe</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            JG</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Jesus Giraldo</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
+                            LR</div>
+                        <span class="text-sm font-medium text-on-surface-variant">Luis Ruiz</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Estatus</h4>
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-2xl text-primary"
+                        data-icon="verified_user">verified_user</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-on-surface-variant">Manual Oficial
+                        2026</span>
+                </div>
+                <p class="text-xs text-[#111d23]/50 dark:text-[#e9f6fd]/50">
+                    © 2026 CE Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
