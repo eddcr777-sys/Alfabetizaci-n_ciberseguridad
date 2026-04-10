@@ -1,79 +1,248 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es"><head>
+<html lang="es">
+<head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Protocolo de Ayuda | Antonio Lemus Pérez</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="configuracion-tailwind.js"></script>
-<link rel="stylesheet" href="estilos-base.css"/>
+<title>Protocolo de Ayuda | L.B. Antonio Lemus Pérez</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Public Sans', sans-serif; 
+    font-size: 1.25rem; 
+    line-height: 1.85; 
+    color: #1a1a1a; 
+    background: #ffffff; 
+  }
+  a { color: inherit; }
+
+  /* HEADER EMERGENCY */
+  .pagina-header {
+    background: #1a237e; /* Azul profundo para dar calma y seguridad */
+    color: white;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+  }
+  .nav-breadcrumb {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+  .titulo-principal {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .subtitulo { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
+
+  /* CONTENIDO */
+  .contenido { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+
+  .intro-ayuda {
+    background: #fdf2f2;
+    border: 2px solid #ef4444;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (max-width: 600px) { .intro-ayuda { flex-direction: column; text-align: center; } }
+  .icon-sos { font-size: 5rem !important; color: #ef4444; }
+
+  /* PASOS */
+  .paso-contenedor { margin-bottom: 6rem; position: relative; }
+  .paso-numero {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #1a237e;
+    opacity: 0.1;
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    z-index: -1;
+  }
+  .paso-titulo {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1a237e;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .paso-caja {
+    background: #f8fafc;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  }
+
+  /* RECUADROS DE CONSEJO */
+  .caja-info {
+    background: #e1f5fe;
+    border-left: 8px solid #0288d1;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    font-weight: 600;
+    color: #01579b;
+  }
+
+  /* LISTAS */
+  .lista-pasos { list-style: none; margin-top: 1.5rem; }
+  .lista-pasos li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    font-weight: 700;
+    color: #334155;
+  }
+  .check-icon { color: #10b981; font-weight: 900; }
+
+  /* CONTACTO SECCION */
+  .seccion-final {
+    background: #1a237e;
+    color: white;
+    border-radius: 3rem;
+    padding: 4rem 3rem;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .seccion-final h2 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+  .seccion-final p { font-size: 1.3rem; opacity: 0.8; margin-bottom: 2.5rem; }
+  .btn-volver {
+    display: inline-block;
+    background: white;
+    color: #1a237e;
+    padding: 1.25rem 2.5rem;
+    border-radius: 1.2rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .btn-volver:hover { transform: scale(1.05); }
+
+  /* PIE */
+  .pie-pagina {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #64748b;
+  }
+  .pie-pagina strong { color: #1a237e; }
+</style>
 </head>
-<body class="bg-surface text-on-surface">
-<!-- TopNavBar -->
-<header class="bg-[#f4faff]/70 dark:bg-[#111d23]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
-<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
-<div class="text-2xl font-black text-[#004D40] dark:text-[#e9f6fd] tracking-tighter">
-                Antonio Lemus Pérez
-            </div>
-<nav class="hidden md:flex items-center gap-10">
-<a class="text-[#111d23]/60 dark:text-[#e9f6fd]/60 font-medium hover:text-[#004D40] dark:hover:text-[#ffffff] transition-all duration-300" href="index.html">Inicio</a>
-<a class="text-[#004D40] dark:text-[#e9f6fd] border-b-2 border-[#004D40] dark:border-[#e9f6fd] font-bold pb-1 transition-all duration-300" href="index2.html">Manual</a>
-</nav>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold">Protocolo SOS</button>
-</div>
+<body>
+
+<header class="pagina-header">
+  <div style="max-width:900px;margin:0 auto;">
+    <a href="index2.html" class="nav-breadcrumb">← Volver al Manual de Temas</a>
+    <h1 class="titulo-principal">¿Qué hacer si algo sale mal en internet?</h1>
+    <p class="subtitulo">Protocolo de Emergencia Paso a Paso para Estudiantes del L.B. Antonio Lemus Pérez</p>
+  </div>
 </header>
-<main class="max-w-4xl mx-auto px-8 py-16">
-<div class="flex items-center gap-2 text-sm text-on-surface-variant mb-8">
-<a class="hover:underline" href="index2.html">Temas</a>
-<span class="material-symbols-outlined text-xs">chevron_right</span>
-<span class="text-on-surface font-semibold">Ayuda</span>
-</div>
-<h1 class="text-5xl md:text-7xl font-extrabold text-primary mb-12 tracking-tighter">¿Qué hacer si algo <br/>sale mal?</h1>
-<div class="space-y-12">
-<!-- Step 1 -->
-<div class="flex gap-8 items-start">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-3xl font-black shrink-0">1</div>
-<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/10 flex-1">
-<h3 class="text-2xl font-bold text-primary mb-2">Mantén la calma</h3>
-<p class="text-on-surface-variant leading-relaxed">No entres en pánico. Los ciberdelincuentes usan el miedo para que cometas errores. Lo primero es respirar y pensar claramente.</p>
-</div>
-</div>
-<!-- Step 2 -->
-<div class="flex gap-8 items-start text-right flex-row-reverse">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-3xl font-black shrink-0">2</div>
-<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/10 flex-1">
-<h3 class="text-2xl font-bold text-primary mb-2">Desconecta Internet</h3>
-<p class="text-on-surface-variant leading-relaxed">Si crees que tu computadora está siendo controlada o tiene un virus, apaga el Wi-Fi de inmediato. Esto corta el puente con el atacante.</p>
-</div>
-</div>
-<!-- Step 3 -->
-<div class="flex gap-8 items-start">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-3xl font-black shrink-0">3</div>
-<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/10 flex-1">
-<h3 class="text-2xl font-bold text-primary mb-2">Pide Ayuda a un Adulto</h3>
-<p class="text-on-surface-variant leading-relaxed">Habla con un profesor o con tus padres. Ellos pueden ayudarte a cambiar contraseñas desde otro dispositivo seguro y reportar el incidente.</p>
-</div>
-</div>
-<!-- Step 4 -->
-<div class="flex gap-8 items-start text-right flex-row-reverse">
-<div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center text-3xl font-black shrink-0">4</div>
-<div class="bg-white p-8 rounded-[2rem] shadow-sm border border-outline-variant/10 flex-1">
-<h3 class="text-2xl font-bold text-primary mb-2">Cambia tus contraseñas</h3>
-<p class="text-on-surface-variant leading-relaxed">Una vez seguro, cambia todas tus contraseñas importantes (correo, bancarias, redes) desde una computadora confiable.</p>
-</div>
-</div>
-</div>
-<div class="mt-24 p-12 bg-primary-container/30 rounded-[3rem] text-center border-2 border-primary/10">
-<h2 class="text-3xl font-bold text-primary mb-6">Tu Seguridad es Prioridad</h2>
-<p class="text-xl text-on-surface-variant max-w-2xl mx-auto">Recuerda que en el Complejo Educativo Antonio Lemus Pérez estamos para apoyarte. No tengas miedo de reportar situaciones extrañas.</p>
-</div>
+
+<main class="contenido">
+
+  <section class="intro-ayuda">
+    <span class="material-symbols-outlined icon-sos">emergency_home</span>
+    <div>
+      <h2 style="margin-bottom:0.5rem; font-size:1.75rem;">¡No entres en pánico!</h2>
+      <p>Si crees que te hackearon, si te están acosando o si abriste un link peligroso, sigue este protocolo. Todos cometemos errores, lo importante es actuar rápido.</p>
+    </div>
+  </section>
+
+  <!-- PASO 1 -->
+  <div class="paso-contenedor">
+    <div class="paso-numero">01</div>
+    <h3 class="paso-titulo">
+      <span class="material-symbols-outlined">wifi_off</span>
+      Desconéctate de Internet
+    </h3>
+    <div class="paso-caja">
+      <p class="parrafo">Si de repente ves que tu cámara se prende sola, que el mouse se mueve solo o que aparecen ventanas extrañas, **apaga el Wi-Fi** o desconecta el cable de red de inmediato.</p>
+      <div class="caja-info">
+        💡 ¿Por qué hacer esto?: Al quitar el internet, cortas el camino que el hacker está usando para controlar tu dispositivo. Es como cerrarle la puerta en la cara.
+      </div>
+    </div>
+  </div>
+
+  <!-- PASO 2 -->
+  <div class="paso-contenedor">
+    <div class="paso-numero">02</div>
+    <h3 class="paso-titulo">
+      <span class="material-symbols-outlined">face_6</span>
+      Habla con un adulto de confianza
+    </h3>
+    <div class="paso-caja">
+      <p class="parrafo">Muchos estudiantes no piden ayuda porque sienten vergüenza o miedo a que les quiten el teléfono. **¡No te quedes callado!**</p>
+      <ul class="lista-pasos">
+        <li><span class="check-icon">✓</span> Avisa a tus padres o representantes.</li>
+        <li><span class="check-icon">✓</span> Busca a un profesor o guía en el liceo.</li>
+        <li><span class="check-icon">✓</span> Ellos sabrán cómo apoyarte sin juzgarte.</li>
+      </ul>
+      <p style="margin-top:1.5rem; font-size:1rem; color:#64748b;">*Recuerda: El atacante cuenta con tu silencio para seguir haciéndote daño.*</p>
+    </div>
+  </div>
+
+  <!-- PASO 3 -->
+  <div class="paso-contenedor">
+    <div class="paso-numero">03</div>
+    <h3 class="paso-titulo">
+      <span class="material-symbols-outlined">password</span>
+      Cambia tus contraseñas (Desde otro equipo)
+    </h3>
+    <div class="paso-caja">
+      <p class="parrafo">Si crees que robaron tu clave, usa un dispositivo seguro (como el de tus padres o uno de los laboratorios del liceo) para cambiar las claves de tus cuentas más importantes.</p>
+      <p class="parrafo">Prioriza estas cuentas:</p>
+      <ul class="lista-pasos" style="display:grid; grid-template-columns: 1fr 1fr;">
+        <li><span class="check-icon">→</span> Correo Electrónico</li>
+        <li><span class="check-icon">→</span> Instagram / TikTok</li>
+        <li><span class="check-icon">→</span> Cuentas de Banco</li>
+        <li><span class="check-icon">→</span> WhatsApp</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PASO 4 -->
+  <div class="paso-contenedor">
+    <div class="paso-numero">04</div>
+    <h3 class="paso-titulo">
+      <span class="material-symbols-outlined">photo_camera</span>
+      Guarda Evidencia (Capturas)
+    </h3>
+    <div class="paso-caja">
+      <p class="parrafo">Si te están acosando o amenazando, **toma capturas de pantalla** de los mensajes, el perfil del atacante y los enlaces que te mandaron.</p>
+      <div class="caja-info" style="border-color:#f59e0b; background:#fffbeb; color:#92400e;">
+        ⚠️ No borres los mensajes todavía. Son la prueba legal que servirá para denunciar el hecho ante las autoridades del liceo o la policía.
+      </div>
+    </div>
+  </div>
+
+  <section class="seccion-final">
+    <h2>En el Lemus Pérez te protegemos</h2>
+    <p>Nuestra institución está comprometida con tu bienestar digital. Si tienes dudas o te sientes en riesgo, acércate a la coordinación o a tus profesores de tecnología.</p>
+    <a href="index2.html" class="btn-volver">Entendido, ir al Manual</a>
+  </section>
+
 </main>
-<footer class="bg-surface-container-low w-full py-16">
-<div class="max-w-7xl mx-auto px-8 text-center text-sm font-medium text-on-surface-variant">
-<p>© 2026 Proyecto Alfabetización Digital</p>
-<p class="mt-2 font-bold opacity-30">ELVIS CORDOVA / HENYER GUIPE / JESUS GIRALDO / LUIS RUIZ</p>
-</div>
+
+<footer class="pie-pagina">
+  <p>Página de Ayuda y Protocolo SOS · © 2026</p>
+  <p style="margin-top:0.5rem;">Desarrollado por: <strong>Elvis Cordova • Henyer Guipe • Jesus Giraldo • Luis Ruiz</strong></p>
+  <p style="font-size:0.8rem; margin-top:1rem; opacity:0.6;">Proyecto Académico UPTOS CR para el L.B. Antonio Lemus Pérez</p>
 </footer>
-</body></html>
+
+</body>
+</html>

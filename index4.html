@@ -1,216 +1,364 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Phishing | Alfabetización Digital - Antonio Lemus Pérez</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="configuracion-tailwind.js"></script>
-    <link rel="stylesheet" href="estilos-phishing.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Phishing y Engaños | L.B. Antonio Lemus Pérez</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Public Sans', sans-serif; font-size: 1.25rem; line-height: 1.85; color: #1a1a1a; background: #ffffff; }
+  a { color: inherit; }
+  .pagina-header { background: #b71c1c; color: white; padding: 2rem 2rem 3rem; }
+  .nav-breadcrumb { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.6; margin-bottom: 1.5rem; }
+  .nav-breadcrumb a { color: white; text-decoration: none; }
+  .titulo-principal { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 1rem; }
+  .subtitulo { font-size: 1.35rem; opacity: 0.85; }
+  .contenido { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+  .seccion { margin-bottom: 5rem; }
+  .titulo-seccion { font-size: 2rem; font-weight: 800; color: #b71c1c; border-left: 8px solid #b71c1c; padding-left: 1.25rem; margin-bottom: 2rem; line-height: 1.2; }
+  .parrafo { margin-bottom: 1.5rem; }
+  .caja-definicion { background: #ffebee; border: 2px solid #b71c1c; border-radius: 1rem; padding: 1.5rem 2rem; margin: 1.75rem 0; }
+  .caja-definicion .etiqueta-def { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #b71c1c; margin-bottom: 0.5rem; }
+  .caja-definicion .texto-def { font-size: 1.1rem; font-weight: 600; color: #7f0000; }
+  .palabra-clave { font-weight: 800; color: #b71c1c; text-decoration: underline; text-decoration-thickness: 3px; text-decoration-color: #ef9a9a; }
+  .caja-alerta { background: #fff3e0; border-left: 8px solid #e65100; border-radius: 0.75rem; padding: 1.5rem 2rem; margin: 1.75rem 0; font-weight: 700; color: #bf360c; font-size: 1.15rem; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+  .tarjeta { background: #f5f5f5; border-radius: 1.25rem; padding: 2rem; border-top: 6px solid #b71c1c; }
+  .tarjeta .tarjeta-titulo { font-size: 1.2rem; font-weight: 800; color: #b71c1c; margin-bottom: 0.75rem; }
+  .tarjeta p { font-size: 1rem; line-height: 1.7; }
+
+  /* SIMULADOR DE CORREO */
+  .simulador-correo {
+    font-family: 'Public Sans', sans-serif;
+    border: 2px solid #dee2e6;
+    border-radius: 1.25rem;
+    overflow: visible;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  }
+  .correo-barra-top {
+    background: #f1f3f5;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #555;
+    border-bottom: 1px solid #dee2e6;
+    display: flex; gap: 0.5rem; align-items: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+  .correo-barra-top .circulo { display: inline-block; width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .correo-cuerpo { padding: 2rem; font-size: 1rem; }
+  .correo-campo {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+  }
+  .correo-campo strong { color: #777; flex-shrink: 0; min-width: 70px; padding-top: 0.15rem; }
+
+  /* SEÑALES DE PELIGRO — sistema de clic expandible */
+  .señal-peligro {
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px dashed #dc2626;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.45rem;
+    cursor: pointer;
+    color: #b91c1c;
+    font-weight: 700;
+    display: inline;
+  }
+  .señal-peligro:hover {
+    background: rgba(220, 38, 38, 0.18);
+  }
+  /* Explicación desplegable — se muestra DEBAJO, dentro del flujo normal */
+  .explicacion-señal {
+    display: none;
+    background: #1a1a1a;
+    color: #f8f8f8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .señal-wrapper {
+    display: inline;
+  }
+  .señal-wrapper.abierto .explicacion-señal {
+    display: block;
+  }
+  /* Contenedor de campo con explicacion */
+  .correo-campo-bloque {
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+  }
+  .correo-campo-bloque .etiqueta-campo {
+    color: #777;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    min-width: 70px;
+    margin-right: 0.5rem;
+  }
+  .instruccion-taller {
+    font-size: 0.9rem;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+
+    white-space: normal;
+    text-align: center;
+    font-weight: 400;
+  }
+  .señal-peligro:hover::after { opacity: 1; }
+  .contador-señales { text-align: center; margin: 1rem 0; font-weight: 700; color: #b71c1c; font-size: 1.1rem; }
+
+  /* VERIFICADOR URL */
+  .taller-bloque { background: #ffebee; border: 2px solid #b71c1c; border-radius: 1.5rem; padding: 2.5rem; margin: 2rem 0; }
+  .taller-titulo { font-size: 1.5rem; font-weight: 800; color: #b71c1c; margin-bottom: 0.5rem; }
+  .taller-instruccion { font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
+  .url-ejemplos { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0; }
+  .url-item {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;
+    background: white; border-radius: 0.75rem; padding: 1rem 1.5rem;
+    border: 2px solid #e2e8f0; cursor: pointer; font-size: 0.95rem;
+    font-family: monospace; font-weight: 600; transition: all 0.3s;
+  }
+  .url-item .badge { font-family: 'Public Sans', sans-serif; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.8rem; border-radius: 50px; opacity: 0; transition: opacity 0.3s; white-space: nowrap; }
+  .url-item.revelado .badge { opacity: 1; }
+  .url-item.segura { border-color: #2e7d32; background: #e8f5e9; }
+  .url-item.segura .badge { background: #2e7d32; color: white; }
+  .url-item.peligrosa { border-color: #b71c1c; background: #ffebee; }
+  .url-item.peligrosa .badge { background: #b71c1c; color: white; }
+  .url-item.dudosa { border-color: #f57f17; background: #fff8e1; }
+  .url-item.dudosa .badge { background: #f57f17; color: white; }
+
+  .bloque-recuerda { background: #b71c1c; color: white; border-radius: 2rem; padding: 3rem; margin: 2rem 0; }
+  .bloque-recuerda h3 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+  .lista-reglas { list-style: none; }
+  .lista-reglas li { font-size: 1.2rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 1rem; }
+  .pie-pagina { border-top: 2px solid #e0e0e0; padding: 3rem 2rem; text-align: center; font-size: 0.9rem; color: #999; max-width: 900px; margin: 0 auto; }
+  .pie-pagina .autores { font-weight: 700; color: #b71c1c; margin-top: 0.5rem; }
+</style>
 </head>
+<body>
 
-<body class="bg-surface text-on-surface">
-    <!-- TopNavBar -->
-    <header class="bg-[#f4faff]/70 dark:bg-[#111d23]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
-            <div class="text-2xl font-black text-[#004D40] dark:text-[#e9f6fd] tracking-tighter">
-                Antonio Lemus Pérez
+<div class="pagina-header">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="nav-breadcrumb"><a href="index2.html">← Volver al Manual de Temas</a></p>
+    <h1 class="titulo-principal">¿Cómo detectar mensajes falsos y engaños en internet?</h1>
+    <p class="subtitulo">Módulo 3 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
+  </div>
+</div>
+
+<main class="contenido">
+
+  <section class="seccion">
+    <h2 class="titulo-seccion">1. ¿Qué es el "Pesca de Datos" o Phishing?</h2>
+    <p class="parrafo">
+      Existe un tipo de engaño por internet llamado <span class="palabra-clave">Phishing</span> (se pronuncia "fishing", que en inglés significa "pescar"). 
+      El nombre viene de que los criminales "lanzan un anzuelo" (un mensaje falso) esperando que tú "piques" y entregues tus datos.
+    </p>
+    <div class="caja-definicion">
+      <div class="etiqueta-def">📖 ¿Qué es el Phishing?</div>
+      <div class="texto-def">Es cuando alguien te manda un mensaje falso que parece real (de tu banco, de Instagram, de Netflix, etc.) para que entres en un enlace y escribas tu contraseña en una página falsa. Así te roban la cuenta sin necesidad de hackear nada.</div>
+    </div>
+    <p class="parrafo">
+      Para lograrlo, usan técnicas psicológicas llamadas <span class="palabra-clave">Ingeniería Social</span>.
+    </p>
+    <div class="caja-definicion">
+      <div class="etiqueta-def">📖 ¿Qué es la Ingeniería Social?</div>
+      <div class="texto-def">No es hackear computadoras, es hackear personas. Usan el miedo ("¡Tu cuenta se cerrará!"), la urgencia ("¡Tienes 24 horas!") o la curiosidad ("Mira quién te está viendo el perfil") para que reacciones sin pensar.</div>
+    </div>
+    <div class="grid-2">
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">📧 Phishing por Correo</div>
+        <p>El más común. Recibes un correo que parece de Gmail, tu banco o Instagram. Tiene un botón que te lleva a una página idéntica a la original, pero falsa.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">📱 Engaño por Mensaje (Smishing)</div>
+        <p>Por WhatsApp o SMS te mandan un link con el mensaje "Ganaste un premio" o "Tu pedido está retenido". El link descarga un virus o te lleva a una página falsa.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">📞 Engaño por Llamada (Vishing)</div>
+        <p>Te llama una persona fingiendo ser del banco o de soporte técnico. Te piden datos "para verificar tu identidad". Ningún banco real te pedirá tu clave por teléfono.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">🎯 Engaño Personalizado (Spear Phishing)</div>
+        <p>Un ataque más peligroso donde el criminal investiga tus redes sociales y sabe tu nombre, colegio o gustos para hacer el mensaje más creíble y confiable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TALLER 1: SIMULADOR DE CORREO -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">🧪 Taller 1: Detecta las Señales de Alarma</h2>
+    <div class="instruccion-taller">
+      💡 Toca las partes que están resaltadas en rojo para descubrir por qué este correo es una trampa.
+    </div>
+
+    <div class="simulador-correo">
+      <div class="correo-barra-top">
+        <span class="circulo" style="background:#ef4444"></span>
+        <span class="circulo" style="background:#fbbf24"></span>
+        <span class="circulo" style="background:#22c55e"></span>
+        <span style="margin-left:1rem;">Bandeja de Entrada — Gmail</span>
+      </div>
+      <div class="correo-cuerpo">
+        <div class="correo-campo-bloque">
+          <span class="etiqueta-campo">De:</span>
+          <div class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro">seguridad-banco@gmail.com</span>
+            <div class="explicacion-señal">
+              🚨 SEÑAL 1: Un banco real (@bancovenezuela.com) nunca usaría una cuenta gratuita de Gmail. Esta dirección es falsa.
             </div>
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-[#111d23]/60 dark:text-[#e9f6fd]/60 font-medium hover:text-[#004D40] dark:hover:text-[#ffffff] transition-all duration-300"
-                    href="index.html">Inicio</a>
-                <a class="text-[#004D40] dark:text-[#e9f6fd] border-b-2 border-[#004D40] dark:border-[#e9f6fd] font-bold pb-1 transition-all duration-300"
-                    href="index2.html">Manual</a>
-            </nav>
-            <a href="index3.html">
-                <button
-                    class="bg-primary-container text-on-primary-container px-6 py-3 rounded-xl font-bold scale-102 active:scale-98 transition-transform duration-200">
-                    Modo Accesible
-                </button>
-            </a>
+          </div>
         </div>
-    </header>
-    <main class="max-w-7xl mx-auto px-8 py-16">
-        <!-- Breadcrumb & Awareness Pulse -->
-        <div class="flex items-center gap-4 mb-8">
-            <span
-                class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold tracking-wider flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary-fixed-dim awareness-pulse"></span>
-                ALERTA ACTIVA
+        
+        <div class="correo-campo-bloque">
+          <span class="etiqueta-campo">Asunto:</span>
+          <div class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro">⚠️ URGENTE: Tu cuenta será bloqueada</span>
+            <div class="explicacion-señal">
+              🚨 SEÑAL 2: Los estafadores usan la urgencia para que te asustes y no pienses con calma. Un banco nunca te amenazaría así por correo.
+            </div>
+          </div>
+        </div>
+
+        <hr style="margin:1.5rem 0; border: 0; border-top: 1px solid #eee;"/>
+
+        <p class="parrafo" style="font-size: 1.1rem; margin-bottom: 1rem;">
+          Estimado 
+          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro">usuario</span>,
+            <span class="explicacion-señal">
+              🚨 SEÑAL 3: El mensaje es genérico. Si fuera tu banco real, pondría tu nombre y apellido completos.
             </span>
-            <nav class="text-sm text-on-surface-variant flex items-center gap-2">
-                <a class="hover:underline" href="index2.html">Temas</a>
-                <span class="material-symbols-outlined text-xs">chevron_right</span>
-                <span class="text-on-surface font-semibold">Phishing</span>
-            </nav>
-        </div>
-        <!-- Hero Section -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-24">
-            <div class="md:col-span-7">
-                <h1 class="text-6xl md:text-8xl font-extrabold text-primary tracking-tighter leading-none mb-8">
-                    Phishing:<br />El Anzuelo Digital.
-                </h1>
-                <p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
-                    Aprende a identificar correos y enlaces extraños. Tu información es valiosa, no permitas que te
-                    engañen con mensajes falsos.
-                </p>
-            </div>
-            <div class="md:col-span-5 relative">
-                <div
-                    class="aspect-square rounded-full bg-surface-container-low flex items-center justify-center p-8 overflow-hidden">
-                    <img alt="Seguridad Digital"
-                        class="w-full h-full object-cover rounded-full mix-blend-multiply opacity-80"
-                        data-alt="Cybersecurity icon of a fish hook capturing a secure digital envelope in a deep green tech matrix"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZTLXya0WjjW4vCpu4rpUf0Ly_tUZ1x_BlXsIVh6_rBObkhLj4j6b_MEJkPaX_XjLYAlucE27PJCigLYYCDw8-GK_ar_7ss--7kiqg4qM0HOiW9kj4Tq3MCX7rxfQGDv6LjBDRMtkQxaIbT1WMdqh89JAJUfJuELCXwBeJd-it7lHrjE-zuz7Y689bI6e5pG75FtfIgB8qtdkLjJpEuCJXvZCBBUFY1KaYsNqfJKJVjnhZwloNKZ8CMA7kOZGAVeWmeA3kO4U-BzM" />
-                </div>
-            </div>
-        </section>
-        <!-- Content Grid: Bento Style -->
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            <!-- Card 1: Definition -->
-            <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between">
-                <div>
-                    <h2 class="text-3xl font-bold text-primary mb-6">¿Qué es y por qué es peligroso?</h2>
-                    <p class="text-lg leading-relaxed text-on-surface-variant mb-8">
-                        El Phishing es una técnica de engaño que usan los ciberdelincuentes para robar tus datos. Se
-                        hacen pasar por personas o empresas en las que confías para que les entregues tus contraseñas o
-                        datos bancarios.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
-                            <span class="material-symbols-outlined text-primary text-3xl">link_off</span>
-                            <div>
-                                <h4 class="font-bold text-on-surface">Links Extraños</h4>
-                                <p class="text-sm text-on-surface-variant">Nunca hagas clic en enlaces que lleguen de
-                                    números o correos desconocidos.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4 p-4 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
-                            <span class="material-symbols-outlined text-primary text-3xl">warning</span>
-                            <div>
-                                <h4 class="font-bold text-on-surface">Urgencia Falsa</h4>
-                                <p class="text-sm text-on-surface-variant">Desconfía de mensajes que digan "Tu cuenta
-                                    será cerrada ya".</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2: Interactive Test -->
-            <div class="bg-primary text-on-primary rounded-xl p-10 flex flex-col">
-                <span class="material-symbols-outlined text-5xl mb-6">contact_support</span>
-                <h3 class="text-2xl font-bold mb-4 leading-tight">Pon a prueba tu instinto</h3>
-                <p class="text-on-primary-container text-lg mb-8 leading-relaxed">
-                    Si recibes un correo de "Netflix" pidiendo tu tarjeta pero el remitente es "seguridad@gmail.com",
-                    ¿qué haces?
-                </p>
-                <div class="mt-auto space-y-4">
-                    <button
-                        class="w-full py-3 bg-white text-primary font-bold rounded-xl hover:bg-primary-fixed transition-all">Reportar
-                        y Borrar</button>
-                    <button
-                        class="w-full py-3 border border-white/30 text-white font-bold rounded-xl hover:bg-white/10 transition-all">Abrir
-                        para ver qué pasa</button>
-                </div>
-            </div>
-        </section>
-        <!-- Quiz Section -->
-        <section class="max-w-4xl mx-auto mb-24">
-            <div class="text-center mb-12">
-                <span class="text-primary font-black uppercase tracking-[0.2em] text-sm">Resumen de Seguridad</span>
-                <h2 class="text-4xl font-extrabold text-on-surface mt-2 tracking-tight">Reglas de Oro contra el Phishing
-                </h2>
-            </div>
-            <div
-                class="bg-white border border-outline-variant/20 rounded-2xl p-8 md:p-12 shadow-sm grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-primary">no_accounts</span>
-                    </div>
-                    <p class="text-on-surface-variant font-medium">No respondas mensajes pidiendo datos personales.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-primary">alternate_email</span>
-                    </div>
-                    <p class="text-on-surface-variant font-medium">Verifica siempre la dirección del remitente.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-primary">lock_clock</span>
-                    </div>
-                    <p class="text-on-surface-variant font-medium">Accede a tus cuentas solo desde sitios oficiales.</p>
-                </div>
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center shrink-0">
-                        <span class="material-symbols-outlined text-primary">psychology_alt</span>
-                    </div>
-                    <p class="text-on-surface-variant font-medium">Usa el sentido común: si parece sospechoso, lo es.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer Shell -->
-    <footer class="bg-[#e9f6fd] dark:bg-[#111d23] w-full py-16 mt-auto">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
-            <div class="flex flex-col gap-6">
-                <div class="text-xl font-bold text-[#004D40] dark:text-[#e9f6fd]">Antonio Lemus Pérez</div>
-                <p class="font-public-sans text-sm leading-relaxed text-[#111d23]/70 dark:text-[#e9f6fd]/70">
-                    Cumaná, Estado Sucre. Formando el futuro tecnológico de nuestra nación.
-                </p>
-            </div>
-            <div class="flex flex-col gap-6 md:col-span-2">
-                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Desarrolladores del Proyecto</h4>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                            EC</div>
-                        <span class="text-sm font-medium text-on-surface-variant">Elvis Cordova</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                            HG</div>
-                        <span class="text-sm font-medium text-on-surface-variant">Henyer Guipe</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                            JG</div>
-                        <span class="text-sm font-medium text-on-surface-variant">Jesus Giraldo</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div
-                            class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">
-                            LR</div>
-                        <span class="text-sm font-medium text-on-surface-variant">Luis Ruiz</span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-6">
-                <h4 class="font-bold text-[#004D40] dark:text-[#e9f6fd]">Estatus</h4>
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-2xl text-primary"
-                        data-icon="verified_user">verified_user</span>
-                    <span class="text-xs font-medium uppercase tracking-widest text-on-surface-variant">Manual Oficial
-                        2026</span>
-                </div>
-                <p class="text-xs text-[#111d23]/50 dark:text-[#e9f6fd]/50">
-                    © 2026 CE Antonio Lemus Pérez. Todos los derechos reservados.
-                </p>
-            </div>
-        </div>
-    </footer>
-</body>
+          </span>
+        </p>
 
+        <p class="parrafo" style="font-size: 1.1rem; margin-bottom: 1rem;">
+          Hemos detectado un problema de seguridad. Debe verificar su cuenta 
+          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro">antes de 2 horas</span>
+            <span class="explicacion-señal">
+              🚨 SEÑAL 4: Otra vez usan la presión del tiempo. Es una trampa psicológica muy común.
+            </span>
+          </span>
+          o será suspendida.
+        </p>
+
+        <p style="margin: 2rem 0; text-align: center;">
+          <span class="señal-wrapper" style="display: block;" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro" style="display: inline-block; padding: 1rem 2rem; border-style: solid; background: #b71c1c; color: white;">Verificar Cuenta Ahora →</span>
+            <span class="explicacion-señal" style="text-align: left;">
+              🚨 SEÑAL 5: Este botón te lleva a una página falsa que se ve igual al banco pero es del hacker. ¡Nunca hagas clic!
+            </span>
+          </span>
+        </p>
+
+        <p style="font-size:0.85rem; color:#888; border-top: 1px solid #eee; pt-4 mt-4 text-center;">
+          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+            <span class="señal-peligro">© 2026 Banco Seguro. Todos los derechos reserbados.</span>
+            <span class="explicacion-señal">
+              🚨 SEÑAL 6: Observa la mala ortografía ("reserbados" con B). Las empresas serias no cometen estos errores.
+            </span>
+          </span>
+        </p>
+      </div>
+    </div>
+    <p class="contador-señales">Toca cada zona roja para aprender. Hay 6 en total. 🔍</p>
+  </section>
+
+  <!-- TALLER 2: VERIFICADOR DE URLs -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">🧪 Taller 2: ¿Es segura esta dirección web?</h2>
+    <p class="parrafo">
+      La <span class="palabra-clave">URL</span> es la dirección de una página web, lo que ves en la barra de tu navegador (ej: www.google.com).
+    </p>
+    <div class="caja-definicion">
+      <div class="etiqueta-def">📖 ¿Cómo leer una URL con seguridad?</div>
+      <div class="texto-def">
+        Una URL tiene partes importantes. Ejemplo: <strong>https://www.instagram.com/login</strong><br/>
+        • <strong>https://</strong> → El sitio tiene seguridad cifrada (el candado verde). Si dice solo "http://" sin la "s", es inseguro.<br/>
+        • <strong>www.instagram.com</strong> → El "dominio", el nombre real del sitio. Siempre verifica que sea exactamente el correcto.<br/>
+        • <strong>/login</strong> → La página dentro del sitio.
+      </div>
+    </div>
+
+    <div class="taller-bloque">
+      <div class="taller-titulo">¿Cuál es el link real?</div>
+      <p class="taller-instruccion">Toca cada enlace para ver si es seguro, peligroso o dudoso:</p>
+
+      <div class="url-ejemplos">
+        <div class="url-item" data-tipo="segura" data-explicacion="✅ SEGURA" onclick="revelarUrl(this)">
+          <span>https://www.instagram.com/accounts/login</span>
+          <span class="badge">✅ SEGURA — Dominio oficial correcto</span>
+        </div>
+        <div class="url-item" data-tipo="peligrosa" data-explicacion="🚨 FALSA" onclick="revelarUrl(this)">
+          <span>http://instagram-seguridad.xyz/login</span>
+          <span class="badge">🚨 FALSA — "http" sin "s" y dominio ".xyz" sospechoso</span>
+        </div>
+        <div class="url-item" data-tipo="peligrosa" data-explicacion="🚨 FALSA" onclick="revelarUrl(this)">
+          <span>https://lnstagram.com/login</span>
+          <span class="badge">🚨 FALSA — La "l" parece "I" pero cambia el dominio</span>
+        </div>
+        <div class="url-item" data-tipo="segura" data-explicacion="✅ SEGURA" onclick="revelarUrl(this)">
+          <span>https://mail.google.com/mail/</span>
+          <span class="badge">✅ SEGURA — Dominio real de Google con https</span>
+        </div>
+        <div class="url-item" data-tipo="peligrosa" data-explicacion="🚨 FALSA" onclick="revelarUrl(this)">
+          <span>https://google.seguridad-verifica.com</span>
+          <span class="badge">🚨 FALSA — El dominio real es "seguridad-verifica.com", no Google</span>
+        </div>
+        <div class="url-item" data-tipo="dudosa" data-explicacion="⚠️ DUDOSA" onclick="revelarUrl(this)">
+          <span>https://bit.ly/3xLm9qZ</span>
+          <span class="badge">⚠️ DUDOSA — Links acortados ocultan el destino real. ¡Cuidado!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="bloque-recuerda">
+      <h3>📋 Protocolo: ¿Qué hacer si recibes un mensaje sospechoso?</h3>
+      <ul class="lista-reglas">
+        <li>🛑 NO hagas clic en ningún enlace, aunque el mensaje parezca urgente.</li>
+        <li>📧 Verifica siempre el remitente: ¿el correo tiene el dominio oficial o es un Gmail/Hotmail raro?</li>
+        <li>🔍 Revisa la URL antes de escribir tu contraseña: busca errores en el nombre o ausencia de "https".</li>
+        <li>🗑️ Borra el mensaje y márcalo como "Spam" o "Phishing" en tu correo.</li>
+        <li>🔑 Si ingresaste tu clave por error, cámbiala de inmediato desde el sitio oficial.</li>
+        <li>🗣️ Avisa a un profesor o directivo para proteger a tus compañeros.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie-pagina">
+  <p>Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
+  <p class="autores">Elvis Cordova · Henyer Guipe · Jesus Giraldo · Luis Ruiz · 2026</p>
+  <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · UPTOS CR</p>
+</footer>
+
+<script>
+  function revelarUrl(el) {
+    const tipo = el.dataset.tipo;
+    el.classList.add('revelado', tipo);
+  }
+</script>
+</body>
 </html>

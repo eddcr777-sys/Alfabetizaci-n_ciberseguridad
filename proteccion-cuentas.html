@@ -1,196 +1,455 @@
 <!DOCTYPE html>
-
-<html class="light" lang="es">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Protección de Cuentas | Antonio Lemus Pérez</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="configuracion-tailwind.js"></script>
-    <link rel="stylesheet" href="estilos-base.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Protección de Cuentas | L.B. Antonio Lemus Pérez</title>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.85;
+    color: #1a1a1a;
+    background: #ffffff;
+  }
+  a { color: inherit; }
+
+  /* HEADER */
+  .pagina-header {
+    background: #004d40;
+    color: white;
+    padding: 2rem 2rem 3rem;
+  }
+  .nav-breadcrumb {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+  }
+  .nav-breadcrumb a { color: white; text-decoration: none; }
+  .nav-breadcrumb a:hover { text-decoration: underline; }
+  .titulo-principal {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+  .subtitulo { font-size: 1.35rem; opacity: 0.85; }
+
+  /* CUERPO */
+  .contenido { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+
+  /* SECCIONES */
+  .seccion { margin-bottom: 5rem; }
+  .titulo-seccion {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #004d40;
+    border-left: 8px solid #004d40;
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+  }
+  .parrafo { margin-bottom: 1.5rem; }
+
+  /* CAJAS DE DEFINICION */
+  .caja-definicion {
+    background: #e8f5e9;
+    border: 2px solid #004d40;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+  }
+  .caja-definicion .etiqueta-def {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #004d40;
+    margin-bottom: 0.5rem;
+  }
+  .caja-definicion .texto-def {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1b5e20;
+  }
+
+  /* PALABRA CLAVE */
+  .palabra-clave {
+    font-weight: 800;
+    color: #004d40;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #80cbc4;
+  }
+
+  /* ALERTA */
+  .caja-alerta {
+    background: #fff3e0;
+    border-left: 8px solid #e65100;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+    font-weight: 700;
+    color: #bf360c;
+    font-size: 1.15rem;
+  }
+
+  /* TARJETAS INFORMATIVAS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0; }
+  @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+  .tarjeta {
+    background: #f5f5f5;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border-top: 6px solid #004d40;
+  }
+  .tarjeta .tarjeta-titulo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 0.75rem;
+  }
+  .tarjeta p { font-size: 1rem; line-height: 1.7; }
+
+  /* TALLER INTERACTIVO: MEDIDOR */
+  .taller-bloque {
+    background: #f1f8e9;
+    border: 2px solid #004d40;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin: 2rem 0;
+  }
+  .taller-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #004d40;
+    margin-bottom: 0.5rem;
+  }
+  .taller-instruccion { font-size: 1rem; color: #555; margin-bottom: 1.5rem; }
+  .input-clave {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1.35rem;
+    font-family: monospace;
+    border: 3px solid #b2dfdb;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .input-clave:focus { border-color: #004d40; }
+  .barra-fuerza-contenedor { height: 14px; background: #ddd; border-radius: 50px; overflow: hidden; margin-bottom: 1rem; }
+  .barra-fuerza-relleno { height: 100%; width: 0; border-radius: 50px; transition: all 0.5s ease; }
+  .etiqueta-fuerza { font-size: 1rem; font-weight: 700; min-height: 1.5rem; }
+  .checks-clave { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1rem; }
+  @media (max-width: 500px) { .checks-clave { grid-template-columns: 1fr; } }
+  .check-item {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #888;
+    border: 2px solid #eee;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .check-item.activo { color: #004d40; border-color: #004d40; background: #e8f5e9; }
+
+  /* QUIZ */
+  .quiz-bloque {
+    background: #263238;
+    color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 2rem 0;
+  }
+  .quiz-pregunta {
+    background: rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quiz-pregunta:hover { background: rgba(255,255,255,0.12); }
+  .quiz-pregunta .estado { font-size: 1.5rem; opacity: 0; transition: opacity 0.3s; }
+  .quiz-pregunta.revelado .estado { opacity: 1; }
+  .quiz-pregunta.seguro { border-color: #4caf50; background: rgba(76,175,80,0.15); }
+  .quiz-pregunta.inseguro { border-color: #f44336; background: rgba(244,67,54,0.15); }
+
+  /* BLOQUE FINAL */
+  .bloque-recuerda {
+    background: #004d40;
+    color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 2rem 0;
+  }
+  .bloque-recuerda h3 { font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
+  .lista-reglas { list-style: none; }
+  .lista-reglas li {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    gap: 1rem;
+  }
+
+  /* PIE */
+  .pie-pagina {
+    border-top: 2px solid #e0e0e0;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .pie-pagina .autores { font-weight: 700; color: #004d40; margin-top: 0.5rem; }
+</style>
 </head>
+<body>
 
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <!-- Header -->
-    <header class="bg-[#f4faff]/90 backdrop-blur-xl sticky top-0 z-50 border-b border-outline-variant/10">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-            <div class="text-xl font-bold text-primary flex items-center gap-2">
-                <span class="material-symbols-outlined">shield_person</span>
-                Módulo 1: Protección Profunda
-            </div>
-            <nav class="hidden md:flex gap-6">
-                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index.html">Inicio</a>
-                <a class="text-sm font-bold opacity-60 hover:opacity-100 transition-all" href="index2.html">Temas</a>
-            </nav>
-        </div>
-    </header>
-    <main class="max-w-5xl mx-auto px-8 py-16">
-        <!-- Breadcrumb -->
-        <nav class="text-xs font-bold uppercase tracking-widest text-on-surface-variant flex items-center gap-2 mb-12">
-            <a href="index2.html">Manual</a>
-            <span class="material-symbols-outlined text-[10px]">chevron_right</span>
-            <span class="text-primary">Protección de Cuentas</span>
-        </nav>
-        <!-- Intro -->
-        <section class="mb-24 text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-primary mb-8 tracking-tighter leading-tight">
-                    Blindando tu Identidad Digital.</h1>
-                <p class="text-xl text-on-surface-variant leading-relaxed mb-8">
-                    Tus cuentas son la puerta de entrada a tu vida privada, financiera y académica. Un error aquí puede
-                    comprometer tu futuro. Aprende a construir una muralla infranqueable.
-                </p>
-            </div>
-            <div class="relative bg-primary-container/10 p-8 rounded-[3rem] border border-primary/10">
-                <img alt="Seguridad" class="rounded-3xl shadow-2xl"
-                    data-alt="Close up of a person's hands holding a smartphone with a glowing biometric fingerprint scanner in a soft green tech background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJHf-abH9L903H3SuDh7nXNh4I3lG0i6ECbFbTgzi7FP1QDN-tz_Q0HWXDw9M3qs5XD_SSUpi87D4XTQmPngJ_qiEXh481agN9Qy_eiNdaEKO02xJAlChY5ZBFSgo-H-qmwPl64wAMHN0t_01_WC2wWk3GwpSidr8G3bqF7gFEMATmexf5ncf6JoYi4t8M6Tc7L-iuUeL_bIU0WLsI3clrGqtHWt4HINb7F7mP1gn7-IbjH4rp3grspjkXqV-CS2zyWJ6eaby2Sic" />
-            </div>
-        </section>
-        <!-- Deep Info Section: Passwords -->
-        <section class="mb-32">
-            <h2 class="text-3xl font-bold text-primary mb-12 flex items-center gap-3">
-                <span
-                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">01</span>
-                El Fin de las Contraseñas Simples
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div class="bg-white p-8 rounded-3xl border border-outline-variant/10 shadow-sm">
-                    <h4 class="font-bold mb-4">¿Por qué fallan?</h4>
-                    <p class="text-sm text-on-surface-variant leading-relaxed">Los atacantes usan "Fuerza Bruta" y
-                        "Ataques de Diccionario" que prueban millones de contraseñas por segundo. Si tu clave está en un
-                        diccionario, será hackeada en minutos.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-outline-variant/10 shadow-sm">
-                    <h4 class="font-bold mb-4">La Reutilización</h4>
-                    <p class="text-sm text-on-surface-variant leading-relaxed">Si usas la misma contraseña para todo,
-                        hackear un sitio pequeño (como un foro de juegos) le da al atacante la llave para entrar a tu
-                        cuenta bancaria y Gmail.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl border border-outline-variant/10 shadow-sm">
-                    <h4 class="font-bold mb-4">Gestores de Claves</h4>
-                    <p class="text-sm text-on-surface-variant leading-relaxed">No intentes recordarlas todas. Usa
-                        Bitwarden o 1Password. Generan claves aleatorias de 25 caracteres y las guardan de forma
-                        cifrada.</p>
-                </div>
-            </div>
-            <!-- Detailed Guide Checklist -->
-            <div class="bg-surface-container-low rounded-[3rem] p-10 md:p-16">
-                <h3 class="text-2xl font-bold mb-8">Anatomía de una Contraseña Robusta</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <ul class="space-y-6">
-                        <li class="flex gap-4">
-                            <span class="material-symbols-outlined text-primary">done_all</span>
-                            <div>
-                                <p class="font-bold">Longitud > Complejidad</p>
-                                <p class="text-sm text-on-surface-variant">Es más difícil hackear
-                                    "mi-perro-come-mango-verde" que "P@ss123!". La longitud es la clave.</p>
-                            </div>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="material-symbols-outlined text-primary">done_all</span>
-                            <div>
-                                <p class="font-bold">Evita Datos Obvios</p>
-                                <p class="text-sm text-on-surface-variant">Sin nombres de mascotas, fechas de nacimiento
-                                    o nombres de familiares.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="bg-primary text-on-primary p-8 rounded-2xl relative overflow-hidden">
-                        <p class="text-sm font-bold opacity-70 mb-2 uppercase tracking-widest">Hack Tip</p>
-                        <p class="text-lg leading-relaxed">Usa la técnica **Diceware**: elige 5 palabras al azar de un
-                            diccionario y júntalas. Es amigable para humanos y pesadilla para máquinas.</p>
-                        <span
-                            class="material-symbols-outlined absolute -right-4 -bottom-4 text-9xl opacity-10">key</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Deep Info: 2FA -->
-        <section class="mb-32">
-            <h2 class="text-3xl font-bold text-primary mb-12 flex items-center gap-3">
-                <span
-                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">02</span>
-                Factor de Doble Autenticación (2FA)
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
-                <div class="md:col-span-8 space-y-8">
-                    <p class="text-xl text-on-surface-variant">Incluso si te roban la contraseña, el 2FA detiene al
-                        intruso al pedir un segundo comprobante de identidad.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-white rounded-2xl border border-outline-variant/10">
-                            <h4 class="font-bold text-secondary mb-2">Apps de Autenticación (Recomendado)</h4>
-                            <p class="text-sm">Google Authenticator o Authy. Generan códigos temporales que no dependen
-                                de la red móvil.</p>
-                        </div>
-                        <div class="p-6 bg-white rounded-2xl border border-outline-variant/10 opacity-60">
-                            <h4 class="font-bold mb-2">SMS (Menos Seguro)</h4>
-                            <p class="text-sm">Vulnerable a ataques de "SIM Swapping" donde el atacante duplica tu
-                                número telefónico.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-4 bg-surface-container-highest p-8 rounded-3xl flex flex-col justify-center">
-                    <h4 class="font-bold mb-4">Llaves Físicas</h4>
-                    <p class="text-xs text-on-surface-variant mb-6">El máximo nivel de seguridad (Yubico). Es un
-                        dispositivo USB físico que debes tocar para entrar a tus cuentas.</p>
-                    <button
-                        class="w-full py-3 bg-primary text-on-primary rounded-xl text-xs font-bold font-public-sans uppercase tracking-[0.2em] shadow-lg">Nivel
-                        Militar</button>
-                </div>
-            </div>
-        </section>
-        <!-- Simulation / Quiz Section -->
-        <section
-            class="mb-32 bg-primary text-on-primary rounded-[3.5rem] p-12 md:p-20 text-center relative overflow-hidden">
-            <div class="relative z-10 scale-105">
-                <h2 class="text-4xl md:text-5xl font-black mb-8">¿Estás Listo para la Prueba?</h2>
-                <p class="text-xl opacity-80 max-w-2xl mx-auto mb-12">Evalúa tu conocimiento antes de pasar al siguiente
-                    módulo de nuestra alfabetización digital.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div
-                        class="p-6 bg-white/10 rounded-2xl border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
-                        <h5 class="font-bold mb-2">Test de Riesgo</h5>
-                        <p class="text-xs opacity-70">Evalúa cuán fácil es hackearte hoy.</p>
-                    </div>
-                    <div
-                        class="p-6 bg-white/10 rounded-2xl border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
-                        <h5 class="font-bold mb-2">Configuración 2FA</h5>
-                        <p class="text-xs opacity-70">Guía paso a paso para tus apps.</p>
-                    </div>
-                    <div
-                        class="p-6 bg-white/10 rounded-2xl border border-white/20 hover:bg-white/20 transition-all cursor-pointer">
-                        <h5 class="font-bold mb-2">Certificado</h5>
-                        <p class="text-xs opacity-70">Obtén tu sello de alumno protegido.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Background pattern -->
-            <div class="absolute inset-0 opacity-10 mix-blend-overlay rotate-12 scale-150">
-                <span class="material-symbols-outlined text-[500px]" data-icon="lock">lock</span>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-surface-container-low py-16 px-8 rounded-t-[4rem]">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-2xl font-bold text-primary">Antonio Lemus Pérez</h3>
-                <p class="text-on-surface-variant max-w-sm mt-2 leading-relaxed italic">"Formación digital para una
-                    nueva generación de ciudadanos conscientes y protegidos."</p>
-            </div>
-            <div class="text-right flex flex-col gap-2">
-                <p class="text-xs font-bold tracking-widest text-primary uppercase">Equipo de Desarrollo</p>
-                <p class="text-sm font-medium text-on-surface-variant">Còrdova • Guipe • Giraldo • Ruiz</p>
-            </div>
-        </div>
-    </footer>
+<div class="pagina-header">
+  <div style="max-width:900px;margin:0 auto;">
+    <p class="nav-breadcrumb"><a href="index2.html">← Volver al Manual de Temas</a></p>
+    <h1 class="titulo-principal">¿Cómo proteger tus cuentas y contraseñas?</h1>
+    <p class="subtitulo">Módulo 1 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
+  </div>
+</div>
+
+<main class="contenido">
+
+  <!-- SECCIÓN 1: CONTRASEÑAS -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">1. ¿Qué es una contraseña y por qué importa tanto?</h2>
+
+    <p class="parrafo">
+      Una <span class="palabra-clave">contraseña</span> es la clave secreta que usas para entrar a tus cuentas de Instagram, Gmail, TikTok, etc. 
+      Es exactamente como la llave de tu casa: si la pierdes o la adivina alguien, esa persona puede entrar y hacer lo que quiera.
+    </p>
+
+    <p class="parrafo">
+      Mucha gente cree que los hackers son genios que rompen sistemas con computadoras increíbles. La realidad es más simple: 
+      la mayoría solo adivina contraseñas débiles porque las personas usan claves muy fáciles.
+    </p>
+
+    <div class="caja-alerta">
+      ⚠️ Las contraseñas MÁS USADAS en el mundo son: "123456", "password", "qwerty" y el nombre del usuario. 
+      Un atacante las prueba en menos de un segundo.
+    </div>
+
+    <h3 style="font-size:1.5rem;font-weight:800;color:#004d40;margin:2rem 0 1rem;">¿Cómo roban las contraseñas?</h3>
+
+    <div class="grid-2">
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">Ataque de Fuerza Bruta</div>
+        <p>Un programa de computadora prueba millones de combinaciones de letras y números automáticamente hasta dar con la correcta. Si tu clave es corta, lo logra en segundos.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">Ataque de Diccionario</div>
+        <p>El programa prueba palabras comunes de un listado: "gato", "amor", "futbol", tu nombre, tu fecha de nacimiento. Si usas palabras reales, es muy inseguro.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">Filtración de Datos</div>
+        <p>Cuando un sitio web es hackeado, las contraseñas de todos sus usuarios quedan expuestas. Por eso, usar la misma clave en varias cuentas es muy peligroso.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">Ingeniería Social</div>
+        <p>No hackean la máquina, te engañan a ti. Por ejemplo: te mandan un mensaje falso de Instagram pidiéndote tu clave "para verificar tu cuenta".</p>
+      </div>
+    </div>
+
+    <div class="caja-definicion">
+      <div class="etiqueta-def">📖 ¿Qué es "Entropía" de una contraseña?</div>
+      <div class="texto-def">Es una forma técnica de medir qué tan difícil es adivinar una clave. A mayor entropía, mejor seguridad. Una clave con letras grandes, pequeñas, números y símbolos tiene una entropía altísima.</div>
+    </div>
+  </section>
+
+  <!-- TALLER 1: MEDIDOR DE CONTRASEÑAS -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">🧪 Taller 1: ¿Qué tan segura es tu clave?</h2>
+
+    <div class="taller-bloque">
+      <div class="taller-titulo">Laboratorio de Contraseñas</div>
+      <p class="taller-instruccion">
+        Escribe una contraseña inventada (¡no la tuya real!) y mira cómo el sistema la analiza en tiempo real.
+      </p>
+      <input class="input-clave" id="claveInput" placeholder="Escribe una contraseña de prueba aquí..." type="text"/>
+      <div class="barra-fuerza-contenedor">
+        <div class="barra-fuerza-relleno" id="barraRelleno"></div>
+      </div>
+      <p class="etiqueta-fuerza" id="etiquetaFuerza">Esperando...</p>
+      <div class="checks-clave">
+        <div class="check-item" id="checkLargo">⬜ Al menos 10 caracteres</div>
+        <div class="check-item" id="checkMayus">⬜ Letra MAYÚSCULA</div>
+        <div class="check-item" id="checkNum">⬜ Número (1, 2, 3...)</div>
+        <div class="check-item" id="checkSimbolo">⬜ Símbolo (@, #, $, !)</div>
+      </div>
+    </div>
+
+    <div class="caja-definicion">
+      <div class="etiqueta-def">💡 Ejemplo de contraseña MUY segura</div>
+      <div class="texto-def">En vez de "gato2024", usa: "Mi!Gato_Naranja#12". Es larga, tiene mayúsculas, números y símbolos. ¡Nadie la adivinaría!</div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: DOBLE FACTOR -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">2. La Verificación de Dos Pasos</h2>
+
+    <p class="parrafo">
+      Imagina que para entrar a tu casa necesitas la llave normal Y ADEMÁS un código secreto que solo llega a tu celular. 
+      Eso es exactamente la <span class="palabra-clave">Verificación en Dos Pasos</span>, también llamada Autenticación de Doble Factor.
+    </p>
+
+    <div class="caja-definicion">
+      <div class="etiqueta-def">📖 ¿Qué significa "Autenticación de Doble Factor"?</div>
+      <div class="texto-def">Es una protección adicional donde, después de ingresar tu contraseña, debes verificar tu identidad de una segunda forma. Así, aunque alguien robe tu clave, no puede entrar a tu cuenta porque no tiene tu celular.</div>
+    </div>
+
+    <p class="parrafo">Hay varias formas de hacerlo. De menos segura a más segura:</p>
+
+    <div class="grid-2">
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">📱 Por mensaje de texto</div>
+        <p>Te llega un código de 6 dígitos por SMS. Es el método más común. Es bueno, pero tiene un punto débil: los atacantes expertos pueden duplicar tu chip telefónico para recibir ese código.</p>
+      </div>
+      <div class="tarjeta">
+        <div class="tarjeta-titulo">🔐 Por aplicación de seguridad</div>
+        <p>Usas una app como "Google Authenticator" que genera un código que cambia cada 30 segundos. Es mucho más seguro porque no depende de tu chip telefónico.</p>
+      </div>
+    </div>
+
+    <div class="caja-alerta">
+      🔑 ACTIVAR AHORA: Entra a Configuración → Seguridad → Verificación en dos pasos en Instagram, Facebook y Gmail. ¡Tarda menos de 5 minutos!
+    </div>
+  </section>
+
+  <!-- TALLER 2: QUIZ -->
+  <section class="seccion">
+    <h2 class="titulo-seccion">🧪 Taller 2: ¿Qué harías tú?</h2>
+    <div class="quiz-bloque">
+      <p style="font-size:1.1rem;opacity:0.7;margin-bottom:1.5rem;">Toca cada situación para ver si es segura o peligrosa:</p>
+      <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
+        <span>Usar "Lemus2024" como contraseña de Instagram.</span>
+        <span class="estado">❌ Peligroso — Tiene tu nombre y el año. Es muy fácil de adivinar.</span>
+      </div>
+      <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
+        <span>Activar el código por SMS en mi cuenta de Gmail.</span>
+        <span class="estado">✅ Buena práctica — Añade una capa extra de protección.</span>
+      </div>
+      <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
+        <span>Usar la misma clave en Instagram, TikTok y el correo.</span>
+        <span class="estado">❌ Muy peligroso — Si roban una cuenta, roban todas.</span>
+      </div>
+      <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
+        <span>Crear una clave larga usando frase: "MiPerro!Come#3Veces".</span>
+        <span class="estado">✅ Excelente — Larga, con símbolos y números. Muy difícil de romper.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGLAS DE ORO -->
+  <section class="seccion">
+    <div class="bloque-recuerda">
+      <h3>📋 Reglas de Oro para Tus Cuentas</h3>
+      <ul class="lista-reglas">
+        <li>🔑 Usa contraseñas de mínimo 12 caracteres, con mayúsculas, números y símbolos.</li>
+        <li>🚫 Nunca uses tu nombre, apellido ni fecha de nacimiento como contraseña.</li>
+        <li>🔄 Usa una contraseña diferente para cada cuenta importante.</li>
+        <li>📲 Activa la verificación en dos pasos en cada red social.</li>
+        <li>🙅 Nunca le digas tu contraseña a nadie, ni a tus amigos.</li>
+        <li>❓ Si crees que alguien sabe tu clave, cámbiala de inmediato.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie-pagina">
+  <p>Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
+  <p class="autores">Elvis Cordova · Henyer Guipe · Jesus Giraldo · Luis Ruiz · 2026</p>
+  <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russian" (UPTOS CR)</p>
+</footer>
+
+<script>
+  // MEDIDOR DE CONTRASEÑA
+  const claveInput = document.getElementById('claveInput');
+  const barraRelleno = document.getElementById('barraRelleno');
+  const etiquetaFuerza = document.getElementById('etiquetaFuerza');
+
+  claveInput.addEventListener('input', function() {
+    const val = this.value;
+    let puntaje = 0;
+
+    const tieneLargo = val.length >= 10;
+    const tieneMayus = /[A-Z]/.test(val);
+    const tieneNum = /[0-9]/.test(val);
+    const tieneSimbolo = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val);
+
+    if (tieneLargo) puntaje += 25;
+    if (tieneMayus) puntaje += 25;
+    if (tieneNum) puntaje += 25;
+    if (tieneSimbolo) puntaje += 25;
+
+    actualizarCheck('checkLargo', tieneLargo, 'Al menos 10 caracteres');
+    actualizarCheck('checkMayus', tieneMayus, 'Letra MAYÚSCULA');
+    actualizarCheck('checkNum', tieneNum, 'Número (1, 2, 3...)');
+    actualizarCheck('checkSimbolo', tieneSimbolo, 'Símbolo (@, #, $, !)');
+
+    barraRelleno.style.width = puntaje + '%';
+
+    if (val.length === 0) {
+      barraRelleno.style.background = '#ccc';
+      etiquetaFuerza.textContent = 'Escribe para analizar...';
+      etiquetaFuerza.style.color = '#888';
+    } else if (puntaje <= 25) {
+      barraRelleno.style.background = '#f44336';
+      etiquetaFuerza.textContent = '🔴 MUY DÉBIL — Un atacante la adivinaría en segundos.';
+      etiquetaFuerza.style.color = '#f44336';
+    } else if (puntaje <= 50) {
+      barraRelleno.style.background = '#ff9800';
+      etiquetaFuerza.textContent = '🟠 DÉBIL — Mejórala añadiendo más tipos de caracteres.';
+      etiquetaFuerza.style.color = '#ff9800';
+    } else if (puntaje <= 75) {
+      barraRelleno.style.background = '#ffc107';
+      etiquetaFuerza.textContent = '🟡 ACEPTABLE — Añade un símbolo para hacerla más fuerte.';
+      etiquetaFuerza.style.color = '#f57f17';
+    } else {
+      barraRelleno.style.background = '#004d40';
+      etiquetaFuerza.textContent = '🟢 ¡EXCELENTE! Esta contraseña es muy difícil de romper.';
+      etiquetaFuerza.style.color = '#004d40';
+    }
+  });
+
+  function actualizarCheck(id, activo, texto) {
+    const el = document.getElementById(id);
+    el.textContent = (activo ? '✅ ' : '⬜ ') + texto;
+    el.classList.toggle('activo', activo);
+  }
+
+  // QUIZ
+  function revelarQuiz(el) {
+    el.classList.add('revelado');
+    const seguro = el.dataset.seguro === 'si';
+    el.classList.toggle('seguro', seguro);
+    el.classList.toggle('inseguro', !seguro);
+  }
+</script>
 </body>
-
 </html>
