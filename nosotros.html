@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nosotros | El Equipo de Desarrollo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="configuracion-tailwind.js"></script>
+    <link rel="stylesheet" href="estilos-base.css" />
+    <style>
+        .creator-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .creator-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 77, 64, 0.12);
+        }
+
+        .avatar-glow {
+            position: relative;
+        }
+
+        .avatar-glow::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(45deg, #26A69A, #004D40);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Navegación -->
+    <nav class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-primary/5">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 md:h-24">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined text-white">school</span>
+                </div>
+                <div class="text-lg md:text-xl font-black text-[#004D40] tracking-tighter uppercase leading-none">
+                    L.B. Antonio <br /><span class="text-xs tracking-widest opacity-70">Lemus Pérez</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-10 items-center">
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors"
+                    href="index.html">Inicio</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors"
+                    href="justificacion.html">El Proyecto</a>
+                <a class="text-on-surface-variant font-medium hover:text-primary transition-colors"
+                    href="index2.html">Manual Digital</a>
+                <a class="text-[#004D40] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primary"
+                    href="nosotros.html">Nosotros</a>
+                <a href="index3.html">
+                    <button
+                        class="bg-primary text-on-primary px-6 py-2.5 rounded-2xl font-bold hover:shadow-lg hover:shadow-primary/30 transition-all active:scale-95">Accesibilidad</button>
+                </a>
+            </div>
+            <button class="md:hidden text-primary">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="py-24 px-6 bg-gradient-to-b from-[#f4faff] to-surface relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full mb-8">
+                <span class="material-symbols-outlined text-sm">groups</span>
+                <span class="text-xs font-black uppercase tracking-[0.2em]">Detrás del Código</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-black text-primary tracking-tight mb-8">
+                Conoce a los <br />Creadores.
+            </h1>
+            <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto font-medium">
+                Somos estudiantes de la UPTOS "Clodosbaldo Russian", unidos por la misión de fortalecer la seguridad
+                digital en nuestra comunidad académica.
+            </p>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 L100 100 M100 0 L0 100" stroke="currentColor" stroke-width="0.1" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- Team Grid -->
+    <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+                <!-- Elvis Cordova -->
+                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 creator-card text-center">
+                    <div class="w-32 h-32 mx-auto mb-8 avatar-glow">
+                        <div
+                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
+                            <span class="material-symbols-outlined text-5xl text-primary/30">account_circle</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Elvis Cordova</h3>
+                    <p class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Encargado del desarrollo web
+                        y la creación de entornos digitales seguros para las nuevas generaciones.</p>
+                </div>
+
+                <!-- Henyer Guipe -->
+                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 creator-card text-center">
+                    <div class="w-32 h-32 mx-auto mb-8 avatar-glow">
+                        <div
+                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
+                            <span class="material-symbols-outlined text-5xl text-primary/30">account_circle</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Henyer Guipe</h3>
+                    <p class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Comprometido con la creación de
+                        herramientas que protejan a los estudiantes del Lemus Pérez.</p>
+                </div>
+
+                <!-- Jesus Giraldo -->
+                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 creator-card text-center">
+                    <div class="w-32 h-32 mx-auto mb-8 avatar-glow">
+                        <div
+                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
+                            <span class="material-symbols-outlined text-5xl text-primary/30">account_circle</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Jesus Giraldo</h3>
+                    <p class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Enfocado en la investigación técnica
+                        y la alfabetización digital para la prevención.</p>
+                </div>
+
+                <!-- Luis Ruiz -->
+                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 creator-card text-center">
+                    <div class="w-32 h-32 mx-auto mb-8 avatar-glow">
+                        <div
+                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
+                            <span class="material-symbols-outlined text-5xl text-primary/30">account_circle</span>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Luis Ruiz</h3>
+                    <p class="text-primary font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">Buscando democratizar el acceso a la
+                        ciberseguridad mediante recursos simples y efectivos.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy -->
+    <section class="py-32 px-6 bg-surface-container-low">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-black text-primary mb-12">Nuestra Meta</h2>
+            <p class="text-2xl text-on-surface-variant leading-relaxed">
+                Este proyecto no es solo una evaluación académica; es nuestro aporte al Liceo Bolivariano Antonio Lemus
+                Pérez. Queremos que cada estudiante se sienta seguro navegando en este nuevo mundo digital.
+            </p>
+            <div class="mt-16 pt-16 border-t border-outline-variant/10">
+                <p class="text-xs font-black uppercase tracking-[0.3em] opacity-40 mb-4 text-[#004D40]">En colaboración
+                    con</p>
+                <p class="text-xl font-black text-[#004D40] opacity-70">UPTOS "CLODOSBALDO RUSSIAN" - CUMANÁ</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-outline-variant/5 py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-sm">school</span>
+                        </div>
+                        <span class="text-2xl font-black text-[#004D40] tracking-tighter uppercase">CE Antonio Lemus
+                            Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-black text-primary uppercase tracking-widest text-xs mb-8">Navegación</h4>
+                    <ul class="space-y-4 font-bold text-on-surface-variant text-sm">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Inicio</a></li>
+                        <li><a href="justificacion.html" class="hover:text-primary transition-colors">Proyecto</a></li>
+                        <li><a href="index2.html" class="hover:text-primary transition-colors">Manual</a></li>
+                        <li><a href="nosotros.html"
+                                class="hover:text-primary transition-colors text-primary">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-black text-primary uppercase tracking-widest text-xs mb-8">Institución</h4>
+                    <p class="text-on-surface-variant font-medium text-sm">Cumaná, Estado Sucre, Venezuela. Alianza
+                        Educativa 2026.</p>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-outline-variant/10 text-center">
+                <p class="text-sm font-medium text-on-surface-variant opacity-60">
+                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
