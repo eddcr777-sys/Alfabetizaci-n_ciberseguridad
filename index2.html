@@ -20,8 +20,8 @@
 <body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- Top Navigation Bar -->
     <nav class="bg-[#f4faff]/70 backdrop-blur-[24px] docked full-width top-0 sticky z-50">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
-            <div class="text-2xl font-black text-[#004D40] tracking-tighter">Alfabetización Digital</div>
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-8 h-20 md:h-24">
+            <div class="text-base md:text-2xl font-black text-[#004D40] tracking-tighter uppercase shrink-0">Antonio Lemus Pérez</div>
             <div class="hidden md:flex gap-8 items-center">
                 <a class="text-[#111d23]/60 font-medium hover:text-[#004D40] transition-all duration-300"
                     href="index.html">Inicio</a>
@@ -55,118 +55,135 @@
         </div>
     </header>
     <!-- Themes Grid Section -->
-    <section class="bg-surface-container-low py-24 px-8">
+    <section class="bg-surface-container-low py-12 px-8">
         <div class="max-w-7xl mx-auto">
-            <!-- Bento Grid Layout -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Topic Card: Protección de Cuentas -->
-                <div
-                    class="md:col-span-2 group relative bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-10 items-center overflow-hidden hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
-                    <div class="flex-1 order-2 md:order-1">
-                        <div class="inline-flex items-center justify-center p-4 bg-primary-fixed rounded-2xl mb-8">
-                            <span class="material-symbols-outlined text-primary text-4xl" data-icon="security"
-                                style="font-variation-settings: 'FILL' 1;">security</span>
+
+            <!-- MAIN FEATURED MANUAL -->
+            <div class="mb-8 md:mb-12">
+                <a href="manual-estudiante.html" class="group block relative bg-primary text-white p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border-4 border-primary-container shadow-2xl hover:scale-[1.01] transition-transform overflow-hidden">
+                    <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-1 rounded-full mb-4 md:mb-6 border border-white/20">
+                                <span class="material-symbols-outlined text-[10px] md:text-sm">stars</span>
+                                <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest">Lo Recomendado</span>
+                            </div>
+                            <h2 class="text-3xl md:text-6xl font-black mb-4 md:mb-6 leading-none">Manual Maestro <br/>Integral 2026.</h2>
+                            <p class="text-base md:text-xl opacity-80 max-w-xl leading-relaxed mb-6 md:mb-8">
+                                La guía definitiva y más completa. Incluye concienciación profunda, blindaje de cuentas y más en un solo lugar.
+                            </p>
+                            <span class="inline-flex items-center gap-2 bg-white text-primary px-6 md:px-8 py-3 md:py-4 rounded-xl md:rounded-2xl font-black uppercase tracking-widest text-xs md:text-sm">
+                                Abrir Manual
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </span>
                         </div>
-                        <h3 class="text-3xl font-bold text-primary mb-4">Protección de Cuentas</h3>
-                        <p class="text-on-surface-variant leading-relaxed text-lg mb-6">La primera línea de defensa.
-                            Aprende sobre el factor de doble autenticación (2FA) y cómo crear contraseñas que nadie
-                            pueda adivinar.</p>
-                        <a href="proteccion-cuentas.html">
-                            <button
-                                class="bg-primary text-on-primary px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all">Iniciar
-                                Módulo</button>
-                        </a>
-                    </div>
-                    <div
-                        class="w-full md:w-2/5 aspect-video md:aspect-square order-1 md:order-2 bg-primary/5 rounded-3xl flex items-center justify-center">
-                        <span class="material-symbols-outlined text-8xl text-primary/20"
-                            data-icon="vpn_key">vpn_key</span>
-                    </div>
-                </div>
-                <!-- Topic Card: Redes Sociales -->
-                <div
-                    class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
-                    <div
-                        class="inline-flex items-center justify-center p-4 bg-secondary-container rounded-2xl mb-8 w-fit">
-                        <span class="material-symbols-outlined text-secondary text-4xl" data-icon="share"
-                            style="font-variation-settings: 'FILL' 1;">share</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-primary mb-4">Uso de Redes</h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-auto">Configura tu privacidad correctamente y
-                        aprende qué información es seguro compartir y qué debe permanecer privado.</p>
-                    <a href="redes-sociales.html" class="mt-8 w-full">
-                        <button
-                            class="w-full py-3 bg-surface-container-high rounded-xl text-primary font-bold hover:bg-primary/10 transition-all">Explorar
-                            Privacidad</button>
-                    </a>
-                </div>
-                <!-- Topic Card: Phishing -->
-                <a class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10"
-                    href="index4.html">
-                    <div class="inline-flex items-center justify-center p-4 bg-tertiary-fixed rounded-2xl mb-8 w-fit">
-                        <span class="material-symbols-outlined text-tertiary text-4xl" data-icon="phishing"
-                            style="font-variation-settings: 'FILL' 1;">phishing</span>
-                    </div>
-                    <h3 class="text-3xl font-bold text-primary mb-4">Riesgos de Phishing</h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-auto">¡Cuidado con el anzuelo! Aprende a
-                        identificar correos, mensajes y links sospechosos que intentan robar tu información.</p>
-                    <div class="mt-8 pt-8 border-t border-outline-variant/10">
-                        <span class="text-sm font-bold text-tertiary uppercase tracking-widest">Módulo Crítico</span>
+                        <div class="hidden md:block opacity-20">
+                            <span class="material-symbols-outlined text-[240px]" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+                        </div>
                     </div>
                 </a>
+            </div>
+
+            <!-- Grid de Módulos Específicos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Topic Card: Protección de Cuentas -->
+                <a href="proteccion-cuentas.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-primary transition-colors group">
+                    <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                        <span class="material-symbols-outlined text-primary group-hover:text-white transition-colors">lock</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cuentas y Claves</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Aprende a crear contraseñas imposibles de adivinar y activa el doble factor.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-primary flex items-center gap-2">Explorar módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+                </a>
+
+                <!-- Topic Card: Redes Sociales -->
+                <a href="redes-sociales.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-purple-600 transition-colors group">
+                    <div class="w-14 h-14 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
+                        <span class="material-symbols-outlined text-purple-600 group-hover:text-white transition-colors">share</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Redes Sociales</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Privacidad, huella digital y cómo evitar que extraños vean tu vida diaria.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-purple-600 flex items-center gap-2">Explorar módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+                </a>
+
+                <!-- Topic Card: Phishing -->
+                <a href="index4.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-red-600 transition-colors group">
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors">
+                        <span class="material-symbols-outlined text-red-600 group-hover:text-white transition-colors">phishing</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Phishing y Engaños</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">No muerdas el anzuelo. Identifica mensajes falsos de bancos y redes.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-red-600 flex items-center gap-2">Explorar módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+                </a>
+
                 <!-- Topic Card: Videojuegos -->
-                <div
-                    class="md:col-span-2 group relative bg-primary-container p-10 rounded-[2.5rem] flex flex-col md:flex-row gap-10 items-center overflow-hidden">
-                    <div class="flex-1 text-on-primary-container">
-                        <div
-                            class="inline-flex items-center justify-center p-4 bg-primary-fixed-dim/20 rounded-2xl mb-8">
-                            <span class="material-symbols-outlined text-primary-fixed text-4xl"
-                                data-icon="sports_esports"
-                                style="font-variation-settings: 'FILL' 1;">sports_esports</span>
-                        </div>
-                        <h3 class="text-3xl font-bold text-white mb-4">Sobreexposición en Juegos</h3>
-                        <p class="opacity-90 leading-relaxed text-lg mb-6">Los videojuegos son divertidos, pero la
-                            sobreexposición y los chats con desconocidos pueden ser peligrosos. Aprende a jugar seguro.
-                        </p>
-                        <a href="videojuegos.html">
-                            <button
-                                class="bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-xl font-bold hover:bg-white hover:text-primary transition-all">Guía
-                                del Gamer Seguro</button>
-                        </a>
+                <a href="videojuegos.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-blue-600 transition-colors group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+                        <span class="material-symbols-outlined text-blue-600 group-hover:text-white transition-colors">sports_esports</span>
                     </div>
-                    <div class="hidden md:block absolute right-12 top-1/2 -translate-y-1/2 opacity-10">
-                        <span class="material-symbols-outlined text-[120px] text-white"
-                            data-icon="videogame_asset">videogame_asset</span>
-                    </div>
-                </div>
+                    <h3 class="text-2xl font-bold mb-4">Seguridad Gaming</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Robux, skins y el peligro real de los desconocidos en los chats de voz.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-blue-600 flex items-center gap-2">Explorar módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+                </a>
+
                 <!-- Topic Card: Piratería -->
-                <div
-                    class="bg-surface-container-lowest p-10 rounded-[2.5rem] flex flex-col hover:scale-[1.01] transition-all duration-300 border border-outline-variant/10">
-                    <div class="inline-flex items-center justify-center p-4 bg-error-container rounded-2xl mb-8 w-fit">
-                        <span class="material-symbols-outlined text-error text-4xl" data-icon="dangerous"
-                            style="font-variation-settings: 'FILL' 1;">dangerous</span>
+                <a href="software-pirata.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-rose-600 transition-colors group">
+                    <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-rose-600 transition-colors">
+                        <span class="material-symbols-outlined text-rose-600 group-hover:text-white transition-colors">dangerous</span>
                     </div>
-                    <h3 class="text-3xl font-bold text-primary mb-4">Software Pirata</h3>
-                    <p class="text-on-surface-variant leading-relaxed mb-auto">Descargar "cracks" o programas piratas es
-                        la forma más fácil de infectar tu PC con virus y troyanos. Evita el riesgo.</p>
-                    <a href="software-pirata.html" class="mt-8 w-full">
-                        <button class="w-full py-3 bg-error text-on-error rounded-xl font-bold">Ver Peligros</button>
-                    </a>
-                </div>
-                <!-- Topic Card: Protocolo -->
-                <div
-                    class="md:col-span-3 bg-secondary-container p-10 rounded-[2.5rem] flex flex-col md:flex-row items-center gap-10 border border-secondary/20">
-                    <div class="flex-1">
-                        <h3 class="text-3xl font-bold text-on-secondary-container mb-4">¿Qué hacer si te atacan?</h3>
-                        <p class="text-on-secondary-fixed-variant text-lg">Si has sido víctima de un hackeo o sospechas
-                            de una estafa, mantén la calma. Aquí tienes los pasos a seguir de inmediato.</p>
+                    <h3 class="text-2xl font-bold mb-4">Piratería y Malware</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">El peligro oculto de los "cracks" y programas gratis descargados de internet.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-rose-600 flex items-center gap-2">Explorar módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+                </a>
+
+                <!-- Topic Card: SOS -->
+                <a href="protocolo-ayuda.html" class="bg-slate-900 p-8 rounded-[2.5rem] hover:scale-105 transition-transform group">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="material-symbols-outlined text-white">support_agent</span>
                     </div>
-                    <a href="protocolo-ayuda.html">
-                        <button
-                            class="bg-secondary text-on-secondary px-10 py-5 rounded-2xl font-black text-xl shadow-xl hover:scale-105 transition-all">PROTOCOLO
-                            DE ACCIÓN</button>
-                    </a>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Ayuda SOS</h3>
+                    <p class="text-sm text-white/60 leading-relaxed mb-6">Si ya cometiste un error o crees que te atacan, entra aquí de inmediato.</p>
+                    <span class="text-xs font-black uppercase tracking-widest text-white flex items-center gap-2">Protocolo de acción <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                </a>
+
+            </div>
+            <!-- SECCIÓN: GUÍAS ESPECIALIZADAS PARA LA COMUNIDAD -->
+            <div class="mt-20 mb-12">
+                <div class="inline-flex items-center gap-3 bg-secondary/10 text-secondary px-4 py-1.5 rounded-full mb-8">
+                    <span class="material-symbols-outlined text-sm">groups</span>
+                    <span class="text-sm font-bold uppercase tracking-widest">Apoyo a la Comunidad</span>
                 </div>
+                <h2 class="text-4xl font-black text-primary mb-10 tracking-tighter">Impacto Social y Educativo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Guía para Docentes -->
+                    <a href="guia-docentes.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-teal-600 transition-all group flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="w-20 h-20 bg-teal-50 rounded-3xl flex items-center justify-center shrink-0 group-hover:bg-teal-600 transition-colors">
+                            <span class="material-symbols-outlined text-teal-600 group-hover:text-white text-4xl">school</span>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-black mb-2">Para Docentes</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed mb-4">Herramientas pedagógicas, gestión de crisis en el aula y protocolos oficiales.</p>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-teal-600 flex items-center justify-center md:justify-start gap-2">Abrir guía técnica <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </a>
+
+                    <!-- Guía para Padres -->
+                    <a href="guia-padres.html" class="bg-white p-8 rounded-[2.5rem] border border-slate-200 hover:border-orange-600 transition-all group flex flex-col md:flex-row items-center md:items-start gap-6">
+                        <div class="w-20 h-20 bg-orange-50 rounded-3xl flex items-center justify-center shrink-0 group-hover:bg-orange-600 transition-colors">
+                            <span class="material-symbols-outlined text-orange-600 group-hover:text-white text-4xl">family_restroom</span>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h3 class="text-2xl font-black mb-2">Para Padres y Madres</h3>
+                            <p class="text-sm text-slate-500 leading-relaxed mb-4">Consejos para el hogar, señales de alarma y cómo hablar de seguridad con sus hijos.</p>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-orange-600 flex items-center justify-center md:justify-start gap-2">Abrir manual familiar <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
                 <!-- Full Guide CTA -->
                 <div
                     class="md:col-span-3 bg-primary text-on-primary p-12 rounded-[3.5rem] mt-12 flex flex-col md:flex-row items-center justify-between gap-8 border-4 border-primary-container shadow-2xl">

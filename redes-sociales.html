@@ -40,6 +40,13 @@
     background: white; border-radius: 1rem; padding: 1.25rem 1.5rem;
     margin-bottom: 1rem; border: 2px solid #e1bee7;
     cursor: pointer; transition: all 0.3s; font-size: 1.05rem; font-weight: 600;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  .checklist-item span {
+    flex: 1;
+    min-width: 0;
   }
   .checklist-item:hover { border-color: #6a0dad; }
   .checklist-item.marcado { background: #e8f5e9; border-color: #388e3c; }
@@ -57,6 +64,17 @@
   .lista-reglas li { font-size: 1.2rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 1rem; }
   .pie-pagina { border-top: 2px solid #e0e0e0; padding: 3rem 2rem; text-align: center; font-size: 0.9rem; color: #999; max-width: 900px; margin: 0 auto; }
   .pie-pagina .autores { font-weight: 700; color: #6a0dad; margin-top: 0.5rem; }
+  /* RESPONSIVE FIXES */
+  @media (max-width: 768px) {
+    body { font-size: 1.15rem; }
+    .pagina-header { padding: 1.5rem; text-align: center; }
+    .titulo-principal { font-size: 2.25rem; }
+    .contenido { padding: 1.5rem 1rem; }
+    .seccion { margin-bottom: 3rem; }
+    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
+    .caja-definicion, .taller-bloque { padding: 1.25rem; }
+    .btn-auditoria { padding: 1rem; font-size: 1rem; }
+  }
 </style>
 </head>
 <body>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Manual Integral de Alfabetización Digital | Antonio Lemus Pérez</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #1a4d33;
+            --secondary: #d4af37;
+            --emergency: #b71c1c;
+            --bg-body: #f1f5f9;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: #1e293b;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary);
+        }
+
+        /* LAYOUT */
+        .manual-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            gap: 3rem;
+            min-height: 100vh;
+            padding: 0 2rem;
+        }
+
+        .header-gradient {
+            background: linear-gradient(135deg, #1a4d33 0%, #0d2b1d 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            body {
+                background-color: white;
+            }
+
+            .manual-wrapper {
+                flex-direction: column;
+                padding: 0;
+                gap: 0;
+                width: 100%;
+                max-width: 100vw;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .content-area {
+                padding: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .chapter-card {
+                padding: 2.5rem 1.25rem;
+                border-radius: 0;
+                margin-bottom: 0;
+                box-shadow: none;
+                border: none;
+                border-bottom: 1px solid #e2e8f0;
+                width: 100%;
+                box-sizing: border-box;
+                word-wrap: break-word;
+            }
+
+            .chapter-card:last-of-type {
+                border-bottom: none;
+            }
+
+            .chapter-title {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+
+            .header-gradient {
+                padding: 3.5rem 1.25rem;
+                margin-bottom: 0;
+            }
+
+            .shock-box {
+                padding: 1.25rem;
+                margin: 1.5rem 0;
+            }
+
+            .btn-sos {
+                padding: 1.25rem;
+                width: 100%;
+                justify-content: center;
+                font-size: 1rem;
+            }
+
+            .flex.justify-between.items-center {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .price-tag {
+                align-self: flex-start;
+            }
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            padding: 2rem 0;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .sidebar-brand {
+            margin-bottom: 3rem;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.85rem 1rem;
+            border-radius: 0.75rem;
+            color: #64748b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            margin-bottom: 0.25rem;
+        }
+
+        .nav-item:hover {
+            background: #f1f5f9;
+            color: var(--primary);
+        }
+
+        .nav-item.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* CONTENT */
+        .content-area {
+            flex-grow: 1;
+            padding: 0;
+            max-width: 900px;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 2rem;
+            padding: 4rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 4rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .chapter-header {
+            border-bottom: 4px solid #f1f5f9;
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chapter-number {
+            font-weight: 900;
+            color: var(--secondary);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .chapter-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        /* SHOCK ELEMENTS */
+        .shock-box {
+            background: #fef2f2;
+            border: 2px solid #fee2e2;
+            border-left: 8px solid var(--emergency);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .price-tag {
+            background: #1e293b;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        /* TOOLS */
+        .tip-box {
+            background: #fffbeb;
+            border-left: 8px solid #f59e0b;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            margin: 1.5rem 0;
+        }
+
+        .def-inline {
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: underline;
+            text-decoration-color: var(--secondary);
+            text-decoration-thickness: 3px;
+        }
+
+        .btn-sos {
+            background: var(--emergency);
+            color: white;
+            padding: 1.5rem 2rem;
+            border-radius: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header-gradient">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-secondary font-black tracking-widest uppercase text-sm mb-4">Manual Maestro Institucional</p>
+            <h1 class="text-white text-5xl md:text-7xl font-black mb-8">Alfabetización Digital Integral</h1>
+            <p class="text-white/80 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
+        </div>
+    </header>
+
+    <div class="manual-wrapper">
+
+        <!-- SIDEBAR IZQUIERDA -->
+        <aside class="sidebar">
+
+            <nav>
+                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Secciones del Manual</p>
+                <a href="#shock" class="nav-item active"><span class="material-symbols-outlined">warning</span> La
+                    Realidad Cruda</a>
+                <a href="#cuentas" class="nav-item"><span class="material-symbols-outlined">lock</span> Blindaje de
+                    Cuentas</a>
+                <a href="#redes" class="nav-item"><span class="material-symbols-outlined">share</span> Redes
+                    Sociales</a>
+                <a href="#engaños" class="nav-item"><span class="material-symbols-outlined">phishing</span> Engaños y
+                    Phishing</a>
+                <a href="#gaming" class="nav-item"><span class="material-symbols-outlined">sports_esports</span>
+                    Videojuegos</a>
+                <a href="#software" class="nav-item"><span class="material-symbols-outlined">download</span> Software y
+                    Virus</a>
+                <a href="#legal" class="nav-item"><span class="material-symbols-outlined">gavel</span> Responsabilidad
+                    Legal</a>
+                <a href="#ayuda" class="nav-item"><span class="material-symbols-outlined">support_agent</span> Protocolo
+                    SOS</a>
+            </nav>
+
+            <div class="mt-20 p-4 bg-slate-50 rounded-2xl">
+                <p class="text-xs font-bold text-slate-500 mb-2">Proyecto Universitario</p>
+                <p class="text-[10px] text-slate-400 leading-tight">Diseñado para la formación integral de estudiantes
+                    venezolanos.</p>
+            </div>
+        </aside>
+
+        <!-- AREA DE CONTENIDO -->
+        <div class="content-area">
+
+            <!-- CAPITULO 1: SHOCK -->
+            <section id="shock" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 01</span>
+                    <h2 class="chapter-title">La Realidad de tu Identidad</h2>
+                </div>
+
+                <p class="mb-8">
+                    En internet, tú no eres un "usuario". Eres un objetivo. Los criminales no buscan computadoras,
+                    buscan **personas vulnerables** para sacar provecho de ellas.
+                </p>
+
+                <h3 class="text-2xl font-black mb-6">¿Cuánto vales en el mercado negro?</h3>
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center p-4 bg-slate-50 rounded-xl">
+                        <span>Cuenta de Instagram (robo para estafar amigos)</span>
+                        <span class="price-tag">$5.00 - $15.00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 bg-slate-50 rounded-xl">
+                        <span>Clave de Correo Personal (puerta a todo tu mundo)</span>
+                        <span class="price-tag">$10.00 - $25.00</span>
+                    </div>
+                    <div class="flex justify-between items-center p-4 bg-slate-50 rounded-xl">
+                        <span>Tus fotos íntimas compartidas (extorsión)</span>
+                        <span class="price-tag">Incalculable (el daño)</span>
+                    </div>
+                </div>
+
+                <div class="shock-box">
+                    <h4 class="font-black text-emergency mb-2">EL EFECTO DOMINÓ</h4>
+                    <p class="text-sm">
+                        Si tú abres un link falso y te roban tu cuenta, no solo te afecta a ti. El criminal usará **tu
+                        nombre** para escribirle a tu mamá, a tus hermanos o a tus amigos del liceo para pedirles dinero
+                        por una supuesta emergencia. **Tus errores pueden arruinar a tu familia.**
+                    </p>
+                </div>
+            </section>
+
+            <!-- CAPITULO 2: CUENTAS -->
+            <section id="cuentas" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 02</span>
+                    <h2 class="chapter-title">Blindaje de Cuentas</h2>
+                </div>
+                <p class="mb-6">Tu contraseña no es una "clave", es la **única barrera** entre un extraño y tu vida
+                    privada.</p>
+
+                <h3 class="text-2xl font-black mb-4">Reglas de un Maestro de la Seguridad:</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex gap-4">✅ **Nada de datos personales:** No uses tu nombre, tu fecha de nacimiento o
+                        tu barrio como clave.</li>
+                    <li>✅ **Longitud es poder:** Una clave de 12 letras es mil veces más difícil de romper que una de 8.
+                    </li>
+                    <li>✅ **Diferentes cuentas, diferentes claves:** Si usas la misma clave para todo, con que te roben
+                        una, te roban la vida entera.</li>
+                </ul>
+
+                <div class="tip-box">
+                    <strong>EL SECRETO: Verificación de Dos Pasos.</strong>
+                    Actívalo en WhatsApp e Instagram YA. Es un código extra que llega a tu celular. Sin ese código,
+                    nadie puede entrar aunque tenga tu clave.
+                </div>
+            </section>
+
+            <!-- CAPITULO 3: REDES -->
+            <section id="redes" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 03</span>
+                    <h2 class="chapter-title">Redes Sociales y Privacidad</h2>
+                </div>
+                <p class="mb-6">Todo lo que publicas se convierte en tu <span class="def-inline">Huella Digital</span>.
+                    No pienses en quién lo ve hoy, piensa en quién lo verá en 10 años cuando busques trabajo.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="p-6 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-primary mb-2">Perfil Privado</h4>
+                        <p class="text-sm">Si tu perfil es público, cualquier persona (incluyendo delincuentes) sabe a
+                            qué hora sales del liceo y quiénes son tus amigos.</p>
+                    </div>
+                    <div class="p-6 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-primary mb-2">Metadatos de Fotos</h4>
+                        <p class="text-sm">Tus fotos guardan la ubicación exacta de donde fueron tomadas. Apaga el GPS
+                            de tu cámara antes de publicar.</p>
+                    </div>
+                </div>
+
+                <div class="shock-box" style="border-left-color: #f59e0b; background: #fffbeb;">
+                    <h4 class="font-black text-amber-900 mb-2 italic">⚠️ CUIDADO CON LOS "CHISMES"</h4>
+                    <p class="text-sm">Participar en grupos de chismes o compartir fotos de otros sin permiso es
+                        **violencia digital**. No seas parte del problema.</p>
+                </div>
+            </section>
+
+            <!-- CAPITULO 4: ENGAÑOS -->
+            <section id="engaños" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 04</span>
+                    <h2 class="chapter-title">Engaños y Phishing</h2>
+                </div>
+                <p class="mb-6">El <span class="def-inline">Phishing</span> es el arte de pescar víctimas con mensajes
+                    falsos. No muerdas el anzuelo.</p>
+
+                <h3 class="text-xl font-black mb-4">¿Cómo detectar la mentira?</h3>
+                <ol class="space-y-4 mb-8">
+                    <li>1. **Urgencia extrema:** "Tu cuenta será cerrada en 1 hora". (Mentira).</li>
+                    <li>2. **Premios imposibles:** "Bono del gobierno por $500". (Mentira).</li>
+                    <li>3. **Links raros:** Direcciones como `instagram-seguridad.xyz` en vez de `instagram.com`.</li>
+                </ol>
+
+                <div class="tip-box">
+                    <strong>REGLA DE ORO:</strong> Si un mensaje te asusta o te emociona demasiado, respira 10 segundos.
+                    Los hackers odian que la gente piense antes de hacer clic.
+                </div>
+            </section>
+
+            <!-- CAPITULO 5: GAMING -->
+            <section id="gaming" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 05</span>
+                    <h2 class="chapter-title">Videojuegos Sin Riesgos</h2>
+                </div>
+                <p class="mb-6">Tus cuentas de juegos valen dinero real. Los atacantes lo saben.</p>
+
+                <h3 class="text-xl font-bold mb-4">Lo que debes evitar:</h3>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex gap-4">🏴 **Generadores de Monedas:** No existen los Robux o V-Bucks gratis. Son
+                        trampas para robarte el acceso.</li>
+                    <li>🏴 **Doxing en Chat:** No des tu nombre real ni tu colegio en el chat de voz, incluso si parece
+                        gente buena nota.</li>
+                    <li>🏴 **Trading Inseguro:** Nunca aceptes intercambios fuera de la plataforma oficial del juego.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- CAPITULO 6: SOFTWARE -->
+            <section id="software" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 06</span>
+                    <h2 class="chapter-title">Software Pirata y Malware</h2>
+                </div>
+                <p class="mb-6">Bajar programas "crackeados" es como dejar las llaves de tu casa puestas por fuera.</p>
+
+                <div class="term-box">
+                    <span class="term-title">Keyloggers y Rootkits</span>
+                    Son los virus invisibles. Un Keylogger graba cada letra que escribes (incluyendo claves de banco) y
+                    el Rootkit lo oculta para que el antivirus no lo vea.
+                </div>
+
+                <p class="parrafo">Usa siempre **Alternativas Legales Gratis**: Google Docs en vez de Office pirata,
+                    Canva en vez de Photoshop pirata. Es más seguro y profesional.</p>
+            </section>
+
+            <!-- CAPITULO 7: LEGAL -->
+            <section id="legal" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 07</span>
+                    <h2 class="chapter-title">Tu Responsabilidad Legal</h2>
+                </div>
+                <p class="mb-6">En Venezuela, el internet no es "tierra de nadie". Hay leyes que se cumplen.</p>
+
+                <h3 class="text-xl font-black mb-4">Ley Especial contra Delitos Informáticos:</h3>
+                <div class="space-y-4">
+                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                        <b>Artículo 6 (Acceso Indebido):</b> Entrar a la cuenta de otro sin permiso puede llevarte a
+                        prisión de 1 a 5 años.
+                    </div>
+                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                        <b>Artículo 20 (Revelación de datos):</b> Difundir fotos o información privada de alguien es un
+                        delito grave.
+                    </div>
+                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                        <b>Artículo 22 (Acoso):</b> El maltrato por redes sociales puede ser castigado penalmente.
+                    </div>
+                </div>
+            </section>
+
+            <!-- CAPITULO 8: SOS -->
+            <section id="ayuda" class="chapter-card" style="border-color: var(--emergency);">
+                <div class="chapter-header" style="border-bottom-color: #fee2e2;">
+                    <span class="chapter-number" style="color: var(--emergency);">Capítulo final</span>
+                    <h2 class="chapter-title" style="color: var(--emergency);">PROTOCOLO SOS</h2>
+                </div>
+                <p class="mb-8 font-bold">Si ya cometiste el error o crees que estás bajo ataque:</p>
+
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-emergency text-white flex items-center justify-center shrink-0 font-black">
+                            1</div>
+                        <p><b>Desconecta el Internet:</b> Apaga el Wi-Fi o datos de inmediato para frenar al hacker.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-emergency text-white flex items-center justify-center shrink-0 font-black">
+                            2</div>
+                        <p><b>Habla con un adulto:</b> No tengas miedo. Tus padres o profesores están para ayudarte, no
+                            para castigarte.</p>
+                    </div>
+                    <div class="flex gap-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-emergency text-white flex items-center justify-center shrink-0 font-black">
+                            3</div>
+                        <p><b>Cambia claves:</b> Hazlo desde otro dispositivo que sea seguro (como el de tu papá o
+                            mamá).</p>
+                    </div>
+                </div>
+
+                <a href="protocolo-ayuda.html" class="btn-sos">
+                    <span class="material-symbols-outlined">support_agent</span>
+                    ABRIR GUÍA DE EMERGENCIA COMPLETA
+                </a>
+            </section>
+
+            <!-- FINAL PLEDGE -->
+            <div class="text-center py-20">
+                <h3 class="text-3xl font-black mb-6">¿Estás listo para ser un Ciudadano Digital?</h3>
+                <p class="max-w-xl mx-auto mb-10 opacity-70">Al usar esta guía, te comprometes a protegerte a ti mismo y
+                    a cuidar la integridad de tus compañeros en el L.B. Antonio Lemus Pérez.</p>
+                <a href="index.html"
+                    class="bg-primary text-white px-12 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform">Finalizar
+                    Lectura</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-center">
+        <p class="text-[10px] font-black uppercase text-slate-400">Educación Digital Antonio Lemus Pérez · UPTOS CR ·
+            2026</p>
+    </footer>
+
+    <script>
+        // Lógica simple para marcar sección activa en el sidebar al hacer scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
