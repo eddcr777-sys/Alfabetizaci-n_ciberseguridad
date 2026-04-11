@@ -1,0 +1,54 @@
+:root {
+    --primary: #042f2e;
+    --danger: #991b1b;
+    --secure: #1e40af;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    background: #fff;
+    color: #0f172a;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    text-transform: uppercase;
+}
+
+.grid-matrix {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    border: 2px solid #e2e8f0;
+}
+
+.matrix-cell {
+    padding: 1rem;
+    border: 1px solid #e2e8f0;
+    font-size: 0.85rem;
+}
+
+.matrix-head {
+    background: #f8fafc;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.emergency-btn {
+    background: var(--danger);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.data-shield {
+    background: #eff6ff;
+    border: 2px solid #1e40af;
+    border-radius: 1.5rem;
+    padding: 2rem;
+}

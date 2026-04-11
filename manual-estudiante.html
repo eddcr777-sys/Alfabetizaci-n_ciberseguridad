@@ -11,257 +11,16 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <style>
-        :root {
-            --primary: #1a4d33;
-            --secondary: #d4af37;
-            --emergency: #b71c1c;
-            --bg-body: #f1f5f9;
-        }
-
-        body {
-            font-family: 'Public Sans', sans-serif;
-            background-color: var(--bg-body);
-            color: #1e293b;
-            font-size: 1.25rem;
-            line-height: 1.7;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--primary);
-        }
-
-        /* LAYOUT */
-        .manual-wrapper {
-            max-width: 1280px;
-            margin: 0 auto;
-            display: flex;
-            gap: 3rem;
-            min-height: 100vh;
-            padding: 0 2rem;
-        }
-
-        .header-gradient {
-            background: linear-gradient(135deg, #1a4d33 0%, #0d2b1d 100%);
-            color: white;
-            padding: 5rem 2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        @media (max-width: 1024px) {
-            body {
-                background-color: white;
-            }
-
-            .manual-wrapper {
-                flex-direction: column;
-                padding: 0;
-                gap: 0;
-                width: 100%;
-                max-width: 100vw;
-            }
-
-            .sidebar {
-                display: none;
-            }
-
-            .content-area {
-                padding: 0;
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .chapter-card {
-                padding: 2.5rem 1.25rem;
-                border-radius: 0;
-                margin-bottom: 0;
-                box-shadow: none;
-                border: none;
-                border-bottom: 1px solid #e2e8f0;
-                width: 100%;
-                box-sizing: border-box;
-                word-wrap: break-word;
-            }
-
-            .chapter-card:last-of-type {
-                border-bottom: none;
-            }
-
-            .chapter-title {
-                font-size: 2rem;
-                line-height: 1.2;
-            }
-
-            .header-gradient {
-                padding: 3.5rem 1.25rem;
-                margin-bottom: 0;
-            }
-
-            .shock-box {
-                padding: 1.25rem;
-                margin: 1.5rem 0;
-            }
-
-            .btn-sos {
-                padding: 1.25rem;
-                width: 100%;
-                justify-content: center;
-                font-size: 1rem;
-            }
-
-            .flex.justify-between.items-center {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-
-            .price-tag {
-                align-self: flex-start;
-            }
-        }
-
-        /* SIDEBAR */
-        .sidebar {
-            width: 320px;
-            flex-shrink: 0;
-            padding: 2rem 0;
-            position: sticky;
-            top: 2rem;
-            height: fit-content;
-        }
-
-        .sidebar-brand {
-            margin-bottom: 3rem;
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 0.85rem 1rem;
-            border-radius: 0.75rem;
-            color: #64748b;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s;
-            margin-bottom: 0.25rem;
-        }
-
-        .nav-item:hover {
-            background: #f1f5f9;
-            color: var(--primary);
-        }
-
-        .nav-item.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* CONTENT */
-        .content-area {
-            flex-grow: 1;
-            padding: 0;
-            max-width: 900px;
-        }
-
-        .chapter-card {
-            background: white;
-            border-radius: 2rem;
-            padding: 4rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 4rem;
-            border: 1px solid #e2e8f0;
-        }
-
-        .chapter-header {
-            border-bottom: 4px solid #f1f5f9;
-            padding-bottom: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .chapter-number {
-            font-weight: 900;
-            color: var(--secondary);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .chapter-title {
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 0;
-        }
-
-        /* SHOCK ELEMENTS */
-        .shock-box {
-            background: #fef2f2;
-            border: 2px solid #fee2e2;
-            border-left: 8px solid var(--emergency);
-            padding: 2rem;
-            border-radius: 1rem;
-            margin: 2rem 0;
-        }
-
-        .price-tag {
-            background: #1e293b;
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 0.5rem;
-            font-family: monospace;
-            font-weight: bold;
-        }
-
-        /* TOOLS */
-        .tip-box {
-            background: #fffbeb;
-            border-left: 8px solid #f59e0b;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-size: 1.1rem;
-            margin: 1.5rem 0;
-        }
-
-        .def-inline {
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: underline;
-            text-decoration-color: var(--secondary);
-            text-decoration-thickness: 3px;
-        }
-
-        .btn-sos {
-            background: var(--emergency);
-            color: white;
-            padding: 1.5rem 2rem;
-            border-radius: 1rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            text-decoration: none;
-            margin-top: 2rem;
-        }
-    </style>
+    <link rel="stylesheet" href="manual-estudiante.css" />
 </head>
 
 <body>
 
     <header class="header-gradient">
         <div class="max-w-4xl mx-auto">
-            <p class="text-secondary font-black tracking-widest uppercase text-sm mb-4">Manual Maestro Institucional</p>
-            <h1 class="text-white text-5xl md:text-7xl font-black mb-8">Alfabetización Digital Integral</h1>
-            <p class="text-white/80 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
+            <p class="text-amber-400 font-black tracking-[0.2em] uppercase text-xs mb-4">Manual Maestro Institucional</p>
+            <h1 class="text-white text-5xl md:text-7xl font-black mb-8 leading-tight">Alfabetización Digital Integral</h1>
+            <p class="text-white/90 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
         </div>
     </header>
 
@@ -271,7 +30,7 @@
         <aside class="sidebar">
 
             <nav>
-                <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-4">Secciones del Manual</p>
+                <p class="text-xs font-black text-slate-400 uppercase tracking-[0.15em] mb-4">Secciones del Manual</p>
                 <a href="#shock" class="nav-item active"><span class="material-symbols-outlined">warning</span> La
                     Realidad Cruda</a>
                 <a href="#cuentas" class="nav-item"><span class="material-symbols-outlined">lock</span> Blindaje de
@@ -286,14 +45,14 @@
                     Virus</a>
                 <a href="#legal" class="nav-item"><span class="material-symbols-outlined">gavel</span> Responsabilidad
                     Legal</a>
+                <a href="#apps" class="nav-item"><span class="material-symbols-outlined">apps</span> Herramientas</a>
                 <a href="#ayuda" class="nav-item"><span class="material-symbols-outlined">support_agent</span> Protocolo
                     SOS</a>
             </nav>
 
             <div class="mt-20 p-4 bg-slate-50 rounded-2xl">
                 <p class="text-xs font-bold text-slate-500 mb-2">Proyecto Universitario</p>
-                <p class="text-[10px] text-slate-400 leading-tight">Diseñado para la formación integral de estudiantes
-                    venezolanos.</p>
+                <p class="text-xs text-slate-400 leading-tight">Diseñado para la formación integral de estudiantes venezolanos.</p>
             </div>
         </aside>
 
@@ -476,11 +235,77 @@
                 </div>
             </section>
 
-            <!-- CAPITULO 8: SOS -->
+            <!-- CAPITULO 08: KIT DE HERRAMIENTAS -->
+            <section id="apps" class="chapter-card">
+                <div class="chapter-header">
+                    <span class="chapter-number">Capítulo 08</span>
+                    <h2 class="chapter-title">Tu Kit de Herramientas Seguras</h2>
+                </div>
+
+                <p class="mb-8 font-medium">No tienes que gastar dinero para estar protegido. Aquí tienes las mejores herramientas gratuitas recomendadas por expertos:</p>
+
+                <div class="space-y-6">
+                    <!-- BITWARDEN -->
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300">
+                        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
+                            <span class="material-symbols-outlined text-white text-4xl">vpn_key</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Bitwarden</h4>
+                            <p class="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Gestor de Contraseñas</p>
+                            <p class="text-base text-slate-600 mb-5 leading-relaxed">La herramienta definitiva para guardar todas tus claves complejas. Sincroniza entre tu celular y tu PC de forma totalmente gratuita.</p>
+                            <span class="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-xs font-black shadow-sm">RECOMENDADO</span>
+                        </div>
+                    </div>
+
+                    <!-- PROTON VPN -->
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300">
+                        <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-purple-200">
+                            <span class="material-symbols-outlined text-white text-4xl">vpn_lock</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Proton VPN</h4>
+                            <p class="text-xs text-purple-600 font-black uppercase tracking-widest mb-3">VPN Gratuita Ilimitada</p>
+                            <p class="text-base text-slate-600 mb-0 leading-relaxed">Oculta tu dirección IP mientras navegas. A diferencia de otras VPN gratis, Proton tiene sede en Suiza y no vende tus datos.</p>
+                        </div>
+                    </div>
+
+                    <!-- BRAVE / FIREFOX -->
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-orange-500/5 transition-all duration-300">
+                        <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-orange-200">
+                            <span class="material-symbols-outlined text-white text-4xl">browser_updated</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Brave Browser</h4>
+                            <p class="text-xs text-orange-600 font-black uppercase tracking-widest mb-3">Navegador Privado</p>
+                            <p class="text-base text-slate-600 mb-0 leading-relaxed">Bloquea anuncios intrusivos y rastreadores de forma automática, haciendo que internet sea mucho más rápido y limpio.</p>
+                        </div>
+                    </div>
+
+                    <!-- VIRUS TOTAL -->
+                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300">
+                        <div class="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-emerald-200">
+                            <span class="material-symbols-outlined text-white text-4xl">verified_user</span>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">VirusTotal</h4>
+                            <p class="text-xs text-emerald-600 font-black uppercase tracking-widest mb-3">Analizador de Archivos Web</p>
+                            <p class="text-base text-slate-600 mb-0 leading-relaxed">No necesitas instalar nada. Antes de abrir un archivo sospechoso, súbelo a VirusTotal.com y 70 antivirus diferentes lo revisarán por ti.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tip-box mt-8">
+                    <p class="font-bold">⚠️ Consejo Maestro:</p>
+                    <p class="text-sm">Nunca descargues estas herramientas desde sitios sospechosos. Busca siempre la página oficial o las tiendas del sistema (Play Store / App Store).</p>
+                </div>
+            </section>
+
+            <!-- CAPITULO 09: SOS -->
             <section id="ayuda" class="chapter-card" style="border-color: var(--emergency);">
                 <div class="chapter-header" style="border-bottom-color: #fee2e2;">
-                    <span class="chapter-number" style="color: var(--emergency);">Capítulo final</span>
-                    <h2 class="chapter-title" style="color: var(--emergency);">PROTOCOLO SOS</h2>
+                    <span class="chapter-number" style="color: var(--emergency);">Capítulo 09</span>
+                    <h4 class="chapter-title" style="color: var(--emergency);">PROTOCOLO SOS</h4>
                 </div>
                 <p class="mb-8 font-bold">Si ya cometiste el error o crees que estás bajo ataque:</p>
 
@@ -528,8 +353,7 @@
 
     <!-- FOOTER SIMPLE -->
     <footer class="bg-white border-t border-slate-200 py-12 text-center">
-        <p class="text-[10px] font-black uppercase text-slate-400">Educación Digital Antonio Lemus Pérez · UPTOS CR ·
-            2026</p>
+        <p class="text-xs font-black uppercase text-slate-400 tracking-widest">Educación Digital Antonio Lemus Pérez · UPTOS CR · 2026</p>
     </footer>
 
     <script>

@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.85;
+    color: #f1f5f9;
+    background: #0f172a;
+}
+
+a {
+    color: inherit;
+}
+
+.pagina-header {
+    background: #7f1d1d;
+    color: white;
+    padding: 2rem 2rem 3rem;
+}
+
+.nav-breadcrumb {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.nav-breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.titulo-principal {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font-size: 1.35rem;
+    opacity: 0.85;
+}
+
+.contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.seccion {
+    margin-bottom: 5rem;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f87171;
+    border-left: 8px solid #f87171;
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.parrafo {
+    margin-bottom: 1.5rem;
+    color: #cbd5e1;
+}
+
+.caja-definicion {
+    background: #1e293b;
+    border: 2px solid #f87171;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+}
+
+.caja-definicion .etiqueta-def {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f87171;
+    margin-bottom: 0.5rem;
+}
+
+.caja-definicion .texto-def {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fca5a5;
+}
+
+.palabra-clave {
+    font-weight: 800;
+    color: #fca5a5;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+.caja-alerta {
+    background: #431407;
+    border-left: 8px solid #ea580c;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+    font-weight: 700;
+    color: #fdba74;
+    font-size: 1.15rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 640px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tarjeta {
+    background: #1e293b;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border-top: 6px solid #f87171;
+}
+
+.tarjeta .tarjeta-titulo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f87171;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #94a3b8;
+}
+
+/* SIMULADOR DE DESCARGA */
+.sim-descarga {
+    background: #f8fafc;
+    color: #1a1a1a;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: 2px solid #e2e8f0;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.sim-barra {
+    background: #e2e8f0;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.sim-barra .circulo {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.sim-url {
+    padding: 0.75rem 1.25rem;
+    background: white;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #ef4444;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sim-cuerpo {
+    padding: 2rem;
+    text-align: center;
+}
+
+.sim-cuerpo h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.sim-cuerpo p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.btn-falso {
+    display: block;
+    width: 100%;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.btn-verde {
+    background: #22c55e;
+    color: white;
+}
+
+.btn-azul {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-gris {
+    background: #e2e8f0;
+    color: #475569;
+    border: 1px solid #cbd5e1;
+    font-size: 0.85rem;
+    padding: 0.75rem;
+}
+
+.btn-falso:active {
+    transform: scale(0.97);
+}
+
+.mensaje-trampa {
+    display: none;
+    background: #fef2f2;
+    border: 2px solid #fca5a5;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #991b1b;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.btn-falso:focus + .mensaje-trampa,
+.mensaje-trampa.visible {
+    display: block;
+}
+
+/* ALTERNATIVAS */
+.tarjeta-alternativa {
+    background: #1e293b;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border-left: 6px solid #22c55e;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-alternativa .nombre-pirata {
+    color: #f87171;
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.tarjeta-alternativa .nombre-libre {
+    color: #4ade80;
+    font-weight: 800;
+    font-size: 1.05rem;
+}
+
+.flecha {
+    color: #64748b;
+    font-weight: 800;
+    margin: 0 0.5rem;
+}
+
+.bloque-recuerda {
+    background: #7f1d1d;
+    color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 2rem 0;
+    border: 2px solid #f87171;
+}
+
+.bloque-recuerda h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: #fca5a5;
+}
+
+.lista-reglas {
+    list-style: none;
+}
+
+.lista-reglas li {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex; gap: 1rem;
+    color: #fecaca;
+}
+
+.pie-pagina {
+    border-top: 2px solid #1e293b;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pie-pagina .autores {
+    font-weight: 700;
+    color: #f87171;
+    margin-top: 0.5rem;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    body { font-size: 1.15rem; }
+    .pagina-header { padding: 1.5rem; text-align: center; }
+    .titulo-principal { font-size: 2.25rem; }
+    .contenido { padding: 1.5rem 1rem; }
+    .seccion { margin-bottom: 3rem; }
+    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
+    .caja-definicion, .simulador-descarga { padding: 1.25rem; }
+    .btn-falso { font-size: 0.9rem; padding: 0.6rem 0.8rem; }
+}

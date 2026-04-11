@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.85;
+    color: #1a1a1a;
+    background: #ffffff;
+}
+
+a {
+    color: inherit;
+}
+
+.pagina-header {
+    background: #b71c1c;
+    color: white;
+    padding: 2rem 2rem 3rem;
+}
+
+.nav-breadcrumb {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.nav-breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+.titulo-principal {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font-size: 1.35rem;
+    opacity: 0.85;
+}
+
+.contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.seccion {
+    margin-bottom: 5rem;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #b71c1c;
+    border-left: 8px solid #b71c1c;
+    padding-left: 1.25rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.parrafo {
+    margin-bottom: 1.5rem;
+}
+
+.caja-definicion {
+    background: #ffebee;
+    border: 2px solid #b71c1c;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+}
+
+.caja-definicion .etiqueta-def {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #b71c1c;
+    margin-bottom: 0.5rem;
+}
+
+.caja-definicion .texto-def {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #7f0000;
+}
+
+.palabra-clave {
+    font-weight: 800;
+    color: #b71c1c;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #ef9a9a;
+}
+
+.caja-alerta {
+    background: #fff3e0;
+    border-left: 8px solid #e65100;
+    border-radius: 0.75rem;
+    padding: 1.5rem 2rem;
+    margin: 1.75rem 0;
+    font-weight: 700;
+    color: #bf360c;
+    font-size: 1.15rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 640px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tarjeta {
+    background: #f5f5f5;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    border-top: 6px solid #b71c1c;
+}
+
+.tarjeta .tarjeta-titulo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #b71c1c;
+    margin-bottom: 0.75rem;
+}
+
+.tarjeta p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* SIMULADOR DE CORREO */
+.simulador-correo {
+    font-family: 'Public Sans', sans-serif;
+    border: 2px solid #dee2e6;
+    border-radius: 1.25rem;
+    overflow: visible;
+    margin: 2rem 0;
+    background: white;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.correo-barra-top {
+    background: #f1f3f5;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #555;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+.correo-barra-top .circulo {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.correo-cuerpo {
+    padding: 2rem;
+    font-size: 1rem;
+}
+
+.correo-campo {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+}
+
+.correo-campo strong {
+    color: #777;
+    flex-shrink: 0;
+    min-width: 70px;
+    padding-top: 0.15rem;
+}
+
+/* SEÑALES DE PELIGRO */
+.señal-peligro {
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px dashed #dc2626;
+    border-radius: 0.4rem;
+    padding: 0.15rem 0.45rem;
+    cursor: pointer;
+    color: #b91c1c;
+    font-weight: 700;
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.señal-peligro:hover {
+    background: rgba(220, 38, 38, 0.18);
+}
+
+.explicacion-señal {
+    display: none;
+    background: #1a1a1a;
+    color: #f8f8f8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.señal-wrapper {
+    display: block;
+    width: 100%;
+}
+
+.señal-wrapper.abierto .explicacion-señal {
+    display: block;
+}
+
+.correo-campo-bloque {
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.correo-campo-bloque .etiqueta-campo {
+    color: #777;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    min-width: 70px;
+    margin-right: 0.5rem;
+}
+
+.instruccion-taller {
+    font-size: 0.9rem;
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    color: #856404;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.contador-señales {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 700;
+    color: #b71c1c;
+    font-size: 1.1rem;
+}
+
+/* VERIFICADOR URL */
+.taller-bloque {
+    background: #ffebee;
+    border: 2px solid #b71c1c;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    margin: 2rem 0;
+}
+
+.taller-titulo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #b71c1c;
+    margin-bottom: 0.5rem;
+}
+
+.taller-instruccion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.url-ejemplos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.url-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: monospace;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.url-item span:first-child {
+    word-break: break-all;
+    flex: 1;
+    min-width: 200px;
+}
+
+.url-item .badge {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.url-item.revelado .badge {
+    opacity: 1;
+}
+
+.url-item.segura {
+    border-color: #2e7d32;
+    background: #e8f5e9;
+}
+
+.url-item.segura .badge {
+    background: #2e7d32;
+    color: white;
+}
+
+.url-item.peligrosa {
+    border-color: #b71c1c;
+    background: #ffebee;
+}
+
+.url-item.peligrosa .badge {
+    background: #b71c1c;
+    color: white;
+}
+
+.url-item.dudosa {
+    border-color: #f57f17;
+    background: #fff8e1;
+}
+
+.url-item.dudosa .badge {
+    background: #f57f17;
+    color: white;
+}
+
+.bloque-recuerda {
+    background: #b71c1c;
+    color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 2rem 0;
+}
+
+.bloque-recuerda h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.lista-reglas {
+    list-style: none;
+}
+
+.lista-reglas li {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 1rem;
+}
+
+.pie-pagina {
+    border-top: 2px solid #e0e0e0;
+    padding: 3rem 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pie-pagina .autores {
+    font-weight: 700;
+    color: #b71c1c;
+    margin-top: 0.5rem;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    body { font-size: 1.15rem; }
+    .pagina-header { padding: 1.5rem; text-align: center; }
+    .titulo-principal { font-size: 2.25rem; }
+    .contenido { padding: 1.5rem 1rem; }
+    .seccion { margin-bottom: 3rem; }
+    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
+    .caja-definicion, .simulador-correo, .taller-bloque { padding: 1.25rem; }
+    .url-item { font-size: 0.85rem; padding: 0.75rem 1rem; }
+    .explicacion-señal { font-size: 0.8rem; }
+}
