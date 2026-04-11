@@ -16,7 +16,7 @@
 
 <body>
 
-    <header class="header-gradient">
+    <header class="gradiente-cabecera">
         <div class="max-w-4xl mx-auto">
             <p class="text-secondary font-black tracking-widest uppercase text-sm mb-4">Manual de Referencia
                 Institucional</p>
@@ -27,18 +27,18 @@
 
     <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
 
-        <!-- SIDEBAR -->
+        <!-- BARRA LATERAL -->
         <aside class="md:w-1/4">
-            <div class="sidebar-sticky border-r border-slate-200 pr-6 hidden md:block">
+            <div class="barra-lateral-fija border-r border-slate-200 pr-6 hidden md:block">
                 <h4 class="text-xs uppercase font-black text-slate-400 mb-6 tracking-widest">Navegación</h4>
                 <nav class="space-y-1">
-                    <a href="#introduccion" class="nav-link">1. Introducción</a>
-                    <a href="#conceptos" class="nav-link">2. Conceptos Clave</a>
-                    <a href="#amenazas" class="nav-link">3. Amenazas Reales</a>
-                    <a href="#redes" class="nav-link">4. Redes y WiFi</a>
-                    <a href="#higiene" class="nav-link">5. Higiene Digital</a>
-                    <a href="#legalidad" class="nav-link">6. Marco Legal</a>
-                    <a href="#glosario" class="nav-link">7. Glosario A-Z</a>
+                    <a href="#introduccion" class="enlace-navegacion">1. Introducción</a>
+                    <a href="#conceptos" class="enlace-navegacion">2. Conceptos Clave</a>
+                    <a href="#amenazas" class="enlace-navegacion">3. Amenazas Reales</a>
+                    <a href="#redes" class="enlace-navegacion">4. Redes y WiFi</a>
+                    <a href="#higiene" class="enlace-navegacion">5. Higiene Digital</a>
+                    <a href="#legalidad" class="enlace-navegacion">6. Marco Legal</a>
+                    <a href="#glosario" class="enlace-navegacion">7. Glosario A-Z</a>
                 </nav>
                 <div class="mt-12 bg-slate-50 p-6 rounded-2xl border border-slate-200">
                     <p class="text-xs font-bold text-slate-500 mb-2">¿Necesitas ayuda?</p>
@@ -48,32 +48,32 @@
             </div>
         </aside>
 
-        <!-- MAIN CONTENT -->
+        <!-- CONTENIDO PRINCIPAL -->
         <main class="md:w-3/4">
 
-            <!-- INTRO -->
-            <section id="introduccion" class="guia-card">
+            <!-- INTRODUCCIÓN -->
+            <section id="introduccion" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-6">1. Introducción y Justificación</h2>
                 <p class="mb-6">
                     Esta guía es mucho más que un manual; es una enciclopedia diseñada para proteger a los estudiantes
-                    del <span class="highlight">Liceo Antonio Lemus Pérez</span>. En la era actual, la seguridad en
+                    del <span class="resaltado">Liceo Antonio Lemus Pérez</span>. En la era actual, la seguridad en
                     internet no es una opción, es una necesidad de protección personal.
                 </p>
-                <div class="term-box">
-                    <span class="term-title">La Tríada CIA (Seguridad de la Información)</span>
+                <div class="caja-termino">
+                    <span class="titulo-termino">La Tríada CIA (Seguridad de la Información)</span>
                     Toda seguridad digital busca proteger tres cosas:
                     <ul class="text-sm mt-3 space-y-2 font-medium">
-                        <li>• <span class="highlight">Confidencialidad:</span> Que solo tú veas tus datos.</li>
-                        <li>• <span class="highlight">Integridad:</span> Que nadie pueda cambiar tus datos sin permiso.
+                        <li>• <span class="resaltado">Confidencialidad:</span> Que solo tú veas tus datos.</li>
+                        <li>• <span class="resaltado">Integridad:</span> Que nadie pueda cambiar tus datos sin permiso.
                         </li>
-                        <li>• <span class="highlight">Disponibilidad:</span> Que puedas entrar a tus datos cuando los
+                        <li>• <span class="resaltado">Disponibilidad:</span> Que puedas entrar a tus datos cuando los
                             necesites.</li>
                     </ul>
                 </div>
             </section>
 
             <!-- CONCEPTOS -->
-            <section id="conceptos" class="guia-card">
+            <section id="conceptos" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8">2. Conceptos que debes entender</h2>
                 <p class="mb-8">Para hablar de seguridad, primero debemos entender las palabras que usan los expertos en
                     un lenguaje simple:</p>
@@ -82,7 +82,7 @@
                     <div>
                         <h3 class="text-2xl font-bold mb-3">Identidad Digital</h3>
                         <p>Es el "Tú" virtual. Se forma por tus fotos, tus comentarios, lo que compras y lo que
-                            compartas. Todo esto deja una <span class="definition-inline">Huella Digital</span> (el
+                            compartas. Todo esto deja una <span class="definicion-linea">Huella Digital</span> (el
                             rastro que dejas en internet para siempre).</p>
                     </div>
                     <div>
@@ -100,11 +100,11 @@
             </section>
 
             <!-- AMENAZAS -->
-            <section id="amenazas" class="guia-card">
+            <section id="amenazas" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8 text-red-700">3. Amenazas Reales y Ataques</h2>
                 <p class="mb-4 font-bold text-slate-500 uppercase text-sm tracking-widest">Catálogo de Riesgos</p>
 
-                <div class="grid-info">
+                <div class="rejilla-informacion">
                     <div class="info-pill"><span class="material-symbols-outlined text-red-500">bug_report</span>
                         <b>Malware:</b> Todo programa malicioso o virus.</div>
                     <div class="info-pill"><span class="material-symbols-outlined text-red-500">phishing</span>
@@ -124,7 +124,7 @@
             </section>
 
             <!-- RIESGOS COTIDIANOS -->
-            <section id="cotidiano" class="guia-card">
+            <section id="cotidiano" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8 text-blue-700">3.5 Riesgos del Día a Día: Guía de Supervivencia</h2>
                 <p class="mb-6">Como adolescentes, ustedes pasan la mayor parte del tiempo en estas plataformas. Aquí es
                     donde los atacantes ponen sus trampas más inteligentes:</p>
@@ -171,8 +171,8 @@
                             <span class="material-symbols-outlined">chat</span> Estafas en WhatsApp (Caso Venezuela)
                         </h3>
                         <p class="text-sm mb-4">En nuestro país, los estafadores son expertos en inventar historias:</p>
-                        <div class="term-box bg-green-50 border-green-700">
-                            <span class="term-title text-green-800">El engaño del "Bono Patria" o "Registro"</span>
+                        <div class="caja-termino bg-green-50 border-green-700">
+                            <span class="titulo-termino text-green-800">El engaño del "Bono Patria" o "Registro"</span>
                             Llegan mensajes diciendo que saliste seleccionado para un beneficio y debes entrar en un
                             link. Ese link clona tu WhatsApp o te pide datos personales extremadamente sensibles.
                             **Desconfía de cualquier noticia que no sea de una fuente oficial.**
@@ -187,13 +187,13 @@
             </section>
 
             <!-- REDES -->
-            <section id="redes" class="guia-card">
+            <section id="redes" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8">4. Seguridad en Redes y WiFi</h2>
                 <p class="mb-6">El Wi-Fi es como una señal de radio: si no eres cuidadoso, cualquiera que esté cerca
                     puede "escuchar" lo que envías.</p>
 
-                <div class="term-box">
-                    <span class="term-title">Ataque de Intercepción (Man-in-the-Middle)</span>
+                <div class="caja-termino">
+                    <span class="titulo-termino">Ataque de Intercepción (Man-in-the-Middle)</span>
                     Es cuando un atacante se mete entre tu celular y el WiFi del lugar. Él puede ver cada sitio que
                     visitas y cada contraseña que escribes.
                 </div>
@@ -213,7 +213,7 @@
             </section>
 
             <!-- HIGIENE -->
-            <section id="higiene" class="guia-card">
+            <section id="higiene" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8">5. Higiene Digital (Buenas Prácticas)</h2>
                 <p class="mb-6">Cuidar tu computadora o celular es como cuidar tu salud física. Estos hábitos te
                     salvarán de muchos ataques:</p>
@@ -227,14 +227,14 @@
                     <div class="p-6 bg-slate-50 rounded-2xl">
                         <h4 class="font-black text-primary mb-2">Copias de Seguridad</h4>
                         <p class="text-sm">Guarda tus trabajos y fotos importantes en un pendrive o disco externo. Si te
-                            ataca un virus tipo <span class="highlight">Ransomware</span>, podrás recuperar tus
+                            ataca un virus tipo <span class="resaltado">Ransomware</span>, podrás recuperar tus
                             archivos.</p>
                     </div>
                 </div>
             </section>
 
             <!-- LEGALIDAD -->
-            <section id="legalidad" class="guia-card">
+            <section id="legalidad" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-6">6. Marco Legal en Venezuela</h2>
                 <p class="mb-6">
                     En Venezuela existe la **Ley Especial contra los Delitos Informáticos**. Es muy importante que sepas
@@ -251,7 +251,7 @@
             </section>
 
             <!-- GLOSARIO -->
-            <section id="glosario" class="guia-card">
+            <section id="glosario" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8">7. Glosario de Conceptos A-Z</h2>
                 <div class="space-y-6">
                     <details class="border-b border-slate-100 pb-4">

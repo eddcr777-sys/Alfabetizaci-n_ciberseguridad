@@ -5,13 +5,14 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Protección de Cuentas | L.B. Antonio Lemus Pérez</title>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="proteccion-cuentas.css" />
 </head>
 <body>
 
 <div class="pagina-header">
   <div style="max-width:900px;margin:0 auto;">
-    <p class="nav-breadcrumb"><a href="index2.html">← Volver al Manual de Temas</a></p>
+    <p class="rastro-navegacion"><a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a></p>
     <h1 class="titulo-principal">¿Cómo proteger tus cuentas y contraseñas?</h1>
     <p class="subtitulo">Módulo 1 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
   </div>
@@ -34,13 +35,13 @@
     </p>
 
     <div class="caja-alerta">
-      ⚠️ Las contraseñas MÁS USADAS en el mundo son: "123456", "password", "qwerty" y el nombre del usuario. 
+      <span class="material-symbols-outlined text-amber-600 align-middle">warning</span> Las contraseñas MÁS USADAS en el mundo son: "123456", "password", "qwerty" y el nombre del usuario. 
       Un atacante las prueba en menos de un segundo.
     </div>
 
     <h3 style="font-size:1.5rem;font-weight:800;color:#004d40;margin:2rem 0 1rem;">¿Cómo roban las contraseñas?</h3>
 
-    <div class="grid-2">
+    <div class="rejilla-2">
       <div class="tarjeta">
         <div class="tarjeta-titulo">Ataque de Fuerza Bruta</div>
         <p>Un programa de computadora prueba millones de combinaciones de letras y números automáticamente hasta dar con la correcta. Si tu clave es corta, lo logra en segundos.</p>
@@ -60,14 +61,14 @@
     </div>
 
     <div class="caja-definicion">
-      <div class="etiqueta-def">📖 ¿Qué es "Entropía" de una contraseña?</div>
+      <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es "Entropía" de una contraseña?</div>
       <div class="texto-def">Es una forma técnica de medir qué tan difícil es adivinar una clave. A mayor entropía, mejor seguridad. Una clave con letras grandes, pequeñas, números y símbolos tiene una entropía altísima.</div>
     </div>
   </section>
 
   <!-- TALLER 1: MEDIDOR DE CONTRASEÑAS -->
   <section class="seccion">
-    <h2 class="titulo-seccion">🧪 Taller 1: ¿Qué tan segura es tu clave?</h2>
+    <h2 class="titulo-seccion"><span class="material-symbols-outlined align-middle">science</span> Taller 1: ¿Qué tan segura es tu clave?</h2>
 
     <div class="taller-bloque">
       <div class="taller-titulo">Laboratorio de Contraseñas</div>
@@ -80,15 +81,15 @@
       </div>
       <p class="etiqueta-fuerza" id="etiquetaFuerza">Esperando...</p>
       <div class="checks-clave">
-        <div class="check-item" id="checkLargo">⬜ Al menos 10 caracteres</div>
-        <div class="check-item" id="checkMayus">⬜ Letra MAYÚSCULA</div>
-        <div class="check-item" id="checkNum">⬜ Número (1, 2, 3...)</div>
-        <div class="check-item" id="checkSimbolo">⬜ Símbolo (@, #, $, !)</div>
+        <div class="check-item" id="checkLargo"><span class="material-symbols-outlined text-slate-300 align-middle">radio_button_unchecked</span> Al menos 10 caracteres</div>
+        <div class="check-item" id="checkMayus"><span class="material-symbols-outlined text-slate-300 align-middle">radio_button_unchecked</span> Letra MAYÚSCULA</div>
+        <div class="check-item" id="checkNum"><span class="material-symbols-outlined text-slate-300 align-middle">radio_button_unchecked</span> Número (1, 2, 3...)</div>
+        <div class="check-item" id="checkSimbolo"><span class="material-symbols-outlined text-slate-300 align-middle">radio_button_unchecked</span> Símbolo (@, #, $, !)</div>
       </div>
     </div>
 
     <div class="caja-definicion">
-      <div class="etiqueta-def">💡 Ejemplo de contraseña MUY segura</div>
+      <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">lightbulb</span> Ejemplo de contraseña MUY segura</div>
       <div class="texto-def">En vez de "gato2024", usa: "Mi!Gato_Naranja#12". Es larga, tiene mayúsculas, números y símbolos. ¡Nadie la adivinaría!</div>
     </div>
   </section>
@@ -103,48 +104,48 @@
     </p>
 
     <div class="caja-definicion">
-      <div class="etiqueta-def">📖 ¿Qué significa "Autenticación de Doble Factor"?</div>
+      <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué significa "Autenticación de Doble Factor"?</div>
       <div class="texto-def">Es una protección adicional donde, después de ingresar tu contraseña, debes verificar tu identidad de una segunda forma. Así, aunque alguien robe tu clave, no puede entrar a tu cuenta porque no tiene tu celular.</div>
     </div>
 
     <p class="parrafo">Hay varias formas de hacerlo. De menos segura a más segura:</p>
 
-    <div class="grid-2">
+    <div class="rejilla-2">
       <div class="tarjeta">
-        <div class="tarjeta-titulo">📱 Por mensaje de texto</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">smartphone</span> Por mensaje de texto</div>
         <p>Te llega un código de 6 dígitos por SMS. Es el método más común. Es bueno, pero tiene un punto débil: los atacantes expertos pueden duplicar tu chip telefónico para recibir ese código.</p>
       </div>
       <div class="tarjeta">
-        <div class="tarjeta-titulo">🔐 Por aplicación de seguridad</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">encrypted</span> Por aplicación de seguridad</div>
         <p>Usas una app como "Google Authenticator" que genera un código que cambia cada 30 segundos. Es mucho más seguro porque no depende de tu chip telefónico.</p>
       </div>
     </div>
 
     <div class="caja-alerta">
-      🔑 ACTIVAR AHORA: Entra a Configuración → Seguridad → Verificación en dos pasos en Instagram, Facebook y Gmail. ¡Tarda menos de 5 minutos!
+      <span class="material-symbols-outlined text-amber-600 align-middle">vpn_key</span> ACTIVAR AHORA: Entra a Configuración → Seguridad → Verificación en dos pasos en Instagram, Facebook y Gmail. ¡Tarda menos de 5 minutos!
     </div>
   </section>
 
   <!-- TALLER 2: QUIZ -->
   <section class="seccion">
-    <h2 class="titulo-seccion">🧪 Taller 2: ¿Qué harías tú?</h2>
+    <h2 class="titulo-seccion"><span class="material-symbols-outlined align-middle">science</span> Taller 2: ¿Qué harías tú?</h2>
     <div class="quiz-bloque">
       <p style="font-size:1.1rem;opacity:0.7;margin-bottom:1.5rem;">Toca cada situación para ver si es segura o peligrosa:</p>
       <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
         <span>Usar "Lemus2024" como contraseña de Instagram.</span>
-        <span class="estado">❌ Peligroso — Tiene tu nombre y el año. Es muy fácil de adivinar.</span>
+        <span class="estado"><span class="material-symbols-outlined text-red-500 align-middle">cancel</span> Peligroso — Tiene tu nombre y el año. Es muy fácil de adivinar.</span>
       </div>
       <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
         <span>Activar el código por SMS en mi cuenta de Gmail.</span>
-        <span class="estado">✅ Buena práctica — Añade una capa extra de protección.</span>
+        <span class="estado"><span class="material-symbols-outlined text-green-500 align-middle">check_circle</span> Buena práctica — Añade una capa extra de protección.</span>
       </div>
       <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
         <span>Usar la misma clave en Instagram, TikTok y el correo.</span>
-        <span class="estado">❌ Muy peligroso — Si roban una cuenta, roban todas.</span>
+        <span class="estado"><span class="material-symbols-outlined text-red-500 align-middle">cancel</span> Muy peligroso — Si roban una cuenta, roban todas.</span>
       </div>
       <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
         <span>Crear una clave larga usando frase: "MiPerro!Come#3Veces".</span>
-        <span class="estado">✅ Excelente — Larga, con símbolos y números. Muy difícil de romper.</span>
+        <span class="estado"><span class="material-symbols-outlined text-green-500 align-middle">check_circle</span> Excelente — Larga, con símbolos y números. Muy difícil de romper.</span>
       </div>
     </div>
   </section>
@@ -152,14 +153,14 @@
   <!-- REGLAS DE ORO -->
   <section class="seccion">
     <div class="bloque-recuerda">
-      <h3>📋 Reglas de Oro para Tus Cuentas</h3>
+      <h3><span class="material-symbols-outlined align-middle">assignment</span> Reglas de Oro para Tus Cuentas</h3>
       <ul class="lista-reglas">
-        <li>🔑 Usa contraseñas de mínimo 12 caracteres, con mayúsculas, números y símbolos.</li>
-        <li>🚫 Nunca uses tu nombre, apellido ni fecha de nacimiento como contraseña.</li>
-        <li>🔄 Usa una contraseña diferente para cada cuenta importante.</li>
-        <li>📲 Activa la verificación en dos pasos en cada red social.</li>
-        <li>🙅 Nunca le digas tu contraseña a nadie, ni a tus amigos.</li>
-        <li>❓ Si crees que alguien sabe tu clave, cámbiala de inmediato.</li>
+        <li><span class="material-symbols-outlined align-middle text-amber-400">vpn_key</span> Usa contraseñas de mínimo 12 caracteres, con mayúsculas, números y símbolos.</li>
+        <li><span class="material-symbols-outlined align-middle text-red-400">block</span> Nunca uses tu nombre, apellido ni fecha de nacimiento como contraseña.</li>
+        <li><span class="material-symbols-outlined align-middle text-blue-400">sync</span> Usa una contraseña diferente para cada cuenta importante.</li>
+        <li><span class="material-symbols-outlined align-middle text-green-400">install_mobile</span> Activa la verificación en dos pasos en cada red social.</li>
+        <li><span class="material-symbols-outlined align-middle text-red-400">person_off</span> Nunca le digas tu contraseña a nadie, ni a tus amigos.</li>
+        <li><span class="material-symbols-outlined align-middle text-amber-400">help</span> Si crees que alguien sabe tu clave, cámbiala de inmediato.</li>
       </ul>
     </div>
   </section>
@@ -172,69 +173,6 @@
   <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russian" (UPTOS CR)</p>
 </footer>
 
-<script>
-  // MEDIDOR DE CONTRASEÑA
-  const claveInput = document.getElementById('claveInput');
-  const barraRelleno = document.getElementById('barraRelleno');
-  const etiquetaFuerza = document.getElementById('etiquetaFuerza');
-
-  claveInput.addEventListener('input', function() {
-    const val = this.value;
-    let puntaje = 0;
-
-    const tieneLargo = val.length >= 10;
-    const tieneMayus = /[A-Z]/.test(val);
-    const tieneNum = /[0-9]/.test(val);
-    const tieneSimbolo = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val);
-
-    if (tieneLargo) puntaje += 25;
-    if (tieneMayus) puntaje += 25;
-    if (tieneNum) puntaje += 25;
-    if (tieneSimbolo) puntaje += 25;
-
-    actualizarCheck('checkLargo', tieneLargo, 'Al menos 10 caracteres');
-    actualizarCheck('checkMayus', tieneMayus, 'Letra MAYÚSCULA');
-    actualizarCheck('checkNum', tieneNum, 'Número (1, 2, 3...)');
-    actualizarCheck('checkSimbolo', tieneSimbolo, 'Símbolo (@, #, $, !)');
-
-    barraRelleno.style.width = puntaje + '%';
-
-    if (val.length === 0) {
-      barraRelleno.style.background = '#ccc';
-      etiquetaFuerza.textContent = 'Escribe para analizar...';
-      etiquetaFuerza.style.color = '#888';
-    } else if (puntaje <= 25) {
-      barraRelleno.style.background = '#f44336';
-      etiquetaFuerza.textContent = '🔴 MUY DÉBIL — Un atacante la adivinaría en segundos.';
-      etiquetaFuerza.style.color = '#f44336';
-    } else if (puntaje <= 50) {
-      barraRelleno.style.background = '#ff9800';
-      etiquetaFuerza.textContent = '🟠 DÉBIL — Mejórala añadiendo más tipos de caracteres.';
-      etiquetaFuerza.style.color = '#ff9800';
-    } else if (puntaje <= 75) {
-      barraRelleno.style.background = '#ffc107';
-      etiquetaFuerza.textContent = '🟡 ACEPTABLE — Añade un símbolo para hacerla más fuerte.';
-      etiquetaFuerza.style.color = '#f57f17';
-    } else {
-      barraRelleno.style.background = '#004d40';
-      etiquetaFuerza.textContent = '🟢 ¡EXCELENTE! Esta contraseña es muy difícil de romper.';
-      etiquetaFuerza.style.color = '#004d40';
-    }
-  });
-
-  function actualizarCheck(id, activo, texto) {
-    const el = document.getElementById(id);
-    el.textContent = (activo ? '✅ ' : '⬜ ') + texto;
-    el.classList.toggle('activo', activo);
-  }
-
-  // QUIZ
-  function revelarQuiz(el) {
-    el.classList.add('revelado');
-    const seguro = el.dataset.seguro === 'si';
-    el.classList.toggle('seguro', seguro);
-    el.classList.toggle('inseguro', !seguro);
-  }
-</script>
+<script src="logica-proteccion.js"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
         <h1 class="text-5xl md:text-6xl font-black mb-12 tracking-tighter leading-none">PLAN DE ACCIÓN <br>PARA DOCENTES.</h1>
 
         <!-- SECCIÓN 3: PROTECCIÓN DE DATOS DE ALUMNOS -->
-        <section class="data-shield mb-16">
+        <section class="escudo-datos mb-16">
             <h2 class="text-2xl font-black mb-6 text-blue-900 flex items-center gap-3">
                 <span class="material-symbols-outlined text-3xl">privacy_tip</span> Protección de Datos de Alumnos
             </h2>
@@ -27,16 +27,16 @@
                     <h3 class="font-black text-blue-900 mb-2">Gestión de Información Sensible</h3>
                     <p class="text-xs text-blue-900/70 mb-4">Evite almacenar listados con Cédula de Identidad, teléfonos o direcciones en servicios de "nube" gratuitos o computadoras públicas del liceo.</p>
                     <ul class="text-[10px] space-y-2 font-bold text-blue-900">
-                        <li class="flex gap-2">🛡️ Use archivos con contraseña si los guarda en Pendrives.</li>
-                        <li class="flex gap-2">🛡️ Borre los historiales de descargas al terminar su jornada.</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">lock</span> Use archivos con contraseña si los guarda en Pendrives.</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">delete</span> Borre los historiales de descargas al terminar su jornada.</li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="font-black text-blue-900 mb-2">Uso Digital de Imágenes</h3>
                     <p class="text-xs text-blue-900/70 mb-4">Publicar fotos de alumnos con el uniforme expone al liceo y al niño a geolocalización por parte de terceros malintencionados (Grooming).</p>
                     <ul class="text-[10px] space-y-2 font-bold text-blue-900">
-                        <li class="flex gap-2">🛡️ No publique fotos de clase en redes personales.</li>
-                        <li class="flex gap-2">🛡️ En grupos de WhatsApp, solo comparta información oficial.</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">no_photography</span> No publique fotos de clase en redes personales.</li>
+                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">notification_important</span> En grupos de WhatsApp, solo comparta información oficial.</li>
                     </ul>
                 </div>
             </div>
@@ -49,18 +49,18 @@
         <section class="mb-16">
             <h2 class="text-2xl font-black mb-6">1. Matriz de Respuesta a Incidentes</h2>
             <div class="overflow-x-auto">
-                <div class="grid-matrix min-w-[700px]">
-                    <div class="matrix-cell matrix-head">Incidente</div>
-                    <div class="matrix-cell matrix-head">Acción Inmediata</div>
-                    <div class="matrix-cell matrix-head">Ruta Legal / Técnica</div>
+                <div class="rejilla-matriz min-w-[700px]">
+                    <div class="celda-matriz cabecera-matriz">Incidente</div>
+                    <div class="celda-matriz cabecera-matriz">Acción Inmediata</div>
+                    <div class="celda-matriz cabecera-matriz">Ruta Legal / Técnica</div>
                     
-                    <div class="matrix-cell font-bold text-red-700">Ciberacoso / Difamación</div>
-                    <div class="matrix-cell">Aislar equipos. No borrar chats. Captura de pantalla.</div>
-                    <div class="matrix-cell">Notificar Dirección. Art. 22 Ley Delitos Informáticos.</div>
-
-                    <div class="matrix-cell font-bold text-orange-700">Sospecha de Ransomware</div>
-                    <div class="matrix-cell">Desconexión total de la red. No apagar equipos.</div>
-                    <div class="matrix-cell">Reportar a soporte técnico UPTO-CR. Auditar puertos.</div>
+                    <div class="celda-matriz font-bold text-red-700">Ciberacoso / Difamación</div>
+                    <div class="celda-matriz">Aislar equipos. No borrar chats. Captura de pantalla.</div>
+                    <div class="celda-matriz">Notificar Dirección. Art. 22 Ley Delitos Informáticos.</div>
+                    
+                    <div class="celda-matriz font-bold text-orange-700">Sospecha de Ransomware</div>
+                    <div class="celda-matriz">Desconexión total de la red. No apagar equipos.</div>
+                    <div class="celda-matriz">Reportar a soporte técnico UPTO-CR. Auditar puertos.</div>
                 </div>
             </div>
         </section>
@@ -72,23 +72,25 @@
                 <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
                     <h3 class="font-black text-xs uppercase mb-4 text-teal-800">Control de Red</h3>
                     <ul class="text-[11px] space-y-3 font-medium">
-                        <li>📡 <strong>DNS Escolar:</strong> Use 1.1.1.3 para bloqueo de contenido.</li>
-                        <li>📡 <strong>Aislamiento:</strong> Wi-Fi de alumnos ≠ Red administrativa.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">settings_ethernet</span> <strong>DNS Escolar:</strong> Use 1.1.1.3 para bloqueo de contenido.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">lan</span> <strong>Aislamiento:</strong> Wi-Fi de alumnos ≠ Red administrativa.</li>
                     </ul>
                 </div>
                 <div class="p-6 bg-slate-50 border border-slate-200 rounded-xl">
                     <h3 class="font-black text-xs uppercase mb-4 text-teal-800">Laboratorio</h3>
                     <ul class="text-[11px] space-y-3 font-medium">
-                        <li>📡 <strong>Puertos:</strong> Inspección física mensual de CPUs.</li>
-                        <li>📡 <strong>Navegación:</strong> Inhabilitar autoguardado de claves.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">usb</span> <strong>Puertos:</strong> Inspección física mensual de CPUs.</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">password</span> <strong>Navegación:</strong> Inhabilitar autoguardado de claves.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <div class="border-t-2 border-slate-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-            <a href="index2.html" class="font-black text-xs uppercase tracking-widest hover:underline">← Volver al Panel</a>
-            <a href="protocolo-ayuda.html" class="emergency-btn">
+            <a href="index2.html" class="font-black text-xs uppercase tracking-widest hover:underline flex items-center gap-2">
+                <span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">arrow_back</span> Volver al Panel
+            </a>
+            <a href="protocolo-ayuda.html" class="boton-emergencia">
                 <span class="material-symbols-outlined">support_agent</span> PROTOCOLO DE EMERGENCIA
             </a>
         </div>

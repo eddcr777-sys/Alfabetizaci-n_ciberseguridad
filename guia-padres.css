@@ -1,8 +1,8 @@
 :root {
-    --accent: #1e3a8a;
-    --warning: #d97706;
-    --step-bg: #f8fafc;
-    --pro-bg: #fefce8;
+    --acento: #1e3a8a;
+    --advertencia: #d97706;
+    --fondo-paso: #f8fafc;
+    --fondo-pro: #fefce8;
 }
 
 body {
@@ -16,31 +16,31 @@ h1, h2, h3 {
     font-family: 'Outfit', sans-serif;
 }
 
-.step-card {
-    background: var(--step-bg);
+.tarjeta-paso {
+    background: var(--fondo-paso);
     border: 1px solid #e2e8f0;
     border-radius: 1.25rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.pro-card {
-    background: var(--pro-bg);
+.tarjeta-pro {
+    background: var(--fondo-pro);
     border: 2px solid #ca8a04;
     border-radius: 1.5rem;
     padding: 2rem;
     margin-top: 3rem;
 }
 
-.instruction-step {
+.paso-instruccion {
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
     align-items: flex-start;
 }
 
-.number-icon {
-    background: var(--accent);
+.icono-numero {
+    background: var(--acento);
     color: white;
     width: 24px;
     height: 24px;
@@ -54,7 +54,7 @@ h1, h2, h3 {
     margin-top: 2px;
 }
 
-.tag-red {
+.etiqueta-roja {
     font-size: 9px;
     font-weight: 800;
     padding: 2px 8px;

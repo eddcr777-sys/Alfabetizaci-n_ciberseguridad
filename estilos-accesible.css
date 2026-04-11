@@ -5,15 +5,15 @@
 }
 
 /* Neurodivergent High Contrast Overrides */
-.nd-mode {
+.modo-nd {
     background-color: #ffffff !important;
     color: #111d23 !important;
 }
 
-.nd-border {
+.borde-nd {
     border: 3px dashed #003608 !important;
 }
 
-.nd-spacing {
+.espaciado-nd {
     margin-bottom: 2rem !important;
 }

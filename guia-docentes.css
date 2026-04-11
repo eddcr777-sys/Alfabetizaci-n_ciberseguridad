@@ -1,7 +1,7 @@
 :root {
-    --primary: #042f2e;
-    --danger: #991b1b;
-    --secure: #1e40af;
+    --primario: #042f2e;
+    --peligro: #991b1b;
+    --seguro: #1e40af;
 }
 
 body {
@@ -16,27 +16,27 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-.grid-matrix {
+.rejilla-matriz {
     display: grid;
     grid-template-columns: 200px 1fr 1fr;
     border: 2px solid #e2e8f0;
 }
 
-.matrix-cell {
+.celda-matriz {
     padding: 1rem;
     border: 1px solid #e2e8f0;
     font-size: 0.85rem;
 }
 
-.matrix-head {
+.cabecera-matriz {
     background: #f8fafc;
     font-weight: 800;
     text-transform: uppercase;
     font-size: 0.75rem;
 }
 
-.emergency-btn {
-    background: var(--danger);
+.boton-emergencia {
+    background: var(--peligro);
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -46,7 +46,7 @@ h1, h2, h3 {
     gap: 10px;
 }
 
-.data-shield {
+.escudo-datos {
     background: #eff6ff;
     border: 2px solid #1e40af;
     border-radius: 1.5rem;

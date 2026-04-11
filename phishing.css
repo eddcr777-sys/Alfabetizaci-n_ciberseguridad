@@ -22,7 +22,7 @@ a {
     padding: 2rem 2rem 3rem;
 }
 
-.nav-breadcrumb {
+.rastro-navegacion {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.nav-breadcrumb a {
+.rastro-navegacion a {
     color: white;
     text-decoration: none;
 }
@@ -114,7 +114,7 @@ a {
     font-size: 1.15rem;
 }
 
-.grid-2 {
+.rejilla-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -122,7 +122,7 @@ a {
 }
 
 @media (max-width: 640px) {
-    .grid-2 {
+    .rejilla-2 {
         grid-template-columns: 1fr;
     }
 }
@@ -328,7 +328,7 @@ a {
     min-width: 200px;
 }
 
-.url-item .badge {
+.url-item .distintivo {
     font-family: 'Public Sans', sans-serif;
     font-size: 0.75rem;
     font-weight: 800;
@@ -339,7 +339,7 @@ a {
     white-space: nowrap;
 }
 
-.url-item.revelado .badge {
+.url-item.revelado .distintivo {
     opacity: 1;
 }
 
@@ -348,7 +348,7 @@ a {
     background: #e8f5e9;
 }
 
-.url-item.segura .badge {
+.url-item.segura .distintivo {
     background: #2e7d32;
     color: white;
 }
@@ -358,7 +358,7 @@ a {
     background: #ffebee;
 }
 
-.url-item.peligrosa .badge {
+.url-item.peligrosa .distintivo {
     background: #b71c1c;
     color: white;
 }

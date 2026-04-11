@@ -10,13 +10,13 @@
     <script src="configuracion-tailwind.js"></script>
     <link rel="stylesheet" href="estilos-base.css"/>
     <style>
-        .gradient-glow {
+        .brillo-gradiente {
             background: radial-gradient(circle at 50% 50%, rgba(38, 166, 154, 0.1), transparent 70%);
         }
-        .reveal-card {
+        .tarjeta-revelacion {
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        .reveal-card:hover {
+        .tarjeta-revelacion:hover {
             transform: scale(1.02) translateY(-5px);
         }
     </style>
@@ -84,7 +84,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <!-- Pilar 1 -->
-                <div class="bg-white p-12 rounded-[3.5rem] reveal-card shadow-sm border border-outline-variant/5">
+                <div class="bg-white p-12 rounded-[3.5rem] tarjeta-revelacion shadow-sm border border-outline-variant/5">
                     <div class="w-16 h-16 bg-red-50 rounded-2xl flex items-center justify-center mb-10">
                         <span class="material-symbols-outlined text-3xl text-red-600">emergency_home</span>
                     </div>
@@ -94,7 +94,7 @@
                     </p>
                 </div>
                 <!-- Pilar 2 -->
-                <div class="bg-[#111d23] p-12 rounded-[4rem] reveal-card shadow-2xl text-white transform md:-translate-y-8">
+                <div class="bg-[#111d23] p-12 rounded-[4rem] tarjeta-revelacion shadow-2xl text-white transform md:-translate-y-8">
                     <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mb-10">
                         <span class="material-symbols-outlined text-3xl text-primary">security</span>
                     </div>
@@ -104,7 +104,7 @@
                     </p>
                 </div>
                 <!-- Pilar 3 -->
-                <div class="bg-white p-12 rounded-[3.5rem] reveal-card shadow-sm border border-outline-variant/5">
+                <div class="bg-white p-12 rounded-[3.5rem] tarjeta-revelacion shadow-sm border border-outline-variant/5">
                     <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-10">
                         <span class="material-symbols-outlined text-3xl text-blue-600">diversity_3</span>
                     </div>

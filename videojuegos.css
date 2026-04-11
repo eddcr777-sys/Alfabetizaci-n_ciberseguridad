@@ -22,7 +22,7 @@ a {
     padding: 2rem 2rem 3rem;
 }
 
-.nav-breadcrumb {
+.rastro-navegacion {
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -31,7 +31,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.nav-breadcrumb a {
+.rastro-navegacion a {
     color: white;
     text-decoration: none;
 }
@@ -114,7 +114,7 @@ a {
     font-size: 1.15rem;
 }
 
-.grid-2 {
+.rejilla-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -122,7 +122,7 @@ a {
 }
 
 @media (max-width: 640px) {
-    .grid-2 {
+    .rejilla-2 {
         grid-template-columns: 1fr;
     }
 }

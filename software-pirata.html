@@ -5,13 +5,14 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Software Pirata y Virus | L.B. Antonio Lemus Pérez</title>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="software-pirata.css" />
 </head>
 <body>
 
 <div class="pagina-header">
   <div style="max-width:900px;margin:0 auto;">
-    <p class="nav-breadcrumb"><a href="index2.html">← Volver al Manual de Temas</a></p>
+    <p class="rastro-navegacion"><a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a></p>
     <h1 class="titulo-principal">¿Por qué es peligroso descargar programas piratas?</h1>
     <p class="subtitulo">Módulo 5 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
   </div>
@@ -30,7 +31,7 @@
       Todos los virus y programas espía que contienen se llaman en conjunto <span class="palabra-clave">Malware</span>.
     </p>
     <div class="caja-definicion">
-      <div class="etiqueta-def">📖 ¿Qué es el Malware?</div>
+      <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es el Malware?</div>
       <div class="texto-def">Es la palabra técnica para cualquier programa malicioso (viene de "malicious software"). Incluye virus, troyanos, spyware y ransomware. Su único objetivo es dañar tu dispositivo, robar tu información o darte problemas.</div>
     </div>
   </section>
@@ -39,33 +40,33 @@
     <h2 class="titulo-seccion">2. ¿Qué hay dentro de un "crack"?</h2>
     <p class="parrafo">Cuando instalas un activador o crack, en muchos casos estás instalando alguno de estos tipos de Malware:</p>
 
-    <div class="grid-2">
+    <div class="rejilla-2">
       <div class="tarjeta">
-        <div class="tarjeta-titulo">⌨️ Registrador de Teclas (Keylogger)</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">keyboard</span> Registrador de Teclas (Keylogger)</div>
         <p>Un programa que graba todo lo que escribes: contraseñas, números bancarios, mensajes privados. El atacante lo recibe de forma remota sin que tú lo notes.</p>
       </div>
       <div class="tarjeta">
-        <div class="tarjeta-titulo">🚪 Puerta Trasera (Backdoor)</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">door_open</span> Puerta Trasera (Backdoor)</div>
         <p>Crea un acceso oculto a tu dispositivo. El hacker puede encender tu cámara, ver tus archivos, descargar tus fotos o usar tu computadora para atacar a otras personas, todo sin tu permiso.</p>
       </div>
       <div class="tarjeta">
-        <div class="tarjeta-titulo">🔒 Secuestro de Archivos (Ransomware)</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">lock</span> Secuestro de Archivos (Ransomware)</div>
         <p>Bloquea todos tus archivos (tareas, fotos, música) y pide que pagues dinero para recuperarlos. En muchos casos, aunque pagues, no los devuelven.</p>
       </div>
       <div class="tarjeta">
-        <div class="tarjeta-titulo">⛏️ Minero Oculto (Cryptojacking)</div>
+        <div class="tarjeta-titulo"><span class="material-symbols-outlined align-middle">mining</span> Minero Oculto (Cryptojacking)</div>
         <p>Usa la potencia de tu computadora para ganar dinero digital para el hacker, haciendo que tu PC se vuelva lenta, se caliente y se dañe con el tiempo.</p>
       </div>
     </div>
 
     <div class="caja-alerta">
-      ⚠️ La mayoría de estos programas te piden que desactives el antivirus para "funcionar bien". Ese es el momento en que entran en tu sistema. NUNCA desactives el antivirus.
+      <span class="material-symbols-outlined text-amber-600 align-middle">warning</span> La mayoría de estos programas te piden que desactives el antivirus para "funcionar bien". Ese es el momento en que entran en tu sistema. NUNCA desactives el antivirus.
     </div>
   </section>
 
   <!-- TALLER INTERACTIVO: SIMULADOR DE DESCARGA -->
   <section class="seccion">
-    <h2 class="titulo-seccion">🧪 Taller: El Laberinto de Descargas</h2>
+    <h2 class="titulo-seccion"><span class="material-symbols-outlined align-middle">science</span> Taller: El Laberinto de Descargas</h2>
     <p class="parrafo">
       Los sitios de piratería usan múltiples botones falsos para confundirte. Toca cualquier botón de esta simulación para ver lo que pasaría en realidad:
     </p>
@@ -75,25 +76,25 @@
         <span class="circulo" style="background:#ef4444"></span>
         <span class="circulo" style="background:#fbbf24"></span>
         <span class="circulo" style="background:#22c55e"></span>
-        <span style="margin-left:0.5rem;">🔓 Sitio no seguro</span>
+        <span style="margin-left:0.5rem;"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">lock_open</span> Sitio no seguro</span>
       </div>
       <div class="sim-url">http://megadescargas-gratis.xyz/photoshop-crack-2026</div>
       <div class="sim-cuerpo">
         <h3>Photoshop CC 2026 FULL - Activado para siempre</h3>
         <p>Adobe Photoshop CC 2026 Full Version. Sin virus. Garantizado. 100% Funcional.</p>
 
-        <button class="btn-falso btn-verde" onclick="mostrarTrampa('t1')">⬇️ DESCARGAR AHORA — Versión Full Gratis</button>
-        <div class="mensaje-trampa" id="t1">🦠 Si hubieras hecho clic: Se descargaría un archivo "setup.exe" que al ejecutarse instala un Registrador de Teclas (Keylogger). En minutos, el hacker tendría todas tus contraseñas.</div>
+        <button class="btn-falso btn-verde" onclick="mostrarTrampa('t1')"><span class="material-symbols-outlined align-middle">download</span> DESCARGAR AHORA — Versión Full Gratis</button>
+        <div class="mensaje-trampa" id="t1"><span class="material-symbols-outlined text-red-600 align-middle">pest_control</span> Alerta de Seguridad: Se descargaría un archivo "setup.exe" que al ejecutarse instala un Registrador de Teclas (Keylogger). En minutos, el hacker tendría todas tus contraseñas.</div>
 
-        <button class="btn-falso btn-azul" onclick="mostrarTrampa('t2')">🔗 MIRROR ALTERNATIVO — Click aquí si el botón de arriba no funciona</button>
-        <div class="mensaje-trampa" id="t2">🦠 Si hubieras hecho clic: Te lleva a una página de publicidad con un virus que se descarga automáticamente (drive-by download) sin que tengas que hacer nada más.</div>
+        <button class="btn-falso btn-azul" onclick="mostrarTrampa('t2')"><span class="material-symbols-outlined align-middle">link</span> MIRROR ALTERNATIVO — Click aquí si el botón de arriba no funciona</button>
+        <div class="mensaje-trampa" id="t2"><span class="material-symbols-outlined text-red-600 align-middle">pest_control</span> Alerta de Seguridad: Te lleva a una página de publicidad con un virus que se descarga automáticamente sin que tengas que hacer nada más.</div>
 
         <button class="btn-falso btn-gris" onclick="mostrarTrampa('t3')">Generar enlace de descarga personalizado</button>
-        <div class="mensaje-trampa" id="t3">🦠 Si hubieras hecho clic: Te pide "verificar que no eres un robot" completando una encuesta. Esa encuesta roba tu número de teléfono y te suscribe a cargos premium sin tu consentimiento.</div>
+        <div class="mensaje-trampa" id="t3"><span class="material-symbols-outlined text-red-600 align-middle">pest_control</span> Alerta de Seguridad: Te pide "verificar que no eres un robot" completando una encuesta. Esa encuesta roba tu número de teléfono y te suscribe a cargos premium sin tu consentimiento.</div>
 
         <p style="font-size:0.75rem;color:#94a3b8;margin-top:1rem;">Sin registro. Sin virus. Verificado por nuestro equipo. ⭐⭐⭐⭐⭐</p>
         <div style="margin-top:1.5rem;padding:1rem;background:#dcfce7;border-radius:0.75rem;color:#166534;font-weight:700;font-size:0.9rem;">
-          📌 CONCLUSIÓN: Ningún botón en un sitio de piratería es seguro. Todos llevan a algún tipo de trampa.
+          <span class="material-symbols-outlined align-middle">info</span> CONCLUSIÓN: Ningún botón en un sitio de piratería es seguro. Todos llevan a algún tipo de trampa.
         </div>
       </div>
     </div>
@@ -106,41 +107,41 @@
 
     <div class="tarjeta-alternativa">
       <span class="nombre-pirata">Adobe Photoshop (pirata)</span>
-      <span class="flecha">→</span>
+      <span class="flecha"><span class="material-symbols-outlined align-middle">arrow_forward</span></span>
       <span class="nombre-libre">GIMP o Photopea.com (web, gratis, sin instalación)</span>
     </div>
     <div class="tarjeta-alternativa">
       <span class="nombre-pirata">Microsoft Word/Excel (pirata)</span>
-      <span class="flecha">→</span>
+      <span class="flecha"><span class="material-symbols-outlined align-middle">arrow_forward</span></span>
       <span class="nombre-libre">Google Docs y Google Sheets (100% gratis, en la nube)</span>
     </div>
     <div class="tarjeta-alternativa">
       <span class="nombre-pirata">Windows activado con crack</span>
-      <span class="flecha">→</span>
+      <span class="flecha"><span class="material-symbols-outlined align-middle">arrow_forward</span></span>
       <span class="nombre-libre">Linux (sistema operativo gratuito, seguro y muy potente)</span>
     </div>
     <div class="tarjeta-alternativa">
       <span class="nombre-pirata">Diseños con Canva Pro pirateado</span>
-      <span class="flecha">→</span>
+      <span class="flecha"><span class="material-symbols-outlined align-middle">arrow_forward</span></span>
       <span class="nombre-libre">Canva Estudiante (plan gratuito con correo del colegio)</span>
     </div>
 
     <div class="caja-definicion">
-      <div class="etiqueta-def">📖 ¿Qué es el Software de Código Abierto (Open Source)?</div>
+      <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es el Software de Código Abierto (Open Source)?</div>
       <div class="texto-def">Son programas creados por comunidades de programadores del mundo entero que deciden compartirlos gratis para siempre. Son seguros, actualizados constantemente y completamente legales. Nadie puede meterles virus a propósito porque cualquiera puede revisar su código.</div>
     </div>
   </section>
 
   <section class="seccion">
     <div class="bloque-recuerda">
-      <h3>⚠️ Reglas de Oro sobre Software</h3>
+      <h3><span class="material-symbols-outlined align-middle">warning</span> Reglas de Oro sobre Software</h3>
       <ul class="lista-reglas">
-        <li>🚫 No descargues programas piratas ni activadores en ningún dispositivo.</li>
-        <li>🛡️ Jamás desactives el antivirus para instalar algo. Eso es la señal más clara de trampa.</li>
-        <li>🌐 Usa siempre las alternativas gratuitas y legales mencionadas en esta guía.</li>
-        <li>📥 Solo descarga desde sitios oficiales: la página web real del programa.</li>
-        <li>🔍 Si el sitio no tiene "https" y candado verde, no descargues nada de ahí.</li>
-        <li>🗣️ Si sospechas que tu computadora fue infectada, avisa a un profesor o técnico.</li>
+        <li><span class="material-symbols-outlined align-middle text-red-400">block</span> No descargues programas piratas ni activadores en ningún dispositivo.</li>
+        <li><span class="material-symbols-outlined align-middle text-amber-400">security</span> Jamás desactives el antivirus para instalar algo. Eso es la señal más clara de trampa.</li>
+        <li><span class="material-symbols-outlined align-middle text-blue-400">public</span> Usa siempre las alternativas gratuitas y legales mencionadas en esta guía.</li>
+        <li><span class="material-symbols-outlined align-middle text-green-400">download_for_offline</span> Solo descarga desde sitios oficiales: la página web real del programa.</li>
+        <li><span class="material-symbols-outlined align-middle text-amber-400">search</span> Si el sitio no tiene "https" y candado verde, no descargues nada de ahí.</li>
+        <li><span class="material-symbols-outlined align-middle text-blue-400">forum</span> Si sospechas que tu computadora fue infectada, avisa a un profesor o técnico.</li>
       </ul>
     </div>
   </section>
@@ -153,10 +154,8 @@
   <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · UPTOS CR</p>
 </footer>
 
-<script>
-  function mostrarTrampa(id) {
-    const msg = document.getElementById(id);
-    msg.classList.add('visible');
+<script src="logica-pirateria.js"></script>
+</body>.classList.add('visible');
     // scroll suave hacia el mensaje
     setTimeout(() => msg.scrollIntoView({ behavior: 'smooth', block: 'center' }), 50);
   }
