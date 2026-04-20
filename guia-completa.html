@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="guia-completa.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 
 <body>
@@ -30,7 +31,7 @@
         <!-- BARRA LATERAL -->
         <aside class="md:w-1/4">
             <div class="barra-lateral-fija border-r border-slate-200 pr-6 hidden md:block">
-                <h4 class="text-xs uppercase font-black text-slate-400 mb-6 tracking-widest">Navegación</h4>
+                <h4 class="text-xs uppercase font-black text-slate-600 mb-6 tracking-widest">Navegación</h4>
                 <nav class="space-y-1">
                     <a href="#introduccion" class="enlace-navegacion">1. Introducción</a>
                     <a href="#conceptos" class="enlace-navegacion">2. Conceptos Clave</a>
@@ -41,7 +42,7 @@
                     <a href="#glosario" class="enlace-navegacion">7. Glosario A-Z</a>
                 </nav>
                 <div class="mt-12 bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                    <p class="text-xs font-bold text-slate-500 mb-2">¿Necesitas ayuda?</p>
+                    <p class="text-xs font-black text-slate-700 mb-2">¿Necesitas ayuda?</p>
                     <a href="protocolo-ayuda.html" class="text-xs font-black text-primary uppercase">Guía de Emergencia
                         →</a>
                 </div>
@@ -102,16 +103,16 @@
             <!-- AMENAZAS -->
             <section id="amenazas" class="tarjeta-guia">
                 <h2 class="text-4xl font-black mb-8 text-red-700">3. Amenazas Reales y Ataques</h2>
-                <p class="mb-4 font-bold text-slate-500 uppercase text-sm tracking-widest">Catálogo de Riesgos</p>
+                <p class="mb-4 font-black text-slate-700 uppercase text-xs tracking-widest">Catálogo de Riesgos</p>
 
                 <div class="rejilla-informacion">
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">bug_report</span>
+                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe868;</span>
                         <b>Malware:</b> Todo programa malicioso o virus.</div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">phishing</span>
+                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xead7;</span>
                         <b>Phishing:</b> Engaño para robar tus claves.</div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">keyboard</span>
+                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe312;</span>
                         <b>Keylogger:</b> Graba lo que escribes.</div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">lock_open</span>
+                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe898;</span>
                         <b>Rootkit:</b> Virus que se esconde del antivirus.</div>
                 </div>
 
@@ -171,16 +172,11 @@
                             <span class="material-symbols-outlined">chat</span> Estafas en WhatsApp (Caso Venezuela)
                         </h3>
                         <p class="text-sm mb-4">En nuestro país, los estafadores son expertos en inventar historias:</p>
-                        <div class="caja-termino bg-green-50 border-green-700">
-                            <span class="titulo-termino text-green-800">El engaño del "Bono Patria" o "Registro"</span>
-                            Llegan mensajes diciendo que saliste seleccionado para un beneficio y debes entrar en un
-                            link. Ese link clona tu WhatsApp o te pide datos personales extremadamente sensibles.
-                            **Desconfía de cualquier noticia que no sea de una fuente oficial.**
-                        </div>
-                        <div class="p-4 bg-green-100 rounded-xl text-green-900 font-bold mb-4">
-                            🚫 CUIDADO CON EL SIM SWAPPING: Si de repente tu teléfono se queda "sin señal" y no vuelve,
-                            es posible que alguien esté clonando tu número para entrar a tu WhatsApp y pedir dinero
-                            prestado a tus contactos fingiendo ser tú.
+                        <div class="tarjeta-aviso-premium aviso-esmeralda">
+                            <div class="contenido-relativo">
+                                <h4><span class="material-symbols-outlined">&#xad12;</span> Estafa Bono Patria / WhatsApp</h4>
+                                <p>Llegan mensajes diciendo que saliste seleccionado para un beneficio y debes entrar en un link. Ese link clona tu WhatsApp o te pide datos personales. Desconfía de cualquier noticia que no sea de una fuente oficial.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -301,6 +297,7 @@
         </div>
     </footer>
 
+    <script src="logica-tema.js"></script>
 </body>
 
 </html>

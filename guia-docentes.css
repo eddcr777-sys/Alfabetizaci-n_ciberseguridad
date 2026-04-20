@@ -52,3 +52,63 @@ h1, h2, h3 {
     border-radius: 1.5rem;
     padding: 2rem;
 }
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body { background-color: #0f172a; color: #f8fafc; border-top-color: #115e59 !important; }
+
+.dark .escudo-datos {
+    background-color: #1e3a8a !important; /* Azul profundo */
+    border-color: #3b82f6 !important;
+}
+
+.dark .escudo-datos h2, 
+.dark .escudo-datos h3,
+.dark .escudo-datos p,
+.dark .escudo-datos ul,
+.dark .escudo-datos li {
+    color: #dbeafe !important; /* Azul muy claro para legibilidad */
+}
+
+.dark .escudo-datos div[class*="bg-white"] {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+    color: #93c5fd !important;
+}
+
+.dark .rejilla-matriz {
+    border-color: #334155 !important;
+}
+
+.dark .celda-matriz {
+    border-color: #334155 !important;
+    background-color: #1e293b;
+    color: #cbd5e1;
+}
+
+.dark .cabecera-matriz {
+    background-color: #0f172a !important;
+    color: #94a3b8 !important;
+}
+
+.dark .text-red-700 {
+    color: #f87171 !important;
+}
+
+.dark .text-orange-700 {
+    color: #fb923c !important;
+}
+
+.dark .bg-slate-50 {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+.dark .text-teal-700, .dark .text-teal-800, .dark .text-teal-900 {
+    color: #2dd4bf !important;
+}
+
+.dark h1, .dark h2, .dark h3 {
+    color: #f8fafc !important;
+}

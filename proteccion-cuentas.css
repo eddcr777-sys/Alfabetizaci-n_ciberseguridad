@@ -371,3 +371,95 @@ a {
         text-align: left;
     }
 }
+
+/* ==========================================
+   ESTILOS DE MODO OSCURO (Paso 3)
+   ========================================== */
+.dark body {
+    background-color: #0f172a; /* Fondo slate-900 */
+    color: #f8fafc; /* Texto slate-50 */
+}
+
+.dark .pagina-header {
+    background: #022c22; /* Verde muy oscuro */
+}
+
+.dark .titulo-seccion {
+    color: #34d399; /* Verde claro (emerald-400) */
+    border-left-color: #34d399;
+}
+
+.dark .caja-definicion {
+    background: #064e3b; /* Fondo verde oscuro */
+    border-color: #022c22;
+}
+
+.dark .caja-definicion .texto-def {
+    color: #a7f3d0;
+}
+
+.dark .caja-definicion .etiqueta-def {
+    color: #34d399;
+}
+
+.dark .palabra-clave {
+    color: #34d399;
+}
+
+.dark .caja-alerta {
+    background: #451a03; /* Naranja/rojo muy oscuro */
+    border-color: #9a3412;
+    color: #fdba74;
+}
+
+.dark .tarjeta {
+    background: #1e293b; /* Slate-800 */
+    border-top-color: #34d399;
+}
+
+.dark .tarjeta .tarjeta-titulo {
+    color: #34d399;
+}
+
+.dark .taller-bloque {
+    background: #1e293b;
+    border-color: #064e3b;
+}
+
+.dark .taller-titulo {
+    color: #34d399;
+}
+
+.dark .taller-instruccion {
+    color: #cbd5e1; /* Slate-300 */
+}
+
+.dark .input-clave {
+    background: #0f172a;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+.dark .input-clave:focus {
+    border-color: #34d399;
+}
+
+.dark .barra-fuerza-contenedor {
+    background: #334155;
+}
+
+.dark .check-item {
+    background: #0f172a;
+    border-color: #334155;
+    color: #64748b;
+}
+
+.dark .check-item.activo {
+    background: #064e3b;
+    border-color: #34d399;
+    color: #34d399;
+}
+
+.dark .bloque-recuerda {
+    background: #022c22;
+}

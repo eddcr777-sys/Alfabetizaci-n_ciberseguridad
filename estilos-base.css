@@ -4,10 +4,252 @@
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
-body { 
-    font-family: 'Public Sans', sans-serif; 
+body {
+    font-family: 'Public Sans', sans-serif;
 }
 
-h1, h2, h3 { 
-    font-family: 'Manrope', sans-serif; 
+h1,
+h2,
+h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* ==========================================
+   ESTILOS BASE MODO OSCURO (GLOBAL UNIVERSAL)
+   ========================================== */
+.dark body {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+}
+
+.dark h1:not(.text-transparent),
+.dark h2:not(.text-transparent),
+.dark h3:not(.text-transparent) {
+    color: #f8fafc;
+}
+
+/* Fondos base y tarjetas de todas las subpáginas */
+.dark .bg-surface,
+.dark .bg-surface-container-lowest,
+.dark .bg-surface-container-low,
+.dark .bg-white,
+.dark .bg-slate-50,
+.dark .bg-blue-50,
+.dark .bg-green-50,
+.dark .bg-red-50,
+.dark .tarjeta-guia,
+.dark .tarjeta-institucional,
+.dark .tarjeta-capitulo {
+    background-color: #1e293b !important;
+    color: #f8fafc !important;
+}
+
+/* Navegación semi-transparente y Menús */
+.dark nav,
+.dark .bg-white\/80,
+.dark .bg-\[\#f4faff\]\/70,
+.dark [class*="bg-[#f4faff]"],
+.dark [class*="bg-white/"] {
+    background-color: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Cajas e íconos verde oscuro y fondos primarios */
+.dark .bg-\[\#004D40\],
+.dark footer.bg-primary,
+.dark header.bg-primary {
+    background-color: #022c22 !important;
+}
+
+/* Textos regulares y secundarios */
+.dark .text-on-surface,
+.dark .text-on-surface-variant,
+.dark p,
+.dark li {
+    color: #cbd5e1 !important;
+}
+
+/* Títulos y textos destacados */
+.dark .text-\[\#004D40\] {
+    color: #34d399 !important;
+}
+
+.dark .text-primary {
+    color: #4ade80 !important;
+}
+
+/* Bordes sutiles (respetando opacidad) */
+.dark [class*="border-outline-variant"],
+.dark [class*="border-primary"],
+.dark .border-slate-200,
+.dark .border-slate-100 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fondos especiales de portada y cabeceras en TODAS las páginas */
+.dark .gradiente-portada,
+.dark .gradiente-cabecera,
+.dark .gradiente-encabezado,
+.dark .pagina-header {
+    background: radial-gradient(circle at top right, #0f172a, #020617) !important;
+    color: #f8fafc !important;
+}
+
+/* Formularios, Inputs y Controles Interactivos */
+.dark input,
+.dark textarea,
+.dark select {
+    background-color: #0f172a !important;
+    color: #f8fafc !important;
+    border-color: #334155 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: #64748b !important;
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus {
+    border-color: #34d399 !important;
+    outline: none !important;
+}
+
+/* Cajas específicas de talleres y minijuegos */
+.dark .taller-bloque,
+.dark .caja-definicion,
+.dark .check-item,
+.dark .paso-caja,
+.dark .caja-alerta,
+.dark .tarjeta,
+.dark .quiz-pregunta,
+.dark .bloque-recuerda {
+    background-color: #1e293b !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #cbd5e1 !important;
+}
+
+/* Refinamiento de Contraste y Legibilidad */
+.dark .text-slate-400,
+.dark .text-slate-500,
+.dark .text-slate-600,
+.dark .text-on-surface-variant {
+    color: #94a3b8 !important;
+    /* Slate-400: mejor contraste que el original */
+}
+
+.dark .opacity-30,
+.dark .opacity-40,
+.dark .opacity-60 {
+    opacity: 0.8 !important;
+    /* Evitar que el texto desaparezca en fondos oscuros */
+}
+
+.dark a:hover {
+    color: #4ade80 !important;
+    /* Verde brillante al pasar el mouse */
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+    color: #f8fafc !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500,
+.dark .text-slate-400 {
+    color: #94a3b8 !important;
+}
+
+.dark .text-on-surface-variant {
+    color: #94a3b8 !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200 {
+    border-color: #334155 !important;
+}
+
+/* ESTILO ARMÓNICO Y PREMIUM PARA ICONOS */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: -0.05em !important;
+    /* Estilo Relleno: Más sólido, moderno y armonioso */
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24 !important;
+    font-size: 1.15em !important;
+    opacity: 0.85; /* Integración suave con el texto */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-rendering: optimizeLegibility;
+}
+
+/* Interacción armónica */
+a:hover .material-symbols-outlined,
+button:hover .material-symbols-outlined,
+.tarjeta:hover .material-symbols-outlined {
+    opacity: 1;
+    transform: scale(1.15) rotate(3deg);
+}
+
+.material-symbols-outlined {
+    margin-right: 0.25em;
+}
+
+/* Evitar que se encimen al texto adyacente */
+span.material-symbols-outlined+span,
+span.material-symbols-outlined+b,
+span.material-symbols-outlined+strong {
+    margin-left: 0.25rem;
+}
+
+/* Soporte para páginas de Nosotros, Justificación e Índices */
+.dark .text-\[\#111d23\],
+.dark .text-\[\#004D40\],
+.dark .text-slate-900,
+.dark .text-slate-800 {
+    color: #f8fafc !important;
+}
+
+.dark .bg-\[\#f4faff\],
+.dark .from-\[\#f4faff\],
+.dark .bg-surface-container-low {
+    background-color: #0f172a !important;
+    background-image: none !important;
+}
+
+.dark .tarjeta-creador,
+.dark .bg-white,
+.dark .tarjeta-institucional {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+.dark .bg-primary-container {
+    background-color: #064e3b !important;
+    color: #34d399 !important;
+}
+
+.dark .text-primary-fixed-dim {
+    color: #94a3b8 !important;
+}
+
+.dark .border-outline-variant\/10,
+.dark .border-primary\/5 {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .caja-termino {
+    background-color: #022c22 !important;
+    border-left-color: #059669 !important;
+    color: #d1fae5 !important;
+}
+
+.dark .titulo-termino {
+    color: #34d399 !important;
+    font-weight: 800;
 }

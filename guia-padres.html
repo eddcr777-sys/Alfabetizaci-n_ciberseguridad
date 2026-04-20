@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
     <link rel="stylesheet" href="guia-padres.css" />
+    <link rel="stylesheet" href="componentes-premium.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 <body class="p-0 border-t-8 border-blue-900">
 
@@ -23,21 +25,33 @@
             <p class="text-xs text-amber-800 mb-6 font-medium">Usted es el pilar de la casa. Si su cuenta bancaria o su correo se ven comprometidos, toda la familia corre peligro. Siga estas reglas estratégicas:</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="p-4 bg-white/50 rounded-xl border border-amber-200">
-                    <h4 class="font-black text-xs uppercase mb-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">block</span> La Regla del Código SMS</h4>
-                    <p class="text-[10px] text-amber-900">NUNCA dicte a nadie un código que le llegue por mensaje de texto, aunque la persona diga que es del banco, de Corpoelec o de la Patria. <strong>El banco JAMÁS le pedirá códigos por teléfono.</strong></p>
+                <!-- REGLA SMS -->
+                <div class="tarjeta-aviso-premium aviso-ambar" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe14b;</span> La Regla del Código SMS</h4>
+                        <p>NUNCA dicte a nadie un código que le llegue por mensaje de texto, aunque digan que es del banco o del Gobierno. <strong>El banco JAMÁS le pedirá códigos por teléfono.</strong></p>
+                    </div>
                 </div>
-                <div class="p-4 bg-white/50 rounded-xl border border-amber-200">
-                    <h4 class="font-black text-xs uppercase mb-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">key</span> Diferentes llaves</h4>
-                    <p class="text-[10px] text-amber-900">No use la misma clave para todo. Si usa su clave del Banco para Facebook, un hacker que entre a su Facebook podrá robarle su dinero de inmediato.</p>
+                <!-- LLAVES -->
+                <div class="tarjeta-aviso-premium aviso-azul" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe897;</span> Diferentes llaves</h4>
+                        <p>No use la misma clave para todo. Si usa su clave del banco en redes sociales, un hacker que entre a su perfil podrá robarle su dinero de inmediato.</p>
+                    </div>
                 </div>
-                <div class="p-4 bg-white/50 rounded-xl border border-amber-200">
-                    <h4 class="font-black text-xs uppercase mb-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">package_2</span> Compras Seguras</h4>
-                    <p class="text-[10px] text-amber-900">Si compra por Marketplace o Instagram, nunca pague por adelantado sin verificar la reputación del vendedor. Desconfíe de ofertas que parecen "demasiado buenas".</p>
+                <!-- COMPRAS -->
+                <div class="tarjeta-aviso-premium aviso-esmeralda" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xf893;</span> Compras Seguras</h4>
+                        <p>En Marketplace o Instagram, nunca pague por adelantado sin verificar al vendedor. Desconfíe de ofertas que parecen demasiado buenas para ser verdad.</p>
+                    </div>
                 </div>
-                <div class="p-4 bg-white/50 rounded-xl border border-amber-200">
-                    <h4 class="font-black text-xs uppercase mb-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">mail</span> Enlaces de la Patria</h4>
-                    <p class="text-[10px] text-amber-900">Los bonos se consultan en la plataforma oficial, no en links enviados por WhatsApp. Esas páginas falsas solo buscan robar su identidad.</p>
+                <!-- PATRIA -->
+                <div class="tarjeta-aviso-premium aviso-naranja" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe158;</span> Enlaces de Ayuda</h4>
+                        <p>Los beneficios sociales se consultan en plataformas oficiales, no en links de WhatsApp. Esas páginas falsas buscan robar sus datos de acceso.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,9 +109,9 @@
         </section>
 
         <!-- TRIAGE DE SEGURIDAD -->
-        <section class="p-8 border-2 border-slate-100 rounded-3xl bg-slate-50">
+        <section class="p-8 border-2 border-slate-200 rounded-3xl bg-slate-50">
             <h2 class="text-lg font-black mb-4 uppercase tracking-tighter text-slate-900">¿Cómo detectar ataques?</h2>
-            <ul class="space-y-4 text-[11px] font-medium text-slate-700">
+            <ul class="space-y-4 text-xs font-bold text-slate-800">
                 <li class="flex gap-4"><span class="material-symbols-outlined text-red-600 align-middle" style="font-size:1.2rem;">block</span> <strong>Sesiones:</strong> Revise "Dispositivos vinculados" en WhatsApp. Si hay uno extraño, dele a "Cerrar sesión".</li>
                 <li class="flex gap-4"><span class="material-symbols-outlined text-amber-600 align-middle" style="font-size:1.2rem;">thermostat</span> <strong>Calor:</strong> El teléfono se calienta sin uso y gasta batería rápido.</li>
             </ul>
@@ -110,5 +124,6 @@
             <div class="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Manual de Familia · Lemus Pérez</div>
         </footer>
     </main>
+    <script src="logica-tema.js"></script>
 </body>
 </html>

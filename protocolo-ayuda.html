@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="protocolo-ayuda.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 <body>
 
@@ -95,6 +96,77 @@
     </div>
   </div>
 
+  <!-- SECCION NUEVA: RECURSOS Y DIRECTORIO -->
+  <section style="margin-top: 8rem; margin-bottom: 5rem;">
+    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; text-align: center; font-family: 'Outfit';">Directorio de Ayuda Real</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        
+        <!-- CICPC -->
+        <div class="paso-caja">
+            <h4 style="font-weight: 800; margin-bottom: 1rem; color: #dc2626; display: flex; align-items: center; gap: 10px;">
+                <span class="material-symbols-outlined">policy</span> CICPC Delitos Informáticos
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Autoridad oficial en Venezuela para denunciar extorsiones, hackeos y estafas por WhatsApp/Instagram.</p>
+            <div style="background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 0.75rem; font-size: 0.85rem; font-weight: 700;">
+                Denuncias en Instagram: <a href="https://www.instagram.com/informaticoscicpc/" target="_blank" style="color: #2563eb; text-decoration: underline;">@informaticoscicpc</a>
+                <br><br>
+                <span style="opacity: 0.6; font-size: 0.75rem;">Sede Cumaná: Av. Universidad, detrás del Hospital.</span>
+            </div>
+        </div>
+
+        <!-- AYUDA TECNICA -->
+        <div class="paso-caja">
+            <h4 style="font-weight: 800; margin-bottom: 1rem; color: #2563eb; display: flex; align-items: center; gap: 10px;">
+                <span class="material-symbols-outlined">contact_support</span> Centros de Recuperación
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Si perdiste acceso a tu cuenta, usa estos links oficiales de inmediato:</p>
+            <ul style="font-size: 0.85rem; font-weight: 600; list-style: none; space-y: 10px;">
+                <li style="margin-bottom:8px;">• <a href="https://www.facebook.com/hacked" target="_blank" style="color: #2563eb; text-decoration: underline;">Reportar Instagram/Facebook Robado</a></li>
+                <li style="margin-bottom:8px;">• <a href="https://accounts.google.com/signin/recovery" target="_blank" style="color: #2563eb; text-decoration: underline;">Recuperar cuenta Gmail/Google</a></li>
+                <li style="margin-bottom:8px;">• <a href="https://faq.whatsapp.com/1131610350465505/" target="_blank" style="color: #2563eb; text-decoration: underline;">Mi WhatsApp fue hackeado</a></li>
+            </ul>
+        </div>
+
+        <!-- DIAGNOSTICO -->
+        <div class="paso-caja">
+            <h4 style="font-weight: 800; margin-bottom: 1rem; color: #059669; display: flex; align-items: center; gap: 10px;">
+                <span class="material-symbols-outlined">verified_user</span> Herramientas de Chequeo
+            </h4>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">Antes de entrar en pánico, verifica la seguridad de tus datos y archivos:</p>
+            <ul style="font-size: 0.85rem; font-weight: 600; list-style: none;">
+                <li style="margin-bottom:12px;">
+                    <strong>Have I Been Pwned:</strong> 
+                    <a href="https://haveibeenpwned.com/" target="_blank" style="display: block; color: #2563eb; font-size: 0.75rem;">¿Mi correo está en una base de datos robada?</a>
+                </li>
+                <li>
+                    <strong>VirusTotal:</strong> 
+                    <a href="https://www.virustotal.com/" target="_blank" style="display: block; color: #2563eb; font-size: 0.75rem;">Analizar archivo sospechoso antes de abrirlo</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- GUIA RAPIDA POR CASO -->
+    <div class="caja-guia-rapida">
+        <h4 class="guia-rapida-titulo">Guía rápida según tu caso:</h4>
+        <div class="guia-rapida-grid">
+            <div>
+                <strong style="color: #ef4444; display: block; margin-bottom: 0.5rem;">Si te extorsionan:</strong>
+                No pagues nada. No borres los chats. Bloquea al usuario pero guarda las capturas. Habla con un adulto YA.
+            </div>
+            <div>
+                <strong style="color: #60a5fa; display: block; margin-bottom: 0.5rem;">Si entraste a un link:</strong>
+                Desconecta el WiFi. Cambia tu clave desde OTRA computadora. Pasa un antivirus al equipo que usaste.
+            </div>
+            <div>
+                <strong style="color: #34d399; display: block; margin-bottom: 0.5rem;">Si el banco te pide datos:</strong>
+                Cierra la página. Llama al número oficial de tu banco o ve a una oficina. El banco nunca pide claves por SMS.
+            </div>
+        </div>
+    </div>
+  </section>
+
   <section class="seccion-final">
     <h2>En el Lemus Pérez te protegemos</h2>
     <p>Nuestra institución está comprometida con tu bienestar digital. Si tienes dudas o te sientes en riesgo, acércate a la coordinación o a tus profesores de tecnología.</p>
@@ -109,5 +181,6 @@
   <p style="font-size:0.8rem; margin-top:1rem; opacity:0.6;">Proyecto Académico UPTOS CR para el L.B. Antonio Lemus Pérez</p>
 </footer>
 
+    <script src="logica-tema.js"></script>
 </body>
 </html>

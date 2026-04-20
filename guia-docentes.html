@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;800&family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet" />
     <link rel="stylesheet" href="guia-docentes.css" />
+    <link rel="stylesheet" href="componentes-premium.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 <body class="p-0 border-t-8 border-teal-900 text-sm">
 
@@ -20,24 +22,22 @@
             <h2 class="text-2xl font-black mb-6 text-blue-900 flex items-center gap-3">
                 <span class="material-symbols-outlined text-3xl">privacy_tip</span> Protección de Datos de Alumnos
             </h2>
-            <p class="text-[11px] text-blue-800 font-medium mb-8 uppercase tracking-widest">Responsabilidad legal y ética sobre la privacidad del menor</p>
+            <p class="text-xs text-blue-900 font-bold mb-8 uppercase tracking-widest">Responsabilidad legal y ética sobre la privacidad del menor</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-black text-blue-900 mb-2">Gestión de Información Sensible</h3>
-                    <p class="text-xs text-blue-900/70 mb-4">Evite almacenar listados con Cédula de Identidad, teléfonos o direcciones en servicios de "nube" gratuitos o computadoras públicas del liceo.</p>
-                    <ul class="text-[10px] space-y-2 font-bold text-blue-900">
-                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">lock</span> Use archivos con contraseña si los guarda en Pendrives.</li>
-                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">delete</span> Borre los historiales de descargas al terminar su jornada.</li>
-                    </ul>
+                <!-- GESTIÓN DATOS -->
+                <div class="tarjeta-aviso-premium aviso-azul" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe897;</span> Información Sensible</h4>
+                        <p>Evite almacenar listados con Cédula, teléfonos o direcciones en nubes gratuitas o PCs públicas. Use archivos con contraseña si usa Pendrives.</p>
+                    </div>
                 </div>
-                <div>
-                    <h3 class="font-black text-blue-900 mb-2">Uso Digital de Imágenes</h3>
-                    <p class="text-xs text-blue-900/70 mb-4">Publicar fotos de alumnos con el uniforme expone al liceo y al niño a geolocalización por parte de terceros malintencionados (Grooming).</p>
-                    <ul class="text-[10px] space-y-2 font-bold text-blue-900">
-                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">no_photography</span> No publique fotos de clase en redes personales.</li>
-                        <li class="flex gap-2"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">notification_important</span> En grupos de WhatsApp, solo comparta información oficial.</li>
-                    </ul>
+                <!-- IMÁGENES -->
+                <div class="tarjeta-aviso-premium aviso-rosa" style="margin:0;">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe439;</span> Uso de Imágenes</h4>
+                        <p>Publicar fotos de alumnos con el uniforme los expone a geolocalización. No publique fotos de clase en sus redes sociales personales.</p>
+                    </div>
                 </div>
             </div>
             <div class="mt-8 p-4 bg-white/50 border border-blue-200 rounded-xl italic text-xs text-blue-800">
@@ -95,5 +95,6 @@
             </a>
         </div>
     </main>
+    <script src="logica-tema.js"></script>
 </body>
 </html>

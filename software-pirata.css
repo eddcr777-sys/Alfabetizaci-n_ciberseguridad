@@ -340,3 +340,20 @@ a {
     .caja-definicion, .simulador-descarga { padding: 1.25rem; }
     .btn-falso { font-size: 0.9rem; padding: 0.6rem 0.8rem; }
 }
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body { background-color: #0f172a; color: #f8fafc; }
+.dark .tarjeta, .dark .caja-definicion, .dark .simulador-descarga { background-color: #1e293b; border-color: #334155; color: #f8fafc; }
+.dark .pagina-header { background-color: #450a0a; } /* Rojo sangre */
+.dark .titulo-seccion, .dark .tarjeta-titulo { color: #f87171; border-left-color: #ef4444; }
+.dark .caja-alerta { background-color: #451a03; border-color: #9a3412; color: #fdba74; }
+.dark .bloque-recuerda { background-color: #450a0a; border-color: #f87171; }
+.dark .sim-descarga { background-color: #1e293b; border-color: #334155; color: #f8fafc; }
+.dark .sim-barra { background-color: #0f172a; border-bottom-color: #334155; color: #94a3b8; }
+.dark .sim-url { background-color: #0f172a; border-bottom-color: #334155; }
+.dark .sim-cuerpo h3 { color: #f8fafc; }
+.dark .btn-gris { background-color: #334155; color: #94a3b8; border-color: #475569; }
+.dark .tarjeta-alternativa { background-color: #1e293b; border-color: #22c55e; }
+.dark .mensaje-trampa { background-color: #450a0a; border-color: #7f1d1d; color: #fecaca; }

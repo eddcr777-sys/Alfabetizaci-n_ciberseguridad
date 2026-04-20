@@ -12,14 +12,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="manual-estudiante.css" />
+    <link rel="stylesheet" href="componentes-premium.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 
 <body>
 
+    <!-- BARRA DE PROGRESO DE LECTURA -->
+    <div id="barra-lectura-contenedor"
+        style="position:fixed;top:0;left:0;width:100%;height:5px;z-index:9999;background:rgba(0,0,0,0.08);">
+        <div id="barra-lectura-relleno"
+            style="height:100%;width:0%;background:linear-gradient(90deg,#1a4d33,#d4af37);transition:width 0.1s ease;">
+        </div>
+    </div>
+
+    <!-- BOTÓN FLOTANTE VOLVER ARRIBA -->
+    <button id="boton-subir" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Volver al inicio"
+        style="position:fixed;bottom:2rem;right:2rem;z-index:999;width:52px;height:52px;border-radius:50%;background:#1a4d33;color:white;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(26,77,51,0.35);display:none;align-items:center;justify-content:center;font-size:1.5rem;transition:all 0.3s;">
+        &#x2191;
+    </button>
+
     <header class="gradiente-encabezado">
         <div class="max-w-4xl mx-auto">
-            <p class="text-amber-400 font-black tracking-[0.2em] uppercase text-xs mb-4">Manual Maestro Institucional</p>
-            <h1 class="text-white text-5xl md:text-7xl font-black mb-8 leading-tight">Alfabetización Digital Integral</h1>
+            <p class="text-amber-400 font-black tracking-[0.2em] uppercase text-xs mb-4">Manual Maestro Institucional
+            </p>
+            <h1 class="text-white text-5xl md:text-7xl font-black mb-8 leading-tight">Alfabetización Digital Integral
+            </h1>
             <p class="text-white/90 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
         </div>
     </header>
@@ -30,49 +48,65 @@
         <aside class="barra-lateral">
 
             <nav class="mb-8 pb-8 border-b border-slate-100">
-                <p class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-4">Navegación Global</p>
-                <a href="index.html" class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
-                    <span class="material-symbols-outlined text-xl">home</span> Inicio
+                <p class="text-[10px] font-black text-slate-600 uppercase tracking-[0.2em] mb-4">Navegación Global</p>
+                <a href="index.html"
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
+                    <span class="material-symbols-outlined text-xl">&#xe88a;</span> Inicio
                 </a>
-                <a href="justificacion.html" class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
-                    <span class="material-symbols-outlined text-xl">description</span> El Proyecto
+                <a href="justificacion.html"
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
+                    <span class="material-symbols-outlined text-xl">&#xe873;</span> El Proyecto
                 </a>
-                <a href="nosotros.html" class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors">
-                    <span class="material-symbols-outlined text-xl">groups</span> Nosotros
+                <a href="nosotros.html"
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-xl">&#xf233;</span> Nosotros
                 </a>
             </nav>
 
             <nav>
-                <p class="text-xs font-black text-slate-400 uppercase tracking-[0.15em] mb-4">Secciones del Manual</p>
-                <a href="#shock" class="item-navegacion active"><span class="material-symbols-outlined">warning</span> La
+                <p class="text-xs font-black text-slate-600 uppercase tracking-[0.15em] mb-4">Secciones del Manual</p>
+                <a href="#shock" class="item-navegacion active"><span class="material-symbols-outlined">&#xe002;</span>
+                    La
                     Realidad Cruda</a>
-                <a href="#cuentas" class="item-navegacion"><span class="material-symbols-outlined">lock</span> Blindaje de
+                <a href="#cuentas" class="item-navegacion"><span class="material-symbols-outlined">&#xe897;</span>
+                    Blindaje de
                     Cuentas</a>
-                <a href="#redes" class="item-navegacion"><span class="material-symbols-outlined">share</span> Redes
+                <a href="#redes" class="item-navegacion"><span class="material-symbols-outlined">&#xe80d;</span> Redes
                     Sociales</a>
-                <a href="#engaños" class="item-navegacion"><span class="material-symbols-outlined">phishing</span> Engaños y
+                <a href="#ciberacoso" class="item-navegacion"><span class="material-symbols-outlined">&#xe92a;</span>
+                    Ciberacoso
+                    Escolar</a>
+                <a href="#engaños" class="item-navegacion"><span class="material-symbols-outlined">&#xead7;</span>
+                    Engaños y
                     Phishing</a>
-                <a href="#gaming" class="item-navegacion"><span class="material-symbols-outlined">sports_esports</span>
+                <a href="#ia" class="item-navegacion"><span class="material-symbols-outlined">&#xea4a;</span> IA y
+                    Deepfakes</a>
+                <a href="#gaming" class="item-navegacion"><span class="material-symbols-outlined">&#xea28;</span>
                     Videojuegos</a>
-                <a href="#software" class="item-navegacion"><span class="material-symbols-outlined">download</span> Software y
+                <a href="#software" class="item-navegacion"><span class="material-symbols-outlined">&#xf090;</span>
+                    Software y
                     Virus</a>
-                <a href="#legal" class="item-navegacion"><span class="material-symbols-outlined">gavel</span> Responsabilidad
+                <a href="#legal" class="item-navegacion"><span class="material-symbols-outlined">&#xe90e;</span>
+                    Responsabilidad
                     Legal</a>
-                <a href="#apps" class="item-navegacion"><span class="material-symbols-outlined">apps</span> Herramientas</a>
-                <a href="#ayuda" class="item-navegacion"><span class="material-symbols-outlined">support_agent</span> Protocolo
+                <a href="#apps" class="item-navegacion"><span class="material-symbols-outlined">&#xe5c3;</span>
+                    Herramientas</a>
+                <a href="#ayuda" class="item-navegacion"><span class="material-symbols-outlined">&#xf0e2;</span>
+                    Protocolo
                     SOS</a>
             </nav>
 
             <div class="mt-20 p-4 bg-slate-50 rounded-2xl">
                 <p class="text-xs font-bold text-slate-500 mb-2">Proyecto Universitario</p>
-                <p class="text-xs text-slate-400 leading-tight">Diseñado para la formación integral de estudiantes venezolanos.</p>
+                <p class="text-xs text-slate-400 leading-tight">Diseñado para la formación integral de estudiantes
+                    venezolanos.</p>
             </div>
         </aside>
 
-        <!-- AREA DE CONTENIDO -->
+
         <div class="area-contenido">
 
-            <!-- CAPITULO 1: SHOCK -->
+
             <section id="shock" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">Capítulo 01</span>
@@ -108,9 +142,33 @@
                         por una supuesta emergencia. **Tus errores pueden arruinar a tu familia.**
                     </p>
                 </div>
+
+                <!-- ESTADÍSTICAS ANIMADAS -->
+                <div class="mt-8 p-8 rounded-3xl"
+                    style="background: linear-gradient(135deg, #0d2b1d 0%, #1a4d33 100%);">
+                    <p class="text-center text-amber-400 font-black text-xs tracking-[0.2em] uppercase mb-6">Datos
+                        Reales · América Latina 2025</p>
+                    <div class="grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-black text-white" id="contador-1" data-objetivo="83">0</div>
+                            <div class="text-xs font-bold text-white/60 mt-1 uppercase tracking-widest">% de
+                                adolescentes con cuentas pública</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black text-amber-400" id="contador-2" data-objetivo="1">0</div>
+                            <div class="text-xs font-bold text-white/60 mt-1 uppercase tracking-widest">ataque cada ~39
+                                seg. en el mundo</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-black text-red-400" id="contador-3" data-objetivo="70">0</div>
+                            <div class="text-xs font-bold text-white/60 mt-1 uppercase tracking-widest">% de víctimas
+                                son menores de 25 años</div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <!-- CAPITULO 2: CUENTAS -->
+
             <section id="cuentas" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">Capítulo 02</span>
@@ -121,28 +179,50 @@
 
                 <h3 class="text-2xl font-black mb-4">Reglas de un Maestro de la Seguridad:</h3>
                 <ul class="space-y-4 mb-8">
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-green-600 align-middle">verified</span> **Nada de datos personales:** No uses tu nombre, tu fecha de nacimiento o
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Nada de
+                        datos personales:** No uses tu nombre, tu fecha de nacimiento o
                         tu barrio como clave.</li>
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-green-600 align-middle">verified</span> **Longitud es poder:** Una clave de 12 letras es mil veces más difícil de romper que una de 8.
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Longitud es
+                        poder:** Una clave de 12 letras es mil veces más difícil de romper que una de 8.
                     </li>
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-green-600 align-middle">verified</span> **Diferentes cuentas, diferentes claves:** Si usas la misma clave para todo, con que te roben
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Diferentes
+                        cuentas, diferentes claves:** Si usas la misma clave para todo, con que te roben
                         una, te roban la vida entera.</li>
                 </ul>
 
-                <div class="caja-consejo">
-                    <strong>EL SECRETO: Verificación de Dos Pasos.</strong>
-                    Actívalo en WhatsApp e Instagram YA. Es un código extra que llega a tu celular. Sin ese código,
-                    nadie puede entrar aunque tenga tu clave.
+                <!-- 2FA -->
+                <div class="tarjeta-aviso-premium aviso-purpura">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe897;</span> Verificación de Dos Pasos</h4>
+                        <p><strong>Actívalo en WhatsApp e Instagram YA.</strong> Es un código extra que llega a tu
+                            celular. Sin ese código, nadie puede entrar a tu cuenta aunque logren robar tu contraseña
+                            maestra.</p>
+                    </div>
+                </div>
+
+                <!-- GESTORES -->
+                <div class="tarjeta-aviso-premium aviso-esmeralda">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xea4a;</span> Gestores de Contraseñas</h4>
+                        <p>Anotar claves en un cuaderno o usar la misma en todos lados es peligroso. Aprende a usar un
+                            <strong>Gestor de Contraseñas</strong> (como Bitwarden). Estas apps crean claves
+                            indescifrables y tú solo tienes que recordar una única contraseña maestra.
+                        </p>
+                    </div>
                 </div>
             </section>
 
-            <!-- CAPITULO 3: REDES -->
+
             <section id="redes" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">Capítulo 03</span>
                     <h2 class="titulo-capitulo">Redes Sociales y Privacidad</h2>
                 </div>
-                <p class="mb-6">Todo lo que publicas se convierte en tu <span class="definicion-linea">Huella Digital</span>.
+                <p class="mb-6">Todo lo que publicas se convierte en tu <span class="definicion-linea">Huella
+                        Digital</span>.
                     No pienses en quién lo ve hoy, piensa en quién lo verá en 10 años cuando busques trabajo.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -158,66 +238,266 @@
                     </div>
                 </div>
 
-                <div class="caja-impacto" style="border-left-color: #f59e0b; background: #fffbeb;">
-                    <h4 class="font-black text-amber-900 mb-2 italic"><span class="material-symbols-outlined align-middle" style="font-size:1.2rem;">warning</span> CUIDADO CON LOS "CHISMES"</h4>
-                    <p class="text-sm">Participar en grupos de chismes o compartir fotos de otros sin permiso es
-                        **violencia digital**. No seas parte del problema.</p>
+                <!-- AVISO CHISMES -->
+                <div class="tarjeta-aviso-premium aviso-ambar">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe002;</span> CUIDADO CON LOS "CHISMES"</h4>
+                        <p>Participar en grupos de chismes o compartir fotos de otros sin permiso es <strong>violencia
+                                digital</strong>. No seas parte del problema; un comentario puede destruir una vida.</p>
+                    </div>
+                </div>
+
+                <!-- REGLA DE LA ABUELA -->
+                <div class="tarjeta-aviso-premium aviso-azul">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe87c;</span> La Regla de la Abuela</h4>
+                        <p>Antes de publicar una foto, un video o un comentario, hazte esta pregunta: <strong>"¿Me daría
+                                vergüenza que mi abuela viera esto?"</strong>. Si la respuesta es SÍ, entonces <b>NO lo
+                                publiques</b>. El internet es para siempre y no perdona.</p>
+                    </div>
+                </div>
+
+                <!-- ACOSO ADULTOS -->
+                <div class="tarjeta-aviso-premium aviso-rosa">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xea66;</span> Gente que no es quien dice ser</h4>
+                        <p>Si alguien que no conoces en persona te escribe, te dice que tiene tu misma edad y te pide
+                            fotos privadas o verte a escondidas, <strong>estás en peligro</strong>. Muchos adultos con
+                            malas intenciones crean perfiles falsos de adolescentes para engañarte. Bloquéalos de
+                            inmediato y cuéntaselo a tus padres o profesores.</p>
+                    </div>
+                </div>
+
+                <!-- FOTOS ÍNTIMAS -->
+                <div class="tarjeta-aviso-premium aviso-purpura">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe439;</span> El Peligro de las Fotos Íntimas</h4>
+                        <p>Nunca envíes fotos sin ropa, ni siquiera a tu pareja. Cuando envías una foto, pierdes el
+                            control sobre ella para siempre. Si alguien te amenaza con publicar fotos tuyas si no haces
+                            lo que te piden, <strong>no cedas ni pagues</strong>. Busca ayuda de un adulto
+                            inmediatamente, la culpa es de quien amenaza, no tuya.</p>
+                    </div>
+                </div>
+
+                <!-- TALLER INTERACTIVO: AUDITORÍA DE PERFIL -->
+                <div class="mt-10 p-8 rounded-3xl border-2 border-purple-300 dark:border-purple-700"
+                    style="background: #f3e5f5;" id="taller-auditoria">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="material-symbols-outlined text-purple-700 dark:text-purple-400"
+                            style="font-size:2rem;">&#xea46;</span>
+                        <h3 class="text-2xl font-black text-purple-900 dark:text-purple-300">Taller: Auditoría de tu
+                            Perfil</h3>
+                    </div>
+                    <p class="text-base font-bold text-purple-800 dark:text-purple-300 mb-1">¿Qué tan visible está tu
+                        información?</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Marca las protecciones que ya tienes
+                        activadas. El sistema calculará qué tan protegido estás:</p>
+
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-1">
+                        <input type="checkbox" id="aud1" />
+                        <label for="aud1">Mi perfil de Instagram/TikTok está en modo <strong>PRIVADO</strong>.</label>
+                    </div>
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-2">
+                        <input type="checkbox" id="aud2" />
+                        <label for="aud2">Desactivé la ubicación <strong>GPS</strong> de mi cámara.</label>
+                    </div>
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-3">
+                        <input type="checkbox" id="aud3" />
+                        <label for="aud3">No publico fotos con el <strong>uniforme del colegio</strong>
+                            visiblemente.</label>
+                    </div>
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-4">
+                        <input type="checkbox" id="aud4" />
+                        <label for="aud4">No tengo mi <strong>teléfono ni dirección</strong> en mi bio pública.</label>
+                    </div>
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-5">
+                        <input type="checkbox" id="aud5" />
+                        <label for="aud5">Solo acepto solicitudes de personas que <strong>conozco en
+                                persona</strong>.</label>
+                    </div>
+                    <div class="item-lista-verificacion-manual" id="auditoria-item-6">
+                        <input type="checkbox" id="aud6" />
+                        <label for="aud6">Tengo activada la <strong>"Revisión de etiquetas"</strong> antes de que me
+                            etiqueten en fotos.</label>
+                    </div>
+
+                    <div class="resultado-auditoria-manual" id="resultadoAuditoria" style="display:none;"></div>
                 </div>
             </section>
 
-            <!-- CAPITULO 4: ENGAÑOS -->
-            <section id="engaños" class="tarjeta-capitulo">
+            <!-- CAPITULO 04: CIBERACOSO -->
+            <section id="ciberacoso" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">Capítulo 04</span>
-                    <h2 class="titulo-capitulo">Engaños y Phishing</h2>
+                    <h2 class="titulo-capitulo">Ciberacoso Escolar (Cyberbullying)</h2>
                 </div>
-                <p class="mb-6">El <span class="definicion-linea">Phishing</span> es el arte de pescar víctimas con mensajes
+                <p class="mb-6">Las burlas y los ataques en internet duelen tanto como en la vida real, y dejan una
+                    marca permanente.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="tarjeta-aviso-premium aviso-azul" style="margin:0;">
+                        <div class="contenido-relativo">
+                            <h4><span class="material-symbols-outlined">&#xe044;</span> No respondas</h4>
+                            <p>El acosador busca tu reacción. Ignorar o bloquear es tu mejor defensa. Responder con
+                                rabia solo empeora la situación.</p>
+                        </div>
+                    </div>
+                    <div class="tarjeta-aviso-premium aviso-esmeralda" style="margin:0;">
+                        <div class="contenido-relativo">
+                            <h4><span class="material-symbols-outlined">&#xe412;</span> Guarda evidencia</h4>
+                            <p>Toma capturas de pantalla de los mensajes u ofensas antes de bloquear. Serán tu prueba
+                                ante un adulto o autoridad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEFENSOR NO CÓMPLICE -->
+                <div class="tarjeta-aviso-premium aviso-purpura">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe7ef;</span> Sé un Defensor, no un Cómplice</h4>
+                        <p>Si ves que están molestando a un compañero en un grupo de WhatsApp o en Instagram, no te rías
+                            ni compartas el contenido. <strong>El silencio también te hace cómplice.</strong> Apoya a la
+                            víctima en privado y reporta la situación a un docente de confianza.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="engaños" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">Capítulo 05</span>
+                    <h2 class="titulo-capitulo">Engaños y Trampas</h2>
+                </div>
+                <p class="mb-6">La <span class="definicion-linea">Pesca de Víctimas</span> es el arte de atraparte con
+                    mensajes
                     falsos. No muerdas el anzuelo.</p>
 
                 <h3 class="text-xl font-black mb-4">¿Cómo detectar la mentira?</h3>
                 <ol class="space-y-4 mb-8">
-                    <li>1. **Urgencia extrema:** "Tu cuenta será cerrada en 1 hora". (Mentira).</li>
-                    <li>2. **Premios imposibles:** "Bono del gobierno por $500". (Mentira).</li>
-                    <li>3. **Links raros:** Direcciones como `instagram-seguridad.xyz` en vez de `instagram.com`.</li>
+                    <li>1. **Urgencia extrema:** "Tu cuenta será cerrada en 1 hora". (Mentira para asustarte).</li>
+                    <li>2. **Premios imposibles:** "Bono del gobierno por $500". (Mentira para robarte).</li>
+                    <li>3. **Enlaces raros:** Direcciones como `instagram-seguridad.xyz` en vez de la oficial
+                        `instagram.com`.</li>
                 </ol>
 
-                <div class="caja-consejo">
-                    <strong>REGLA DE ORO:</strong> Si un mensaje te asusta o te emociona demasiado, respira 10 segundos.
-                    Los hackers odian que la gente piense antes de hacer clic.
+                <div class="tarjeta-aviso-premium aviso-naranja">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xea4a;</span> REGLA DE ORO</h4>
+                        <p>Si un mensaje te asusta o te emociona demasiado, respira 10 segundos. Los atacantes odian que
+                            la gente piense antes de hacer clic.</p>
+                    </div>
+                </div>
+
+                <!-- WHATSAPP HIJACKING -->
+                <div class="tarjeta-aviso-premium aviso-esmeralda">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xad12;</span> El "Secuestro" de WhatsApp</h4>
+                        <p class="mb-3">Es la estafa más común. Funciona así:</p>
+                        <ol class="text-sm space-y-2 mb-4">
+                            <li>1. Te llama un "supuesto" trabajador de Movistar, Corpoelec o Netflix.</li>
+                            <li>2. Te dice que te van a enviar un código de 6 números por SMS.</li>
+                            <li>3. Te piden que les dictes ese código para "confirmar tu identidad".</li>
+                        </ol>
+                        <p class="text-sm font-black text-red-600 dark:text-red-400">¡NUNCA DES ESE CÓDIGO! Es el acceso
+                            a tu cuenta. Si lo das, te roban el WhatsApp y estafarán a tus contactos.</p>
+                    </div>
+                </div>
+
+                <!-- VISHING -->
+                <div class="tarjeta-aviso-premium aviso-cian">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe0b0;</span> El Peligro del "Vishing"</h4>
+                        <p>Te llaman fingiendo ser el soporte de tu banco, avisándote de un cargo falso para que entres
+                            en pánico. <strong>Regla de oro:</strong> Si te llaman para advertirte sobre dinero, cuelga
+                            y llama tú mismo al número oficial de tu banco.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- CAPITULO 5: GAMING -->
+            <!-- CAPITULO 06: IA Y DEEPFAKES -->
+            <section id="ia" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">Capítulo 06</span>
+                    <h2 class="titulo-capitulo">Inteligencia Artificial y Deepfakes</h2>
+                </div>
+                <p class="mb-6">Los delincuentes ahora usan Inteligencia Artificial para clonar voces y manipular
+                    rostros en fotos y videos. No todo lo que ves o escuchas en internet es real.</p>
+
+                <div class="caja-impacto" style="border-left-color: #ef4444; background: #fef2f2;">
+                    <h4 class="font-black text-red-900 mb-2 italic"><span class="material-symbols-outlined align-middle"
+                            style="font-size:1.2rem;">&#xe002;</span> EL ROBO DE TU VOZ Y TU ROSTRO</h4>
+                    <p class="text-sm mb-4 text-slate-800">Con un video corto tuyo de redes sociales, la IA puede clonar
+                        tu voz a la perfección o poner tu cara en otro cuerpo para extorsionarte. Usan tu voz para
+                        llamar a tus padres fingiendo un accidente y pidiendo dinero urgente.</p>
+                </div>
+
+                <div class="tarjeta-aviso-premium aviso-azul">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe0da;</span> La Palabra Clave</h4>
+                        <p>Acuerda una <strong>"Palabra Secreta"</strong> familiar. Si alguien llama diciendo que eres
+                            tú y que estás en peligro, tus padres deben pedir la palabra. Si no la sabe, es una estafa
+                            por IA.</p>
+                    </div>
+                </div>
+            </section>
+
+
             <section id="gaming" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
-                    <span class="numero-capitulo">Capítulo 05</span>
+                    <span class="numero-capitulo">Capítulo 07</span>
                     <h2 class="titulo-capitulo">Videojuegos Sin Riesgos</h2>
                 </div>
-                <p class="mb-6">Tus cuentas de juegos valen dinero real. Los atacantes lo saben.</p>
+                <p class="mb-6">Tus cuentas de juegos valen dinero real. Los estafadores lo saben.</p>
 
                 <h3 class="text-xl font-bold mb-4">Lo que debes evitar:</h3>
                 <ul class="space-y-3 mb-8">
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-red-600 align-middle">block</span> **Generadores de Monedas:** No existen los Robux o V-Bucks gratis. Son
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-red-600 align-middle">&#xe14b;</span> **Generadores de
+                        Monedas:** No existen los Robux o V-Bucks gratis. Son
                         trampas para robarte el acceso.</li>
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-amber-600 align-middle">person_off</span> **Doxing en Chat:** No des tu nombre real ni tu colegio en el chat de voz, incluso si parece
-                        gente buena nota.</li>
-                    <li class="flex gap-4"><span class="material-symbols-outlined text-red-600 align-middle">dangerous</span> **Trading Inseguro:** Nunca aceptes intercambios fuera de la plataforma oficial del juego.
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-amber-600 align-middle">&#xe510;</span> **Revelar
+                        Datos en el Chat:** No des tu nombre real ni tu liceo en el chat de voz, incluso si parecen
+                        amigables.</li>
+                    <li class="flex gap-4"><span
+                            class="material-symbols-outlined text-red-600 align-middle">&#xe99a;</span> **Intercambios
+                        Inseguros:** Nunca aceptes intercambios de objetos fuera del juego oficial.
                     </li>
                 </ul>
+
+                <!-- WIFI GRATIS -->
+                <div class="tarjeta-aviso-premium aviso-naranja">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe63e;</span> El Peligro del Wi-Fi Gratis</h4>
+                        <p>Si te conectas al Wi-Fi de una plaza sin contraseña, cualquier persona en esa red puede ver
+                            lo que escribes. Nunca entres al banco ni a tus redes sociales desde un Wi-Fi abierto.</p>
+                    </div>
+                </div>
+
+                <!-- DOXING -->
+                <div class="tarjeta-aviso-premium aviso-amarillo">
+                    <div class="contenido-relativo">
+                        <h4><span class="material-symbols-outlined">&#xe8b6;</span> El Peligro del "Doxing"</h4>
+                        <p>El doxing ocurre cuando alguien revela tu información real (nombre, dirección, liceo). Evita
+                            mencionar detalles de tu vida real en juegos. Usa siempre nombres de usuario que no te
+                            identifiquen.</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- CAPITULO 6: SOFTWARE -->
+
             <section id="software" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
-                    <span class="numero-capitulo">Capítulo 06</span>
-                    <h2 class="titulo-capitulo">Software Pirata y Malware</h2>
+                    <span class="numero-capitulo">Capítulo 08</span>
+                    <h2 class="titulo-capitulo">Programas Piratas y Virus</h2>
                 </div>
-                <p class="mb-6">Bajar programas "crackeados" es como dejar las llaves de tu casa puestas por fuera.</p>
+                <p class="mb-6">Bajar programas "modificados" gratis es como dejar las llaves de tu casa puestas por
+                    fuera.</p>
 
                 <div class="caja-termino">
-                    <span class="titulo-termino">Keyloggers y Rootkits</span>
-                    Son los virus invisibles. Un Keylogger graba cada letra que escribes (incluyendo claves de banco) y
-                    el Rootkit lo oculta para que el antivirus no lo vea.
+                    <span class="titulo-termino">Programas Espías (Virus Invisibles)</span>
+                    Son virus que no hacen ruido. Uno de ellos graba cada letra que escribes (como tus claves) y
+                    el otro se oculta tan bien que el antivirus no lo ve.
                 </div>
 
                 <p class="parrafo">Usa siempre **Alternativas Legales Gratis**: Google Docs en vez de Office pirata,
@@ -227,7 +507,7 @@
             <!-- CAPITULO 7: LEGAL -->
             <section id="legal" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
-                    <span class="numero-capitulo">Capítulo 07</span>
+                    <span class="numero-capitulo">Capítulo 09</span>
                     <h2 class="titulo-capitulo">Tu Responsabilidad Legal</h2>
                 </div>
                 <p class="mb-6">En Venezuela, el internet no es "tierra de nadie". Hay leyes que se cumplen.</p>
@@ -251,73 +531,116 @@
             <!-- CAPITULO 08: KIT DE HERRAMIENTAS -->
             <section id="apps" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
-                    <span class="numero-capitulo">Capítulo 08</span>
-                    <h2 class="titulo-capitulo">Tu Kit de Herramientas Seguras</h2>
+                    <span class="numero-capitulo">Capítulo 10</span>
+                    <h2 class="titulo-capitulo">Tu Kit de Herramientas</h2>
                 </div>
 
-                <p class="mb-8 font-medium">No tienes que gastar dinero para estar protegido. Aquí tienes las mejores herramientas gratuitas recomendadas por expertos:</p>
-
-                <div class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-8">
                     <!-- BITWARDEN -->
-                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-blue-500/5 transition-all duration-300">
-                        <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-blue-200">
-                            <span class="material-symbols-outlined text-white text-4xl">vpn_key</span>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group hover:shadow-lg hover:border-blue-200 transition-all">
+                        <div
+                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-blue-100 dark:bg-blue-900/30 p-4 rounded-2xl">
+                            <!-- SVG representativo de Bitwarden (Escudo/Llave) -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#2563eb"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 11V15" stroke="#2563eb" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="12" cy="8" r="2" stroke="#2563eb" stroke-width="2" />
+                            </svg>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Bitwarden</h4>
-                            <p class="text-xs text-blue-600 font-black uppercase tracking-widest mb-3">Gestor de Contraseñas</p>
-                            <p class="text-base text-slate-600 mb-5 leading-relaxed">La herramienta definitiva para guardar todas tus claves complejas. Sincroniza entre tu celular y tu PC de forma totalmente gratuita.</p>
-                            <span class="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-xs font-black shadow-sm">RECOMENDADO</span>
+                        <div>
+                            <span
+                                class="text-lg font-black text-blue-600 dark:text-blue-400 mb-2 block">BITWARDEN</span>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Tu bóveda acorazada. Crea
+                                contraseñas largas y seguras para cada red social y guárdalas bajo una única clave
+                                maestra. Así evitas usar la misma contraseña en todos lados.</p>
                         </div>
                     </div>
 
-                    <!-- PROTON VPN -->
-                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300">
-                        <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-purple-200">
-                            <span class="material-symbols-outlined text-white text-4xl">vpn_lock</span>
+                    <!-- PROTON -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group hover:shadow-lg hover:border-purple-200 transition-all">
+                        <div
+                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-purple-100 dark:bg-purple-900/30 p-4 rounded-2xl">
+                            <!-- SVG representativo de Proton (Privacidad/VPN) -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="#9333ea" stroke-width="2" />
+                                <path d="M12 8V12L15 15" stroke="#9333ea" stroke-width="2" stroke-linecap="round" />
+                                <path d="M8 12H16" stroke="#9333ea" stroke-width="2" stroke-linecap="round" />
+                            </svg>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Proton VPN</h4>
-                            <p class="text-xs text-purple-600 font-black uppercase tracking-widest mb-3">VPN Gratuita Ilimitada</p>
-                            <p class="text-base text-slate-600 mb-0 leading-relaxed">Oculta tu dirección IP mientras navegas. A diferencia de otras VPN gratis, Proton tiene sede en Suiza y no vende tus datos.</p>
+                        <div>
+                            <span class="text-lg font-black text-purple-600 dark:text-purple-400 mb-2 block">PROTON
+                                VPN</span>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Tu escudo invisible en
+                                internet. Actívalo siempre que uses un Wi-Fi público (como en plazas o liceos) para
+                                ocultar tus datos de mirones y hackers conectados a la misma red.</p>
                         </div>
                     </div>
 
-                    <!-- BRAVE / FIREFOX -->
-                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-orange-500/5 transition-all duration-300">
-                        <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-orange-200">
-                            <span class="material-symbols-outlined text-white text-4xl">browser_updated</span>
+                    <!-- BRAVE -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group hover:shadow-lg hover:border-orange-200 transition-all">
+                        <div
+                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-orange-100 dark:bg-orange-900/30 p-4 rounded-2xl">
+                            <!-- SVG representativo de Brave (Navegador/León/Velocidad) -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#ea580c" stroke-width="2"
+                                    stroke-linejoin="round" />
+                                <path d="M2 17L12 22L22 17" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" />
+                                <path d="M2 12L12 17L22 12" stroke="#ea580c" stroke-width="2" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">Brave Browser</h4>
-                            <p class="text-xs text-orange-600 font-black uppercase tracking-widest mb-3">Navegador Privado</p>
-                            <p class="text-base text-slate-600 mb-0 leading-relaxed">Bloquea anuncios intrusivos y rastreadores de forma automática, haciendo que internet sea mucho más rápido y limpio.</p>
+                        <div>
+                            <span class="text-lg font-black text-orange-600 dark:text-orange-400 mb-2 block">BRAVE
+                                BROWSER</span>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Un navegador de alta
+                                seguridad. Bloquea automáticamente los rastreadores, anuncios engañosos y scripts
+                                maliciosos, haciendo que navegues más rápido y mucho más seguro.</p>
                         </div>
                     </div>
 
                     <!-- VIRUS TOTAL -->
-                    <div class="p-8 bg-white border border-slate-200 rounded-3xl shadow-sm flex flex-col md:flex-row items-center md:items-start gap-8 text-center md:text-left hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300">
-                        <div class="w-16 h-16 bg-emerald-600 rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-emerald-200">
-                            <span class="material-symbols-outlined text-white text-4xl">verified_user</span>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group hover:shadow-lg hover:border-emerald-200 transition-all">
+                        <div
+                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-emerald-100 dark:bg-emerald-900/30 p-4 rounded-2xl">
+                            <!-- SVG representativo de VirusTotal (Seguridad/Escaneo) -->
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 12L11 14L15 10" stroke="#059669" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 3L4 5V12C4 18 12 22 12 22C12 22 20 18 20 12V5L12 3Z" stroke="#059669"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <div class="flex-1">
-                            <h4 class="text-2xl font-black mb-1 text-slate-900 leading-tight">VirusTotal</h4>
-                            <p class="text-xs text-emerald-600 font-black uppercase tracking-widest mb-3">Analizador de Archivos Web</p>
-                            <p class="text-base text-slate-600 mb-0 leading-relaxed">No necesitas instalar nada. Antes de abrir un archivo sospechoso, súbelo a VirusTotal.com y 70 antivirus diferentes lo revisarán por ti.</p>
+                        <div>
+                            <span class="text-lg font-black text-emerald-600 dark:text-emerald-400 mb-2 block">VIRUS
+                                TOTAL</span>
+                            <p class="text-sm font-medium text-slate-500 dark:text-slate-400">La sala de cuarentena.
+                                Antes de instalar un programa o abrir un link extraño, pégalo en esta web y será
+                                analizado por más de 70 antivirus simultáneos para garantizar que esté limpio.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="caja-consejo mt-8">
-                    <p class="font-bold"><span class="material-symbols-outlined align-middle" style="font-size:1.2rem;">warning</span> Consejo Maestro:</p>
-                    <p class="text-sm">Nunca descargues estas herramientas desde sitios sospechosos. Busca siempre la página oficial o las tiendas del sistema (Play Store / App Store).</p>
+                <div class="caja-consejo mt-12">
+                    <p class="text-sm font-bold">Busca siempre las páginas oficiales para descargar estas herramientas.
+                    </p>
                 </div>
             </section>
 
             <!-- CAPITULO 09: SOS -->
             <section id="ayuda" class="tarjeta-capitulo" style="border-color: var(--emergency);">
                 <div class="encabezado-capitulo" style="border-bottom-color: #fee2e2;">
-                    <span class="numero-capitulo" style="color: var(--emergency);">Capítulo 09</span>
+                    <span class="numero-capitulo" style="color: var(--emergency);">Capítulo 11</span>
                     <h4 class="titulo-capitulo" style="color: var(--emergency);">PROTOCOLO SOS</h4>
                 </div>
                 <p class="mb-8 font-bold">Si ya cometiste el error o crees que estás bajo ataque:</p>
@@ -346,9 +669,93 @@
                 </div>
 
                 <a href="protocolo-ayuda.html" class="boton-sos">
-                    <span class="material-symbols-outlined">support_agent</span>
+                    <span class="material-symbols-outlined">&#xf0e2;</span>
                     ABRIR GUÍA DE EMERGENCIA COMPLETA
                 </a>
+            </section>
+
+            <!-- QUIZ INTERACTIVO FINAL -->
+            <section class="tarjeta-capitulo" id="quiz-final"
+                style="background: linear-gradient(135deg, #0d2b1d 0%, #1a4d33 100%); border: none;">
+                <div class="encabezado-capitulo" style="border-bottom-color: rgba(255,255,255,0.1);">
+                    <span class="numero-capitulo" style="color: #d4af37;">&#x1F3C6; Examen Final</span>
+                    <h2 class="titulo-capitulo" style="color: white;">¿Cuánto aprendiste?</h2>
+                </div>
+                <p class="text-white/70 mb-8">Responde estas 5 preguntas para saber si estás listo para navegar con
+                    seguridad. ¡Solo hay una respuesta correcta por pregunta!</p>
+
+                <div id="quiz-contenedor">
+                    <!-- Pregunta 1 -->
+                    <div class="quiz-pregunta" data-correcta="b">
+                        <p class="quiz-enunciado">1. Te llega un mensaje: <em>"Tu cuenta será cerrada en 1 hora, haz
+                                clic aquí para verificarla"</em>. ¿Qué haces?</p>
+                        <div class="quiz-opciones">
+                            <button class="quiz-opcion" data-valor="a">Hago clic de inmediato para no perder la
+                                cuenta.</button>
+                            <button class="quiz-opcion" data-valor="b">Ignoro el mensaje y entro directamente a la app
+                                oficial.</button>
+                            <button class="quiz-opcion" data-valor="c">Lo reenvío a mis amigos para
+                                advertirles.</button>
+                        </div>
+                        <div class="quiz-feedback" style="display:none;"></div>
+                    </div>
+
+                    <!-- Pregunta 2 -->
+                    <div class="quiz-pregunta" data-correcta="c">
+                        <p class="quiz-enunciado">2. ¿Cuál de estas contraseñas es la MÁS SEGURA?</p>
+                        <div class="quiz-opciones">
+                            <button class="quiz-opcion" data-valor="a">luis2010</button>
+                            <button class="quiz-opcion" data-valor="b">123456789</button>
+                            <button class="quiz-opcion" data-valor="c">Perro!Azul#48$Liceo</button>
+                        </div>
+                        <div class="quiz-feedback" style="display:none;"></div>
+                    </div>
+
+                    <!-- Pregunta 3 -->
+                    <div class="quiz-pregunta" data-correcta="a">
+                        <p class="quiz-enunciado">3. Un "amigo" en línea que nunca has conocido te pide tu número de
+                            teléfono. ¿Qué debes hacer?</p>
+                        <div class="quiz-opciones">
+                            <button class="quiz-opcion" data-valor="a">No darlo. Bloquear y contarle a un adulto de
+                                confianza.</button>
+                            <button class="quiz-opcion" data-valor="b">Dárselo si lleva mucho tiempo
+                                hablándote.</button>
+                            <button class="quiz-opcion" data-valor="c">Pedirle primero el suyo para verificar si es de
+                                fiar.</button>
+                        </div>
+                        <div class="quiz-feedback" style="display:none;"></div>
+                    </div>
+
+                    <!-- Pregunta 4 -->
+                    <div class="quiz-pregunta" data-correcta="b">
+                        <p class="quiz-enunciado">4. Encuentras un programa de Adobe Photoshop gratis en un blog
+                            desconocido. ¿Qué haces?</p>
+                        <div class="quiz-opciones">
+                            <button class="quiz-opcion" data-valor="a">Lo descargo, es lo mismo que el
+                                original.</button>
+                            <button class="quiz-opcion" data-valor="b">Uso Canva o la versión de prueba oficial. No vale
+                                el riesgo.</button>
+                            <button class="quiz-opcion" data-valor="c">Lo descargo pero no lo instalo todavía.</button>
+                        </div>
+                        <div class="quiz-feedback" style="display:none;"></div>
+                    </div>
+
+                    <!-- Pregunta 5 -->
+                    <div class="quiz-pregunta" data-correcta="c">
+                        <p class="quiz-enunciado">5. ¿Qué hace la "Verificación en Dos Pasos" (2FA)?</p>
+                        <div class="quiz-opciones">
+                            <button class="quiz-opcion" data-valor="a">Crea una copia de tu cuenta en la nube.</button>
+                            <button class="quiz-opcion" data-valor="b">Cambia tu contraseña automáticamente cada
+                                mes.</button>
+                            <button class="quiz-opcion" data-valor="c">Pide un código extra para entrar, aunque el
+                                atacante tenga tu clave.</button>
+                        </div>
+                        <div class="quiz-feedback" style="display:none;"></div>
+                    </div>
+                </div>
+
+                <div id="quiz-resultado-final" style="display:none;" class="mt-10 p-8 rounded-3xl text-center"
+                    style="background:rgba(255,255,255,0.1);"></div>
             </section>
 
             <!-- FINAL PLEDGE -->
@@ -366,11 +773,89 @@
 
     <!-- FOOTER SIMPLE -->
     <footer class="bg-white border-t border-slate-200 py-12 text-center">
-        <p class="text-xs font-black uppercase text-slate-400 tracking-[0.2em] mb-2">Educación Digital Antonio Lemus Pérez · UPTOS CR · 2026</p>
+        <p class="text-xs font-black uppercase text-slate-400 tracking-[0.2em] mb-2">Educación Digital Antonio Lemus
+            Pérez · UPTOS CR · 2026</p>
         <p class="text-[9px] font-bold uppercase text-slate-300 tracking-[0.3em]">Cordova · Guipe · Giraldo · Ruiz</p>
     </footer>
 
     <script src="logica-manual.js"></script>
+    <script src="logica-tema.js"></script>
+    <script>
+        // ============================================
+        // TALLER AUDITORÍA DE PERFIL - Manual Maestro
+        // Lógica autónoma para el taller incrustado
+        // ============================================
+        (function () {
+            const configResultado = {
+                0: { emoji: '🚨', nivel: 'CRÍTICO', mensaje: 'Tu perfil está completamente expuesto.', detalle: 'Activa al menos una medida de seguridad para comenzar.', fondo: '#ffebee', texto: '#b71c1c', borde: '#b71c1c', barra: '#b71c1c' },
+                1: { emoji: '⚠️', nivel: 'AVISO', barra: '#e65100', fondo: '#fff3e0', texto: '#e65100', borde: '#e65100' },
+                2: { emoji: '⚠️', nivel: 'AVISO', barra: '#e65100', fondo: '#fff3e0', texto: '#e65100', borde: '#e65100' },
+                3: { emoji: '🟡', nivel: 'MODERADO', barra: '#f57f17', fondo: '#fffde7', texto: '#f57f17', borde: '#f57f17' },
+                4: { emoji: '🟡', nivel: 'MODERADO', barra: '#f57f17', fondo: '#fffde7', texto: '#f57f17', borde: '#f57f17' },
+                5: { emoji: '✅', nivel: 'CASI ÓPTIMO', barra: '#2e7d32', fondo: '#e8f5e9', texto: '#1b5e20', borde: '#2e7d32' },
+                6: { emoji: '🛡️', nivel: 'ÓPTIMO', barra: '#1b5e20', fondo: '#e8f5e9', texto: '#1b5e20', borde: '#2e7d32' },
+            };
+
+            function calcularResultado() {
+                const items = document.querySelectorAll('#taller-auditoria .item-lista-verificacion-manual');
+                let marcados = 0;
+                items.forEach(function (item) {
+                    const caja = item.querySelector('input[type="checkbox"]');
+                    if (caja && caja.checked) {
+                        marcados++;
+                        item.classList.add('marcado-manual');
+                    } else {
+                        item.classList.remove('marcado-manual');
+                    }
+                });
+
+                const total = items.length;
+                const porcentaje = total > 0 ? Math.round((marcados / total) * 100) : 0;
+                const conf = configResultado[marcados] || configResultado[0];
+                const resultado = document.getElementById('resultadoAuditoria');
+                if (!resultado) return;
+
+                let mensajeTexto = conf.mensaje || `${marcados} de ${total} protecciones activas (${porcentaje}%). ¡Sigue mejorando!`;
+                let detalleTexto = conf.detalle || '';
+
+                if (marcados >= 1 && marcados <= 2) {
+                    mensajeTexto = `${marcados} de ${total} protecciones activas (${porcentaje}%). ¡Hay mucho por mejorar!`;
+                    detalleTexto = 'Activa más medidas para proteger tu privacidad.';
+                } else if (marcados >= 3 && marcados <= 4) {
+                    mensajeTexto = `${marcados} de ${total} (${porcentaje}%): Vas bien, pero aún tienes puntos vulnerables.`;
+                    detalleTexto = '¡Casi lo logras! Activa las protecciones que faltan.';
+                } else if (marcados === 5) {
+                    mensajeTexto = `${marcados} de ${total} (${porcentaje}%): Excelente nivel de privacidad.`;
+                    detalleTexto = '¡Una protección más y estarás al máximo!';
+                } else if (marcados === 6) {
+                    mensajeTexto = `¡${marcados} de ${total} (${porcentaje}%)! Tu perfil está muy bien protegido.`;
+                    detalleTexto = '¡Felicidades! Eres un ciudadano digital responsable.';
+                }
+
+                resultado.style.display = 'block';
+                resultado.style.background = conf.fondo;
+                resultado.style.color = conf.texto;
+                resultado.style.borderColor = conf.borde;
+                resultado.innerHTML = `
+                    <div style="font-size:1.75rem;margin-bottom:0.4rem;">${conf.emoji}</div>
+                    <strong>${conf.nivel} — ${mensajeTexto}</strong>
+                    <div style="font-size:0.85rem;margin-top:0.4rem;font-weight:600;opacity:0.85;">${detalleTexto}</div>
+                    <div class="barra-progreso-contenedor" style="margin-top:0.75rem;">
+                        <div class="barra-progreso-relleno" style="width:${porcentaje}%;background:${conf.barra};"></div>
+                    </div>
+                `;
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const items = document.querySelectorAll('#taller-auditoria .item-lista-verificacion-manual');
+                items.forEach(function (item) {
+                    const caja = item.querySelector('input[type="checkbox"]');
+                    if (!caja) return;
+                    caja.addEventListener('change', calcularResultado);
+                });
+            });
+        })();
+    </script>
 </body>
 
 </html>

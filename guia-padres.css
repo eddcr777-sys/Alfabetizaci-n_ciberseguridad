@@ -63,3 +63,60 @@ h1, h2, h3 {
     margin-bottom: 8px;
     display: inline-block;
 }
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body { background-color: #0f172a; color: #f8fafc; }
+
+.dark .tarjeta-pro {
+    background-color: #451a03 !important; /* Ámbar muy oscuro */
+    border-color: #92400e !important;
+}
+
+.dark .tarjeta-pro h2, 
+.dark .tarjeta-pro p,
+.dark .tarjeta-pro h4 {
+    color: #fef3c7 !important; /* Texto ámbar claro legible */
+}
+
+.dark .tarjeta-pro div[class*="bg-white"] {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(251, 191, 36, 0.2) !important;
+}
+
+.dark .tarjeta-paso {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #f8fafc !important;
+}
+
+.dark .tarjeta-paso h3 {
+    color: #f8fafc !important;
+}
+
+.dark .tarjeta-paso p {
+    color: #cbd5e1 !important;
+}
+
+.dark .etiqueta-roja {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #f8fafc !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark .icono-numero {
+    background-color: #3b82f6 !important;
+}
+
+.dark h1, .dark h2, .dark .text-slate-900 {
+    color: #f8fafc !important;
+}
+
+.dark .text-blue-800, .dark .text-blue-900 {
+    color: #60a5fa !important;
+}
+
+.dark .text-amber-800, .dark .text-amber-900 {
+    color: #fcd34d !important;
+}

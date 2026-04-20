@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="phishing.css" />
+    <link rel="stylesheet" href="estilos-base.css" />
 </head>
 <body>
 
@@ -92,7 +93,7 @@
           </div>
         </div>
 
-        <hr style="margin:1.5rem 0; border: 0; border-top: 1px solid #eee;"/>
+        <hr style="margin:1.5rem 0; border: 0; border-top: 1px solid rgba(0,0,0,0.1); border-color: inherit; opacity: 0.2;"/>
 
         <p class="parrafo" style="font-size: 1.1rem; margin-bottom: 1rem;">
           Estimado 
@@ -124,7 +125,7 @@
           </span>
         </p>
 
-        <p style="font-size:0.85rem; color:#888; border-top: 1px solid #eee; pt-4 mt-4 text-center;">
+        <p style="font-size:0.85rem; border-top: 1px solid rgba(0,0,0,0.1); border-color: inherit; pt-4 mt-4 text-center; opacity: 0.5;">
           <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro">© 2026 Banco Seguro. Todos los derechos reserbados.</span>
             <span class="explicacion-señal">
@@ -153,36 +154,163 @@
       </div>
     </div>
 
-    <div class="taller-bloque">
-      <div class="taller-titulo">¿Cuál es el link real?</div>
-      <p class="taller-instruccion">Toca cada enlace para ver si es seguro, peligroso o dudoso:</p>
+    <div class="verificador-urls">
+        <div class="verificador-encabezado">
+            <span style="font-size:1.5rem;">&#x1F575;&#xFE0F;</span>
+            <div>
+                <div class="verificador-titulo">¿Cuál es el enlace real?</div>
+                <p class="verificador-subtitulo">Toca cada enlace para analizar si es seguro, falso o dudoso. ¡Descubre por qué!</p>
+            </div>
+        </div>
 
-      <div class="url-ejemplos">
-        <div class="url-item" data-tipo="segura" data-explicacion="SEGURA" onclick="revelarDireccion(this)">
-          <span>https://www.instagram.com/accounts/login</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">check_circle</span> SEGURA — Dominio oficial correcto</span>
+        <!-- URL 1: Segura -->
+        <div class="url-tarjeta" id="url-1" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-seguro">https://</span><span class="url-parte dominio-principal">www.instagram.com</span><span class="url-parte ruta">/accounts/login</span>
+                </div>
+                <span class="url-candado">&#x1F512;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge segura">&#x2705; SEGURA</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Protocolo</span><span class="ua-valor">&#x2714; <strong>https://</strong> — Conexión cifrada y segura</span></div>
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Dominio</span><span class="ua-valor">&#x2714; <strong>instagram.com</strong> — Dominio oficial correcto</span></div>
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Ruta</span><span class="ua-valor">&#x2714; <strong>/accounts/login</strong> — Página de inicio de sesión real</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-        <div class="url-item" data-tipo="peligrosa" data-explicacion="FALSA" onclick="revelarDireccion(this)">
-          <span>http://instagram-seguridad.xyz/login</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">cancel</span> FALSA — "http" sin "s" y dominio ".xyz" sospechoso</span>
+
+        <!-- URL 2: Peligrosa (http + dominio .xyz) -->
+        <div class="url-tarjeta" id="url-2" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-inseguro">http://</span><span class="url-parte dominio-falso">instagram-seguridad.xyz</span><span class="url-parte ruta">/login</span>
+                </div>
+                <span class="url-candado peligro">&#x26A0;&#xFE0F;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge peligrosa">&#x274C; ENLACE FALSO</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Protocolo</span><span class="ua-valor">&#x2716; <strong>http://</strong> sin "s" — SIN cifrado. Tus datos viajan expuestos</span></div>
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Dominio</span><span class="ua-valor">&#x2716; <strong>instagram-seguridad.xyz</strong> — No es Instagram. El ".xyz" es un dominio barato y sospechoso</span></div>
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Ruta</span><span class="ua-valor">~ <strong>/login</strong> — La ruta parece normal, pero todo el resto es falso</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-        <div class="url-item" data-tipo="peligrosa" data-explicacion="FALSA" onclick="revelarDireccion(this)">
-          <span>https://lnstagram.com/login</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">cancel</span> FALSA — La "l" parece "I" pero cambia el dominio</span>
+
+        <!-- URL 3: Peligrosa (typosquatting: lnstagram vs Instagram) -->
+        <div class="url-tarjeta" id="url-3" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-seguro">https://</span><span class="url-parte dominio-falso"><span class="letra-trampa">ln</span>stagram.com</span><span class="url-parte ruta">/login</span>
+                </div>
+                <span class="url-candado peligro">&#x26A0;&#xFE0F;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge peligrosa">&#x274C; TRAMPA VISUAL</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Protocolo</span><span class="ua-valor">~ <strong>https://</strong> — Tiene "s", pero eso no garantiza que el sitio sea real</span></div>
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Dominio</span><span class="ua-valor">&#x2716; ¡El dominio dice <strong>"lnstagram"</strong> con una "l" minúscula! La "I" (mayúscula) y la "l" (minúscula) son casi idénticas visualmente. Este truco se llama <strong>Typosquatting</strong>.</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-        <div class="url-item" data-tipo="segura" data-explicacion="SEGURA" onclick="revelarDireccion(this)">
-          <span>https://mail.google.com/mail/</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">check_circle</span> SEGURA — Dominio real de Google con https</span>
+
+        <!-- URL 4: Segura (subdomain de Google) -->
+        <div class="url-tarjeta" id="url-4" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-seguro">https://</span><span class="url-parte subdominio">mail.</span><span class="url-parte dominio-principal">google.com</span><span class="url-parte ruta">/mail/</span>
+                </div>
+                <span class="url-candado">&#x1F512;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge segura">&#x2705; SEGURA</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Protocolo</span><span class="ua-valor">&#x2714; <strong>https://</strong> — Conexión segura</span></div>
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Subdominio</span><span class="ua-valor">&#x2714; <strong>mail.</strong> — Es un servicio oficial dentro de Google</span></div>
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Dominio</span><span class="ua-valor">&#x2714; <strong>google.com</strong> — Dominio oficial de Google</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-        <div class="url-item" data-tipo="peligrosa" data-explicacion="FALSA" onclick="revelarDireccion(this)">
-          <span>https://google.seguridad-verifica.com</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">cancel</span> FALSA — El dominio real es "seguridad-verifica.com", no Google</span>
+
+        <!-- URL 5: Peligrosa (subdomain falso) -->
+        <div class="url-tarjeta" id="url-5" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-seguro">https://</span><span class="url-parte subdominio-trampa">google.</span><span class="url-parte dominio-falso">seguridad-verifica.com</span>
+                </div>
+                <span class="url-candado peligro">&#x26A0;&#xFE0F;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge peligrosa">&#x274C; TRAMPA DE SUBDOMINIO</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item ok"><span class="ua-etiqueta">Protocolo</span><span class="ua-valor">~ <strong>https://</strong> — Tiene "s", pero el sitio sigue siendo falso</span></div>
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Truco</span><span class="ua-valor">&#x2716; La palabra "google" es solo un subdominio decorativo. El <strong>dominio real es "seguridad-verifica.com"</strong>, que no tiene nada que ver con Google.</span></div>
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Regla</span><span class="ua-valor">&#x26A1; Siempre lee la URL <strong>de derecha a izquierda</strong> desde el primer punto antes del primer /</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-        <div class="url-item" data-tipo="dudosa" data-explicacion="DUDOSA" onclick="revelarDireccion(this)">
-          <span>https://bit.ly/3xLm9qZ</span>
-          <span class="badge"><span class="material-symbols-outlined align-middle">help</span> DUDOSA — Links acortados ocultan el destino real. ¡Cuidado!</span>
+
+        <!-- URL 6: Dudosa (link acortado) -->
+        <div class="url-tarjeta" id="url-6" onclick="analizarUrl(this)">
+            <div class="url-barra-navegador">
+                <div class="url-barra-dots">
+                    <span class="url-dot" style="background:#ef4444;"></span>
+                    <span class="url-dot" style="background:#f59e0b;"></span>
+                    <span class="url-dot" style="background:#22c55e;"></span>
+                </div>
+                <div class="url-barra-campo">
+                    <span class="url-parte protocolo-seguro">https://</span><span class="url-parte dominio-dudoso">bit.ly</span><span class="url-parte ruta">/3xLm9qZ</span>
+                </div>
+                <span class="url-candado dudosa">&#x2753;</span>
+            </div>
+            <div class="url-estado" style="display:none;">
+                <div class="url-badge dudosa">&#x26A0;&#xFE0F; DUDOSA</div>
+                <div class="url-analisis">
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Problema</span><span class="ua-valor">&#x2716; <strong>bit.ly</strong> es un acortador de links. Oculta completamente a dónde llevas al hacer clic.</span></div>
+                    <div class="url-analisis-item mal"><span class="ua-etiqueta">Riesgo</span><span class="ua-valor">&#x26A1; Los atacantes usan acortadores para disfrazar URLs peligrosas. Puedes usar <strong>unshorten.it</strong> para ver el destino real antes de entrar.</span></div>
+                </div>
+            </div>
+            <p class="url-instruccion">Toca para analizar</p>
         </div>
-      </div>
+
+        <div class="verificador-progreso">
+            <span id="urls-revisadas">0</span> de 6 analizadas
+            <div class="verificador-barra-contenedor">
+                <div class="verificador-barra-relleno" id="barra-urls"></div>
+            </div>
+        </div>
     </div>
   </section>
 
@@ -209,5 +337,6 @@
 </footer>
 
 <script src="logica-phishing.js"></script>
+    <script src="logica-tema.js"></script>
 </body>
 </html>

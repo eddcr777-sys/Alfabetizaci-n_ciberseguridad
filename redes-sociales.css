@@ -65,7 +65,7 @@ a {
 .titulo-seccion {
     font-size: 2rem;
     font-weight: 800;
-    color: #6a0dad;
+    color: #000000;
     border-left: 8px solid #6a0dad;
     padding-left: 1.25rem;
     margin-bottom: 2rem;
@@ -152,7 +152,7 @@ a {
 .tarjeta .tarjeta-titulo {
     font-size: 1.2rem;
     font-weight: 800;
-    color: #6a0dad;
+    color: #000000;
     margin-bottom: 0.75rem;
 }
 
@@ -173,13 +173,14 @@ a {
 .taller-titulo {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #6a0dad;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
 .taller-instruccion {
     font-size: 1rem;
-    color: #555;
+    color: #374151;
+    /* slate-700 */
     margin-bottom: 1.5rem;
 }
 
@@ -215,24 +216,40 @@ a {
     border-color: #388e3c;
 }
 
-.checklist-item input[type="checkbox"] {
-    width: 1.5rem;
-    height: 1.5rem;
+.item-lista-verificacion input[type="checkbox"] {
+    width: 1.4rem;
+    height: 1.4rem;
     margin-top: 0.2rem;
     accent-color: #6a0dad;
     flex-shrink: 0;
     cursor: pointer;
+    pointer-events: none;
+    /* El div padre gestiona el click */
 }
 
 .resultado-privacidad {
     margin-top: 1.5rem;
     padding: 1.5rem;
     border-radius: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
     text-align: center;
     border: 3px solid;
     transition: all 0.5s;
+}
+
+.barra-progreso-contenedor {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+    height: 10px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.barra-progreso-relleno {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s ease;
 }
 
 .bloque-recuerda {
@@ -266,7 +283,8 @@ a {
     padding: 3rem 2rem;
     text-align: center;
     font-size: 0.9rem;
-    color: #999;
+    color: #475569;
+    /* slate-600 */
     max-width: 900px;
     margin: 0 auto;
 }
@@ -279,12 +297,173 @@ a {
 
 /* RESPONSIVE FIXES */
 @media (max-width: 768px) {
-    body { font-size: 1.15rem; }
-    .pagina-header { padding: 1.5rem; text-align: center; }
-    .titulo-principal { font-size: 2.25rem; }
-    .contenido { padding: 1.5rem 1rem; }
-    .seccion { margin-bottom: 3rem; }
-    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
-    .caja-definicion, .taller-bloque { padding: 1.25rem; }
-    .btn-auditoria { padding: 1rem; font-size: 1rem; }
+    body {
+        font-size: 1.15rem;
+    }
+
+    .pagina-header {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .titulo-principal {
+        font-size: 2.25rem;
+    }
+
+    .contenido {
+        padding: 1.5rem 1rem;
+    }
+
+    .seccion {
+        margin-bottom: 3rem;
+    }
+
+    .titulo-seccion {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        border-left-width: 6px;
+    }
+
+    .caja-definicion,
+    .taller-bloque {
+        padding: 1.25rem;
+    }
+
+    .btn-auditoria {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+.dark .tarjeta,
+.dark .caja-definicion,
+.dark .taller-bloque {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .pagina-header {
+    background-color: #2e1065;
+}
+
+/* Violeta oscuro */
+.dark .titulo-seccion,
+.dark .tarjeta-titulo,
+.dark .taller-titulo {
+    color: #c084fc;
+    border-left-color: #a855f7;
+}
+
+.dark .caja-alerta {
+    background-color: #451a03;
+    border-color: #9a3412;
+    color: #fdba74;
+}
+
+.dark .caja-peligro {
+    background-color: #450a0a;
+    border-color: #991b1b;
+    color: #fecaca;
+}
+
+.dark .bloque-recuerda {
+    background-color: #2e1065;
+    border-color: #a855f7;
+}
+
+.dark .item-lista-verificacion {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+.dark .item-lista-verificacion:hover {
+    border-color: #a855f7;
+}
+
+.dark .item-lista-verificacion.marcado {
+    background-color: #064e3b;
+    border-color: #22c55e;
+    color: #f8fafc;
+}
+
+.dark .caja-definicion .texto-def {
+    color: #e9d5ff;
+}
+
+.dark .palabra-clave {
+    color: #d8b4fe;
+    text-decoration-color: #a855f7;
+}
+
+.dark .sim-descarga {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .sim-barra {
+    background-color: #0f172a;
+    border-bottom-color: #334155;
+    color: #94a3b8;
+}
+
+.dark .sim-url {
+    background-color: #0f172a;
+    border-bottom-color: #334155;
+}
+
+.dark .sim-cuerpo h3 {
+    color: #f8fafc;
+}
+
+.dark .btn-gris {
+    background-color: #334155;
+    color: #94a3b8;
+    border-color: #475569;
+}
+
+.dark .tarjeta-alternativa {
+    background-color: #1e293b;
+    border-color: #22c55e;
+}
+
+.dark .mensaje-trampa {
+    background-color: #450a0a;
+    border-color: #7f1d1d;
+    color: #fecaca;
+}
+
+.dark .item-lista-verificacion {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #cbd5e1;
+}
+
+.dark .item-lista-verificacion:hover {
+    border-color: #a855f7;
+}
+
+.dark .item-lista-verificacion.marcado {
+    background-color: #064e3b;
+    border-color: #22c55e;
+    color: #f8fafc;
+}
+
+.dark .caja-definicion .texto-def {
+    color: #e9d5ff;
+}
+
+.dark .palabra-clave {
+    color: #d8b4fe;
+    text-decoration-color: #a855f7;
 }

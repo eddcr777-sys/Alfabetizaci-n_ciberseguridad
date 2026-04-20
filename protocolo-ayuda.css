@@ -187,9 +187,110 @@ a {
     padding: 4rem 2rem;
     text-align: center;
     font-size: 0.95rem;
-    color: #64748b;
+    color: #334155; /* slate-700: mejor contraste */
 }
 
 .pie-pagina strong {
     color: #1a237e;
+}
+
+.caja-guia-rapida {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 2rem;
+}
+
+.guia-rapida-titulo {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    color: #334155;
+}
+
+.guia-rapida-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body { background-color: #0f172a; color: #f8fafc; }
+
+.dark .caja-guia-rapida {
+    background: #111827 !important;
+    border-color: #374151 !important;
+}
+
+.dark .guia-rapida-titulo {
+    color: #94a3b8 !important;
+}
+
+.dark .guia-rapida-grid div {
+    color: #cbd5e1 !important;
+}
+
+.dark .pagina-header {
+    background: radial-gradient(circle at top right, #1e1b4b, #0f172a) !important;
+}
+
+.dark .intro-ayuda {
+    background-color: #450a0a !important;
+    border-color: #991b1b !important;
+}
+
+.dark .intro-ayuda h2,
+.dark .intro-ayuda p {
+    color: #fecaca !important;
+}
+
+.dark .paso-numero {
+    color: #60a5fa !important;
+    opacity: 0.1 !important;
+}
+
+.dark .paso-titulo {
+    color: #60a5fa !important;
+}
+
+.dark .paso-caja {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+}
+
+.dark .caja-info {
+    background-color: #0c4a6e !important;
+    border-left-color: #0ea5e9 !important;
+    color: #e0f2fe !important;
+}
+
+.dark .lista-pasos li {
+    color: #cbd5e1 !important;
+}
+
+.dark .seccion-final {
+    background-color: #1e1b4b !important;
+}
+
+.dark .boton-volver {
+    background-color: #f8fafc !important;
+    color: #1e1b4b !important;
+}
+
+.dark .pie-pagina strong {
+    color: #60a5fa !important;
+}
+
+/* Forzar cajas de advertencia con estilos inline */
+.dark div[style*="background:#fffbeb"] {
+    background-color: #451a03 !important;
+    border-color: #b45309 !important;
+    color: #fef3c7 !important;
 }

@@ -272,3 +272,18 @@ a {
     .caja-definicion, .escenario-bloque { padding: 1.25rem; }
     .opcion-btn { padding: 0.75rem; font-size: 0.95rem; }
 }
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+.dark body { background-color: #0f172a; color: #f8fafc; }
+.dark .tarjeta, .dark .caja-definicion, .dark .taller-bloque { background-color: #1e293b; border-color: #334155; color: #f8fafc; }
+.dark .pagina-header { background-color: #082f49; } /* Azul profundo */
+.dark .titulo-seccion, .dark .tarjeta-titulo, .dark .taller-titulo { color: #38bdf8; border-left-color: #0ea5e9; }
+.dark .caja-alerta { background-color: #451a03; border-color: #9a3412; color: #fdba74; }
+.dark .bloque-recuerda { background-color: #082f49; border-color: #38bdf8; }
+.dark .quiz-pregunta { background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: #f8fafc; }
+.dark .quiz-pregunta:hover { background-color: rgba(56, 189, 248, 0.1); border-color: #38bdf8; }
+.dark .quiz-respuesta { color: #94a3b8; }
+.dark .caja-definicion .texto-def { color: #bae6fd; }
+.dark .palabra-clave { color: #7dd3fc; }
