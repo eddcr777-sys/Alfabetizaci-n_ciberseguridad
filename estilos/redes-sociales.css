@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-.pagina-header {
+.cabecera-pagina {
     background: #6a0dad;
     color: white;
     padding: 2rem 2rem 3rem;
@@ -40,7 +40,7 @@ a {
     text-decoration: underline;
 }
 
-.titulo-principal {
+.titulo-destacado {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.05;
@@ -76,7 +76,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.caja-definicion {
+.bloque-definicion {
     background: #f3e5f5;
     border: 2px solid #6a0dad;
     border-radius: 1rem;
@@ -84,7 +84,7 @@ a {
     margin: 1.75rem 0;
 }
 
-.caja-definicion .etiqueta-def {
+.bloque-definicion .etiqueta-def {
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -93,7 +93,7 @@ a {
     margin-bottom: 0.5rem;
 }
 
-.caja-definicion .texto-def {
+.bloque-definicion .texto-def {
     font-size: 1.1rem;
     font-weight: 600;
     color: #4a148c;
@@ -184,7 +184,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.item-lista-verificacion {
+.elemento-lista-verificacion {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
@@ -202,21 +202,21 @@ a {
     word-wrap: break-word;
 }
 
-.item-lista-verificacion span {
+.elemento-lista-verificacion span {
     flex: 1;
     min-width: 0;
 }
 
-.item-lista-verificacion:hover {
+.elemento-lista-verificacion:hover {
     border-color: #6a0dad;
 }
 
-.item-lista-verificacion.marcado {
+.elemento-lista-verificacion.marcado {
     background: #e8f5e9;
     border-color: #388e3c;
 }
 
-.item-lista-verificacion input[type="checkbox"] {
+.elemento-lista-verificacion input[type="checkbox"] {
     width: 1.4rem;
     height: 1.4rem;
     margin-top: 0.2rem;
@@ -301,12 +301,12 @@ a {
         font-size: 1.15rem;
     }
 
-    .pagina-header {
+    .cabecera-pagina {
         padding: 1.5rem;
         text-align: center;
     }
 
-    .titulo-principal {
+    .titulo-destacado {
         font-size: 2.25rem;
     }
 
@@ -324,12 +324,12 @@ a {
         border-left-width: 6px;
     }
 
-    .caja-definicion,
+    .bloque-definicion,
     .taller-bloque {
         padding: 1.25rem;
     }
 
-    .btn-auditoria {
+    .boton-auditoria {
         padding: 1rem;
         font-size: 1rem;
     }
@@ -339,19 +339,19 @@ a {
    MODO OSCURO
    ========================================== */
 .dark body {
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: #020617;
+    color: #FFFFFF;
 }
 
 .dark .tarjeta,
-.dark .caja-definicion,
+.dark .bloque-definicion,
 .dark .taller-bloque {
-    background-color: #1e293b;
+    background-color: #022C22;
     border-color: #334155;
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
-.dark .pagina-header {
+.dark .cabecera-pagina {
     background-color: #2e1065;
 }
 
@@ -380,23 +380,23 @@ a {
     border-color: #a855f7;
 }
 
-.dark .item-lista-verificacion {
-    background-color: #0f172a;
+.dark .elemento-lista-verificacion {
+    background-color: #020617;
     border-color: #334155;
-    color: #cbd5e1;
+    color: #D1FAE5;
 }
 
-.dark .item-lista-verificacion:hover {
+.dark .elemento-lista-verificacion:hover {
     border-color: #a855f7;
 }
 
-.dark .item-lista-verificacion.marcado {
+.dark .elemento-lista-verificacion.marcado {
     background-color: #064e3b;
     border-color: #22c55e;
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
-.dark .caja-definicion .texto-def {
+.dark .bloque-definicion .texto-def {
     color: #e9d5ff;
 }
 
@@ -406,34 +406,34 @@ a {
 }
 
 .dark .sim-descarga {
-    background-color: #1e293b;
+    background-color: #022C22;
     border-color: #334155;
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
 .dark .sim-barra {
-    background-color: #0f172a;
+    background-color: #020617;
     border-bottom-color: #334155;
     color: #94a3b8;
 }
 
 .dark .sim-url {
-    background-color: #0f172a;
+    background-color: #020617;
     border-bottom-color: #334155;
 }
 
 .dark .sim-cuerpo h3 {
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
-.dark .btn-gris {
+.dark .boton-gris {
     background-color: #334155;
     color: #94a3b8;
     border-color: #475569;
 }
 
 .dark .tarjeta-alternativa {
-    background-color: #1e293b;
+    background-color: #022C22;
     border-color: #22c55e;
 }
 
@@ -443,23 +443,23 @@ a {
     color: #fecaca;
 }
 
-.dark .item-lista-verificacion {
-    background-color: #0f172a;
+.dark .elemento-lista-verificacion {
+    background-color: #020617;
     border-color: #334155;
-    color: #cbd5e1;
+    color: #D1FAE5;
 }
 
-.dark .item-lista-verificacion:hover {
+.dark .elemento-lista-verificacion:hover {
     border-color: #a855f7;
 }
 
-.dark .item-lista-verificacion.marcado {
+.dark .elemento-lista-verificacion.marcado {
     background-color: #064e3b;
     border-color: #22c55e;
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
-.dark .caja-definicion .texto-def {
+.dark .bloque-definicion .texto-def {
     color: #e9d5ff;
 }
 

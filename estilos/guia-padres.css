@@ -1,7 +1,7 @@
 :root {
     --acento: #1e3a8a;
     --advertencia: #d97706;
-    --fondo-paso: #f8fafc;
+    --fondo-paso: #FFFFFF;
     --fondo-pro: #fefce8;
 }
 
@@ -9,7 +9,7 @@
 body {
     font-family: 'Public Sans', sans-serif;
     background: #fff;
-    color: #1e293b;
+    color: #022C22;
     line-height: 1.5;
 }
 
@@ -19,7 +19,7 @@ h1, h2, h3 {
 
 .tarjeta-paso {
     background: var(--fondo-paso);
-    border: 1px solid #e2e8f0;
+    border: 1px solid #ECFDF5;
     border-radius: 1.25rem;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -68,7 +68,7 @@ h1, h2, h3 {
 /* ==========================================
    MODO OSCURO
    ========================================== */
-.dark body { background-color: #0f172a; color: #f8fafc; }
+.dark body { background-color: #020617; color: #FFFFFF; }
 
 .dark .tarjeta-pro {
     background-color: #451a03 !important; /* Ámbar muy oscuro */
@@ -87,22 +87,22 @@ h1, h2, h3 {
 }
 
 .dark .tarjeta-paso {
-    background-color: #1e293b !important;
+    background-color: #022C22 !important;
     border-color: #334155 !important;
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }
 
 .dark .tarjeta-paso h3 {
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }
 
 .dark .tarjeta-paso p {
-    color: #cbd5e1 !important;
+    color: #D1FAE5 !important;
 }
 
 .dark .etiqueta-roja {
     background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
@@ -111,10 +111,10 @@ h1, h2, h3 {
 }
 
 .dark h1, .dark h2, .dark .text-slate-900 {
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }
 
-.dark .text-blue-800, .dark .text-blue-900 {
+.dark .text-secundario-800, .dark .text-secundario-900 {
     color: #60a5fa !important;
 }
 

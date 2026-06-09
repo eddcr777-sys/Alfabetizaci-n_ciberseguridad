@@ -6,15 +6,15 @@
 <title>Phishing y Engaños | L.B. Antonio Lemus Pérez</title>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="phishing.css" />
-    <link rel="stylesheet" href="estilos-base.css" />
+<link rel="stylesheet" href="../estilos/phishing.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
 </head>
 <body>
 
-<div class="pagina-header">
+<div class="cabecera-pagina">
   <div style="max-width:900px;margin:0 auto;">
     <p class="rastro-navegacion"><a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a></p>
-    <h1 class="titulo-principal">¿Cómo detectar mensajes falsos y engaños en internet?</h1>
+    <h1 class="titulo-destacado">¿Cómo detectar mensajes falsos y engaños en internet?</h1>
     <p class="subtitulo">Módulo 3 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
   </div>
 </div>
@@ -27,14 +27,14 @@
       Existe un tipo de engaño por internet llamado <span class="palabra-clave">Phishing</span> (se pronuncia "fishing", que en inglés significa "pescar"). 
       El nombre viene de que los criminales "lanzan un anzuelo" (un mensaje falso) esperando que tú "piques" y entregues tus datos.
     </p>
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es el Phishing?</div>
       <div class="texto-def">Es cuando alguien te manda un mensaje falso que parece real (de tu banco, de Instagram, de Netflix, etc.) para que entres en un enlace y escribas tu contraseña en una página falsa. Así te roban la cuenta sin necesidad de hackear nada.</div>
     </div>
     <p class="parrafo">
       Para lograrlo, usan técnicas psicológicas llamadas <span class="palabra-clave">Ingeniería Social</span>.
     </p>
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es la Ingeniería Social?</div>
       <div class="texto-def">No es hackear computadoras, es hackear personas. Usan el miedo ("¡Tu cuenta se cerrará!"), la urgencia ("¡Tienes 24 horas!") o la curiosidad ("Mira quién te está viendo el perfil") para que reacciones sin pensar.</div>
     </div>
@@ -66,16 +66,16 @@
     </div>
 
     <div class="simulador-correo">
-      <div class="correo-barra-top">
+      <div class="barra-superior-correo">
         <span class="circulo" style="background:#ef4444"></span>
         <span class="circulo" style="background:#fbbf24"></span>
         <span class="circulo" style="background:#22c55e"></span>
         <span style="margin-left:1rem;">Bandeja de Entrada — Gmail</span>
       </div>
-      <div class="correo-cuerpo">
-        <div class="correo-campo-bloque">
+      <div class="cuerpo-correo">
+        <div class="campo-correo-bloque">
           <span class="etiqueta-campo">De:</span>
-          <div class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+          <div class="envoltorio-señal" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro">seguridad-banco@gmail.com</span>
             <div class="explicacion-señal">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 1: Un banco real (@bancovenezuela.com) nunca usaría una cuenta gratuita de Gmail. Esta dirección es falsa.
@@ -83,9 +83,9 @@
           </div>
         </div>
         
-        <div class="correo-campo-bloque">
+        <div class="campo-correo-bloque">
           <span class="etiqueta-campo">Asunto:</span>
-          <div class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+          <div class="envoltorio-señal" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">warning</span> URGENTE: Tu cuenta será bloqueada</span>
             <div class="explicacion-señal">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 2: Los estafadores usan la urgencia para que te asustes y no pienses con calma. Un banco nunca te amenazaría así por correo.
@@ -97,7 +97,7 @@
 
         <p class="parrafo" style="font-size: 1.1rem; margin-bottom: 1rem;">
           Estimado 
-          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+          <span class="envoltorio-señal" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro">usuario</span>,
             <span class="explicacion-señal">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 3: El mensaje es genérico. Si fuera tu banco real, pondría tu nombre y apellido completos.
@@ -107,7 +107,7 @@
 
         <p class="parrafo" style="font-size: 1.1rem; margin-bottom: 1rem;">
           Hemos detectado un problema de seguridad. Debe verificar su cuenta 
-          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+          <span class="envoltorio-señal" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro">antes de 2 horas</span>
             <span class="explicacion-señal">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 4: Otra vez usan la presión del tiempo. Es una trampa psicológica muy común.
@@ -117,7 +117,7 @@
         </p>
 
         <p style="margin: 2rem 0; text-align: center;">
-          <span class="señal-wrapper" style="display: block;" onclick="this.classList.toggle('abierto')">
+          <span class="envoltorio-señal" style="display: block;" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro" style="display: inline-block; padding: 1rem 2rem; border-style: solid; background: #b71c1c; color: white;">Verificar Cuenta Ahora <span class="material-symbols-outlined align-middle">arrow_forward</span></span>
             <span class="explicacion-señal" style="text-align: left;">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 5: Este botón te lleva a una página falsa que se ve igual al banco pero es del hacker. ¡Nunca hagas clic!
@@ -126,7 +126,7 @@
         </p>
 
         <p style="font-size:0.85rem; border-top: 1px solid rgba(0,0,0,0.1); border-color: inherit; pt-4 mt-4 text-center; opacity: 0.5;">
-          <span class="señal-wrapper" onclick="this.classList.toggle('abierto')">
+          <span class="envoltorio-señal" onclick="this.classList.toggle('abierto')">
             <span class="señal-peligro">© 2026 Banco Seguro. Todos los derechos reserbados.</span>
             <span class="explicacion-señal">
               <span class="material-symbols-outlined text-red-600 align-middle">report</span> SEÑAL 6: Observa la mala ortografía ("reserbados" con B). Las empresas serias no cometen estos errores.
@@ -144,7 +144,7 @@
     <p class="parrafo">
       La <span class="palabra-clave">URL</span> es la dirección de una página web, lo que ves en la barra de tu navegador (ej: www.google.com).
     </p>
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Cómo leer una URL con seguridad?</div>
       <div class="texto-def">
         Una URL tiene partes importantes. Ejemplo: <strong>https://www.instagram.com/login</strong><br/>
@@ -320,10 +320,10 @@
       <ul class="lista-reglas">
         <li><span class="material-symbols-outlined align-middle text-red-500">block</span> NO hagas clic en ningún enlace, aunque el mensaje parezca urgente.</li>
         <li><span class="material-symbols-outlined align-middle text-amber-500">mail</span> Verifica siempre el remitente: ¿el correo tiene el dominio oficial o es un Gmail/Hotmail raro?</li>
-        <li><span class="material-symbols-outlined align-middle text-blue-500">search</span> Revisa la URL antes de escribir tu contraseña: busca errores en el nombre o ausencia de "https".</li>
+        <li><span class="material-symbols-outlined align-middle text-secundario-500">search</span> Revisa la URL antes de escribir tu contraseña: busca errores en el nombre o ausencia de "https".</li>
         <li><span class="material-symbols-outlined align-middle text-amber-500">delete</span> Borra el mensaje y márcalo como "Spam" o "Phishing" en tu correo.</li>
         <li><span class="material-symbols-outlined align-middle text-green-500">vpn_key</span> Si ingresaste tu clave por error, cámbiala de inmediato desde el sitio oficial.</li>
-        <li><span class="material-symbols-outlined align-middle text-blue-500">forum</span> Avisa a un profesor o directivo para proteger a tus compañeros.</li>
+        <li><span class="material-symbols-outlined align-middle text-secundario-500">forum</span> Avisa a un profesor o directivo para proteger a tus compañeros.</li>
       </ul>
     </div>
   </section>
@@ -336,7 +336,7 @@
   <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · UPTOS CR</p>
 </footer>
 
-<script src="logica-phishing.js"></script>
-    <script src="logica-tema.js"></script>
+<script src="../scripts/logica-phishing.js"></script>
+    <script src="../scripts/logica-tema.js"></script>
 </body>
 </html>

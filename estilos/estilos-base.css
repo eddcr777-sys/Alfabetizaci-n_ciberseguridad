@@ -1,0 +1,131 @@
+/* Estilos Base - El Arboreto Seguro */
+
+:root {
+    --color-institucional: #064E3B; /* Verde Esmeralda */
+    --color-secundario: #10B981;    /* Verde Vibrante */
+    --color-acento: #22C55E;        /* Verde Neón */
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* ==========================================
+   ESTILOS BASE MODO OSCURO (ESTRICTAMENTE VERDE)
+   ========================================== */
+.dark body {
+    background-color: #020617 !important;
+    color: #FFFFFF !important;
+}
+
+.dark h1:not(.text-transparent),
+.dark h2:not(.text-transparent),
+.dark h3:not(.text-transparent) {
+    color: #FFFFFF;
+}
+
+/* Fondos base y tarjetas de todas las subpáginas */
+.dark .bg-superficie,
+.dark .bg-superficie-container-lowest,
+.dark .bg-superficie-container-low,
+.dark .bg-white,
+.dark .tarjeta-guia,
+.dark .tarjeta-institucional,
+.dark .tarjeta-capitulo {
+    background-color: #022C22 !important;
+    color: #FFFFFF !important;
+}
+
+/* Navegación semi-transparente y Menús */
+.dark nav {
+    background-color: rgba(2, 6, 23, 0.8) !important;
+}
+
+/* Cajas e íconos verde oscuro y fondos primarios */
+.dark .bg-\[\#064E3B\],
+.dark footer.bg-primario,
+.dark header.bg-primario {
+    background-color: #022C22 !important;
+}
+
+/* Textos regulares y secundarios */
+.dark .text-en-superficie,
+.dark .text-en-superficie-variant,
+.dark p,
+.dark li {
+    color: #D1FAE5 !important;
+}
+
+/* Títulos y textos destacados */
+.dark .text-\[\#064E3B\],
+.dark .text-primario {
+    color: #4ADE80 !important;
+}
+
+.dark .text-secundario {
+    color: #34D399 !important;
+}
+
+/* Fondos especiales de portada y cabeceras */
+.dark .gradiente-portada,
+.dark .gradiente-cabecera,
+.dark .gradiente-encabezado,
+.dark .cabecera-pagina {
+    background: radial-gradient(circle at top right, #022C22, #020617) !important;
+    color: #FFFFFF !important;
+}
+
+/* Formularios */
+.dark input,
+.dark textarea,
+.dark select {
+    background-color: #020617 !important;
+    color: #FFFFFF !important;
+    border-color: #064E3B !important;
+}
+
+.dark input:focus,
+.dark textarea:focus {
+    border-color: #4ADE80 !important;
+}
+
+/* Cajas específicas */
+.dark .taller-bloque,
+.dark .bloque-definicion,
+.dark .caja-alerta,
+.dark .tarjeta,
+.dark .pregunta-cuestionario,
+.dark .bloque-recuerda {
+    background-color: #022C22 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: #D1FAE5 !important;
+}
+
+.dark a:hover {
+    color: #4ADE80 !important;
+}
+
+/* ICONOS */
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined' !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle !important;
+    font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .material-symbols-outlined {
+    color: #4ADE80;
+}

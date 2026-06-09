@@ -26,9 +26,9 @@ const observadorNav = new IntersectionObserver(function (entradas) {
         if (entrada.isIntersecting) {
             const idActual = entrada.target.getAttribute('id');
             itemsNavegacion.forEach(function (item) {
-                item.classList.remove('active');
+                item.classList.remove('activo');
                 if (item.getAttribute('href') === '#' + idActual) {
-                    item.classList.add('active');
+                    item.classList.add('activo');
                 }
             });
         }
@@ -93,7 +93,7 @@ let puntajeTotal = 0;
 let quizTerminado = false;
 
 document.addEventListener('DOMContentLoaded', function () {
-    const preguntas = document.querySelectorAll('.quiz-pregunta');
+    const preguntas = document.querySelectorAll('.pregunta-cuestionario');
     if (preguntas.length === 0) return;
 
     // Mostrar solo la primera pregunta al inicio
@@ -102,11 +102,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Asignar eventos a todos los botones de opción
-    document.querySelectorAll('.quiz-opcion').forEach(function (boton) {
+    document.querySelectorAll('.opcion-cuestionario').forEach(function (boton) {
         boton.addEventListener('click', function () {
             if (quizTerminado) return;
 
-            const preguntaDiv = this.closest('.quiz-pregunta');
+            const preguntaDiv = this.closest('.pregunta-cuestionario');
             // Evitar doble respuesta en la misma pregunta
             if (preguntaDiv.classList.contains('respondida')) return;
             preguntaDiv.classList.add('respondida');
@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const correcta = preguntaDiv.dataset.correcta;
             const elegida = this.dataset.valor;
             const esCorrecta = elegida === correcta;
-            const feedback = preguntaDiv.querySelector('.quiz-feedback');
+            const feedback = preguntaDiv.querySelector('.retroalimentacion-cuestionario');
             const indice = Array.from(preguntas).indexOf(preguntaDiv);
 
             if (esCorrecta) puntajeTotal++;
 
             // Resaltar opciones
-            preguntaDiv.querySelectorAll('.quiz-opcion').forEach(function (btn) {
+            preguntaDiv.querySelectorAll('.opcion-cuestionario').forEach(function (btn) {
                 btn.disabled = true;
                 if (btn.dataset.valor === correcta) {
                     btn.classList.add('opcion-correcta');
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ? feedbackTextos.correcto[indice]
                 : feedbackTextos.incorrecto[indice];
             feedback.style.display = 'block';
-            feedback.className = 'quiz-feedback ' + (esCorrecta ? 'feedback-correcto' : 'feedback-incorrecto');
+            feedback.className = 'retroalimentacion-cuestionario ' + (esCorrecta ? 'retroalimentacion-correcta' : 'retroalimentacion-incorrecta');
 
             // Ir a siguiente pregunta o mostrar resultado
             setTimeout(function () {

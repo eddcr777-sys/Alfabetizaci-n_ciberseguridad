@@ -16,7 +16,7 @@ a {
     color: inherit;
 }
 
-.pagina-header {
+.cabecera-pagina {
     background: #b71c1c;
     color: white;
     padding: 2rem 2rem 3rem;
@@ -36,7 +36,7 @@ a {
     text-decoration: none;
 }
 
-.titulo-principal {
+.titulo-destacado {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.05;
@@ -72,7 +72,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-.caja-definicion {
+.bloque-definicion {
     background: #ffebee;
     border: 2px solid #b71c1c;
     border-radius: 1rem;
@@ -80,7 +80,7 @@ a {
     margin: 1.75rem 0;
 }
 
-.caja-definicion .etiqueta-def {
+.bloque-definicion .etiqueta-def {
     font-size: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -89,7 +89,7 @@ a {
     margin-bottom: 0.5rem;
 }
 
-.caja-definicion .texto-def {
+.bloque-definicion .texto-def {
     font-size: 1.1rem;
     font-weight: 600;
     color: #7f0000;
@@ -157,7 +157,7 @@ a {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
-.correo-barra-top {
+.barra-superior-correo {
     background: #f1f3f5;
     padding: 1rem 1.5rem;
     font-size: 0.9rem;
@@ -170,7 +170,7 @@ a {
     border-radius: 1.25rem 1.25rem 0 0;
 }
 
-.correo-barra-top .circulo {
+.barra-superior-correo .circulo {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -178,12 +178,12 @@ a {
     flex-shrink: 0;
 }
 
-.correo-cuerpo {
+.cuerpo-correo {
     padding: 2rem;
     font-size: 1rem;
 }
 
-.correo-campo {
+.campo-correo {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
@@ -192,7 +192,7 @@ a {
     flex-wrap: wrap;
 }
 
-.correo-campo strong {
+.campo-correo strong {
     color: #4b5563; /* slate-600 */
     flex-shrink: 0;
     min-width: 70px;
@@ -232,23 +232,23 @@ a {
     word-wrap: break-word;
 }
 
-.señal-wrapper {
+.envoltorio-señal {
     display: block;
     width: 100%;
 }
 
-.señal-wrapper.abierto .explicacion-señal {
+.envoltorio-señal.abierto .explicacion-señal {
     display: block;
 }
 
-.correo-campo-bloque {
+.campo-correo-bloque {
     margin-bottom: 1.25rem;
     font-size: 0.95rem;
     width: 100%;
     word-wrap: break-word;
 }
 
-.correo-campo-bloque .etiqueta-campo {
+.campo-correo-bloque .etiqueta-campo {
     color: #4b5563; /* slate-600 */
     font-weight: 700;
     font-size: 0.85rem;
@@ -314,7 +314,7 @@ a {
     background: white;
     border-radius: 0.75rem;
     padding: 1rem 1.5rem;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #ECFDF5;
     cursor: pointer;
     font-size: 0.95rem;
     font-family: monospace;
@@ -417,41 +417,44 @@ a {
 
 /* RESPONSIVE FIXES */
 @media (max-width: 768px) {
-    body { font-size: 1.15rem; }
-    .pagina-header { padding: 1.5rem; text-align: center; }
-    .titulo-principal { font-size: 2.25rem; }
-    .contenido { padding: 1.5rem 1rem; }
-    .seccion { margin-bottom: 3rem; }
-    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
-    .caja-definicion, .simulador-correo, .taller-bloque { padding: 1.25rem; }
-    .url-item { font-size: 0.85rem; padding: 0.75rem 1rem; }
-    .explicacion-señal { font-size: 0.8rem; }
+    body { font-size: 1.05rem; }
+    .cabecera-pagina { padding: 1.25rem; text-align: center; }
+    .titulo-destacado { font-size: 2rem; }
+    .contenido { padding: 1.25rem 0.75rem; }
+    .seccion { margin-bottom: 2rem; }
+    .titulo-seccion { font-size: 1.35rem; padding-left: 0.75rem; border-left-width: 4px; }
+    .bloque-definicion, .simulador-correo, .taller-bloque { padding: 1rem; }
+}
+
+@media (max-width: 480px) {
+    .titulo-destacado { font-size: 1.75rem; }
+    .caja-alerta { padding: 1rem; font-size: 0.9rem; }
 }
 
 /* ==========================================
    MODO OSCURO
    ========================================== */
-.dark body { background-color: #0f172a; color: #f8fafc; }
-.dark .tarjeta, .dark .caja-definicion { background-color: #1e293b; border-color: #334155; color: #f8fafc; }
-.dark .pagina-header { background-color: #450a0a; }
+.dark body { background-color: #020617; color: #FFFFFF; }
+.dark .tarjeta, .dark .bloque-definicion { background-color: #022C22; border-color: #334155; color: #FFFFFF; }
+.dark .cabecera-pagina { background-color: #450a0a; }
 .dark .titulo-seccion, .dark .tarjeta-titulo { color: #f87171; }
 .dark .caja-alerta { background-color: #451a03; border-color: #9a3412; color: #fdba74; }
 .dark .bloque-recuerda { background-color: #450a0a; }
 
 /* Refinamiento Simulador de Correo */
 .dark .simulador-correo {
-    background: #1e293b;
+    background: #022C22;
     border-color: #334155;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
 
-.dark .correo-barra-top {
-    background: #0f172a;
+.dark .barra-superior-correo {
+    background: #020617;
     border-bottom-color: #334155;
     color: #94a3b8;
 }
 
-.dark .correo-campo-bloque .etiqueta-campo {
+.dark .campo-correo-bloque .etiqueta-campo {
     color: #94a3b8;
 }
 
@@ -502,11 +505,11 @@ a {
    VERIFICADOR DE URLs PREMIUM
    ===================================================== */
 .verificador-urls {
-    background: #0f172a;
+    background: #020617;
     border-radius: 1.75rem;
     padding: 2rem;
     margin: 2rem 0;
-    border: 2px solid #1e293b;
+    border: 2px solid #022C22;
 }
 
 .verificador-encabezado {
@@ -533,7 +536,7 @@ a {
 
 /* Tarjeta de cada URL */
 .url-tarjeta {
-    background: #1e293b;
+    background: #022C22;
     border: 2px solid #334155;
     border-radius: 1.25rem;
     margin-bottom: 0.875rem;
@@ -559,8 +562,8 @@ a {
     align-items: center;
     gap: 0.75rem;
     padding: 0.75rem 1rem;
-    background: #0f172a;
-    border-bottom: 1px solid #1e293b;
+    background: #020617;
+    border-bottom: 1px solid #022C22;
 }
 
 .url-barra-dots {
@@ -579,7 +582,7 @@ a {
 
 .url-barra-campo {
     flex: 1;
-    background: #1e293b;
+    background: #022C22;
     border-radius: 0.5rem;
     padding: 0.4rem 0.75rem;
     font-family: 'Courier New', monospace;
@@ -677,7 +680,7 @@ a {
 }
 
 .ua-valor {
-    color: #e2e8f0;
+    color: #ECFDF5;
     font-weight: 500;
     line-height: 1.5;
 }
@@ -694,7 +697,7 @@ a {
 }
 
 .verificador-barra-contenedor {
-    background: #1e293b;
+    background: #022C22;
     border-radius: 999px;
     height: 6px;
     margin-top: 0.5rem;

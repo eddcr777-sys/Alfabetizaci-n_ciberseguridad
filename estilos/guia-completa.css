@@ -1,8 +1,8 @@
 :root {
     --primario: #1a4d33;
     --secundario: #d4af37;
-    --fondo-claro: #f8fafc;
-    --texto-principal: #1e293b;
+    --fondo-claro: #FFFFFF;
+    --texto-principal: #022C22;
 }
 
 body {
@@ -40,7 +40,7 @@ h4 {
     background: white;
     border-radius: 1.5rem;
     padding: 2.5rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #ECFDF5;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
     margin-bottom: 3rem;
 }
@@ -102,7 +102,7 @@ h4 {
 
 .pildora-informacion {
     background: white;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #ECFDF5;
     padding: 1rem;
     border-radius: 1rem;
     font-size: 1rem;
@@ -119,8 +119,8 @@ h4 {
 /* ==========================================
    MODO OSCURO
    ========================================== */
-.dark body { background-color: #0f172a; color: #f8fafc; }
-.dark .tarjeta-guia { background-color: #1e293b; border-color: #334155; color: #f8fafc; }
+.dark body { background-color: #020617; color: #FFFFFF; }
+.dark .tarjeta-guia { background-color: #022C22; border-color: #334155; color: #FFFFFF; }
 .dark .gradiente-cabecera { background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); }
 
 .dark .caja-termino {
@@ -153,9 +153,9 @@ h4 {
 }
 
 .dark .pildora-informacion {
-    background-color: #1e293b !important;
+    background-color: #022C22 !important;
     border-color: #334155 !important;
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }
 
 .dark .resaltado {

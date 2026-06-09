@@ -7,7 +7,7 @@
 body {
     font-family: 'Public Sans', sans-serif;
     background: #fff;
-    color: #0f172a;
+    color: #020617;
     line-height: 1.6;
 }
 
@@ -19,17 +19,17 @@ h1, h2, h3 {
 .rejilla-matriz {
     display: grid;
     grid-template-columns: 200px 1fr 1fr;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #ECFDF5;
 }
 
 .celda-matriz {
     padding: 1rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #ECFDF5;
     font-size: 0.85rem;
 }
 
 .cabecera-matriz {
-    background: #f8fafc;
+    background: #FFFFFF;
     font-weight: 800;
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -56,7 +56,7 @@ h1, h2, h3 {
 /* ==========================================
    MODO OSCURO
    ========================================== */
-.dark body { background-color: #0f172a; color: #f8fafc; border-top-color: #115e59 !important; }
+.dark body { background-color: #020617; color: #FFFFFF; border-top-color: #115e59 !important; }
 
 .dark .escudo-datos {
     background-color: #1e3a8a !important; /* Azul profundo */
@@ -83,12 +83,12 @@ h1, h2, h3 {
 
 .dark .celda-matriz {
     border-color: #334155 !important;
-    background-color: #1e293b;
-    color: #cbd5e1;
+    background-color: #022C22;
+    color: #D1FAE5;
 }
 
 .dark .cabecera-matriz {
-    background-color: #0f172a !important;
+    background-color: #020617 !important;
     color: #94a3b8 !important;
 }
 
@@ -101,7 +101,7 @@ h1, h2, h3 {
 }
 
 .dark .bg-slate-50 {
-    background-color: #1e293b !important;
+    background-color: #022C22 !important;
     border-color: #334155 !important;
 }
 
@@ -110,5 +110,5 @@ h1, h2, h3 {
 }
 
 .dark h1, .dark h2, .dark h3 {
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }

@@ -8,7 +8,7 @@
 body {
     font-family: 'Public Sans', sans-serif;
     background-color: var(--bg-body);
-    color: #1e293b;
+    color: #022C22;
     font-size: 1.25rem;
     line-height: 1.7;
     overflow-x: hidden;
@@ -70,7 +70,7 @@ h4 {
         margin-bottom: 0;
         box-shadow: none;
         border: none;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid #ECFDF5;
         width: 100%;
         box-sizing: border-box;
         word-wrap: break-word;
@@ -153,11 +153,11 @@ h4 {
 }
 
 .item-navegacion:hover {
-    background: #e2e8f0;
+    background: #ECFDF5;
     color: var(--primary);
 }
 
-.item-navegacion.active {
+.item-navegacion.activo {
     background: var(--primary);
     color: white;
 }
@@ -175,7 +175,7 @@ h4 {
     padding: 4rem;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     margin-bottom: 4rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #ECFDF5;
 }
 
 .encabezado-capitulo {
@@ -211,7 +211,7 @@ h4 {
 }
 
 .etiqueta-precio {
-    background: #1e293b;
+    background: #022C22;
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 0.5rem;
@@ -254,18 +254,18 @@ h4 {
    ESTILOS DE MODO OSCURO (Paso 3)
    ========================================== */
 :root.dark {
-    --bg-body: #0f172a;
+    --bg-body: #020617;
     /* Fondo muy oscuro (slate-900) */
     --primary: #4ade80;
     /* Un verde más brillante para destacar en negro */
 }
 
 .dark body {
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
 .dark .tarjeta-capitulo {
-    background-color: #1e293b;
+    background-color: #022C22;
     /* slate-800 */
     border-color: #334155;
     /* slate-700 */
@@ -287,7 +287,7 @@ h4 {
     color: var(--primary);
 }
 
-.dark .item-navegacion.active {
+.dark .item-navegacion.activo {
     background-color: var(--primary);
     color: #022c22;
     /* Texto oscuro para el botón verde brillante */
@@ -308,7 +308,7 @@ h4 {
 .dark .etiqueta-precio {
     background-color: #020617;
     /* Slate 950 */
-    color: #f8fafc;
+    color: #FFFFFF;
 }
 
 .dark .gradiente-encabezado {
@@ -322,7 +322,7 @@ h4 {
 }
 
 .dark aside .mt-20.bg-slate-50 {
-    background-color: #1e293b;
+    background-color: #022C22;
     /* Fondo oscuro para el aviso de proyecto */
 }
 
@@ -331,17 +331,17 @@ h4 {
 }
 
 .dark .bg-slate-50 {
-    background-color: #1e293b;
+    background-color: #022C22;
 }
 
 .dark .bg-white {
-    background-color: #1e293b !important;
+    background-color: #022C22 !important;
 }
 
 .dark .text-slate-900,
 .dark .text-slate-800,
 .dark .text-slate-700 {
-    color: #f8fafc !important;
+    color: #FFFFFF !important;
 }
 
 .dark .text-slate-600,
@@ -375,19 +375,19 @@ h4 {
 }
 
 .dark footer {
-    background-color: #0f172a !important;
-    border-top-color: #1e293b !important;
+    background-color: #020617 !important;
+    border-top-color: #022C22 !important;
 }
 
 /* Arreglo específico para iconos y sombras en modo oscuro */
-.dark [class*="shadow-blue-"],
+.dark [class*="shadow-secundario-"],
 .dark [class*="shadow-purple-"],
 .dark [class*="shadow-orange-"],
 .dark [class*="shadow-emerald-"] {
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
 }
 
-.dark .bg-blue-600 {
+.dark .bg-secundario-600 {
     background-color: #2563eb !important;
 }
 
@@ -447,7 +447,7 @@ h4 {
     border-color: #7c3aed !important;
 }
 
-.item-lista-verificacion-manual {
+.elemento-lista-verificacion-manual {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -463,13 +463,13 @@ h4 {
     color: #4a1d96;
 }
 
-.item-lista-verificacion-manual:hover {
+.elemento-lista-verificacion-manual:hover {
     border-color: #7c3aed;
     transform: translateX(4px);
     box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
 }
 
-.item-lista-verificacion-manual input[type="checkbox"] {
+.elemento-lista-verificacion-manual input[type="checkbox"] {
     width: 1.3rem;
     height: 1.3rem;
     accent-color: #7c3aed;
@@ -477,28 +477,28 @@ h4 {
     cursor: pointer;
 }
 
-.item-lista-verificacion-manual label {
+.elemento-lista-verificacion-manual label {
     cursor: pointer;
     flex: 1;
 }
 
-.item-lista-verificacion-manual.marcado-manual {
+.elemento-lista-verificacion-manual.marcado-manual {
     background: #e8f5e9;
     border-color: #388e3c;
     color: #1b5e20;
 }
 
-.dark .item-lista-verificacion-manual {
-    background: #1e293b;
+.dark .elemento-lista-verificacion-manual {
+    background: #022C22;
     border-color: #4c1d95;
     color: #ddd6fe;
 }
 
-.dark .item-lista-verificacion-manual:hover {
+.dark .elemento-lista-verificacion-manual:hover {
     border-color: #a78bfa;
 }
 
-.dark .item-lista-verificacion-manual.marcado-manual {
+.dark .elemento-lista-verificacion-manual.marcado-manual {
     background: #064e3b;
     border-color: #22c55e;
     color: #d1fae5;
@@ -532,7 +532,7 @@ h4 {
 /* ==========================================
    QUIZ INTERACTIVO FINAL
    ========================================== */
-.quiz-pregunta {
+.pregunta-cuestionario {
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 1.5rem;
@@ -553,7 +553,7 @@ h4 {
     }
 }
 
-.quiz-enunciado {
+.enunciado-cuestionario {
     font-size: 1.15rem;
     font-weight: 700;
     color: white;
@@ -561,13 +561,13 @@ h4 {
     line-height: 1.5;
 }
 
-.quiz-opciones {
+.opcion-cuestionarioes {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-.quiz-opcion {
+.opcion-cuestionario {
     background: rgba(255, 255, 255, 0.08);
     border: 2px solid rgba(255, 255, 255, 0.15);
     border-radius: 1rem;
@@ -581,14 +581,14 @@ h4 {
     transition: all 0.2s ease;
 }
 
-.quiz-opcion:hover:not(:disabled) {
+.opcion-cuestionario:hover:not(:disabled) {
     background: rgba(255, 255, 255, 0.16);
     border-color: rgba(212, 175, 55, 0.6);
     color: white;
     transform: translateX(4px);
 }
 
-.quiz-opcion:disabled {
+.opcion-cuestionario:disabled {
     cursor: default;
 }
 
@@ -604,7 +604,7 @@ h4 {
     color: #fca5a5 !important;
 }
 
-.quiz-feedback {
+.retroalimentacion-cuestionario {
     margin-top: 1rem;
     padding: 0.875rem 1.25rem;
     border-radius: 0.75rem;
@@ -613,13 +613,13 @@ h4 {
     animation: aparecer 0.3s ease;
 }
 
-.feedback-correcto {
+.retroalimentacion-correcta {
     background: rgba(34, 197, 94, 0.2);
     color: #86efac;
     border-left: 4px solid #22c55e;
 }
 
-.feedback-incorrecto {
+.retroalimentacion-incorrecta {
     background: rgba(239, 68, 68, 0.2);
     color: #fca5a5;
     border-left: 4px solid #ef4444;
@@ -744,7 +744,7 @@ h4 {
 
 .dark .aviso-cian {
     background: #083344;
-    border-color: #0891b2;
+    border-color: #10B981;
     color: #cffafe;
 }
 

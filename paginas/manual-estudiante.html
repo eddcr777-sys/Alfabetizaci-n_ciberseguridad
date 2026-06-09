@@ -11,9 +11,9 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="manual-estudiante.css" />
-    <link rel="stylesheet" href="componentes-premium.css" />
-    <link rel="stylesheet" href="estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/manual-estudiante.css" />
+    <link rel="stylesheet" href="../estilos/componentes-premium.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
 </head>
 
 <body>
@@ -50,22 +50,22 @@
             <nav class="mb-8 pb-8 border-b border-slate-100">
                 <p class="text-[10px] font-black text-slate-600 uppercase tracking-[0.2em] mb-4">Navegación Global</p>
                 <a href="index.html"
-                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primario transition-colors mb-4">
                     <span class="material-symbols-outlined text-xl">&#xe88a;</span> Inicio
                 </a>
                 <a href="justificacion.html"
-                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors mb-4">
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primario transition-colors mb-4">
                     <span class="material-symbols-outlined text-xl">&#xe873;</span> El Proyecto
                 </a>
                 <a href="nosotros.html"
-                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primary transition-colors">
+                    class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primario transition-colors">
                     <span class="material-symbols-outlined text-xl">&#xf233;</span> Nosotros
                 </a>
             </nav>
 
             <nav>
                 <p class="text-xs font-black text-slate-600 uppercase tracking-[0.15em] mb-4">Secciones del Manual</p>
-                <a href="#shock" class="item-navegacion active"><span class="material-symbols-outlined">&#xe002;</span>
+                <a href="#shock" class="item-navegacion activo"><span class="material-symbols-outlined">&#xe002;</span>
                     La
                     Realidad Cruda</a>
                 <a href="#cuentas" class="item-navegacion"><span class="material-symbols-outlined">&#xe897;</span>
@@ -204,7 +204,7 @@
                 </div>
 
                 <!-- GESTORES -->
-                <div class="tarjeta-aviso-premium aviso-esmeralda">
+                <div class="tarjeta-aviso-premium alerta-esmeralda">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xea4a;</span> Gestores de Contraseñas</h4>
                         <p>Anotar claves en un cuaderno o usar la misma en todos lados es peligroso. Aprende a usar un
@@ -227,19 +227,19 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                     <div class="p-6 border border-slate-100 rounded-2xl">
-                        <h4 class="font-bold text-primary mb-2">Perfil Privado</h4>
+                        <h4 class="font-bold text-primario mb-2">Perfil Privado</h4>
                         <p class="text-sm">Si tu perfil es público, cualquier persona (incluyendo delincuentes) sabe a
                             qué hora sales del liceo y quiénes son tus amigos.</p>
                     </div>
                     <div class="p-6 border border-slate-100 rounded-2xl">
-                        <h4 class="font-bold text-primary mb-2">Metadatos de Fotos</h4>
+                        <h4 class="font-bold text-primario mb-2">Metadatos de Fotos</h4>
                         <p class="text-sm">Tus fotos guardan la ubicación exacta de donde fueron tomadas. Apaga el GPS
                             de tu cámara antes de publicar.</p>
                     </div>
                 </div>
 
                 <!-- AVISO CHISMES -->
-                <div class="tarjeta-aviso-premium aviso-ambar">
+                <div class="tarjeta-aviso-premium alerta-ambar">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe002;</span> CUIDADO CON LOS "CHISMES"</h4>
                         <p>Participar en grupos de chismes o compartir fotos de otros sin permiso es <strong>violencia
@@ -248,7 +248,7 @@
                 </div>
 
                 <!-- REGLA DE LA ABUELA -->
-                <div class="tarjeta-aviso-premium aviso-azul">
+                <div class="tarjeta-aviso-premium alerta-azul">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe87c;</span> La Regla de la Abuela</h4>
                         <p>Antes de publicar una foto, un video o un comentario, hazte esta pregunta: <strong>"¿Me daría
@@ -293,29 +293,29 @@
                     <p class="text-sm text-slate-600 dark:text-slate-400 mb-6">Marca las protecciones que ya tienes
                         activadas. El sistema calculará qué tan protegido estás:</p>
 
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-1">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-1">
                         <input type="checkbox" id="aud1" />
                         <label for="aud1">Mi perfil de Instagram/TikTok está en modo <strong>PRIVADO</strong>.</label>
                     </div>
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-2">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-2">
                         <input type="checkbox" id="aud2" />
                         <label for="aud2">Desactivé la ubicación <strong>GPS</strong> de mi cámara.</label>
                     </div>
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-3">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-3">
                         <input type="checkbox" id="aud3" />
                         <label for="aud3">No publico fotos con el <strong>uniforme del colegio</strong>
                             visiblemente.</label>
                     </div>
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-4">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-4">
                         <input type="checkbox" id="aud4" />
                         <label for="aud4">No tengo mi <strong>teléfono ni dirección</strong> en mi bio pública.</label>
                     </div>
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-5">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-5">
                         <input type="checkbox" id="aud5" />
                         <label for="aud5">Solo acepto solicitudes de personas que <strong>conozco en
                                 persona</strong>.</label>
                     </div>
-                    <div class="item-lista-verificacion-manual" id="auditoria-item-6">
+                    <div class="elemento-lista-verificacion-manual" id="auditoria-item-6">
                         <input type="checkbox" id="aud6" />
                         <label for="aud6">Tengo activada la <strong>"Revisión de etiquetas"</strong> antes de que me
                             etiqueten en fotos.</label>
@@ -335,14 +335,14 @@
                     marca permanente.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div class="tarjeta-aviso-premium aviso-azul" style="margin:0;">
+                    <div class="tarjeta-aviso-premium alerta-azul" style="margin:0;">
                         <div class="contenido-relativo">
                             <h4><span class="material-symbols-outlined">&#xe044;</span> No respondas</h4>
                             <p>El acosador busca tu reacción. Ignorar o bloquear es tu mejor defensa. Responder con
                                 rabia solo empeora la situación.</p>
                         </div>
                     </div>
-                    <div class="tarjeta-aviso-premium aviso-esmeralda" style="margin:0;">
+                    <div class="tarjeta-aviso-premium alerta-esmeralda" style="margin:0;">
                         <div class="contenido-relativo">
                             <h4><span class="material-symbols-outlined">&#xe412;</span> Guarda evidencia</h4>
                             <p>Toma capturas de pantalla de los mensajes u ofensas antes de bloquear. Serán tu prueba
@@ -380,7 +380,7 @@
                         `instagram.com`.</li>
                 </ol>
 
-                <div class="tarjeta-aviso-premium aviso-naranja">
+                <div class="tarjeta-aviso-premium alerta-naranja">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xea4a;</span> REGLA DE ORO</h4>
                         <p>Si un mensaje te asusta o te emociona demasiado, respira 10 segundos. Los atacantes odian que
@@ -389,7 +389,7 @@
                 </div>
 
                 <!-- WHATSAPP HIJACKING -->
-                <div class="tarjeta-aviso-premium aviso-esmeralda">
+                <div class="tarjeta-aviso-premium alerta-esmeralda">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xad12;</span> El "Secuestro" de WhatsApp</h4>
                         <p class="mb-3">Es la estafa más común. Funciona así:</p>
@@ -404,7 +404,7 @@
                 </div>
 
                 <!-- VISHING -->
-                <div class="tarjeta-aviso-premium aviso-cian">
+                <div class="tarjeta-aviso-premium alerta-cian">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe0b0;</span> El Peligro del "Vishing"</h4>
                         <p>Te llaman fingiendo ser el soporte de tu banco, avisándote de un cargo falso para que entres
@@ -431,7 +431,7 @@
                         llamar a tus padres fingiendo un accidente y pidiendo dinero urgente.</p>
                 </div>
 
-                <div class="tarjeta-aviso-premium aviso-azul">
+                <div class="tarjeta-aviso-premium alerta-azul">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe0da;</span> La Palabra Clave</h4>
                         <p>Acuerda una <strong>"Palabra Secreta"</strong> familiar. Si alguien llama diciendo que eres
@@ -466,7 +466,7 @@
                 </ul>
 
                 <!-- WIFI GRATIS -->
-                <div class="tarjeta-aviso-premium aviso-naranja">
+                <div class="tarjeta-aviso-premium alerta-naranja">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe63e;</span> El Peligro del Wi-Fi Gratis</h4>
                         <p>Si te conectas al Wi-Fi de una plaza sin contraseña, cualquier persona en esa red puede ver
@@ -475,7 +475,7 @@
                 </div>
 
                 <!-- DOXING -->
-                <div class="tarjeta-aviso-premium aviso-amarillo">
+                <div class="tarjeta-aviso-premium alerta-amarillo">
                     <div class="contenido-relativo">
                         <h4><span class="material-symbols-outlined">&#xe8b6;</span> El Peligro del "Doxing"</h4>
                         <p>El doxing ocurre cuando alguien revela tu información real (nombre, dirección, liceo). Evita
@@ -514,15 +514,15 @@
 
                 <h3 class="text-xl font-black mb-4">Ley Especial contra Delitos Informáticos:</h3>
                 <div class="space-y-4">
-                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                    <div class="p-4 border-l-4 border-primario bg-slate-50">
                         <b>Artículo 6 (Acceso Indebido):</b> Entrar a la cuenta de otro sin permiso puede llevarte a
                         prisión de 1 a 5 años.
                     </div>
-                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                    <div class="p-4 border-l-4 border-primario bg-slate-50">
                         <b>Artículo 20 (Revelación de datos):</b> Difundir fotos o información privada de alguien es un
                         delito grave.
                     </div>
-                    <div class="p-4 border-l-4 border-primary bg-slate-50">
+                    <div class="p-4 border-l-4 border-primario bg-slate-50">
                         <b>Artículo 22 (Acoso):</b> El maltrato por redes sociales puede ser castigado penalmente.
                     </div>
                 </div>
@@ -540,7 +540,7 @@
                     <div
                         class="bg-slate-50 dark:bg-slate-800 p-8 rounded-3xl border border-slate-100 dark:border-slate-700 flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 group hover:shadow-lg hover:border-blue-200 transition-all">
                         <div
-                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-blue-100 dark:bg-blue-900/30 p-4 rounded-2xl">
+                            class="shrink-0 transform group-hover:scale-110 transition-transform duration-300 bg-secundario-100 dark:bg-secundario-900/30 p-4 rounded-2xl">
                             <!-- SVG representativo de Bitwarden (Escudo/Llave) -->
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -553,7 +553,7 @@
                         </div>
                         <div>
                             <span
-                                class="text-lg font-black text-blue-600 dark:text-blue-400 mb-2 block">BITWARDEN</span>
+                                class="text-lg font-black text-secundario-600 dark:text-secundario-400 mb-2 block">BITWARDEN</span>
                             <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Tu bóveda acorazada. Crea
                                 contraseñas largas y seguras para cada red social y guárdalas bajo una única clave
                                 maestra. Así evitas usar la misma contraseña en todos lados.</p>
@@ -686,71 +686,71 @@
 
                 <div id="quiz-contenedor">
                     <!-- Pregunta 1 -->
-                    <div class="quiz-pregunta" data-correcta="b">
-                        <p class="quiz-enunciado">1. Te llega un mensaje: <em>"Tu cuenta será cerrada en 1 hora, haz
+                    <div class="pregunta-cuestionario" data-correcta="b">
+                        <p class="enunciado-cuestionario">1. Te llega un mensaje: <em>"Tu cuenta será cerrada en 1 hora, haz
                                 clic aquí para verificarla"</em>. ¿Qué haces?</p>
                         <div class="quiz-opciones">
-                            <button class="quiz-opcion" data-valor="a">Hago clic de inmediato para no perder la
+                            <button class="opcion-cuestionario" data-valor="a">Hago clic de inmediato para no perder la
                                 cuenta.</button>
-                            <button class="quiz-opcion" data-valor="b">Ignoro el mensaje y entro directamente a la app
+                            <button class="opcion-cuestionario" data-valor="b">Ignoro el mensaje y entro directamente a la app
                                 oficial.</button>
-                            <button class="quiz-opcion" data-valor="c">Lo reenvío a mis amigos para
+                            <button class="opcion-cuestionario" data-valor="c">Lo reenvío a mis amigos para
                                 advertirles.</button>
                         </div>
-                        <div class="quiz-feedback" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
                     </div>
 
                     <!-- Pregunta 2 -->
-                    <div class="quiz-pregunta" data-correcta="c">
-                        <p class="quiz-enunciado">2. ¿Cuál de estas contraseñas es la MÁS SEGURA?</p>
+                    <div class="pregunta-cuestionario" data-correcta="c">
+                        <p class="enunciado-cuestionario">2. ¿Cuál de estas contraseñas es la MÁS SEGURA?</p>
                         <div class="quiz-opciones">
-                            <button class="quiz-opcion" data-valor="a">luis2010</button>
-                            <button class="quiz-opcion" data-valor="b">123456789</button>
-                            <button class="quiz-opcion" data-valor="c">Perro!Azul#48$Liceo</button>
+                            <button class="opcion-cuestionario" data-valor="a">luis2010</button>
+                            <button class="opcion-cuestionario" data-valor="b">123456789</button>
+                            <button class="opcion-cuestionario" data-valor="c">Perro!Azul#48$Liceo</button>
                         </div>
-                        <div class="quiz-feedback" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
                     </div>
 
                     <!-- Pregunta 3 -->
-                    <div class="quiz-pregunta" data-correcta="a">
-                        <p class="quiz-enunciado">3. Un "amigo" en línea que nunca has conocido te pide tu número de
+                    <div class="pregunta-cuestionario" data-correcta="a">
+                        <p class="enunciado-cuestionario">3. Un "amigo" en línea que nunca has conocido te pide tu número de
                             teléfono. ¿Qué debes hacer?</p>
                         <div class="quiz-opciones">
-                            <button class="quiz-opcion" data-valor="a">No darlo. Bloquear y contarle a un adulto de
+                            <button class="opcion-cuestionario" data-valor="a">No darlo. Bloquear y contarle a un adulto de
                                 confianza.</button>
-                            <button class="quiz-opcion" data-valor="b">Dárselo si lleva mucho tiempo
+                            <button class="opcion-cuestionario" data-valor="b">Dárselo si lleva mucho tiempo
                                 hablándote.</button>
-                            <button class="quiz-opcion" data-valor="c">Pedirle primero el suyo para verificar si es de
+                            <button class="opcion-cuestionario" data-valor="c">Pedirle primero el suyo para verificar si es de
                                 fiar.</button>
                         </div>
-                        <div class="quiz-feedback" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
                     </div>
 
                     <!-- Pregunta 4 -->
-                    <div class="quiz-pregunta" data-correcta="b">
-                        <p class="quiz-enunciado">4. Encuentras un programa de Adobe Photoshop gratis en un blog
+                    <div class="pregunta-cuestionario" data-correcta="b">
+                        <p class="enunciado-cuestionario">4. Encuentras un programa de Adobe Photoshop gratis en un blog
                             desconocido. ¿Qué haces?</p>
                         <div class="quiz-opciones">
-                            <button class="quiz-opcion" data-valor="a">Lo descargo, es lo mismo que el
+                            <button class="opcion-cuestionario" data-valor="a">Lo descargo, es lo mismo que el
                                 original.</button>
-                            <button class="quiz-opcion" data-valor="b">Uso Canva o la versión de prueba oficial. No vale
+                            <button class="opcion-cuestionario" data-valor="b">Uso Canva o la versión de prueba oficial. No vale
                                 el riesgo.</button>
-                            <button class="quiz-opcion" data-valor="c">Lo descargo pero no lo instalo todavía.</button>
+                            <button class="opcion-cuestionario" data-valor="c">Lo descargo pero no lo instalo todavía.</button>
                         </div>
-                        <div class="quiz-feedback" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
                     </div>
 
                     <!-- Pregunta 5 -->
-                    <div class="quiz-pregunta" data-correcta="c">
-                        <p class="quiz-enunciado">5. ¿Qué hace la "Verificación en Dos Pasos" (2FA)?</p>
+                    <div class="pregunta-cuestionario" data-correcta="c">
+                        <p class="enunciado-cuestionario">5. ¿Qué hace la "Verificación en Dos Pasos" (2FA)?</p>
                         <div class="quiz-opciones">
-                            <button class="quiz-opcion" data-valor="a">Crea una copia de tu cuenta en la nube.</button>
-                            <button class="quiz-opcion" data-valor="b">Cambia tu contraseña automáticamente cada
+                            <button class="opcion-cuestionario" data-valor="a">Crea una copia de tu cuenta en la nube.</button>
+                            <button class="opcion-cuestionario" data-valor="b">Cambia tu contraseña automáticamente cada
                                 mes.</button>
-                            <button class="quiz-opcion" data-valor="c">Pide un código extra para entrar, aunque el
+                            <button class="opcion-cuestionario" data-valor="c">Pide un código extra para entrar, aunque el
                                 atacante tenga tu clave.</button>
                         </div>
-                        <div class="quiz-feedback" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
                     </div>
                 </div>
 
@@ -764,7 +764,7 @@
                 <p class="max-w-xl mx-auto mb-10 opacity-70">Al usar esta guía, te comprometes a protegerte a ti mismo y
                     a cuidar la integridad de tus compañeros en el L.B. Antonio Lemus Pérez.</p>
                 <a href="index.html"
-                    class="bg-primary text-white px-12 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform">Finalizar
+                    class="bg-primario text-white px-12 py-4 rounded-2xl font-black uppercase tracking-widest hover:scale-105 transition-transform">Finalizar
                     Lectura</a>
             </div>
 
@@ -778,8 +778,8 @@
         <p class="text-[9px] font-bold uppercase text-slate-300 tracking-[0.3em]">Cordova · Guipe · Giraldo · Ruiz</p>
     </footer>
 
-    <script src="logica-manual.js"></script>
-    <script src="logica-tema.js"></script>
+    <script src="../scripts/logica-manual.js"></script>
+    <script src="../scripts/logica-tema.js"></script>
     <script>
         // ============================================
         // TALLER AUDITORÍA DE PERFIL - Manual Maestro
@@ -797,7 +797,7 @@
             };
 
             function calcularResultado() {
-                const items = document.querySelectorAll('#taller-auditoria .item-lista-verificacion-manual');
+                const items = document.querySelectorAll('#taller-auditoria .elemento-lista-verificacion-manual');
                 let marcados = 0;
                 items.forEach(function (item) {
                     const caja = item.querySelector('input[type="checkbox"]');
@@ -847,7 +847,7 @@
             }
 
             document.addEventListener('DOMContentLoaded', function () {
-                const items = document.querySelectorAll('#taller-auditoria .item-lista-verificacion-manual');
+                const items = document.querySelectorAll('#taller-auditoria .elemento-lista-verificacion-manual');
                 items.forEach(function (item) {
                     const caja = item.querySelector('input[type="checkbox"]');
                     if (!caja) return;

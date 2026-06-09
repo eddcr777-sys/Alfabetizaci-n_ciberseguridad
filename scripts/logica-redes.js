@@ -5,7 +5,7 @@
 // ===================================================
 
 document.addEventListener('DOMContentLoaded', function () {
-    const todosLosItems = document.querySelectorAll('.item-lista-verificacion');
+    const todosLosItems = document.querySelectorAll('.elemento-lista-verificacion');
 
     todosLosItems.forEach(function (item) {
         const caja = item.querySelector('input[type="checkbox"]');
@@ -35,8 +35,8 @@ function actualizarEstadoItem(item, estaMarcado) {
 }
 
 function actualizarResultado() {
-    const totalItems = document.querySelectorAll('.item-lista-verificacion');
-    const marcados = document.querySelectorAll('.item-lista-verificacion.marcado').length;
+    const totalItems = document.querySelectorAll('.elemento-lista-verificacion');
+    const marcados = document.querySelectorAll('.elemento-lista-verificacion.marcado').length;
     const total = totalItems.length;
     const resultado = document.getElementById('resultadoPrivacidad');
 

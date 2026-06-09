@@ -17,7 +17,7 @@ a {
 }
 
 /* HEADER EMERGENCY */
-.pagina-header {
+.cabecera-pagina {
     background: #1a237e; /* Azul profundo para dar calma y seguridad */
     color: white;
     padding: 3rem 2rem 4rem;
@@ -36,7 +36,7 @@ a {
     color: white;
 }
 
-.titulo-principal {
+.titulo-destacado {
     font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 800;
     line-height: 1.1;
@@ -108,10 +108,10 @@ a {
 }
 
 .paso-caja {
-    background: #f8fafc;
+    background: #FFFFFF;
     padding: 2.5rem;
     border-radius: 2rem;
-    border: 1px solid #e2e8f0;
+    border: 1px solid #ECFDF5;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
 }
 
@@ -140,7 +140,7 @@ a {
     color: #334155;
 }
 
-.icono-check {
+.icono-verificacion {
     color: #10b981;
     font-weight: 900;
 }
@@ -197,8 +197,8 @@ a {
 .caja-guia-rapida {
     margin-top: 4rem;
     padding: 2.5rem;
-    background: #f8fafc;
-    border: 2px dashed #cbd5e1;
+    background: #FFFFFF;
+    border: 2px dashed #D1FAE5;
     border-radius: 2rem;
 }
 
@@ -221,7 +221,7 @@ a {
 /* ==========================================
    MODO OSCURO
    ========================================== */
-.dark body { background-color: #0f172a; color: #f8fafc; }
+.dark body { background-color: #020617; color: #FFFFFF; }
 
 .dark .caja-guia-rapida {
     background: #111827 !important;
@@ -233,11 +233,11 @@ a {
 }
 
 .dark .guia-rapida-grid div {
-    color: #cbd5e1 !important;
+    color: #D1FAE5 !important;
 }
 
-.dark .pagina-header {
-    background: radial-gradient(circle at top right, #1e1b4b, #0f172a) !important;
+.dark .cabecera-pagina {
+    background: radial-gradient(circle at top right, #1e1b4b, #020617) !important;
 }
 
 .dark .intro-ayuda {
@@ -260,9 +260,9 @@ a {
 }
 
 .dark .paso-caja {
-    background-color: #1e293b !important;
+    background-color: #022C22 !important;
     border-color: #334155 !important;
-    color: #cbd5e1 !important;
+    color: #D1FAE5 !important;
 }
 
 .dark .caja-info {
@@ -272,7 +272,7 @@ a {
 }
 
 .dark .lista-pasos li {
-    color: #cbd5e1 !important;
+    color: #D1FAE5 !important;
 }
 
 .dark .seccion-final {
@@ -280,7 +280,7 @@ a {
 }
 
 .dark .boton-volver {
-    background-color: #f8fafc !important;
+    background-color: #FFFFFF !important;
     color: #1e1b4b !important;
 }
 

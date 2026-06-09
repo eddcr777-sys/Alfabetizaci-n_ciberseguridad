@@ -6,15 +6,15 @@
 <title>Protección de Cuentas | L.B. Antonio Lemus Pérez</title>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="proteccion-cuentas.css" />
-    <link rel="stylesheet" href="estilos-base.css" />
+<link rel="stylesheet" href="../estilos/proteccion-cuentas.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
 </head>
 <body>
 
-<div class="pagina-header">
+<div class="cabecera-pagina">
   <div style="max-width:900px;margin:0 auto;">
     <p class="rastro-navegacion"><a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a></p>
-    <h1 class="titulo-principal">¿Cómo proteger tus cuentas y contraseñas?</h1>
+    <h1 class="titulo-destacado">¿Cómo proteger tus cuentas y contraseñas?</h1>
     <p class="subtitulo">Módulo 1 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
   </div>
 </div>
@@ -40,7 +40,7 @@
       Un atacante las prueba en menos de un segundo.
     </div>
 
-    <h3 style="font-size:1.5rem;font-weight:800;color:#004d40;margin:2rem 0 1rem;">¿Cómo roban las contraseñas?</h3>
+    <h3 style="font-size:1.5rem;font-weight:800;color:#064E3B;margin:2rem 0 1rem;">¿Cómo roban las contraseñas?</h3>
 
     <div class="rejilla-2">
       <div class="tarjeta">
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué es "Entropía" de una contraseña?</div>
       <div class="texto-def">Es una forma técnica de medir qué tan difícil es adivinar una clave. A mayor entropía, mejor seguridad. Una clave con letras grandes, pequeñas, números y símbolos tiene una entropía altísima.</div>
     </div>
@@ -76,8 +76,8 @@
       <p class="taller-instruccion">
         Escribe una contraseña inventada (¡no la tuya real!) y mira cómo el sistema la analiza en tiempo real.
       </p>
-      <input class="input-clave" id="claveInput" placeholder="Escribe una contraseña de prueba aquí..." type="text"/>
-      <div class="barra-fuerza-contenedor">
+      <input class="entrada-clave" id="claveInput" placeholder="Escribe una contraseña de prueba aquí..." type="text"/>
+      <div class="contenedor-barra-fuerza">
         <div class="barra-fuerza-relleno" id="barraRelleno"></div>
       </div>
       <p class="etiqueta-fuerza" id="etiquetaFuerza">Esperando...</p>
@@ -89,7 +89,7 @@
       </div>
     </div>
 
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">lightbulb</span> Ejemplo de contraseña MUY segura</div>
       <div class="texto-def">En vez de "gato2024", usa: "Mi!Gato_Naranja#12". Es larga, tiene mayúsculas, números y símbolos. ¡Nadie la adivinaría!</div>
     </div>
@@ -104,7 +104,7 @@
       Eso es exactamente la <span class="palabra-clave">Verificación en Dos Pasos</span>, también llamada Autenticación de Doble Factor.
     </p>
 
-    <div class="caja-definicion">
+    <div class="bloque-definicion">
       <div class="etiqueta-def"><span class="material-symbols-outlined align-middle">menu_book</span> ¿Qué significa "Autenticación de Doble Factor"?</div>
       <div class="texto-def">Es una protección adicional donde, después de ingresar tu contraseña, debes verificar tu identidad de una segunda forma. Así, aunque alguien robe tu clave, no puede entrar a tu cuenta porque no tiene tu celular.</div>
     </div>
@@ -132,19 +132,19 @@
     <h2 class="titulo-seccion"><span class="material-symbols-outlined align-middle">science</span> Taller 2: ¿Qué harías tú?</h2>
     <div class="quiz-bloque">
       <p style="font-size:1.1rem;opacity:0.7;margin-bottom:1.5rem;">Toca cada situación para ver si es segura o peligrosa:</p>
-      <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
+      <div class="pregunta-cuestionario" data-seguro="no" onclick="revelarQuiz(this)">
         <span>Usar "Lemus2024" como contraseña de Instagram.</span>
         <span class="estado"><span class="material-symbols-outlined text-red-500 align-middle">cancel</span> Peligroso — Tiene tu nombre y el año. Es muy fácil de adivinar.</span>
       </div>
-      <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
+      <div class="pregunta-cuestionario" data-seguro="si" onclick="revelarQuiz(this)">
         <span>Activar el código por SMS en mi cuenta de Gmail.</span>
         <span class="estado"><span class="material-symbols-outlined text-green-500 align-middle">check_circle</span> Buena práctica — Añade una capa extra de protección.</span>
       </div>
-      <div class="quiz-pregunta" data-seguro="no" onclick="revelarQuiz(this)">
+      <div class="pregunta-cuestionario" data-seguro="no" onclick="revelarQuiz(this)">
         <span>Usar la misma clave en Instagram, TikTok y el correo.</span>
         <span class="estado"><span class="material-symbols-outlined text-red-500 align-middle">cancel</span> Muy peligroso — Si roban una cuenta, roban todas.</span>
       </div>
-      <div class="quiz-pregunta" data-seguro="si" onclick="revelarQuiz(this)">
+      <div class="pregunta-cuestionario" data-seguro="si" onclick="revelarQuiz(this)">
         <span>Crear una clave larga usando frase: "MiPerro!Come#3Veces".</span>
         <span class="estado"><span class="material-symbols-outlined text-green-500 align-middle">check_circle</span> Excelente — Larga, con símbolos y números. Muy difícil de romper.</span>
       </div>
@@ -158,7 +158,7 @@
       <ul class="lista-reglas">
         <li><span class="material-symbols-outlined align-middle text-amber-400">vpn_key</span> Usa contraseñas de mínimo 12 caracteres, con mayúsculas, números y símbolos.</li>
         <li><span class="material-symbols-outlined align-middle text-red-400">block</span> Nunca uses tu nombre, apellido ni fecha de nacimiento como contraseña.</li>
-        <li><span class="material-symbols-outlined align-middle text-blue-400">sync</span> Usa una contraseña diferente para cada cuenta importante.</li>
+        <li><span class="material-symbols-outlined align-middle text-secundario-400">sync</span> Usa una contraseña diferente para cada cuenta importante.</li>
         <li><span class="material-symbols-outlined align-middle text-green-400">install_mobile</span> Activa la verificación en dos pasos en cada red social.</li>
         <li><span class="material-symbols-outlined align-middle text-red-400">person_off</span> Nunca le digas tu contraseña a nadie, ni a tus amigos.</li>
         <li><span class="material-symbols-outlined align-middle text-amber-400">help</span> Si crees que alguien sabe tu clave, cámbiala de inmediato.</li>
@@ -174,7 +174,7 @@
   <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo Russian" (UPTOS CR)</p>
 </footer>
 
-<script src="logica-proteccion.js"></script>
-    <script src="logica-tema.js"></script>
+<script src="../scripts/logica-proteccion.js"></script>
+    <script src="../scripts/logica-tema.js"></script>
 </body>
 </html>
