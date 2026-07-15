@@ -1,0 +1,99 @@
+/* ESTILOS AUDITORIA DIGITAL */
+.contenedor-feed {
+    border: 1px solid #d1fae5;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    background: #f8fafc;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.tarjeta-post {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-post.marcado-algoritmo {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+.tarjeta-post.marcado-organico {
+    border-color: #22c55e;
+    background-color: #f0fdf4;
+}
+
+.etiqueta-post {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.mensaje-explicativo {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    color: #064E3B;
+    display: none;
+}
+
+.marcado-algoritmo .mensaje-explicativo,
+.marcado-organico .mensaje-explicativo {
+    display: block;
+}
+
+/* AUDITORIA DE SEGURIDAD */
+.lista-auditoria {
+    list-style: none;
+    padding: 0;
+}
+
+.item-auditoria {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f0fdf4;
+    border-radius: 1rem;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s;
+}
+
+.item-auditoria:hover {
+    background: #d1fae5;
+}
+
+.checkbox-auditoria {
+    width: 1.5rem;
+    height: 1.5rem;
+    accent-color: #064E3B;
+}
+
+.barra-seguridad-contenedor {
+    height: 1rem;
+    background: #e2e8f0;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+
+.barra-seguridad-relleno {
+    height: 100%;
+    width: 0;
+    background: #22c55e;
+    transition: width 0.5s ease;
+}

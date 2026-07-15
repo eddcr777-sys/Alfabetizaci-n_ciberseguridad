@@ -20,10 +20,8 @@
 
     <!-- BARRA DE PROGRESO DE LECTURA -->
     <div id="barra-lectura-contenedor"
-        style="position:fixed;top:0;left:0;width:100%;height:5px;z-index:9999;background:rgba(0,0,0,0.08);">
-        <div id="barra-lectura-relleno"
-            style="height:100%;width:0%;background:linear-gradient(90deg,#1a4d33,#d4af37);transition:width 0.1s ease;">
-        </div>
+        <div class="barra-progreso-fija">
+                    <div class="barra-progreso-relleno" id="barra-lectura-relleno"></div>
     </div>
 
     <!-- BOTÓN FLOTANTE VOLVER ARRIBA -->
@@ -115,7 +113,7 @@
 
                 <p class="mb-8">
                     En internet, tú no eres un "usuario". Eres un objetivo. Los criminales no buscan computadoras,
-                    buscan **personas vulnerables** para sacar provecho de ellas.
+                    buscan personas vulnerables para sacar provecho de ellas.
                 </p>
 
                 <h3 class="text-2xl font-black mb-6">¿Cuánto vales en el mercado negro?</h3>
@@ -137,9 +135,9 @@
                 <div class="caja-impacto">
                     <h4 class="font-black text-emergency mb-2">EL EFECTO DOMINÓ</h4>
                     <p class="text-sm">
-                        Si tú abres un link falso y te roban tu cuenta, no solo te afecta a ti. El criminal usará **tu
-                        nombre** para escribirle a tu mamá, a tus hermanos o a tus amigos del liceo para pedirles dinero
-                        por una supuesta emergencia. **Tus errores pueden arruinar a tu familia.**
+                        Si tú abres un link falso y te roban tu cuenta, no solo te afecta a ti. El criminal usará tu
+                        nombre para escribirle a tu mamá, a tus hermanos o a tus amigos del liceo para pedirles dinero
+                        por una supuesta emergencia. Tus errores pueden arruinar a tu familia.
                     </p>
                 </div>
 
@@ -174,22 +172,22 @@
                     <span class="numero-capitulo">Capítulo 02</span>
                     <h2 class="titulo-capitulo">Blindaje de Cuentas</h2>
                 </div>
-                <p class="mb-6">Tu contraseña no es una "clave", es la **única barrera** entre un extraño y tu vida
+                <p class="mb-6">Tu contraseña no es una "clave", es la única barrera entre un extraño y tu vida
                     privada.</p>
 
                 <h3 class="text-2xl font-black mb-4">Reglas de un Maestro de la Seguridad:</h3>
                 <ul class="space-y-4 mb-8">
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Nada de
-                        datos personales:** No uses tu nombre, tu fecha de nacimiento o
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> Nada de
+                        datos personales: No uses tu nombre, tu fecha de nacimiento o
                         tu barrio como clave.</li>
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Longitud es
-                        poder:** Una clave de 12 letras es mil veces más difícil de romper que una de 8.
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> Longitud es
+                        poder: Una clave de 12 letras es mil veces más difícil de romper que una de 8.
                     </li>
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> **Diferentes
-                        cuentas, diferentes claves:** Si usas la misma clave para todo, con que te roben
+                            class="material-symbols-outlined text-green-600 align-middle">&#xef76;</span> Diferentes
+                        cuentas, diferentes claves: Si usas la misma clave para todo, con que te roben
                         una, te roban la vida entera.</li>
                 </ul>
 
@@ -321,7 +319,7 @@
                             etiqueten en fotos.</label>
                     </div>
 
-                    <div class="resultado-auditoria-manual" id="resultadoAuditoria" style="display:none;"></div>
+                    <div class="resultado-auditoria-manual" id="resultadoAuditoria" class="oculto"></div>
                 </div>
             </section>
 
@@ -335,14 +333,14 @@
                     marca permanente.</p>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    <div class="tarjeta-aviso-premium alerta-azul" style="margin:0;">
+                    <div class="tarjeta-aviso-premium alerta-azul" class="margen-cero">
                         <div class="contenido-relativo">
                             <h4><span class="material-symbols-outlined">&#xe044;</span> No respondas</h4>
                             <p>El acosador busca tu reacción. Ignorar o bloquear es tu mejor defensa. Responder con
                                 rabia solo empeora la situación.</p>
                         </div>
                     </div>
-                    <div class="tarjeta-aviso-premium alerta-esmeralda" style="margin:0;">
+                    <div class="tarjeta-aviso-premium alerta-esmeralda" class="margen-cero">
                         <div class="contenido-relativo">
                             <h4><span class="material-symbols-outlined">&#xe412;</span> Guarda evidencia</h4>
                             <p>Toma capturas de pantalla de los mensajes u ofensas antes de bloquear. Serán tu prueba
@@ -374,9 +372,9 @@
 
                 <h3 class="text-xl font-black mb-4">¿Cómo detectar la mentira?</h3>
                 <ol class="space-y-4 mb-8">
-                    <li>1. **Urgencia extrema:** "Tu cuenta será cerrada en 1 hora". (Mentira para asustarte).</li>
-                    <li>2. **Premios imposibles:** "Bono del gobierno por $500". (Mentira para robarte).</li>
-                    <li>3. **Enlaces raros:** Direcciones como `instagram-seguridad.xyz` en vez de la oficial
+                    <li>1. Urgencia extrema: "Tu cuenta será cerrada en 1 hora". (Mentira para asustarte).</li>
+                    <li>2. Premios imposibles: "Bono del gobierno por $500". (Mentira para robarte).</li>
+                    <li>3. Enlaces raros: Direcciones como `instagram-seguridad.xyz` en vez de la oficial
                         `instagram.com`.</li>
                 </ol>
 
@@ -452,16 +450,16 @@
                 <h3 class="text-xl font-bold mb-4">Lo que debes evitar:</h3>
                 <ul class="space-y-3 mb-8">
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-red-600 align-middle">&#xe14b;</span> **Generadores de
-                        Monedas:** No existen los Robux o V-Bucks gratis. Son
+                            class="material-symbols-outlined text-red-600 align-middle">&#xe14b;</span> Generadores de
+                        Monedas: No existen los Robux o V-Bucks gratis. Son
                         trampas para robarte el acceso.</li>
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-amber-600 align-middle">&#xe510;</span> **Revelar
-                        Datos en el Chat:** No des tu nombre real ni tu liceo en el chat de voz, incluso si parecen
+                            class="material-symbols-outlined text-amber-600 align-middle">&#xe510;</span> Revelar
+                        Datos en el Chat: No des tu nombre real ni tu liceo en el chat de voz, incluso si parecen
                         amigables.</li>
                     <li class="flex gap-4"><span
-                            class="material-symbols-outlined text-red-600 align-middle">&#xe99a;</span> **Intercambios
-                        Inseguros:** Nunca aceptes intercambios de objetos fuera del juego oficial.
+                            class="material-symbols-outlined text-red-600 align-middle">&#xe99a;</span> Intercambios
+                        Inseguros: Nunca aceptes intercambios de objetos fuera del juego oficial.
                     </li>
                 </ul>
 
@@ -500,7 +498,7 @@
                     el otro se oculta tan bien que el antivirus no lo ve.
                 </div>
 
-                <p class="parrafo">Usa siempre **Alternativas Legales Gratis**: Google Docs en vez de Office pirata,
+                <p class="parrafo">Usa siempre Alternativas Legales Gratis: Google Docs en vez de Office pirata,
                     Canva en vez de Photoshop pirata. Es más seguro y profesional.</p>
             </section>
 
@@ -687,17 +685,19 @@
                 <div id="quiz-contenedor">
                     <!-- Pregunta 1 -->
                     <div class="pregunta-cuestionario" data-correcta="b">
-                        <p class="enunciado-cuestionario">1. Te llega un mensaje: <em>"Tu cuenta será cerrada en 1 hora, haz
+                        <p class="enunciado-cuestionario">1. Te llega un mensaje: <em>"Tu cuenta será cerrada en 1 hora,
+                                haz
                                 clic aquí para verificarla"</em>. ¿Qué haces?</p>
                         <div class="quiz-opciones">
                             <button class="opcion-cuestionario" data-valor="a">Hago clic de inmediato para no perder la
                                 cuenta.</button>
-                            <button class="opcion-cuestionario" data-valor="b">Ignoro el mensaje y entro directamente a la app
+                            <button class="opcion-cuestionario" data-valor="b">Ignoro el mensaje y entro directamente a
+                                la app
                                 oficial.</button>
                             <button class="opcion-cuestionario" data-valor="c">Lo reenvío a mis amigos para
                                 advertirles.</button>
                         </div>
-                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" class="oculto"></div>
                     </div>
 
                     <!-- Pregunta 2 -->
@@ -708,22 +708,25 @@
                             <button class="opcion-cuestionario" data-valor="b">123456789</button>
                             <button class="opcion-cuestionario" data-valor="c">Perro!Azul#48$Liceo</button>
                         </div>
-                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" class="oculto"></div>
                     </div>
 
                     <!-- Pregunta 3 -->
                     <div class="pregunta-cuestionario" data-correcta="a">
-                        <p class="enunciado-cuestionario">3. Un "amigo" en línea que nunca has conocido te pide tu número de
+                        <p class="enunciado-cuestionario">3. Un "amigo" en línea que nunca has conocido te pide tu
+                            número de
                             teléfono. ¿Qué debes hacer?</p>
                         <div class="quiz-opciones">
-                            <button class="opcion-cuestionario" data-valor="a">No darlo. Bloquear y contarle a un adulto de
+                            <button class="opcion-cuestionario" data-valor="a">No darlo. Bloquear y contarle a un adulto
+                                de
                                 confianza.</button>
                             <button class="opcion-cuestionario" data-valor="b">Dárselo si lleva mucho tiempo
                                 hablándote.</button>
-                            <button class="opcion-cuestionario" data-valor="c">Pedirle primero el suyo para verificar si es de
+                            <button class="opcion-cuestionario" data-valor="c">Pedirle primero el suyo para verificar si
+                                es de
                                 fiar.</button>
                         </div>
-                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" class="oculto"></div>
                     </div>
 
                     <!-- Pregunta 4 -->
@@ -733,28 +736,32 @@
                         <div class="quiz-opciones">
                             <button class="opcion-cuestionario" data-valor="a">Lo descargo, es lo mismo que el
                                 original.</button>
-                            <button class="opcion-cuestionario" data-valor="b">Uso Canva o la versión de prueba oficial. No vale
+                            <button class="opcion-cuestionario" data-valor="b">Uso Canva o la versión de prueba oficial.
+                                No vale
                                 el riesgo.</button>
-                            <button class="opcion-cuestionario" data-valor="c">Lo descargo pero no lo instalo todavía.</button>
+                            <button class="opcion-cuestionario" data-valor="c">Lo descargo pero no lo instalo
+                                todavía.</button>
                         </div>
-                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" class="oculto"></div>
                     </div>
 
                     <!-- Pregunta 5 -->
                     <div class="pregunta-cuestionario" data-correcta="c">
                         <p class="enunciado-cuestionario">5. ¿Qué hace la "Verificación en Dos Pasos" (2FA)?</p>
                         <div class="quiz-opciones">
-                            <button class="opcion-cuestionario" data-valor="a">Crea una copia de tu cuenta en la nube.</button>
+                            <button class="opcion-cuestionario" data-valor="a">Crea una copia de tu cuenta en la
+                                nube.</button>
                             <button class="opcion-cuestionario" data-valor="b">Cambia tu contraseña automáticamente cada
                                 mes.</button>
-                            <button class="opcion-cuestionario" data-valor="c">Pide un código extra para entrar, aunque el
+                            <button class="opcion-cuestionario" data-valor="c">Pide un código extra para entrar, aunque
+                                el
                                 atacante tenga tu clave.</button>
                         </div>
-                        <div class="retroalimentacion-cuestionario" style="display:none;"></div>
+                        <div class="retroalimentacion-cuestionario" class="oculto"></div>
                     </div>
                 </div>
 
-                <div id="quiz-resultado-final" style="display:none;" class="mt-10 p-8 rounded-3xl text-center"
+                <div id="quiz-resultado-final" class="oculto" class="mt-10 p-8 rounded-3xl text-center"
                     style="background:rgba(255,255,255,0.1);"></div>
             </section>
 

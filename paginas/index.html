@@ -42,93 +42,58 @@
 <body class="bg-white text-en-superficie selection:bg-primario-fixed selection:text-on-primary-fixed">
     <!-- Navegación -->
     <nav class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-primario/5">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 md:h-24">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20">
             <div class="flex items-center gap-3">
-                <div
-                    class="w-10 h-10 bg-primario rounded-xl flex items-center justify-center shadow-lg shadow-primario/20">
+                <div class="w-10 h-10 bg-primario rounded-xl flex items-center justify-center shadow-lg shadow-primario/20">
                     <span class="material-symbols-outlined text-white">&#xe80c;</span>
                 </div>
-                <div class="text-lg md:text-xl font-black text-[#064E3B] tracking-tighter uppercase leading-none">
-                    L.B. Antonio <br /><span class="text-xs tracking-widest opacity-70">Lemus Pérez</span>
+                <div class="text-sm font-black text-[#064E3B] tracking-tighter uppercase leading-none">
+                    L.B. Antonio Lemus Pérez
                 </div>
             </div>
+
+            <!-- Menú Escritorio -->
             <div class="hidden md:flex gap-10 items-center">
-                <a class="text-[#064E3B] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primario"
-                    href="index.html">Inicio</a>
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                    href="justificacion.html">El Proyecto</a>
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                    href="index2.html">Manual Digital</a>
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                    href="nosotros.html">Nosotros</a>
-                <a href="index3.html">
-                    <button
-                        class="bg-primario text-on-primary px-6 py-2.5 rounded-2xl font-bold hover:shadow-lg hover:shadow-primario/30 transition-all activo:scale-95">Accesibilidad</button>
-                </a>
+                <a class="text-[#064E3B] font-bold" href="index.html">Inicio</a>
+                <a class="text-en-superficie-variant font-medium hover:text-primario" href="justificacion.html">Proyecto</a>
+                <a class="text-en-superficie-variant font-medium hover:text-primario" href="index2.html">Manual</a>
+                <a class="text-en-superficie-variant font-medium hover:text-primario" href="nosotros.html">Nosotros</a>
+                <a href="index3.html" class="bg-primario text-on-primary px-6 py-2.5 rounded-2xl font-bold">Accesibilidad</a>
             </div>
-            <button class="md:hidden text-primario" aria-label="Abrir menú de navegación">
+
+            <!-- Botón Hamburguesa -->
+            <button id="boton-menu-movil" class="md:hidden text-primario" aria-label="Abrir menú">
                 <span class="material-symbols-outlined">&#xe5d2;</span>
             </button>
-            <!-- Botón para cambiar el tema -->
-            <button onclick="alternarModoOscuro()"
-                aria-label="Cambiar entre modo claro y oscuro"
-                class="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-primario transition-colors p-2 rounded-lg dark:text-slate-300">
-                <span class="material-symbols-outlined text-xl dark:hidden">&#xe51c;</span>
-                <span class="material-symbols-outlined text-xl hidden dark:block">&#xe518;</span>
-                <span class="dark:hidden">Modo Oscuro</span>
-                <span class="hidden dark:block">Modo Claro</span>
-            </button>
-
+        </div>
+        <!-- Menú Móvil -->
+        <div id="menu-movil" class="hidden md:hidden bg-white border-t border-primario/10 p-6 flex flex-col gap-4">
+            <a class="text-primario font-bold" href="index.html">Inicio</a>
+            <a class="text-en-superficie-variant font-medium" href="justificacion.html">Proyecto</a>
+            <a class="text-en-superficie-variant font-medium" href="index2.html">Manual</a>
+            <a class="text-en-superficie-variant font-medium" href="nosotros.html">Nosotros</a>
+            <a href="index3.html" class="bg-primario text-on-primary text-center py-3 rounded-xl font-bold">Accesibilidad</a>
         </div>
     </nav>
 
     <!-- Sección de Portada -->
-    <header class="relative overflow-hidden pt-20 pb-32 px-6 gradiente-portada">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative z-10 text-center lg:text-left">
-                <div
-                    class="inline-flex items-center gap-2 bg-primario/10 text-primario px-4 py-1.5 rounded-full mb-8 animate-bounce">
-                    <span class="material-symbols-outlined text-sm">&#xef76;</span>
-                    <span class="text-xs font-bold uppercase tracking-widest">Excelencia Educativa desde 1984</span>
-                </div>
-                <h1
-                    class="text-5xl md:text-8xl font-black text-[#064E3B] tracking-tightest mb-8 leading-[1.1] texto-balanceado">
-                    Forjando el Futuro de <span
-                        class="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">Venezuela</span>.
+    <header class="relative pt-10 pb-16 px-6 gradiente-portada">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
+            <div class="text-center lg:text-left w-full lg:w-1/2">
+                <h1 class="text-4xl md:text-7xl font-black text-[#064E3B] mb-6 leading-[1.1] texto-balanceado">
+                    Forjando el Futuro de Venezuela.
                 </h1>
-                <p
-                    class="text-xl md:text-2xl text-en-superficie-variant leading-relaxed mb-10 texto-balanceado max-w-2xl mx-auto lg:mx-0">
-                    Liceo Bolivariano "Antonio Lemus Pérez": Una comunidad educativa comprometida con la formación
-                    integral, social y tecnológica en Cumaná.
+                <p class="text-lg text-en-superficie-variant mb-8 texto-balanceado">
+                    Liceo Bolivariano "Antonio Lemus Pérez": Una comunidad educativa comprometida con la formación integral y tecnológica.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#historia"
-                        class="bg-[#064E3B] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#003d33] transition-all shadow-xl shadow-[#064E3B]/20">
-                        Conoce nuestra historia
-                        <span class="material-symbols-outlined">&#xe5db;</span>
-                    </a>
-                    <a href="justificacion.html"
-                        class="bg-white text-[#064E3B] border-2 border-[#064E3B]/10 px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2 hover:bg-[#064E3B]/5 transition-all">
-                        Ver Proyecto 2026
+                    <a href="#historia" class="bg-[#064E3B] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-2">
+                        Nuestra Historia
                     </a>
                 </div>
             </div>
-            <div class="relative hidden lg:block">
-                <div class="absolute -top-20 -right-20 w-96 h-96 bg-primario/5 rounded-full blur-3xl"></div>
-                <div class="relative bg-white p-4 rounded-[3rem] shadow-2xl rotate-2 border border-outline-variant/5">
-                    <img src="vista_aerea_institucion_1775858772047.png" alt="L.B. Antonio Lemus Pérez"
-                        class="rounded-[2.5rem] w-full h-[500px] object-cover">
-                    <div
-                        class="absolute bottom-10 -left-10 bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 animar-flotar border border-primario/10">
-                        <div class="w-12 h-12 bg-primario/10 rounded-2xl flex items-center justify-center">
-                            <span class="material-symbols-outlined text-primario">&#xf233;</span>
-                        </div>
-                        <div>
-                            <p class="text-xs text-en-superficie-variant font-medium">Comunidad Activa</p>
-                            <p class="text-lg font-black text-primario">+800 Estudiantes</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <img src="vista_aerea_institucion_1775858772047.png" alt="Institución" class="rounded-3xl w-full max-w-md shadow-2xl">
             </div>
         </div>
     </header>
@@ -374,6 +339,7 @@
         </div>
     </footer>
 
+    <script src="../scripts/menu-movil.js"></script>
     <script src="../scripts/logica-tema.js"></script>
 </body>
 

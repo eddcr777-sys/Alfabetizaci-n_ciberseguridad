@@ -4,17 +4,17 @@ tailwind.config = {
     extend: {
       "colors": {
               // Paleta Estrictamente Verde (Sin rastros de azul)
-              "primario": "#064e3b",      // Verde Esmeralda Muy Oscuro
+              "primario": "#043a0aff",      // Verde Esmeralda Muy Oscuro
               "en-primario": "#ffffff",
-              "contenedor-primario": "#059669", // Verde Esmeralda Medio
+              "contenedor-primario": "#022c22", // Verde Esmeralda Medio
               "en-contenedor-primario": "#022c22",
               
-              "secundario": "#10b981",    // Verde Vibrante
+              "secundario": "#021308ff",    // Verde Vibrante
               "en-secundario": "#ffffff",
               "contenedor-secundario": "#ecfdf5", // Verde Muy Tenue (Fondo)
               "en-contenedor-secundario": "#064e3b",
               
-              "terciario": "#22c55e",     // Verde Neón
+              "terciario": "#022c09ff",     // Verde Neón
               "en-terciario": "#ffffff",
               
               "error": "#b91c1c",         // Rojo para errores (necesario por usabilidad)
