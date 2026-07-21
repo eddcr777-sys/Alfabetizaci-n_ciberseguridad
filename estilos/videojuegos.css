@@ -44,7 +44,11 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-
 
 /* HEADER Y FOOTER SON IDÉNTICOS AL CSS DE SOFTWARE-PIRATA (Usa las mismas clases) */
 .cabecera-pagina { background: var(--bg-tarjeta); border-bottom: 1px solid var(--borde-color); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
-.contenedor-cabecera { max-width: 1400px; margin: 0 auto; padding: 1.25rem 2rem; }
+.contenedor-cabecera { max-width: 1400px; margin: 0 auto; padding: 1.25rem 2rem;    
+
+    /* En el contenedor de la cabecera: */
+
+}
 .barra-herramientas { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
 .boton-regresar { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--texto-secundario); text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: var(--radio-elemento); background: var(--bg-subtil); transition: var(--transicion); }
 .boton-regresar:hover { color: var(--modulo-color); transform: translateX(-3px); }

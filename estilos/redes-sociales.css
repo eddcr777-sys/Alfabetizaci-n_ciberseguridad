@@ -4,10 +4,10 @@
 
 /* Estilos de la cabecera */
 .cabecera-pagina {
-  background: linear-gradient(135deg, #0f5132 0%, #15803d 100%);
+  background-color: #9d00ff;
   color: #ffffff;
   padding: 3.5rem 1.5rem 4rem 1.5rem;
-  border-bottom: 4px solid #f59e0b;
+  border-bottom: 4px solid #9d00ff;
 }
 
 .titulo-destacado {
@@ -27,11 +27,13 @@
 /* Secciones y Bloques Informativos */
 .seccion {
   margin-bottom: 4rem;
+  color: #9d00ff;
 }
 
+
 .palabra-clave {
-  background: #fef3c7;
-  color: #92400e;
+  background: #ffffff;
+  color: #9d00ff;
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
   font-weight: 700;
@@ -64,9 +66,9 @@
 
 /* Alertas */
 .caja-alerta {
-  background-color: #fffbebfb;
-  border-left: 4px solid #f59e0b;
-  color: #b45309;
+  background-color: #fffffffb;
+  border-left: 4px solid #9d00ff;
+  color: #9d00ff;
   padding: 1.25rem;
   border-radius: 8px;
   font-weight: 600;
@@ -99,7 +101,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0f5132;
+  color: #9d00ff;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -115,7 +117,7 @@
 /* Taller Interactivo: Auditoría */
 .taller-bloque {
   background: #ffffff;
-  border: 2px dashed #16a34a;
+  border: 2px dashed #9d00ff;
   border-radius: 16px;
   padding: 2rem;
   margin-top: 1.5rem;
@@ -125,7 +127,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1.35rem;
   font-weight: 800;
-  color: #15803d;
+  color: #9d00ff;
   margin-bottom: 0.5rem;
 }
 
@@ -154,7 +156,7 @@
 .elemento-lista-verificacion input[type="checkbox"] {
   width: 1.2rem;
   height: 1.2rem;
-  accent-color: #16a34a;
+  accent-color: #9d00ff;
   cursor: pointer;
 }
 
@@ -179,7 +181,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #f59e0b;
+  color: #9d00ff;
   margin-bottom: 1.5rem;
 }
 
@@ -199,12 +201,12 @@
 
 /* Soporte Modo Oscuro */
 body.modo-oscuro .bloque-definicion {
-  background: #1e293b;
-  border-left-color: #60a5fa;
+  background: #000000;
+  border-left-color: #9d00ff;
 }
 
 body.modo-oscuro .etiqueta-def {
-  color: #93c5fd;
+  color: #ffffff;
 }
 
 body.modo-oscuro .texto-def {
@@ -212,12 +214,12 @@ body.modo-oscuro .texto-def {
 }
 
 body.modo-oscuro .tarjeta {
-  background: #1e293b;
+  background: #000000;
   border-color: #334155;
 }
 
 body.modo-oscuro .tarjeta-titulo {
-  color: #4ade80;
+  color: #9d00ff;
 }
 
 body.modo-oscuro .tarjeta p {
@@ -226,11 +228,11 @@ body.modo-oscuro .tarjeta p {
 
 body.modo-oscuro .taller-bloque {
   background: #0f172a;
-  border-color: #22c55e;
+  border-color: #9d00ff;
 }
 
 body.modo-oscuro .elemento-lista-verificacion {
-  background: #1e293b;
+  background: #000000;
   color: #f1f5f9;
 }
 

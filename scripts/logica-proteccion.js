@@ -1,63 +1,121 @@
-// MEDIDOR DE CONTRASEÑA
-const claveInput = document.getElementById('claveInput');
-const barraRelleno = document.getElementById('barraRelleno');
-const etiquetaFuerza = document.getElementById('etiquetaFuerza');
+document.addEventListener('DOMContentLoaded', () => {
 
-claveInput.addEventListener('input', function() {
-    const val = this.value;
-    let puntaje = 0;
+    // ==========================================
+    // LÓGICA DEL MODO OSCURO
+    // ==========================================
+    const btnTema = document.getElementById('btn-tema');
+    const iconoTema = document.getElementById('icono-tema');
+    const textoTema = document.getElementById('texto-tema');
+    const htmlElement = document.documentElement;
 
-    const tieneLargo = val.length >= 10;
-    const tieneMayus = /[A-Z]/.test(val);
-    const tieneNum = /[0-9]/.test(val);
-    const tieneSimbolo = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val);
-
-    if (tieneLargo) puntaje += 25;
-    if (tieneMayus) puntaje += 25;
-    if (tieneNum) puntaje += 25;
-    if (tieneSimbolo) puntaje += 25;
-
-    actualizarCheck('checkLargo', tieneLargo, 'Al menos 10 caracteres');
-    actualizarCheck('checkMayus', tieneMayus, 'Letra MAYÚSCULA');
-    actualizarCheck('checkNum', tieneNum, 'Número (1, 2, 3...)');
-    actualizarCheck('checkSimbolo', tieneSimbolo, 'Símbolo (@, #, $, !)');
-
-    barraRelleno.style.width = puntaje + '%';
-
-    if (val.length === 0) {
-        barraRelleno.style.background = '#ccc';
-        etiquetaFuerza.textContent = 'Escribe para analizar...';
-        etiquetaFuerza.style.color = '#888';
-    } else if (puntaje <= 25) {
-        barraRelleno.style.background = '#f44336';
-        etiquetaFuerza.innerHTML = '<span class="status-danger">CRÍTICO — Un atacante la adivinaría en segundos.</span>';
-        etiquetaFuerza.style.color = '#f44336';
-    } else if (puntaje <= 50) {
-        barraRelleno.style.background = '#ff9800';
-        etiquetaFuerza.innerHTML = '<span class="status-warning">DÉBIL — Mejórala añadiendo más tipos de caracteres.</span>';
-        etiquetaFuerza.style.color = '#ff9800';
-    } else if (puntaje <= 75) {
-        barraRelleno.style.background = '#ffc107';
-        etiquetaFuerza.innerHTML = '<span class="status-medium">ACEPTABLE — Añade un símbolo para hacerla más fuerte.</span>';
-        etiquetaFuerza.style.color = '#f57f17';
-    } else {
-        barraRelleno.style.background = '#004d40';
-        etiquetaFuerza.innerHTML = '<span class="status-success">¡EXCELENTE! Esta contraseña es muy difícil de romper.</span>';
-        etiquetaFuerza.style.color = '#004d40';
+    // Verificar preferencia guardada
+    const temaGuardado = localStorage.getItem('temaSeguridad');
+    if (temaGuardado === 'dark') {
+        activarModoOscuro();
     }
+
+    btnTema.addEventListener('click', () => {
+        if (htmlElement.getAttribute('data-theme') === 'light') {
+            activarModoOscuro();
+            localStorage.setItem('temaSeguridad', 'dark');
+        } else {
+            activarModoClaro();
+            localStorage.setItem('temaSeguridad', 'light');
+        }
+    });
+
+    function activarModoOscuro() {
+        htmlElement.setAttribute('data-theme', 'dark');
+        iconoTema.textContent = 'light_mode';
+        textoTema.textContent = 'Modo Claro';
+    }
+
+    function activarModoClaro() {
+        htmlElement.setAttribute('data-theme', 'light');
+        iconoTema.textContent = 'dark_mode';
+        textoTema.textContent = 'Modo Oscuro';
+    }
+
+    // ==========================================
+    // LÓGICA DEL MEDIDOR DE CONTRASEÑA
+    // ==========================================
+    const inputClave = document.getElementById('claveInput');
+    const barra = document.getElementById('barraRelleno');
+    const etiqueta = document.getElementById('etiquetaFuerza');
+
+    const checkLargo = document.getElementById('checkLargo');
+    const checkMayus = document.getElementById('checkMayus');
+    const checkNum = document.getElementById('checkNum');
+    const checkSimbolo = document.getElementById('checkSimbolo');
+
+    inputClave.addEventListener('input', (e) => {
+        const clave = e.target.value;
+        let puntaje = 0;
+
+        // Validaciones RegEx
+        const tieneLargo = clave.length >= 10;
+        const tieneMayus = /[A-Z]/.test(clave);
+        const tieneNum = /[0-9]/.test(clave);
+        const tieneSimbolo = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(clave);
+
+        // Actualizar UI de los checks
+        actualizarCheck(checkLargo, tieneLargo);
+        actualizarCheck(checkMayus, tieneMayus);
+        actualizarCheck(checkNum, tieneNum);
+        actualizarCheck(checkSimbolo, tieneSimbolo);
+
+        // Calcular puntaje
+        if (tieneLargo) puntaje += 25;
+        if (tieneMayus) puntaje += 25;
+        if (tieneNum) puntaje += 25;
+        if (tieneSimbolo) puntaje += 25;
+
+        // Actualizar Barra y Texto
+        barra.style.width = `${puntaje}%`;
+
+        if (clave.length === 0) {
+            etiqueta.textContent = "Esperando ingreso...";
+            barra.style.width = "0%";
+        } else if (puntaje <= 25) {
+            barra.style.backgroundColor = "#ef4444"; // Rojo
+            etiqueta.textContent = "Débil";
+            etiqueta.style.color = "#ef4444";
+        } else if (puntaje <= 50) {
+            barra.style.backgroundColor = "#f59e0b"; // Naranja
+            etiqueta.textContent = "Regular";
+            etiqueta.style.color = "#f59e0b";
+        } else if (puntaje <= 75) {
+            barra.style.backgroundColor = "#3b82f6"; // Azul
+            etiqueta.textContent = "Buena";
+            etiqueta.style.color = "#3b82f6";
+        } else {
+            barra.style.backgroundColor = "#22c55e"; // Verde
+            etiqueta.textContent = "¡Excelente y Segura!";
+            etiqueta.style.color = "#22c55e";
+        }
+    });
+
+    function actualizarCheck(elemento, cumple) {
+        const icono = elemento.querySelector('span');
+        if (cumple) {
+            elemento.classList.add('cumplido');
+            icono.textContent = 'check_circle';
+        } else {
+            elemento.classList.remove('cumplido');
+            icono.textContent = 'radio_button_unchecked';
+        }
+    }
+
+    // ==========================================
+    // LÓGICA DEL CUESTIONARIO (QUIZ)
+    // ==========================================
+    const preguntas = document.querySelectorAll('.pregunta-cuestionario');
+    
+    preguntas.forEach(pregunta => {
+        pregunta.addEventListener('click', () => {
+            // Revela el estado (peligroso/seguro) de la pregunta al hacer clic
+            pregunta.classList.toggle('revelado');
+        });
+    });
+
 });
-
-function actualizarCheck(id, activo, texto) {
-    const el = document.getElementById(id);
-    const icono = activo ? '<span class="material-symbols-outlined text-green-600 align-middle">check_circle</span> ' : '<span class="material-symbols-outlined text-slate-300 align-middle">radio_button_unchecked</span> ';
-    el.innerHTML = icono + texto;
-    el.classList.toggle('activo', activo);
-}
-
-// QUIZ
-function revelarQuiz(el) {
-    el.classList.add('revelado');
-    const seguro = el.dataset.seguro === 'si';
-    el.classList.toggle('seguro', seguro);
-    el.classList.toggle('inseguro', !seguro);
-}
