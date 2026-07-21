@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnMenu = document.getElementById('boton-menu-movil');
     const btnCerrar = document.getElementById('cerrar-menu-movil');
     const menuMovil = document.getElementById('menu-movil');
-    const overlay = document.getElementById('drawer-overlay');
+    const overlay = document.getElementById('capa-menu-movil');
 
     if (btnMenu && menuMovil && overlay) {
         function openMenu() {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 menuMovil.classList.add('hidden');
                 overlay.classList.add('hidden');
-            }, 300); // Igual a duration-300 de Tailwind
+            }, 300); // Igual a la duracion de la animacion CSS
             
             document.body.style.overflow = '';
         }

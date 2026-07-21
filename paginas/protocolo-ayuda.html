@@ -6,9 +6,10 @@
  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
  <title>Protocolo de Ayuda | L.B. Antonio Lemus Pérez</title>
  <link rel="stylesheet" href="../estilos/protocolo-ayuda.css" />
- <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
- <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+  <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
  <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
@@ -88,14 +89,14 @@
  <p class="parrafo">Si crees que robaron tu clave, usa un dispositivo seguro (como el de tus padres o uno de los
  laboratorios del liceo) para cambiar las claves de tus cuentas más importantes.</p>
  <p class="parrafo">Prioriza estas cuentas:</p>
- <ul class="lista-pasos grid-col-1-1">
- <li><span class="material-symbols-outlined tamano-1-1rem">mail</span> Correo
+ <ul class="lista-pasos cuadricula-doble">
+ <li><span class="material-symbols-outlined texto-mediano">mail</span> Correo
  Electrónico</li>
- <li><span class="material-symbols-outlined tamano-1-1rem">share</span> Instagram /
+ <li><span class="material-symbols-outlined texto-mediano">share</span> Instagram /
  TikTok</li>
- <li><span class="material-symbols-outlined tamano-1-1rem">account_balance</span>
+ <li><span class="material-symbols-outlined texto-mediano">account_balance</span>
  Cuentas de Banco</li>
- <li><span class="material-symbols-outlined tamano-1-1rem">chat</span> WhatsApp</li>
+ <li><span class="material-symbols-outlined texto-mediano">chat</span> WhatsApp</li>
  </ul>
  </div>
  </div>
@@ -110,8 +111,8 @@
  <div class="paso-caja">
  <p class="parrafo">Si te están acosando o amenazando, toma capturas de pantalla de los mensajes, el perfil del
  atacante y los enlaces que te mandaron.</p>
- <div class="fondo-info-naranja">
- <span class="material-symbols-outlined tamano-1-2rem">warning</span> No borres los
+ <div class="fondo-alerta-naranja">
+ <span class="material-symbols-outlined texto-grande">warning</span> No borres los
  mensajes todavía. Son la prueba legal que servirá para denunciar el hecho ante las autoridades del liceo o la policía.
  </div>
  </div>
@@ -214,13 +215,44 @@
 
  </main>
 
- <footer class="pie-pagina">
- <p>Página de Ayuda y Protocolo SOS · © 2026</p>
- <p style="margin-top:0.5rem;">Desarrollado por: <strong>Elvis Cordova · Henyer Guipe · Jesus Giraldo · Luis
- Ruiz</strong></p>
- <p style="font-size:0.8rem; margin-top:1rem; opacity:0.6;">Proyecto Académico UPTOS CR para el L.B. Antonio Lemus
- Pérez</p>
- </footer>
+ <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="cuadricula-pie">
+                <div class="columna-principal-pie">
+                    <div class="marca-pie">
+                        <div class="logo-pie">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
+                        </div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="justificacion.html">Justificación</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index3.html">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
+                </div>
+            </div>
+
+            <div class="inferior-pie">
+                <p class="derechos-pie">
+                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+                <a href="nosotros.html" class="creditos-pie">
+                    Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
+                </a>
+            </div>
+        </div>
+    </footer>
 
  <script src="../scripts/logica-tema.js"></script>
 

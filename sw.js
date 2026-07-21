@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lbalp-cache-v1';
+const CACHE_NAME = 'lbalp-cache-v2';
 
 // Recursos críticos para la funcionalidad offline
 const urlsToCache = [
@@ -9,9 +9,12 @@ const urlsToCache = [
   '/paginas/index2.html',
   '/paginas/index3.html',
   '/paginas/nosotros.html',
-  '/estilos/tailwind-compilado.css',
   '/estilos/fuentes-locales.css',
   '/estilos/estilos-base.css',
+  '/estilos/main.css',
+  '/estilos/utilidades-espanol.css',
+  '/estilos/main.css',
+  '/estilos/utilidades-espanol.css',
   '/scripts/menu-movil.js',
   '/scripts/logica-tema.js',
   '/activos/imagenes/institucion-abstracta.svg',

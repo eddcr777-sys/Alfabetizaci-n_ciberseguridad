@@ -5,11 +5,12 @@
  <meta charset="utf-8" />
  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
  <title>Guía Completa de Alfabetización Digital | L.B. Antonio Lemus Pérez</title>
- <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
- <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+  <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
  
  <link rel="stylesheet" href="../estilos/guia-completa.css" />
  <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
@@ -19,32 +20,88 @@
 <body>
 
  <header class="gradiente-cabecera">
- <div class="max-w-4xl mx-auto">
- <p class="text-secundario font-bold tracking-widest uppercase text-sm mb-4">Manual de Referencia
+ <div class="ancho-maximo-medio margen-x-auto">
+ <p class="text-secundario  letras-separadas mayusculas texto-pequeno margen-abajo-normal">Manual de Referencia
  Institucional</p>
- <h1 class="text-white text-5xl md:text-4xl font-bold mb-8">Guía Integral de Seguridad Digital</h1>
- <p class="text-white/80 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
+ <h1 class="texto-blanco texto-titulo-enorme md:text-4xl  margen-abajo-grande">Guía Integral de Seguridad Digital</h1>
+ <p class="text-white/80 texto-muy-grande fuente-media">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
  </div>
  </header>
 
- <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
+ <div class="contenedor py-12 caja-flexible columna-flexible md:flex-row brecha-gigante">
 
  <!-- BARRA LATERAL -->
  <aside class="md:w-1/4">
- <div class="barra-lateral-fija border-r border-slate-200 pr-6 hidden md:block">
- <h4 class="text-xs uppercase font-bold text-slate-600 mb-6 tracking-widest">Navegación</h4>
- <nav class="space-y-1">
- <a href="#introduccion" class="enlace-navegacion">1. Introducción</a>
- <a href="#conceptos" class="enlace-navegacion">2. Conceptos Clave</a>
- <a href="#amenazas" class="enlace-navegacion">3. Amenazas Reales</a>
- <a href="#redes" class="enlace-navegacion">4. Redes y WiFi</a>
- <a href="#higiene" class="enlace-navegacion">5. Higiene Digital</a>
- <a href="#legalidad" class="enlace-navegacion">6. Marco Legal</a>
- <a href="#glosario" class="enlace-navegacion">7. Glosario A-Z</a>
- </nav>
- <div class="mt-12 bg-slate-50 p-6 rounded border border-slate-200">
- <p class="text-xs font-bold text-slate-700 mb-2">¿Necesitas ayuda?</p>
- <a href="protocolo-ayuda.html" class="text-xs font-bold text-primario uppercase">Guía de Emergencia
+ <div class="barra-lateral-fija border-r border-slate-200 pr-6 oculto md:block">
+ <h4 class="texto-diminuto mayusculas  text-slate-600 margen-abajo-medio letras-separadas">Navegación</h4>
+ <!-- Navegación -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+
+            <!-- Menú Escritorio -->
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav active" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-delineado" style="padding: 0.5rem; border-color: transparent; color: var(--color-primario); background: transparent; cursor: pointer;" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+
+            <!-- Botón Hamburguesa -->
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        
+        <!-- Overlay del Drawer -->
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+
+        <!-- Menu Drawer Lateral -->
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu active" href="index.html">
+                    <span class="material-symbols-outlined">&#xe88a;</span> Inicio
+                </a>
+                <a class="enlace-menu" href="justificacion.html">
+                    <span class="material-symbols-outlined">&#xe88e;</span> Proyecto
+                </a>
+                <a class="enlace-menu" href="index2.html">
+                    <span class="material-symbols-outlined">&#xe865;</span> Manual
+                </a>
+                <a class="enlace-menu" href="nosotros.html">
+                    <span class="material-symbols-outlined">&#xe7fb;</span> Nosotros
+                </a>
+                <div style="margin-top: 2rem;">
+                    <button onclick="alternarModoOscuro()" class="boton boton-delineado" style="width: 100%; margin-bottom: 1rem; color: var(--color-primario); border-color: var(--color-primario); background: transparent; cursor: pointer;">
+                        <span class="material-symbols-outlined">dark_mode</span> Cambiar Tema
+                    </button>
+                    <a href="index3.html" class="boton boton-primario" style="width: 100%;">
+                        Accesibilidad
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+ <div class="mt-12 bg-slate-50 relleno-medio rounded borde-normal border-slate-200">
+ <p class="texto-diminuto  text-slate-700 margen-abajo-pequeno">¿Necesitas ayuda?</p>
+ <a href="protocolo-ayuda.html" class="texto-diminuto  texto-principal mayusculas">Guía de Emergencia
  →</a>
  </div>
  </div>
@@ -55,8 +112,8 @@
 
  <!-- INTRODUCCIÓN -->
  <section id="introduccion" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-6">1. Introducción y Justificación</h2>
- <p class="mb-6">
+ <h2 class="texto-titulo-grande  margen-abajo-medio">1. Introducción y Justificación</h2>
+ <p class="margen-abajo-medio">
  Esta guía es mucho más que un manual; es una enciclopedia diseñada para proteger a los estudiantes
  del <span class="resaltado">Liceo Antonio Lemus Pérez</span>. En la era actual, la seguridad en
  internet no es una opción, es una necesidad de protección personal.
@@ -64,7 +121,7 @@
  <div class="caja-termino">
  <span class="titulo-termino">La Tríada CIA (Seguridad de la Información)</span>
  Toda seguridad digital busca proteger tres cosas:
- <ul class="text-sm mt-3 space-y-2 font-medium">
+ <ul class="texto-pequeno mt-3 space-y-2 fuente-media">
  <li>• <span class="resaltado">Confidencialidad:</span> Que solo tú veas tus datos.</li>
  <li>• <span class="resaltado">Integridad:</span> Que nadie pueda cambiar tus datos sin permiso.
  </li>
@@ -76,25 +133,25 @@
 
  <!-- CONCEPTOS -->
  <section id="conceptos" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8">2. Conceptos que debes entender</h2>
- <p class="mb-8">Para hablar de seguridad, primero debemos entender las palabras que usan los expertos en
+ <h2 class="texto-titulo-grande  margen-abajo-grande">2. Conceptos que debes entender</h2>
+ <p class="margen-abajo-grande">Para hablar de seguridad, primero debemos entender las palabras que usan los expertos en
  un lenguaje simple:</p>
 
  <div class="space-y-8">
  <div>
- <h3 class="text-2xl font-bold mb-3">Identidad Digital</h3>
+ <h3 class="texto-titulo-pequeno  mb-3">Identidad Digital</h3>
  <p>Es el "Tú" virtual. Se forma por tus fotos, tus comentarios, lo que compras y lo que
  compartas. Todo esto deja una <span class="definicion-linea">Huella Digital</span> (el
  rastro que dejas en internet para siempre).</p>
  </div>
  <div>
- <h3 class="text-2xl font-bold mb-3">Cifrado (Encriptación)</h3>
+ <h3 class="texto-titulo-pequeno  mb-3">Cifrado (Encriptación)</h3>
  <p>Es como meter tu información en una caja fuerte digital. Solo quien tiene la "llave" (tu
  contraseña) puede leer lo que hay dentro. Si un hacker roba datos cifrados, solo verá letras
  y números sin sentido.</p>
  </div>
  <div>
- <h3 class="text-2xl font-bold mb-3">Servidores y Nube</h3>
+ <h3 class="texto-titulo-pequeno  mb-3">Servidores y Nube</h3>
  <p>Cuando guardas algo en "la nube", en realidad lo estás guardando en la computadora gigante de
  otra empresa (como Google o Facebook) ubicada en otro país.</p>
  </div>
@@ -103,8 +160,8 @@
 
  <!-- AMENAZAS -->
  <section id="amenazas" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8 text-red-700">3. Amenazas Reales y Ataques</h2>
- <p class="mb-4 font-bold text-slate-700 uppercase text-xs tracking-widest">Catálogo de Riesgos</p>
+ <h2 class="texto-titulo-grande  margen-abajo-grande text-red-700">3. Amenazas Reales y Ataques</h2>
+ <p class="margen-abajo-normal  text-slate-700 mayusculas texto-diminuto letras-separadas">Catálogo de Riesgos</p>
 
  <div class="rejilla-informacion">
  <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe868;</span>
@@ -121,8 +178,8 @@
  </div>
  </div>
 
- <div class="mt-8">
- <h3 class="text-2xl font-bold mb-4">Ingeniería Social</h3>
+ <div class="margen-arriba-grande">
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Ingeniería Social</h3>
  <p>Es el "hackeo de personas". El atacante no rompe tu computadora, te engaña a ti usando tus
  emociones. Puede fingir ser un profesor, un directivo del liceo o un amigo en apuros para que le
  des información privada.</p>
@@ -131,24 +188,24 @@
 
  <!-- RIESGOS COTIDIANOS -->
  <section id="cotidiano" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8 text-secundario-700">3.5 Riesgos del Día a Día: Guía de
+ <h2 class="texto-titulo-grande  margen-abajo-grande text-secundario-700">3.5 Riesgos del Día a Día: Guía de
  Supervivencia</h2>
- <p class="mb-6">Como adolescentes, ustedes pasan la mayor parte del tiempo en estas plataformas. Aquí es
+ <p class="margen-abajo-medio">Como adolescentes, ustedes pasan la mayor parte del tiempo en estas plataformas. Aquí es
  donde los atacantes ponen sus trampas más inteligentes:</p>
 
  <div class="space-y-10">
  <!-- GAMING -->
- <div class="border-b border-slate-100 pb-8">
- <h3 class="text-2xl font-bold text-secundario-900 mb-4 flex items-center gap-2">
+ <div class="borde-abajo border-slate-100 pb-8">
+ <h3 class="texto-titulo-pequeno  text-secundario-900 margen-abajo-normal caja-flexible elementos-centrados brecha-pequena">
  <span class="material-symbols-outlined">sports_esports</span> Peligros en el Gaming
  </h3>
- <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
- <div class="p-4 bg-secundario-50 rounded border border-blue-100 italic text-sm">
+ <div class="cuadricula columnas-1 columnas-2-md brecha-grande">
+ <div class="relleno-normal bg-secundario-50 rounded borde-normal border-blue-100 cursiva texto-pequeno">
  <b>Estafas de Monedas (V-Bucks/Robux):</b> Sitios que prometen dinero gratis a cambio de
  ver anuncios o entrar en links. En realidad, te roban tu cuenta de juego para vender tus
  objetos a otros.
  </div>
- <div class="p-4 bg-secundario-50 rounded border border-blue-100 italic text-sm">
+ <div class="relleno-normal bg-secundario-50 rounded borde-normal border-blue-100 cursiva texto-pequeno">
  <b>El peligro de los "Hacks":</b> Scripts que prometen darte puntería perfecta (Aimbot).
  El 90% trae un virus que le da el control total de tu PC a un desconocido.
  </div>
@@ -156,12 +213,12 @@
  </div>
 
  <!-- REDES SOCIALES -->
- <div class="border-b border-slate-100 pb-8">
- <h3 class="text-2xl font-bold text-pink-900 mb-4 flex items-center gap-2">
+ <div class="borde-abajo border-slate-100 pb-8">
+ <h3 class="texto-titulo-pequeno  text-pink-900 margen-abajo-normal caja-flexible elementos-centrados brecha-pequena">
  <span class="material-symbols-outlined">share</span> Presión y Redes Sociales
  </h3>
- <p class="text-sm mb-4">No solo te roban datos, también intentan manipular lo que sientes:</p>
- <ul class="space-y-3 text-sm">
+ <p class="texto-pequeno margen-abajo-normal">No solo te roban datos, también intentan manipular lo que sientes:</p>
+ <ul class="space-y-3 texto-pequeno">
  <li>🚩 <b>Retos Virales (Challenges):</b> Muchos retos están diseñados para obtener datos
  tuyos (como el "recorrido de tu casa") o poner en riesgo tu vida.</li>
  <li>🚩 <b>Cuentas de "Chismes" del Liceo:</b> Perfiles anónimos que publican fotos
@@ -174,10 +231,10 @@
 
  <!-- WHATSAPP VENEZUELA -->
  <div>
- <h3 class="text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
+ <h3 class="texto-titulo-pequeno  text-green-900 margen-abajo-normal caja-flexible elementos-centrados brecha-pequena">
  <span class="material-symbols-outlined">chat</span> Estafas en WhatsApp (Caso Venezuela)
  </h3>
- <p class="text-sm mb-4">En nuestro país, los estafadores son expertos en inventar historias:</p>
+ <p class="texto-pequeno margen-abajo-normal">En nuestro país, los estafadores son expertos en inventar historias:</p>
  <div class="tarjeta-aviso-premium alerta-esmeralda">
  <div class="contenido-relativo">
  <h4><span class="material-symbols-outlined">&#xad12;</span> Estafa Bono Patria /
@@ -193,8 +250,8 @@
 
  <!-- REDES -->
  <section id="redes" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8">4. Seguridad en Redes y WiFi</h2>
- <p class="mb-6">El Wi-Fi es como una señal de radio: si no eres cuidadoso, cualquiera que esté cerca
+ <h2 class="texto-titulo-grande  margen-abajo-grande">4. Seguridad en Redes y WiFi</h2>
+ <p class="margen-abajo-medio">El Wi-Fi es como una señal de radio: si no eres cuidadoso, cualquiera que esté cerca
  puede "escuchar" lo que envías.</p>
 
  <div class="caja-termino">
@@ -204,13 +261,13 @@
  </div>
 
  <ul class="lista-pasos space-y-4">
- <li class="flex items-start gap-3">
- <span class="material-symbols-outlined text-primario">check_circle</span>
+ <li class="caja-flexible items-start brecha-media">
+ <span class="material-symbols-outlined texto-principal">check_circle</span>
  <span><b>Usa HTTPS:</b> Siempre verifica que las páginas tengan el candado verde. La "S"
  significa que tu conexión es segura.</span>
  </li>
- <li class="flex items-start gap-3">
- <span class="material-symbols-outlined text-primario">check_circle</span>
+ <li class="caja-flexible items-start brecha-media">
+ <span class="material-symbols-outlined texto-principal">check_circle</span>
  <span><b>Evita WiFi Abierto:</b> Si el WiFi de una plaza o tienda no pide clave, no lo uses para
  entrar a redes sociales o bancos.</span>
  </li>
@@ -219,19 +276,19 @@
 
  <!-- HIGIENE -->
  <section id="higiene" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8">5. Higiene Digital (Buenas Prácticas)</h2>
- <p class="mb-6">Cuidar tu computadora o celular es como cuidar tu salud física. Estos hábitos te
+ <h2 class="texto-titulo-grande  margen-abajo-grande">5. Higiene Digital (Buenas Prácticas)</h2>
+ <p class="margen-abajo-medio">Cuidar tu computadora o celular es como cuidar tu salud física. Estos hábitos te
  salvarán de muchos ataques:</p>
 
- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
- <div class="p-6 bg-slate-50 rounded">
- <h4 class="font-bold text-primario mb-2">Actualizaciones</h4>
- <p class="text-sm">Cuando tu teléfono pide actualizarse, es porque está "cerrando huecos" por
+ <div class="cuadricula columnas-1 columnas-2-md brecha-muy-grande">
+ <div class="relleno-medio bg-slate-50 rounded">
+ <h4 class=" texto-principal margen-abajo-pequeno">Actualizaciones</h4>
+ <p class="texto-pequeno">Cuando tu teléfono pide actualizarse, es porque está "cerrando huecos" por
  donde entran los hackers. Hazlo siempre de inmediato.</p>
  </div>
- <div class="p-6 bg-slate-50 rounded">
- <h4 class="font-bold text-primario mb-2">Copias de Seguridad</h4>
- <p class="text-sm">Guarda tus trabajos y fotos importantes en un pendrive o disco externo. Si te
+ <div class="relleno-medio bg-slate-50 rounded">
+ <h4 class=" texto-principal margen-abajo-pequeno">Copias de Seguridad</h4>
+ <p class="texto-pequeno">Guarda tus trabajos y fotos importantes en un pendrive o disco externo. Si te
  ataca un virus tipo <span class="resaltado">Ransomware</span>, podrás recuperar tus
  archivos.</p>
  </div>
@@ -240,47 +297,47 @@
 
  <!-- LEGALIDAD -->
  <section id="legalidad" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-6">6. Marco Legal en Venezuela</h2>
- <p class="mb-6">
+ <h2 class="texto-titulo-grande  margen-abajo-medio">6. Marco Legal en Venezuela</h2>
+ <p class="margen-abajo-medio">
  En Venezuela existe la Ley Especial contra los Delitos Informáticos. Es muy importante que sepas
  que lo que haces en internet tiene consecuencias legales reales:
  </p>
- <ul class="space-y-4 text-sm font-medium">
- <li class="p-4 border border-slate-200 rounded-lg">• El acceso indebido a cuentas ajenas es un
+ <ul class="space-y-4 texto-pequeno fuente-media">
+ <li class="relleno-normal borde-normal border-slate-200 rounded-lg">• El acceso indebido a cuentas ajenas es un
  delito penado con prisión.</li>
- <li class="p-4 border border-slate-200 rounded-lg">• La difusión de información o fotos privadas sin
+ <li class="relleno-normal borde-normal border-slate-200 rounded-lg">• La difusión de información o fotos privadas sin
  permiso es ilegal.</li>
- <li class="p-4 border border-slate-200 rounded-lg">• El acoso digital o amenazas tiene castigos
+ <li class="relleno-normal borde-normal border-slate-200 rounded-lg">• El acoso digital o amenazas tiene castigos
  graves en nuestra legislación.</li>
  </ul>
  </section>
 
  <!-- GLOSARIO -->
  <section id="glosario" class="tarjeta-guia">
- <h2 class="text-4xl font-bold mb-8">7. Glosario de Conceptos A-Z</h2>
+ <h2 class="texto-titulo-grande  margen-abajo-grande">7. Glosario de Conceptos A-Z</h2>
  <div class="space-y-6">
- <details class="border-b border-slate-100 pb-4">
- <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Antivirus
+ <details class="borde-abajo border-slate-100 pb-4">
+ <summary class=" texto-principal cursor-pointer hover:underline texto-muy-grande">Antivirus
  (Software de Seguridad)</summary>
- <p class="pl-4 pt-2 text-sm text-slate-600">Programa diseñado para detectar, bloquear y eliminar
+ <p class="pl-4 pt-2 texto-pequeno text-slate-600">Programa diseñado para detectar, bloquear y eliminar
  programas maliciosos de tu dispositivo.</p>
  </details>
- <details class="border-b border-slate-100 pb-4">
- <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Backdoor
+ <details class="borde-abajo border-slate-100 pb-4">
+ <summary class=" texto-principal cursor-pointer hover:underline texto-muy-grande">Backdoor
  (Puerta
  Trasera)</summary>
- <p class="pl-4 pt-2 text-sm text-slate-600">Un acceso secreto que los hackers dejan en un
+ <p class="pl-4 pt-2 texto-pequeno text-slate-600">Un acceso secreto que los hackers dejan en un
  programa para poder entrar cuando quieran.</p>
  </details>
- <details class="border-b border-slate-100 pb-4">
- <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Cookies (Migas
+ <details class="borde-abajo border-slate-100 pb-4">
+ <summary class=" texto-principal cursor-pointer hover:underline texto-muy-grande">Cookies (Migas
  de Datos)</summary>
- <p class="pl-4 pt-2 text-sm text-slate-600">Pequeños archivos que guardan los sitios web en tu
+ <p class="pl-4 pt-2 texto-pequeno text-slate-600">Pequeños archivos que guardan los sitios web en tu
  navegador para recordarte. Se pueden usar para robar sesiones.</p>
  </details>
- <details class="border-b border-slate-100 pb-4">
- <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Proxy</summary>
- <p class="pl-4 pt-2 text-sm text-slate-600">Un intermediario entre tu computadora e internet que
+ <details class="borde-abajo border-slate-100 pb-4">
+ <summary class=" texto-principal cursor-pointer hover:underline texto-muy-grande">Proxy</summary>
+ <p class="pl-4 pt-2 texto-pequeno text-slate-600">Un intermediario entre tu computadora e internet que
  puede ocultar tu dirección IP real.</p>
  </details>
  </div>
@@ -290,22 +347,44 @@
  </div>
 
  <!-- FOOTER INSTITUCIONAL -->
- <footer class="bg-primario text-white py-16 px-6 mt-12">
- <div class="max-w-7xl mx-auto text-center">
- <p class="text-secundario font-bold tracking-widest uppercase mb-6">Proyecto de Alfabetización Digital</p>
- <div class="flex flex-wrap justify-center gap-8 mb-12 opacity-80">
- <span class="font-bold">ELVIS CORDOVA</span>
- <span class="font-bold">HENYER GUIPE</span>
- <span class="font-bold">JESUS GIRALDO</span>
- <span class="font-bold">LUIS RUIZ</span>
- </div>
- <div class="border-t border-white/10 pt-8">
- <p class="text-sm opacity-60">© 2026 Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo
- Russian" (UPTOS CR)</p>
- <p class="text-sm opacity-60">Liceo Bolivariano Antonio Lemus Pérez · Cumaná, Venezuela</p>
- </div>
- </div>
- </footer>
+ <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="cuadricula-pie">
+                <div class="columna-principal-pie">
+                    <div class="marca-pie">
+                        <div class="logo-pie">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
+                        </div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="justificacion.html">Justificación</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index3.html">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
+                </div>
+            </div>
+
+            <div class="inferior-pie">
+                <p class="derechos-pie">
+                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+                <a href="nosotros.html" class="creditos-pie">
+                    Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
+                </a>
+            </div>
+        </div>
+    </footer>
 
  <script src="../scripts/logica-tema.js"></script>
 

@@ -1,259 +1,242 @@
 <!DOCTYPE html>
-<html class="light" lang="es">
-
+<html lang="es">
 <head>
- <meta charset="utf-8" />
- <meta content="width=device-width, initial-scale=1.0" name="viewport" />
- <title>Justificación | Proyecto de Alfabetización Digital</title>
- <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
- <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
- 
- <link rel="stylesheet" href="../estilos/estilos-base.css" />
- <style>
- .brillo-gradiente {
- background: radial-gradient(circle at 50% 50%, rgba(38, 166, 154, 0.1), transparent 70%);
- }
-
- .tarjeta-revelacion {
- transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
- }
-
- .tarjeta-revelacion:hover {
- transform: scale(1.02) translateY(-5px);
- }
- </style>
-
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Justificación | Proyecto de Ciberseguridad</title>
+    <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
     <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
+    <style>
+        .texto-gigante-comillas { font-size: 8rem; line-height: 0; position: absolute; opacity: 0.2; color: var(--color-primario); user-select: none; }
+        .comilla-izq { top: 2rem; left: -2rem; }
+        .comilla-der { bottom: -2rem; right: -2rem; }
+        .icono-destacado { width: 4rem; height: 4rem; border-radius: 1rem; display: flex; justify-content: center; align-items: center; margin-bottom: 1.5rem; }
+        .bg-rojo { background-color: rgba(239, 68, 68, 0.1); color: #ef4444; }
+        .bg-verde { background-color: rgba(34, 197, 94, 0.1); color: var(--color-primario); }
+        .bg-azul { background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+    </style>
 </head>
+<body>
+    <!-- Navegación -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">L.B. Antonio Lemus Pérez</div>
+            </div>
+            <!-- Menú Escritorio -->
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav" href="index.html">Inicio</a>
+                <a class="enlace-nav active" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-delineado" style="padding: 0.5rem; border-color: transparent; color: var(--color-primario); background: transparent; cursor: pointer;" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <!-- Botón Hamburguesa -->
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        <!-- Drawer Overlay y Menú -->
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu" href="index.html"><span class="material-symbols-outlined">&#xe88a;</span> Inicio</a>
+                <a class="enlace-menu active" href="justificacion.html"><span class="material-symbols-outlined">&#xe88e;</span> Proyecto</a>
+                <a class="enlace-menu" href="index2.html"><span class="material-symbols-outlined">&#xe865;</span> Manual</a>
+                <a class="enlace-menu" href="nosotros.html"><span class="material-symbols-outlined">&#xe7fb;</span> Nosotros</a>
+                <div style="margin-top: 2rem;">
+                    <button onclick="alternarModoOscuro()" class="boton boton-delineado" style="width: 100%; margin-bottom: 1rem; color: var(--color-primario); border-color: var(--color-primario); background: transparent; cursor: pointer;">
+                        <span class="material-symbols-outlined">dark_mode</span> Cambiar Tema
+                    </button>
+                    <a href="index3.html" class="boton boton-primario" style="width: 100%;">Accesibilidad</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<body class="bg-white text-en-superficie selection:bg-primario-fixed selection:text-on-primary-fixed">
- <!-- Navegación -->
- <nav class="bg-white bg-white border-b sticky top-0 z-50 border-b border-primario/5">
- <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 md:h-24">
- <div class="flex items-center gap-3">
- <div
- class="w-10 h-10 bg-primario rounded flex items-center justify-center shadow-sm ">
- <span class="material-symbols-outlined text-white">school</span>
- </div>
- <div class="text-lg md:text-xl font-bold text-[#064E3B] tracking-normal uppercase leading-none">
- L.B. Antonio <br /><span class="text-xs tracking-widest opacity-70">Lemus Pérez</span>
- </div>
- </div>
- <div class="hidden md:flex gap-10 items-center">
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a class="text-[#064E3B] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primario"
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a href="index3.html">
- <button
- class="bg-primario text-on-primary px-6 py-2.5 rounded font-bold hover:shadow-sm transition-all activo:scale-95">Accesibilidad</button>
- </a>
- </div>
- <button class="md:hidden text-primario">
- <span class="material-symbols-outlined">menu</span>
- </button>
- </div>
- </nav>
+    <!-- Hero de Justificación -->
+    <header class="portada fondo-alternativo" style="text-align: center; overflow: hidden; padding: 6rem 1.5rem;">
+        <div class="contenedor posicion-relativa" style="z-index: 10; max-width: 56rem;">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(15, 81, 50, 0.1); color: var(--color-primario); padding: 0.375rem 1rem; border-radius: 9999px; margin-bottom: 2rem;">
+                <span class="material-symbols-outlined texto-pequeno">shield_person</span>
+                <span class="texto-diminuto mayusculas" style="letter-spacing: 0.2em;">Visión 2026</span>
+            </div>
+            <h1 class="texto-titulo-enorme texto-principal" style="margin-bottom: 2rem; line-height: 1.1;">
+                ¿Por qué un manual de <br />Ciberseguridad?
+            </h1>
+            <p class="texto-muy-grande texto-gris-oscuro fuente-media altura-linea-relajada">
+                En un mundo donde la frontera entre lo físico y lo digital ha desaparecido, proteger nuestra integridad
+                es más que una opción: es una responsabilidad compartida.
+            </p>
+        </div>
+    </header>
 
- <!-- Hero de Justificación -->
- <header class="py-24 px-6 bg-primario to-surface overflow-hidden relative">
- <div class="max-w-4xl mx-auto text-center relative z-10">
- <div class="inline-flex items-center gap-2 bg-primario/10 text-primario px-4 py-1.5 rounded-full mb-8">
- <span class="material-symbols-outlined text-sm">shield_person</span>
- <span class="text-xs font-bold uppercase tracking-[0.2em]">Visión 2026</span>
- </div>
- <h1 class="text-5xl md:text-5xl font-bold text-primario tracking-normal mb-8">
- ¿Por qué un manual de <br />Ciberseguridad?
- </h1>
- <p class="text-xl md:text-2xl text-en-superficie-variant leading-relaxed mb-12 font-medium">
- En un mundo donde la frontera entre lo físico y lo digital ha desaparecido, proteger nuestra integridad
- es más que una opción: es una responsabilidad compartida.
- </p>
- </div>
- <div
- class="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full max-w-6xl aspect-[21/9] bg-primario/5 rounded-md blur-3xl -z-0">
- </div>
- </header>
+    <!-- El Slogan -->
+    <section class="seccion-espaciada fondo-blanco borde-abajo">
+        <div class="contenedor texto-centrado ancho-maximo-grande">
+            <h2 class="texto-diminuto texto-principal mayusculas letras-separadas margen-abajo-enorme" style="letter-spacing: 0.4em;">Nuestra Filosofía</h2>
+            <div class="posicion-relativa bloque-en-linea" style="max-width: 64rem; margin: 0 auto; padding: 2rem;">
+                <span class="texto-gigante-comillas comilla-izq">“</span>
+                <p class="texto-titulo-grande texto-principal cursiva altura-linea-relajada">
+                    Dejar de responder ante la falla y prevenir con precaución
+                </p>
+                <span class="texto-gigante-comillas comilla-der">”</span>
+            </div>
+        </div>
+    </section>
 
- <!-- El Slogan -->
- <section class="py-32 px-6 bg-white border-y border-outline-variant/10">
- <div class="max-w-7xl mx-auto text-center">
- <h2 class="text-xs font-bold text-primario uppercase tracking-[0.4em] mb-12">Nuestra Filosofía</h2>
- <div class="relative inline-block">
- <span
- class="absolute -top-10 -left-10 text-[10rem] font-serif text-primario/10 opacity-50 select-none">“</span>
- <p
- class="text-4xl md:text-4xl font-bold text-[#111d23] tracking-normal max-w-5xl mx-auto leading-tight italic">
- Dejar de responder ante la falla y prevenir con precaución
- </p>
- <span
- class="absolute -bottom-10 -right-10 text-[10rem] font-serif text-primario/10 opacity-50 translate-y-20 select-none">”</span>
- </div>
- </div>
- </section>
+    <!-- Pilares de la Justificación -->
+    <section class="seccion-espaciada fondo-alternativo">
+        <div class="contenedor ancho-maximo-grande">
+            <div class="cuadricula columnas-1 columnas-3-lg brecha-enorme">
+                <!-- Pilar 1 -->
+                <div class="fondo-blanco relleno-grande bordes-redondeados sombra-pequena borde-normal">
+                    <div class="icono-destacado bg-rojo">
+                        <span class="material-symbols-outlined texto-titulo-medio">emergency_home</span>
+                    </div>
+                    <h3 class="texto-titulo-pequeno texto-principal margen-abajo-normal">Gravedad Silenciosa</h3>
+                    <p class="texto-gris-oscuro altura-linea-relajada fuente-media">
+                        El 85% de los incidentes de ciberseguridad en estudiantes ocurren por falta de información. No
+                        son fallas técnicas, son humanos sin herramientas de navegación segura.
+                    </p>
+                </div>
+                <!-- Pilar 2 -->
+                <div class="fondo-principal relleno-grande bordes-redondeados sombra-media" style="transform: translateY(-1rem);">
+                    <div class="icono-destacado bg-verde">
+                        <span class="material-symbols-outlined texto-titulo-medio texto-blanco">security</span>
+                    </div>
+                    <h3 class="texto-titulo-pequeno texto-blanco margen-abajo-normal">Protección Proactiva</h3>
+                    <p class="texto-blanco opacidad-70 altura-linea-relajada fuente-media">
+                        Buscamos promover la ciberseguridad no como un miedo, sino como una herramienta de libertad. El
+                        conocimiento es el antivirus más potente contra el phishing y el grooming.
+                    </p>
+                </div>
+                <!-- Pilar 3 -->
+                <div class="fondo-blanco relleno-grande bordes-redondeados sombra-pequena borde-normal">
+                    <div class="icono-destacado bg-azul">
+                        <span class="material-symbols-outlined texto-titulo-medio">diversity_3</span>
+                    </div>
+                    <h3 class="texto-titulo-pequeno texto-principal margen-abajo-normal">Coexistencia Digital</h3>
+                    <p class="texto-gris-oscuro altura-linea-relajada fuente-media">
+                        La institución educativa debe ser el primer filtro de defensa. Alfabetizar digitalmente es
+                        garantizar que el Liceo Lemus Pérez sea un espacio seguro dentro y fuera del aula.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <!-- Pilares de la Justificación -->
- <section class="py-32 px-6 bg-white-container-low">
- <div class="max-w-7xl mx-auto">
- <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
- <!-- Pilar 1 -->
- <div
- class="bg-white p-12 rounded-md tarjeta-revelacion shadow-sm border border-outline-variant/5">
- <div class="w-16 h-16 bg-red-50 rounded flex items-center justify-center mb-10">
- <span class="material-symbols-outlined text-3xl text-red-600">emergency_home</span>
- </div>
- <h3 class="text-2xl font-bold text-primario mb-6">Gravedad Silenciosa</h3>
- <p class="text-en-superficie-variant leading-relaxed font-medium">
- El 85% de los incidentes de ciberseguridad en estudiantes ocurren por falta de información. No
- son fallas técnicas, son humanos sin herramientas de navegación segura.
- </p>
- </div>
- <!-- Pilar 2 -->
- <div
- class="bg-[#111d23] p-12 rounded-md tarjeta-revelacion shadow-md text-white transform md:-translate-y-8">
- <div class="w-16 h-16 bg-white/10 rounded flex items-center justify-center mb-10">
- <span class="material-symbols-outlined text-3xl text-primario">security</span>
- </div>
- <h3 class="text-2xl font-bold mb-6">Protección Proactiva</h3>
- <p class="opacity-70 leading-relaxed font-medium">
- Buscamos promover la ciberseguridad no como un miedo, sino como una herramienta de libertad. El
- conocimiento es el antivirus más potente contra el phishing y el grooming.
- </p>
- </div>
- <!-- Pilar 3 -->
- <div
- class="bg-white p-12 rounded-md tarjeta-revelacion shadow-sm border border-outline-variant/5">
- <div class="w-16 h-16 bg-secundario-50 rounded flex items-center justify-center mb-10">
- <span class="material-symbols-outlined text-3xl text-secundario-600">diversity_3</span>
- </div>
- <h3 class="text-2xl font-bold text-primario mb-6">Coexistencia Digital</h3>
- <p class="text-en-superficie-variant leading-relaxed font-medium">
- La institución educativa debe ser el primer filtro de defensa. Alfabetizar digitalmente es
- garantizar que el Liceo Lemus Pérez sea un espacio seguro dentro y fuera del aula.
- </p>
- </div>
- </div>
- </div>
- </section>
+    <!-- Texto Detallado -->
+    <section class="seccion-espaciada fondo-blanco">
+        <div class="contenedor ancho-maximo-medio">
+            <div class="caja-flexible columna-flexible brecha-gigante">
+                <div class="caja-flexible fila-flexible brecha-grande elementos-centrados">
+                    <div class="icono-destacado bg-verde" style="min-width: 4rem; height: 4rem;">
+                        <span class="material-symbols-outlined texto-titulo-grande">inventory_2</span>
+                    </div>
+                    <div>
+                        <h2 class="texto-titulo-grande texto-principal margen-abajo-pequeno">Necesidad del Proyecto</h2>
+                        <p class="texto-grande texto-gris-oscuro altura-linea-relajada">
+                            Actualmente, la digitalización en Venezuela y específicamente en nuestra comunidad educativa
+                            ha crecido exponencialmente. Sin embargo, este crecimiento no ha venido acompañado de una
+                            educación formal sobre los riesgos. Vemos con preocupación cómo la identidad digital de
+                            nuestros jóvenes está expuesta constantemente.
+                        </p>
+                    </div>
+                </div>
 
- <!-- Texto Detallado de Justificación -->
- <section class="py-32 px-6 bg-white overflow-hidden relative">
- <div class="max-w-4xl mx-auto relative z-10">
- <div class="prose prose-xl text-en-superficie-variant space-y-12">
- <div class="flex items-start gap-8 flex-col md:flex-row">
- <div class="shrink-0 w-24 h-24 bg-primario rounded-md flex items-center justify-center text-white">
- <span class="material-symbols-outlined text-5xl">inventory_2</span>
- </div>
- <div>
- <h2 class="text-4xl font-bold text-primario mb-6 tracking-normal">Necesidad del Proyecto</h2>
- <p class="text-xl leading-relaxed">
- Actualmente, la digitalización en Venezuela y específicamente en nuestra comunidad educativa
- ha crecido exponencialmente. Sin embargo, este crecimiento no ha venido acompañado de una
- educación formal sobre los riesgos. Vemos con preocupación cómo la identidad digital de
- nuestros jóvenes está expuesta constantemente.
- </p>
- </div>
- </div>
+                <div class="caja-flexible fila-flexible brecha-grande elementos-centrados">
+                    <div class="icono-destacado bg-rojo" style="min-width: 4rem; height: 4rem;">
+                        <span class="material-symbols-outlined texto-titulo-grande">psychology</span>
+                    </div>
+                    <div>
+                        <h2 class="texto-titulo-grande texto-principal margen-abajo-pequeno">Concientización</h2>
+                        <p class="texto-grande texto-gris-oscuro altura-linea-relajada">
+                            El proyecto tiene como objetivo principal mutar la cultura de la "reacción" por la de la
+                            "preparación". No queremos enseñar qué hacer cuando hackean tu cuenta; queremos enseñarte
+                            cómo hacer que hackearte sea una tarea imposible.
+                        </p>
+                    </div>
+                </div>
 
- <div class="flex items-start gap-8 flex-col md:flex-row">
- <div
- class="shrink-0 w-24 h-24 bg-[#064E3B] rounded-md flex items-center justify-center text-white">
- <span class="material-symbols-outlined text-5xl">psychology</span>
- </div>
- <div>
- <h2 class="text-4xl font-bold text-primario mb-6 tracking-normal">Concientización</h2>
- <p class="text-xl leading-relaxed">
- El proyecto tiene como objetivo principal mutar la cultura de la "reacción" por la de la
- "preparación". No queremos enseñar qué hacer cuando hackean tu cuenta; queremos enseñarte
- cómo hacer que hackearte sea una tarea imposible.
- </p>
- </div>
- </div>
+                <div class="fondo-alternativo relleno-grande bordes-redondeados borde-normal texto-centrado">
+                    <p class="texto-titulo-pequeno texto-principal cursiva">
+                        "En el L.B. Antonio Lemus Pérez, entendemos que un estudiante protegido digitalmente es un
+                        estudiante con futuro garantizado."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <div class="bg-white-container-low p-12 rounded-md border border-outline-variant/5">
- <p class="text-center font-bold text-[#064E3B] text-2xl">
- "En el L.B. Antonio Lemus Pérez, entendemos que un estudiante protegido digitalmente es un
- estudiante con futuro garantizado."
- </p>
- </div>
- </div>
- </div>
- </section>
+    <!-- CTA Final -->
+    <section class="seccion-espaciada fondo-alternativo">
+        <div class="contenedor ancho-maximo-grande">
+            <div class="fondo-principal bordes-redondeados texto-centrado sombra-media" style="padding: 4rem 2rem;">
+                <h2 class="texto-titulo-grande texto-blanco margen-abajo-normal">¿Listo para blindar tu vida digital?</h2>
+                <p class="texto-grande texto-blanco opacidad-70 max-w-2xl margen-x-auto margen-abajo-enorme altura-linea-relajada">
+                    Accede ahora mismo al Manual Maestro Integral diseñado específicamente para nuestra comunidad.
+                </p>
+                <div class="caja-flexible justificar-centro">
+                    <a href="index2.html" class="boton fondo-blanco texto-principal texto-grande sombra-media" style="padding: 1.5rem 3rem; border-radius: 1rem;">
+                        EMPEZAR MANUAL
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
- <!-- CTA Final -->
- <section class="py-32 px-6">
- <div class="max-w-7xl mx-auto">
- <div
- class="bg-primario text-on-primary rounded-md p-12 md:p-24 text-center shadow-md ">
- <h2 class="text-4xl md:text-4xl font-bold mb-8 tracking-normal">¿Listo para blindar tu vida digital?
- </h2>
- <p class="text-xl opacity-90 max-w-2xl mx-auto mb-12 font-medium leading-relaxed">
- Accede ahora mismo al Manual Maestro Integral diseñado específicamente para nuestra comunidad.
- </p>
- <div class="flex flex-wrap justify-center gap-6">
- <a href="index2.html"
- class="bg-white text-primario px-10 py-5 rounded font-bold text-xl transition-all shadow-md">
- EMPEZAR MANUAL
- </a>
- </div>
- </div>
- </div>
- </section>
-
- <!-- Footer -->
- <footer class="bg-white border-t border-outline-variant/5 py-24 px-6">
- <div class="max-w-7xl mx-auto">
- <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
- <div class="md:col-span-2">
- <div class="flex items-center gap-3 mb-8">
- <div class="w-8 h-8 bg-primario rounded-lg flex items-center justify-center">
- <span class="material-symbols-outlined text-white text-sm">school</span>
- </div>
- <span class="text-2xl font-bold text-[#064E3B] tracking-normal uppercase">CE Antonio Lemus
- Pérez</span>
- </div>
- </div>
- <div>
- <h4 class="font-bold text-primario uppercase tracking-widest text-xs mb-8">Navegación</h4>
- <ul class="space-y-4 font-bold text-en-superficie-variant text-sm">
- <li><a href="index.html" class="hover:text-primario transition-colors">Inicio</a></li>
- <li><a href="justificacion.html" class="hover:text-primario transition-colors">Justificación</a>
- </li>
- <li><a href="index2.html" class="hover:text-primario transition-colors">Manual Digital</a></li>
- <li><a href="nosotros.html" class="hover:text-primario transition-colors">Nosotros</a></li>
- <li><a href="index3.html" class="hover:text-primario transition-colors">Accesibilidad</a></li>
- </ul>
- </div>
- <div>
- <h4 class="font-bold text-primario uppercase tracking-widest text-xs mb-8">Institución</h4>
- <p class="text-en-superficie-variant font-medium text-sm">Cumaná, Estado Sucre, Venezuela.</p>
- </div>
- </div>
-
- <div class="pt-12 border-t border-outline-variant/10 text-center">
- <p class="text-sm font-medium text-en-superficie-variant opacity-60">
- © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
- </p>
- <a href="nosotros.html"
- class="text-[10px] font-bold uppercase tracking-[0.3em] opacity-30 mt-4 inline-block hover:opacity-100 transition-opacity">
- Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
- </a>
- </div>
- </div>
- </footer>
- <script src="../scripts/logica-tema.js"></script>
-
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('../sw.js').then(reg => {
-                    console.log('SW registrado', reg.scope);
-                }).catch(err => console.error('SW Fallo', err));
-            });
-        }
-    </script>
+    <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="cuadricula-pie">
+                <div class="columna-principal-pie">
+                    <div class="marca-pie">
+                        <div class="logo-pie">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
+                        </div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="justificacion.html">Justificación</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index3.html">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
+                </div>
+            </div>
+            <div class="inferior-pie">
+                <p class="derechos-pie">© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.</p>
+                <a href="nosotros.html" class="creditos-pie">Desarrollado por: Cordova / Guipe / Giraldo / Ruiz</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/logica-tema.js"></script>
+    <script src="../scripts/menu-movil.js"></script>
 </body>
-
 </html>

@@ -6,51 +6,97 @@
  <meta charset="utf-8" />
  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
  <title>Manual | Alfabetización Digital - Antonio Lemus Pérez</title>
- <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
- <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+  <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
  
  
  <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
     <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
 </head>
 
-<body class="bg-white text-en-superficie selection:bg-primario-fixed selection:text-on-primary-fixed">
+<body class=" selection:bg-primario-fixed selection:text-on-primary-fixed">
  <!-- Barra de Navegación Superior -->
- <nav class="bg-[#f4faff]/70 bg-white border-b acoplado ancho-completo top-0 sticky z-50">
- <div class="flex justify-between items-center max-w-7xl mx-auto px-4 md:px-8 h-20 md:h-24">
- <div class="text-base md:text-2xl font-bold text-[#064E3B] tracking-normal uppercase shrink-0">Antonio
- Lemus Pérez</div>
- <div class="hidden md:flex gap-8 items-center">
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
- <a class="text-[#064E3B] border-b-2 border-[#064E3B] font-bold pb-1 transition-all duration-300"
- <a href="index3.html">
- <button
- class="bg-primario text-on-primary px-6 py-2.5 rounded-lg font-bold scale-102 activo:scale-98 transition-transform duration-200">Modo
- Accesible</button>
- </a>
- </div>
- <button class="md:hidden text-primario">
- <span class="material-symbols-outlined" data-icono="menú">menu</span>
- </button>
- </div>
- </nav>
+ <!-- Navegación -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+
+            <!-- Menú Escritorio -->
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav active" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-delineado" style="padding: 0.5rem; border-color: transparent; color: var(--color-primario); background: transparent; cursor: pointer;" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+
+            <!-- Botón Hamburguesa -->
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        
+        <!-- Overlay del Drawer -->
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+
+        <!-- Menu Drawer Lateral -->
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu active" href="index.html">
+                    <span class="material-symbols-outlined">&#xe88a;</span> Inicio
+                </a>
+                <a class="enlace-menu" href="justificacion.html">
+                    <span class="material-symbols-outlined">&#xe88e;</span> Proyecto
+                </a>
+                <a class="enlace-menu" href="index2.html">
+                    <span class="material-symbols-outlined">&#xe865;</span> Manual
+                </a>
+                <a class="enlace-menu" href="nosotros.html">
+                    <span class="material-symbols-outlined">&#xe7fb;</span> Nosotros
+                </a>
+                <div style="margin-top: 2rem;">
+                    <button onclick="alternarModoOscuro()" class="boton boton-delineado" style="width: 100%; margin-bottom: 1rem; color: var(--color-primario); border-color: var(--color-primario); background: transparent; cursor: pointer;">
+                        <span class="material-symbols-outlined">dark_mode</span> Cambiar Tema
+                    </button>
+                    <a href="index3.html" class="boton boton-primario" style="width: 100%;">
+                        Accesibilidad
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
  <!-- Sección de Cabecera -->
- <header class="relative pt-16 pb-24 px-8 overflow-hidden">
- <div class="max-w-7xl mx-auto">
+ <header class="posicion-relativa pt-16 pb-24 px-8 desbordamiento-oculto">
+ <div class="ancho-maximo-grande margen-x-auto">
  <div
- class="inline-flex items-center gap-3 bg-primario-container text-on-primary-container px-4 py-1.5 rounded-full mb-8">
- <div class="w-2 h-2 rounded-full bg-primario animate-pulse"></div>
- <span class="text-sm font-semibold tracking-normal">Módulos de Aprendizaje</span>
+ class="caja-flexible-en-linea elementos-centrados brecha-media bg-primario-container text-on-primary-container relleno-x-normal py-1.5 bordes-circulares margen-abajo-grande">
+ <div class="w-2 h-2 bordes-circulares fondo-principal animate-pulse"></div>
+ <span class="texto-pequeno font-semibold letras-normales">Módulos de Aprendizaje</span>
  </div>
- <h1 class="text-5xl md:text-5xl font-bold text-primario tracking-normal leading-tight mb-6">
+ <h1 class="texto-titulo-enorme md:text-5xl  texto-principal letras-normales leading-tight margen-abajo-medio">
  Temas de <br />Seguridad Digital.
  </h1>
- <p class="text-xl text-en-superficie-variant max-w-2xl leading-relaxed">
+ <p class="texto-muy-grande texto-gris-oscuro max-w-2xl altura-linea-relajada">
  Selecciona uno de los siguientes módulos para comenzar. Cada sección incluye Talleres Interactivos y
  simuladores diseñados para que aprendas practicando situaciones reales.
  </p>
@@ -58,34 +104,34 @@
  </header>
  <!-- Sección de Rejilla de Temas -->
  <section class="bg-white-container-low py-12 px-8">
- <div class="max-w-7xl mx-auto">
+ <div class="ancho-maximo-grande margen-x-auto">
 
  <!-- MANUAL DESTACADO PRINCIPAL -->
- <div class="mb-8 md:mb-12">
+ <div class="margen-abajo-grande md:mb-12">
  <a href="manual-estudiante.html"
- class="group block relative bg-primario text-white p-6 md:p-12 rounded-md md:rounded-md border-4 border-primario-container shadow-md transition-transform overflow-hidden">
- <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
- <div class="flex-1 text-center md:text-left">
+ class="group bloque posicion-relativa fondo-principal texto-blanco relleno-medio md:p-12 bordes-redondeados md:rounded-md border-4 border-primario-container sombra-media transicion-transformacion desbordamiento-oculto">
+ <div class="posicion-relativa frente-10 caja-flexible columna-flexible md:flex-row elementos-centrados justificar-espacios brecha-grande md:gap-12">
+ <div class="flex-1 texto-centrado md:text-left">
  <div
- class="inline-flex items-center gap-2 bg-white/10 px-4 py-1 rounded-full mb-4 md:mb-6 border border-white/20">
+ class="caja-flexible-en-linea elementos-centrados brecha-pequena  relleno-x-normal py-1 bordes-circulares margen-abajo-normal md:mb-6 borde-normal border-white/20">
  <span class="material-symbols-outlined text-[10px] md:text-sm">stars</span>
- <span class="text-[10px] md:text-xs font-bold uppercase tracking-widest">Lo
+ <span class="text-[10px] md:text-xs  mayusculas letras-separadas">Lo
  Recomendado</span>
  </div>
- <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-6 leading-none">Manual Maestro
+ <h2 class="texto-titulo-medio md:text-4xl  margen-abajo-normal md:mb-6 altura-linea-nula">Manual Maestro
  <br />Integral 2026.
  </h2>
- <p class="text-base md:text-xl opacity-80 max-w-xl leading-relaxed mb-6 md:mb-8">
+ <p class="text-base md:text-xl opacity-80 max-w-xl altura-linea-relajada margen-abajo-medio md:mb-8">
  La guía definitiva y más completa. Incluye concienciación profunda, blindaje de cuentas
  y más en un solo lugar.
  </p>
  <span
- class="inline-flex items-center gap-2 bg-white text-primario px-6 md:px-8 py-3 md:py-4 rounded md:rounded font-bold uppercase tracking-widest text-xs md:text-sm">
+ class="caja-flexible-en-linea elementos-centrados brecha-pequena fondo-blanco texto-principal relleno-x-medio md:px-8 py-3 md:py-4 rounded md:rounded  mayusculas letras-separadas texto-diminuto md:text-sm">
  Abrir Manual
  <span class="material-symbols-outlined">arrow_forward</span>
  </span>
  </div>
- <div class="hidden md:block opacity-20">
+ <div class="oculto md:block opacity-20">
  <span class="material-symbols-outlined text-[240px]"
  style="font-variation-settings: 'FILL' 1;">menu_book</span>
  </div>
@@ -94,162 +140,162 @@
  </div>
 
  <!-- Grid de Módulos Específicos -->
- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+ <div class="cuadricula columnas-1 columnas-2-md columnas-3-lg brecha-muy-grande">
 
  <!-- Topic Card: Auditoría Digital -->
  <a href="auditoria-digital.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-primario transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-primario transicion-colores group">
  <div
- class="w-14 h-14 bg-emerald-50 rounded flex items-center justify-center mb-6 group-hover:bg-primario transition-colors">
+ class="w-14 h-14 bg-emerald-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-primario transicion-colores">
  <span
- class="material-symbols-outlined text-primario group-hover:text-white transition-colors">fact_check</span>
+ class="material-symbols-outlined texto-principal group-hover:text-white transicion-colores">fact_check</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Auditoría Digital</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">Identifica algoritmos en redes sociales y audita tu configuración de seguridad personal.</p>
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Auditoría Digital</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">Identifica algoritmos en redes sociales y audita tu configuración de seguridad personal.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-primario flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas texto-principal caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: Protección de Cuentas -->
  <a href="proteccion-cuentas.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-primario transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-primario transicion-colores group">
  <div
- class="w-14 h-14 bg-teal-50 rounded flex items-center justify-center mb-6 group-hover:bg-primario transition-colors">
+ class="w-14 h-14 bg-teal-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-primario transicion-colores">
  <span
- class="material-symbols-outlined text-primario group-hover:text-white transition-colors">lock</span>
+ class="material-symbols-outlined texto-principal group-hover:text-white transicion-colores">lock</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Cuentas y Claves</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">Aprende a crear contraseñas imposibles de
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Cuentas y Claves</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">Aprende a crear contraseñas imposibles de
  adivinar y activa el doble factor.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-primario flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas texto-principal caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: Redes Sociales -->
  <a href="redes-sociales.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-purple-600 transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-purple-600 transicion-colores group">
  <div
- class="w-14 h-14 bg-purple-50 rounded flex items-center justify-center mb-6 group-hover:bg-purple-600 transition-colors">
+ class="w-14 h-14 bg-purple-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-purple-600 transicion-colores">
  <span
- class="material-symbols-outlined text-purple-600 group-hover:text-white transition-colors">share</span>
+ class="material-symbols-outlined text-purple-600 group-hover:text-white transicion-colores">share</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Redes Sociales</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">Privacidad, huella digital y cómo evitar que
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Redes Sociales</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">Privacidad, huella digital y cómo evitar que
  extraños vean tu vida diaria.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-purple-600 flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas text-purple-600 caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: Phishing -->
  <a href="index4.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-red-600 transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-red-600 transicion-colores group">
  <div
- class="w-14 h-14 bg-red-50 rounded flex items-center justify-center mb-6 group-hover:bg-red-600 transition-colors">
+ class="w-14 h-14 bg-red-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-red-600 transicion-colores">
  <span
- class="material-symbols-outlined text-red-600 group-hover:text-white transition-colors">phishing</span>
+ class="material-symbols-outlined text-red-600 group-hover:text-white transicion-colores">phishing</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Phishing y Engaños</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">No muerdas el anzuelo. Identifica mensajes
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Phishing y Engaños</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">No muerdas el anzuelo. Identifica mensajes
  falsos de bancos y redes.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-red-600 flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas text-red-600 caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: Videojuegos -->
  <a href="videojuegos.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-blue-600 transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-blue-600 transicion-colores group">
  <div
- class="w-14 h-14 bg-secundario-50 rounded flex items-center justify-center mb-6 group-hover:bg-secundario-600 transition-colors">
+ class="w-14 h-14 bg-secundario-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-secundario-600 transicion-colores">
  <span
- class="material-symbols-outlined text-secundario-600 group-hover:text-white transition-colors">sports_esports</span>
+ class="material-symbols-outlined text-secundario-600 group-hover:text-white transicion-colores">sports_esports</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Seguridad Gaming</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">Robux, skins y el peligro real de los
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Seguridad Gaming</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">Robux, skins y el peligro real de los
  desconocidos en los chats de voz.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-secundario-600 flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas text-secundario-600 caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: Piratería -->
  <a href="software-pirata.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-rose-600 transition-colors group">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-rose-600 transicion-colores group">
  <div
- class="w-14 h-14 bg-rose-50 rounded flex items-center justify-center mb-6 group-hover:bg-rose-600 transition-colors">
+ class="w-14 h-14 bg-rose-50 rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio group-hover:bg-rose-600 transicion-colores">
  <span
- class="material-symbols-outlined text-rose-600 group-hover:text-white transition-colors">dangerous</span>
+ class="material-symbols-outlined text-rose-600 group-hover:text-white transicion-colores">dangerous</span>
  </div>
- <h3 class="text-2xl font-bold mb-4">Piratería y Malware</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-6">El peligro oculto de los "cracks" y programas
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal">Piratería y Malware</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-medio">El peligro oculto de los "cracks" y programas
  gratis descargados de internet.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-rose-600 flex items-center gap-2">Explorar
- módulo <span class="material-symbols-outlined text-sm">chevron_right</span></span>
+ class="texto-diminuto  mayusculas letras-separadas text-rose-600 caja-flexible elementos-centrados brecha-pequena">Explorar
+ módulo <span class="material-symbols-outlined texto-pequeno">chevron_right</span></span>
  </a>
 
  <!-- Topic Card: SOS -->
  <a href="protocolo-ayuda.html"
- class="bg-slate-900 p-8 rounded-md transition-transform group">
- <div class="w-14 h-14 bg-white/10 rounded flex items-center justify-center mb-6">
- <span class="material-symbols-outlined text-white">support_agent</span>
+ class="bg-slate-900 relleno-grande bordes-redondeados transicion-transformacion group">
+ <div class="w-14 h-14  rounded caja-flexible elementos-centrados justificar-centro margen-abajo-medio">
+ <span class="material-symbols-outlined texto-blanco">support_agent</span>
  </div>
- <h3 class="text-2xl font-bold mb-4 text-white">Ayuda SOS</h3>
- <p class="text-sm text-white/60 leading-relaxed mb-6">Si ya cometiste un error o crees que te
+ <h3 class="texto-titulo-pequeno  margen-abajo-normal texto-blanco">Ayuda SOS</h3>
+ <p class="texto-pequeno text-white/60 altura-linea-relajada margen-abajo-medio">Si ya cometiste un error o crees que te
  atacan, entra aquí de inmediato.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-white flex items-center gap-2">Protocolo
- de acción <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+ class="texto-diminuto  mayusculas letras-separadas texto-blanco caja-flexible elementos-centrados brecha-pequena">Protocolo
+ de acción <span class="material-symbols-outlined texto-pequeno">arrow_forward</span></span>
  </a>
 
  </div>
  <!-- SECCIÓN: GUÍAS ESPECIALIZADAS PARA LA COMUNIDAD -->
- <div class="mt-20 mb-12">
+ <div class="mt-20 margen-abajo-enorme">
  <div
- class="inline-flex items-center gap-3 bg-secundario/10 text-secundario px-4 py-1.5 rounded-full mb-8">
- <span class="material-symbols-outlined text-sm">groups</span>
- <span class="text-sm font-bold uppercase tracking-widest">Apoyo a la Comunidad</span>
+ class="caja-flexible-en-linea elementos-centrados brecha-media bg-secundario/10 text-secundario relleno-x-normal py-1.5 bordes-circulares margen-abajo-grande">
+ <span class="material-symbols-outlined texto-pequeno">groups</span>
+ <span class="texto-pequeno  mayusculas letras-separadas">Apoyo a la Comunidad</span>
  </div>
- <h2 class="text-4xl font-bold text-primario mb-10 tracking-normal">Impacto Social y Educativo</h2>
- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+ <h2 class="texto-titulo-grande  texto-principal margen-abajo-muy-grande letras-normales">Impacto Social y Educativo</h2>
+ <div class="cuadricula columnas-1 columnas-2-md brecha-muy-grande">
 
  <!-- Guía para Docentes -->
  <a href="guia-docentes.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-teal-600 transition-all group flex flex-col md:flex-row items-center md:items-start gap-6">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-teal-600 transicion-suave group caja-flexible columna-flexible md:flex-row elementos-centrados md:items-start brecha-grande">
  <div
- class="w-20 h-20 bg-teal-50 rounded-md flex items-center justify-center shrink-0 group-hover:bg-teal-600 transition-colors">
+ class="w-20 h-20 bg-teal-50 bordes-redondeados caja-flexible elementos-centrados justificar-centro shrink-0 group-hover:bg-teal-600 transicion-colores">
  <span
- class="material-symbols-outlined text-teal-600 group-hover:text-white text-4xl">school</span>
+ class="material-symbols-outlined text-teal-600 group-hover:text-white texto-titulo-grande">school</span>
  </div>
- <div class="text-center md:text-left">
- <h3 class="text-2xl font-bold mb-2">Para Docentes</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-4">Herramientas pedagógicas, gestión de
+ <div class="texto-centrado md:text-left">
+ <h3 class="texto-titulo-pequeno  margen-abajo-pequeno">Para Docentes</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-normal">Herramientas pedagógicas, gestión de
  crisis en el aula y protocolos oficiales.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-teal-700 flex items-center justify-center md:justify-start gap-2">Abrir
- guía técnica <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+ class="texto-diminuto  mayusculas letras-separadas text-teal-700 caja-flexible elementos-centrados justificar-centro md:justify-start brecha-pequena">Abrir
+ guía técnica <span class="material-symbols-outlined texto-pequeno">arrow_forward</span></span>
  </div>
  </a>
 
  <!-- Guía para Padres -->
  <a href="guia-padres.html"
- class="bg-white p-8 rounded-md border border-slate-200 hover:border-orange-600 transition-all group flex flex-col md:flex-row items-center md:items-start gap-6">
+ class="fondo-blanco relleno-grande bordes-redondeados borde-normal border-slate-200 hover:border-orange-600 transicion-suave group caja-flexible columna-flexible md:flex-row elementos-centrados md:items-start brecha-grande">
  <div
- class="w-20 h-20 bg-orange-50 rounded-md flex items-center justify-center shrink-0 group-hover:bg-orange-600 transition-colors">
+ class="w-20 h-20 bg-orange-50 bordes-redondeados caja-flexible elementos-centrados justificar-centro shrink-0 group-hover:bg-orange-600 transicion-colores">
  <span
- class="material-symbols-outlined text-orange-600 group-hover:text-white text-4xl">family_restroom</span>
+ class="material-symbols-outlined text-orange-600 group-hover:text-white texto-titulo-grande">family_restroom</span>
  </div>
- <div class="text-center md:text-left">
- <h3 class="text-2xl font-bold mb-2">Para Padres y Madres</h3>
- <p class="text-sm text-slate-500 leading-relaxed mb-4">Consejos para el hogar, señales de
+ <div class="texto-centrado md:text-left">
+ <h3 class="texto-titulo-pequeno  margen-abajo-pequeno">Para Padres y Madres</h3>
+ <p class="texto-pequeno text-slate-500 altura-linea-relajada margen-abajo-normal">Consejos para el hogar, señales de
  alarma y cómo hablar de seguridad con sus hijos.</p>
  <span
- class="text-xs font-bold uppercase tracking-widest text-orange-700 flex items-center justify-center md:justify-start gap-2">Abrir
+ class="texto-diminuto  mayusculas letras-separadas text-orange-700 caja-flexible elementos-centrados justificar-centro md:justify-start brecha-pequena">Abrir
  manual familiar <span
- class="material-symbols-outlined text-sm">arrow_forward</span></span>
+ class="material-symbols-outlined texto-pequeno">arrow_forward</span></span>
  </div>
  </a>
 
@@ -259,16 +305,16 @@
  </section>
  <!-- Full Guide CTA -->
  <div
- class="md:col-span-3 bg-primario text-on-primary p-12 rounded-md mt-12 flex flex-col md:flex-row items-center justify-between gap-8 border-4 border-primario-container shadow-md">
+ class="md:col-span-3 boton-primario p-12 bordes-redondeados mt-12 caja-flexible columna-flexible md:flex-row elementos-centrados justificar-espacios brecha-muy-grande border-4 border-primario-container sombra-media">
  <div class="flex-1">
- <h3 class="text-4xl font-bold mb-4">¿Buscas la Guía Técnica Completa?</h3>
- <p class="text-primario-fixed-dim text-xl leading-relaxed">Accede a nuestra enciclopedia
+ <h3 class="texto-titulo-grande  margen-abajo-normal">¿Buscas la Guía Técnica Completa?</h3>
+ <p class="text-primario-fixed-dim texto-muy-grande altura-linea-relajada">Accede a nuestra enciclopedia
  estructurada con toda la información sobre ciberseguridad, ataques comunes y soluciones
  avanzadas.</p>
  </div>
  <a href="guia-completa.html">
  <button
- class="bg-white text-primario px-10 py-5 rounded font-bold text-xl transition-all shadow-md">
+ class="fondo-blanco texto-principal px-10 py-5 rounded  texto-muy-grande transicion-suave sombra-media">
  ABRIR GUÍA COMPLETA
  </button>
  </a>
@@ -277,36 +323,44 @@
  </div>
  </section>
  <!-- Estructura del Pie de Página -->
- <footer class="bg-[#e9f6fd] dark:bg-[#111d23] w-full py-16 mt-auto">
- <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8">
- <div class="flex flex-col gap-6">
- <div class="text-xl font-bold text-[#064E3B] dark:text-[#e9f6fd]">Antonio Lemus Pérez</div>
- <p class="font-public-sans text-sm leading-relaxed text-[#111d23]/70 dark:text-[#e9f6fd]/70">
- Cumaná, Estado Sucre. Formando el futuro tecnológico de nuestra nación.
- </p>
- </div>
- <div class="flex flex-col gap-6 md:col-span-3">
- <div
- class="pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
- <div class="flex flex-col items-center md:items-start">
- <p class="text-xs font-bold uppercase tracking-[0.2em] text-slate-600">
- © 2026 CE Lemus Pérez · UPTOS CR
- </p>
- <a href="nosotros.html"
- class="text-[10px] font-bold uppercase tracking-[0.15em] text-primario hover:underline transition-all mt-2">
- Creado por: Cordova / Guipe / Giraldo / Ruiz
- </a>
- </div>
- <div class="flex items-center gap-3">
- <span class="material-symbols-outlined text-xl text-primario opacity-40">verified_user</span>
- <span
- class="text-[10px] font-bold uppercase tracking-widest text-en-superficie-variant opacity-40">Manual
- Oficial 2026</span>
- </div>
- </div>
- </div>
- </div>
- </footer>
+ <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="cuadricula-pie">
+                <div class="columna-principal-pie">
+                    <div class="marca-pie">
+                        <div class="logo-pie">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
+                        </div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="justificacion.html">Justificación</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index3.html">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
+                </div>
+            </div>
+
+            <div class="inferior-pie">
+                <p class="derechos-pie">
+                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+                <a href="nosotros.html" class="creditos-pie">
+                    Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
+                </a>
+            </div>
+        </div>
+    </footer>
  <script src="../scripts/logica-tema.js"></script>
 
     <script>

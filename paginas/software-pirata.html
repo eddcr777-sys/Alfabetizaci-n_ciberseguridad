@@ -5,9 +5,10 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Software Pirata y Virus | L.B. Antonio Lemus Pérez</title>
 <link rel="stylesheet" href="../estilos/software-pirata.css" />
- <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
- <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+  <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
  <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
@@ -17,7 +18,12 @@
 
 <div class="cabecera-pagina">
  <div class="contenedor-centrado-ancho">
- <p class="rastro-navegacion"><a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a></p>
+ <p class="rastro-navegacion" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+    <a href="index2.html"><span class="material-symbols-outlined align-middle">arrow_back</span> Volver al Manual de Temas</a>
+    <button onclick="alternarModoOscuro()" style="background: rgba(0,0,0,0.1); padding: 0.5rem 1rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.2); color: inherit; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: bold;">
+        <span class="material-symbols-outlined" style="font-size: 1.2rem;">dark_mode</span> Tema
+    </button>
+</p>
  <h1 class="titulo-destacado">¿Por qué es peligroso descargar programas piratas?</h1>
  <p class="subtitulo">Módulo 5 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
  </div>
@@ -153,11 +159,44 @@
 
 </main>
 
-<footer class="pie-pagina">
- <p>Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
- <p class="autores">Elvis Cordova · Henyer Guipe · Jesus Giraldo · Luis Ruiz · 2026</p>
- <p style="margin-top:1rem;font-size:0.85rem;">Proyecto de Alfabetización Digital · UPTOS CR</p>
-</footer>
+<!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <div class="cuadricula-pie">
+                <div class="columna-principal-pie">
+                    <div class="marca-pie">
+                        <div class="logo-pie">
+                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
+                        </div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="justificacion.html">Justificación</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="index3.html">Accesibilidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
+                </div>
+            </div>
+
+            <div class="inferior-pie">
+                <p class="derechos-pie">
+                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+                </p>
+                <a href="nosotros.html" class="creditos-pie">
+                    Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
+                </a>
+            </div>
+        </div>
+    </footer>
 
 <script src="../scripts/logica-pirateria.js"></script>
  <script src="../scripts/logica-tema.js"></script>
