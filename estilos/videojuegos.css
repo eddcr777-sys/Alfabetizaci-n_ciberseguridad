@@ -1,289 +1,87 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================================================
+   Videojuegos Seguros - Tema Morado / Gaming
+   ========================================================================== */
+:root {
+  --bg-cuerpo: #f8fafc;
+  --bg-tarjeta: #ffffff;
+  --bg-subtil: #f1f5f9;
+  --texto-principal: #0f172a;
+  --texto-secundario: #475569;
+  --texto-mutado: #64748b;
+  --borde-color: #e2e8f0;
+  
+  /* Color Característico: Morado / Gaming */
+  --modulo-color: #7c3aed;
+  --modulo-hover: #6d28d9;
+  --modulo-suave: #f5f3ff;
+  --modulo-borde: #c4b5fd;
+
+  --sombra-suave: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  --sombra-elevada: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --radio-tarjeta: 16px;
+  --radio-elemento: 10px;
+  --transicion: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-body {
-    font-family: 'Public Sans', sans-serif;
-    font-size: 1.25rem;
-    line-height: 1.85;
-    color: #f1f5f9;
-    background: #020617;
+body.modo-oscuro {
+  --bg-cuerpo: #090d16;
+  --bg-tarjeta: #111827;
+  --bg-subtil: #1f2937;
+  --texto-principal: #f8fafc;
+  --texto-secundario: #cbd5e1;
+  --texto-mutado: #94a3b8;
+  --borde-color: #1e293b;
+  
+  --modulo-color: #a78bfa;
+  --modulo-hover: #c4b5fd;
+  --modulo-suave: rgba(124, 58, 237, 0.15);
+  --modulo-borde: #4c1d95;
 }
 
-a {
-    color: inherit;
-}
+/* Las mismas reglas base del CSS anterior (reset, tipografía, flexbox)... */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-cuerpo); color: var(--texto-principal); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; min-height: 100vh; display: flex; flex-direction: column; }
 
-.cabecera-pagina {
-    background: #0c4a6e;
-    color: white;
-    padding: 2rem 2rem 3rem;
-}
+/* HEADER Y FOOTER SON IDÉNTICOS AL CSS DE SOFTWARE-PIRATA (Usa las mismas clases) */
+.cabecera-pagina { background: var(--bg-tarjeta); border-bottom: 1px solid var(--borde-color); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+.contenedor-cabecera { max-width: 1400px; margin: 0 auto; padding: 1.25rem 2rem; }
+.barra-herramientas { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.boton-regresar { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--texto-secundario); text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: var(--radio-elemento); background: var(--bg-subtil); transition: var(--transicion); }
+.boton-regresar:hover { color: var(--modulo-color); transform: translateX(-3px); }
+.boton-tema { background: var(--bg-subtil); border: 1px solid var(--borde-color); color: var(--texto-principal); padding: 0.5rem 1rem; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; transition: var(--transicion); }
+.boton-tema:hover { background: var(--borde-color); }
+.encabezado-info .titulo-destacado { font-size: 1.85rem; font-weight: 700; color: var(--texto-principal); }
+.encabezado-info .subtitulo { font-size: 0.95rem; color: var(--texto-mutado); margin-top: 0.25rem; }
+.contenedor-principal { max-width: 1400px; width: 100%; margin: 0 auto; padding: 2.5rem 2rem; flex: 1; }
+.seccion { margin-bottom: 3rem; }
+.texto-titulo-grande { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--modulo-color); margin-bottom: 1rem; }
+.texto-grande { color: var(--texto-secundario); font-size: 1.05rem; margin-bottom: 1rem; }
 
-.rastro-navegacion {
-    font-size: 0.85rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    opacity: 0.9;
-    margin-bottom: 1.5rem;
-}
+/* REJILLAS Y TARJETAS */
+.rejilla-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+.tarjeta { background: var(--bg-tarjeta); border: 1px solid var(--borde-color); border-radius: var(--radio-tarjeta); padding: 1.5rem; box-shadow: var(--sombra-suave); transition: var(--transicion); }
+.tarjeta:hover { border-color: var(--modulo-borde); transform: translateY(-3px); box-shadow: var(--sombra-elevada); }
+.tarjeta-titulo { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: var(--texto-principal); }
+.tarjeta p { color: var(--texto-secundario); font-size: 0.95rem; }
 
-.rastro-navegacion a {
-    color: white;
-    text-decoration: none;
-}
+/* QUIZ INTERACTIVO DE VIDEOJUEGOS */
+.pregunta-cuestionario { background: var(--bg-tarjeta); border: 1px solid var(--borde-color); padding: 1.25rem; border-radius: var(--radio-elemento); margin-bottom: 1rem; cursor: pointer; transition: var(--transicion); display: flex; flex-direction: column; }
+.pregunta-cuestionario:hover { background: var(--bg-subtil); border-color: var(--modulo-borde); }
+.respuesta-cuestionario { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--borde-color); font-size: 0.9rem; font-weight: 600; }
+.pregunta-cuestionario.activa .respuesta-cuestionario { display: block; }
 
-.titulo-destacado {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.05;
-    margin-bottom: 1rem;
-}
+/* REUTILIZABLES */
+.bloque-definicion { background: var(--modulo-suave); border-left: 4px solid var(--modulo-color); padding: 1.25rem; border-radius: 0 var(--radio-elemento) var(--radio-elemento) 0; margin: 1.5rem 0; }
+.etiqueta-def { font-weight: 700; color: var(--modulo-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
 
-.subtitulo {
-    font-size: 1.35rem;
-    opacity: 0.85;
-}
-
-.contenido {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-.seccion {
-    margin-bottom: 5rem;
-}
-
-.titulo-seccion {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #38bdf8;
-    border-left: 8px solid #38bdf8;
-    padding-left: 1.25rem;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-}
-
-.parrafo {
-    margin-bottom: 1.5rem;
-    color: #D1FAE5;
-}
-
-.bloque-definicion {
-    background: #022C22;
-    border: 2px solid #38bdf8;
-    border-radius: 1rem;
-    padding: 1.5rem 2rem;
-    margin: 1.75rem 0;
-}
-
-.bloque-definicion .etiqueta-def {
-    font-size: 0.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #38bdf8;
-    margin-bottom: 0.5rem;
-}
-
-.bloque-definicion .texto-def {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #bae6fd;
-}
-
-.palabra-clave {
-    font-weight: 800;
-    color: #7dd3fc;
-    text-decoration: underline;
-    text-decoration-thickness: 3px;
-}
-
-.caja-alerta {
-    background: #431407;
-    border-left: 8px solid #ea580c;
-    border-radius: 0.75rem;
-    padding: 1.5rem 2rem;
-    margin: 1.75rem 0;
-    font-weight: 700;
-    color: #fdba74;
-    font-size: 1.15rem;
-}
-
-.rejilla-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-@media (max-width: 640px) {
-    .rejilla-2 {
-        grid-template-columns: 1fr;
-    }
-}
-
-.tarjeta {
-    background: #022C22;
-    border-radius: 1.25rem;
-    padding: 2rem;
-    border-top: 6px solid #38bdf8;
-}
-
-.tarjeta .tarjeta-titulo {
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #38bdf8;
-    margin-bottom: 0.75rem;
-}
-
-.tarjeta p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #94a3b8;
-}
-
-.taller-bloque {
-    background: #022C22;
-    border: 2px solid #38bdf8;
-    border-radius: 1.5rem;
-    padding: 2.5rem;
-    margin: 2rem 0;
-}
-
-.taller-titulo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #38bdf8;
-    margin-bottom: 0.5rem;
-}
-
-.taller-instruccion {
-    font-size: 1rem;
-    color: #94a3b8;
-    margin-bottom: 1.5rem;
-}
-
-.pregunta-cuestionario {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 1rem;
-    padding: 1.5rem 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.pregunta-cuestionario:hover {
-    background: rgba(56, 189, 248, 0.08);
-    border-color: #38bdf8;
-}
-
-.respuesta-cuestionario {
-    font-size: 0.9rem;
-    font-weight: 400;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.4s;
-    display: block;
-    margin-top: 0.5rem;
-    color: #94a3b8;
-}
-
-.pregunta-cuestionario.abierto .respuesta-cuestionario {
-    opacity: 1;
-    max-height: 200px;
-}
-
-.pregunta-cuestionario.seguro {
-    border-color: #22c55e;
-    background: rgba(34, 197, 94, 0.08);
-}
-
-.pregunta-cuestionario.peligroso {
-    border-color: #ef4444;
-    background: rgba(239, 68, 68, 0.08);
-}
-
-.bloque-recuerda {
-    background: #0c4a6e;
-    color: white;
-    border-radius: 2rem;
-    padding: 3rem;
-    margin: 2rem 0;
-    border: 2px solid #38bdf8;
-}
-
-.bloque-recuerda h3 {
-    font-size: 1.75rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
-    color: #38bdf8;
-}
-
-.lista-reglas {
-    list-style: none;
-}
-
-.lista-reglas li {
-    font-size: 1.2rem;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    gap: 1rem;
-    color: #ECFDF5;
-}
-
-.pie-pagina {
-    border-top: 2px solid #022C22;
-    padding: 3rem 2rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #64748b;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.pie-pagina .autores {
-    font-weight: 700;
-    color: #38bdf8;
-    margin-top: 0.5rem;
-}
-
-/* RESPONSIVE FIXES */
-@media (max-width: 768px) {
-    body { font-size: 1.15rem; }
-    .cabecera-pagina { padding: 1.5rem; text-align: center; }
-    .titulo-destacado { font-size: 2.25rem; }
-    .contenido { padding: 1.5rem 1rem; }
-    .seccion { margin-bottom: 3rem; }
-    .titulo-seccion { font-size: 1.5rem; padding-left: 1rem; border-left-width: 6px; }
-    .bloque-definicion, .escenario-bloque { padding: 1.25rem; }
-    .opcion-btn { padding: 0.75rem; font-size: 0.95rem; }
-}
-
-/* ==========================================
-   MODO OSCURO
-   ========================================== */
-.dark body { background-color: #020617; color: #FFFFFF; }
-.dark .tarjeta, .dark .bloque-definicion, .dark .taller-bloque { background-color: #022C22; border-color: #334155; color: #FFFFFF; }
-.dark .cabecera-pagina { background-color: #082f49; } /* Azul profundo */
-.dark .titulo-seccion, .dark .tarjeta-titulo, .dark .taller-titulo { color: #38bdf8; border-left-color: #0ea5e9; }
-.dark .caja-alerta { background-color: #451a03; border-color: #9a3412; color: #fdba74; }
-.dark .bloque-recuerda { background-color: #082f49; border-color: #38bdf8; }
-.dark .pregunta-cuestionario { background-color: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: #FFFFFF; }
-.dark .pregunta-cuestionario:hover { background-color: rgba(56, 189, 248, 0.1); border-color: #38bdf8; }
-.dark .respuesta-cuestionario { color: #94a3b8; }
-.dark .bloque-definicion .texto-def { color: #bae6fd; }
-.dark .palabra-clave { color: #7dd3fc; }
+.pie-pagina { background: var(--bg-tarjeta); border-top: 1px solid var(--borde-color); margin-top: auto; padding: 3rem 2rem 1.5rem; }
+.contenedor-pie { max-width: 1400px; margin: 0 auto; }
+.grid-pie { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+.marca-pie { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+.logo-pie-icono { background: var(--modulo-color); color: #ffffff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.titulo-pie { font-weight: 700; font-size: 1.1rem; }
+.encabezado-pie { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+.enlaces-pie { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.enlaces-pie a { color: var(--texto-secundario); text-decoration: none; font-size: 0.9rem; transition: var(--transicion); }
+.enlaces-pie a:hover { color: var(--modulo-color); }
+.inferior-pie { border-top: 1px solid var(--borde-color); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--texto-mutado); }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Software Pirata y Virus | L.B. Antonio Lemus Pérez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="../estilos/software-pirata.css" />
+   
+</head>
+<body>
+
+    <!-- CABECERA UNIFICADA -->
+    <header class="cabecera-pagina">
+        <div class="contenedor-cabecera">
+            <nav class="barra-herramientas">
+                <a href="../index2.html" class="boton-regresar">
+                    <span class="material-symbols-outlined">arrow_back</span> 
+                    Volver al Manual de Temas
+                </a>
+                <button type="button" onclick="alternarModoOscuro()" class="boton-tema">
+                    <span class="material-symbols-outlined" id="icono-tema">dark_mode</span> 
+                    <span id="texto-tema">Tema</span>
+                </button>
+            </nav>
+            <div class="encabezado-info">
+                <h1 class="titulo-destacado">¿Por qué es peligroso descargar programas piratas?</h1>
+                <p class="subtitulo">Módulo 5 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez <!--[cite: 7] --></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion">
+            <h2 class="texto-titulo-grande">1. ¿Qué es el software pirata?</h2>
+            <p class="texto-grande">
+                El <span class="palabra-clave" style="color:var(--modulo-color); font-weight:700;">software pirata</span> es cualquier programa de computadora que ha sido modificado ilegalmente para que puedas usarlo gratis, sin pagar licencia. <!--[cite: 7] -->
+            </p>
+            <div class="bloque-definicion">
+                <div class="etiqueta-def"><span class="material-symbols-outlined">menu_book</span> ¿Qué es el Malware?</div>
+                <div class="texto-def">Es la palabra técnica para cualquier programa malicioso (viene de "malicious software"). Incluye virus, troyanos, spyware y ransomware. <!--[cite: 7] --></div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="texto-titulo-grande">2. ¿Qué hay dentro de un "crack"?</h2>
+            <div class="rejilla-2">
+                <div class="tarjeta">
+                    <div class="tarjeta-titulo"><span class="material-symbols-outlined">keyboard</span> Registrador de Teclas</div>
+                    <p>Un programa que graba todo lo que escribes: contraseñas, números bancarios, mensajes privados. <!--[cite: 7] --></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-titulo"><span class="material-symbols-outlined">door_open</span> Puerta Trasera (Backdoor)</div>
+                    <p>Crea un acceso oculto a tu dispositivo. El hacker puede encender tu cámara, ver tus archivos, o descargar tus fotos. <!--[cite: 7] --></p>
+                </div>
+            </div>
+            <div class="caja-alerta">
+                <span class="material-symbols-outlined">warning</span> La mayoría de estos programas te piden que desactives el antivirus para "funcionar bien". Ese es el momento en que entran en tu sistema. NUNCA desactives el antivirus. <!--[cite: 7] -->
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="texto-titulo-grande"><span class="material-symbols-outlined">science</span> Taller: El Laberinto de Descargas</h2>
+            <div class="sim-descarga">
+                <div class="sim-barra">
+                    <span class="circulo" style="background:#ef4444"></span>
+                    <span class="circulo" style="background:#fbbf24"></span>
+                    <span class="circulo" style="background:#22c55e"></span>
+                    <span style="margin-left:0.5rem;"><span class="material-symbols-outlined align-middle" style="font-size:1rem;">lock_open</span> Sitio no seguro</span>
+                </div>
+                <div class="sim-url">http://megadescargas-gratis.xyz/photoshop-crack-2026</div>
+                <div class="sim-cuerpo">
+                    <h3>Photoshop CC 2026 FULL - Activado para siempre</h3>
+                    <button class="boton-falso boton-verde" onclick="document.getElementById('t1').style.display='block'">DESCARGAR AHORA — Versión Full Gratis</button>
+                    <div class="mensaje-trampa" id="t1">Alerta de Seguridad: Se descargaría un archivo "setup.exe" que al ejecutarse instala un Registrador de Teclas (Keylogger). <!--[cite: 7] --></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="texto-titulo-grande">3. Alternativas gratuitas y seguras</h2>
+            <div class="tarjeta-alternativa">
+                <span class="nombre-pirata">Adobe Photoshop (pirata)</span>
+                <span class="flecha"><span class="material-symbols-outlined">arrow_forward</span></span>
+                <span class="nombre-libre">GIMP o Photopea.com (gratis, sin instalación) <!--[cite: 7] --></span>
+            </div>
+            <div class="tarjeta-alternativa">
+                <span class="nombre-pirata">Microsoft Word/Excel (pirata)</span>
+                <span class="flecha"><span class="material-symbols-outlined">arrow_forward</span></span>
+                <span class="nombre-libre">Google Docs y Google Sheets (100% gratis) <!--[cite: 7] --></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="grid-pie">
+                <div>
+                    <div class="marca-pie">
+                        <div class="logo-pie-icono"><span class="material-symbols-outlined">school</span></div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie" style="color:var(--texto-secundario); font-size:0.9rem;">Cumaná, Estado Sucre, Venezuela. <!--[cite: 7] --></p>
+                </div>
+            </div>
+            <div class="inferior-pie">
+                <p>© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados. <!--[cite: 7] --></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/logica-tema.js"></script>
+</body>
+</html>

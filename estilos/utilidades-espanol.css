@@ -117,3 +117,41 @@
 @media (max-width: 768px) { .md:hidden { display: block; } }
 .md:flex { display: flex; }
 @media (max-width: 768px) { .md:flex { display: none; } }
+
+
+/* CLASES COMPLEMENTARIAS GENERADAS */
+.ancho-14 { width: 3.5rem; } .alto-14 { height: 3.5rem; }
+.ancho-16 { width: 4rem; } .alto-16 { height: 4rem; }
+.fondo-teal-claro { background-color: #f0fdf4; }
+.fondo-purpura-claro { background-color: #faf5ff; }
+.fondo-rojo-claro { background-color: #fef2f2; }
+.fondo-rosa-claro { background-color: #fff1f2; }
+.fondo-secundario-claro { background-color: #eff6ff; }
+.fondo-slate-oscuro { background-color: #0f172a; color: white; }
+.texto-purpura { color: #9333ea; }
+.texto-rojo { color: #dc2626; }
+.texto-rosa { color: #e11d48; }
+.texto-secundario { color: var(--color-secundario); }
+.texto-blanco-transparente { color: rgba(255,255,255,0.6); }
+.margen-arriba-gigante { margin-top: 5rem; }
+.brecha-y-grande > * + * { margin-top: 1.5rem; }
+.brecha-y-muy-grande > * + * { margin-top: 2rem; }
+.brecha-y-gigante > * + * { margin-top: 3rem; }
+
+.hover-borde-primario:hover { border-color: var(--color-primario); }
+.hover-borde-purpura:hover { border-color: #9333ea; }
+.hover-borde-rojo:hover { border-color: #dc2626; }
+.hover-borde-azul:hover { border-color: #2563eb; }
+.hover-borde-rosa:hover { border-color: #e11d48; }
+
+.group:hover .grupo-hover-bg-primario { background-color: var(--color-primario); }
+.group:hover .grupo-hover-bg-purpura { background-color: #9333ea; }
+.group:hover .grupo-hover-bg-rojo { background-color: #dc2626; }
+.group:hover .grupo-hover-bg-secundario { background-color: var(--color-secundario); }
+.group:hover .grupo-hover-bg-rosa { background-color: #e11d48; }
+.group:hover .grupo-hover-texto-blanco { color: #ffffff !important; }
+
+@media (min-width: 768px) {
+    .md-ancho-mitad { width: 50%; }
+    .md-ancho-2-tercios { width: 66.666667%; }
+}

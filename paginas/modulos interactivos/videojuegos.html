@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Seguridad en Videojuegos | L.B. Antonio Lemus Pérez</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../estilos/videojuegos.css" />
+</head>
+<body>
+
+    <!-- CABECERA UNIFICADA -->
+    <header class="cabecera-pagina">
+        <div class="contenedor-cabecera">
+            <nav class="barra-herramientas">
+                <a href="index2.html" class="boton-regresar">
+                    <span class="material-symbols-outlined">arrow_back</span> 
+                    Volver al Manual de Temas
+                </a>
+                <button type="button" onclick="alternarModoOscuro()" class="boton-tema">
+                    <span class="material-symbols-outlined" id="icono-tema">dark_mode</span> 
+                    <span id="texto-tema">Tema</span>
+                </button>
+            </nav>
+            <div class="encabezado-info">
+                <h1 class="titulo-destacado">¿Cómo jugar en internet sin correr peligros?</h1>
+                <p class="subtitulo">Módulo 4 de 5 · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez <!--[cite: 8] --></p>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor-principal">
+        <section class="seccion">
+            <h2 class="texto-titulo-grande">1. Los videojuegos como campo de riesgo</h2>
+            <p class="texto-grande">
+                Los videojuegos de internet no son solo entretenimiento: son también plataformas sociales donde interactúas con personas de todo el mundo. <!--[cite: 8] -->
+            </p>
+            <div class="bloque-definicion">
+                <div class="etiqueta-def"><span class="material-symbols-outlined">menu_book</span> ¿Qué es el Doxing?</div>
+                <div class="texto-def">Es cuando un jugador investiga y publica tu información real (nombre completo, colegio, barrio, redes sociales) para acosarte fuera del juego. <!--[cite: 8] --></div>
+            </div>
+
+            <div class="rejilla-2">
+                <div class="tarjeta">
+                    <div class="tarjeta-titulo"><span class="material-symbols-outlined">featured_play_list</span> Estafas de "Regalos"</div>
+                    <p>Jugadores o cuentas falsas que prometen "skins" gratis, monedas o poderes especiales a cambio de que entres en un link. Ese link roba tu sesión de juego. <!--[cite: 8] --></p>
+                </div>
+                <div class="tarjeta">
+                    <div class="tarjeta-titulo"><span class="material-symbols-outlined">person_search</span> Perfiles Falsos en Discord</div>
+                    <p>Personas con perfiles falsos que se hacen tus "amigos de juego" para ganarte confianza y luego pedirte datos o fotos. <!--[cite: 8] --></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion">
+            <h2 class="texto-titulo-grande"><span class="material-symbols-outlined">science</span> Taller: ¿Qué harías en estas situaciones?</h2>
+            
+            <div class="pregunta-cuestionario" onclick="this.classList.toggle('activa')">
+                <div>Un jugador desconocido te dice "te regalo 1000 V-Bucks si entras a este link". <!--[cite: 8] --></div>
+                <span class="respuesta-cuestionario" style="color: #ef4444;"><span class="material-symbols-outlined align-middle">report</span> PELIGROSO — Nadie regala nada gratis en internet. Ese link roba tu cuenta o instala un virus. <!--[cite: 8] --></span>
+            </div>
+
+            <div class="pregunta-cuestionario" onclick="this.classList.toggle('activa')">
+                <div>Cuando alguien te molesta en el chat, decides bloquearlo y reportar su cuenta al juego. <!--[cite: 8] --></div>
+                <span class="respuesta-cuestionario" style="color: #10b981;"><span class="material-symbols-outlined align-middle">check_circle</span> CORRECTO — Bloquear y reportar es la respuesta correcta. No respondas con insultos. <!--[cite: 8] --></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA UNIFICADO -->
+    <footer class="pie-pagina">
+        <div class="contenedor-pie">
+            <div class="grid-pie">
+                <div>
+                    <div class="marca-pie">
+                        <div class="logo-pie-icono"><span class="material-symbols-outlined">school</span></div>
+                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Navegación</h4>
+                    <ul class="enlaces-pie">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index2.html">Manual Digital</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="encabezado-pie">Contacto</h4>
+                    <p class="texto-pie" style="color:var(--texto-secundario); font-size:0.9rem;">Cumaná, Estado Sucre, Venezuela. <!--[cite: 8] --></p>
+                </div>
+            </div>
+            <div class="inferior-pie">
+                <p>© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados. <!--[cite: 8] --></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/logica-tema.js"></script>
+</body>
+</html>
