@@ -2,308 +2,322 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Guía Completa de Alfabetización Digital | L.B. Antonio Lemus Pérez</title>
-    <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
-    <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
-    
-    <link rel="stylesheet" href="../estilos/guia-completa.css" />
-    <link rel="stylesheet" href="../estilos/estilos-base.css" />
+ <meta charset="utf-8" />
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <title>Guía Completa de Alfabetización Digital | L.B. Antonio Lemus Pérez</title>
+ <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
+ <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+ 
+ <link rel="stylesheet" href="../estilos/guia-completa.css" />
+ <link rel="stylesheet" href="../estilos/estilos-base.css" />
+
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="theme-color" content="#0F5132" />
+    <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
 </head>
 
 <body>
 
-    <header class="gradiente-cabecera">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-secundario font-black tracking-widest uppercase text-sm mb-4">Manual de Referencia
-                Institucional</p>
-            <h1 class="text-white text-5xl md:text-6xl font-black mb-8">Guía Integral de Seguridad Digital</h1>
-            <p class="text-white/80 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
-        </div>
-    </header>
+ <header class="gradiente-cabecera">
+ <div class="max-w-4xl mx-auto">
+ <p class="text-secundario font-bold tracking-widest uppercase text-sm mb-4">Manual de Referencia
+ Institucional</p>
+ <h1 class="text-white text-5xl md:text-4xl font-bold mb-8">Guía Integral de Seguridad Digital</h1>
+ <p class="text-white/80 text-xl font-medium">L.B. Antonio Lemus Pérez / UPTOS CR · 2026</p>
+ </div>
+ </header>
 
-    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
+ <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-12">
 
-        <!-- BARRA LATERAL -->
-        <aside class="md:w-1/4">
-            <div class="barra-lateral-fija border-r border-slate-200 pr-6 hidden md:block">
-                <h4 class="text-xs uppercase font-black text-slate-600 mb-6 tracking-widest">Navegación</h4>
-                <nav class="space-y-1">
-                    <a href="#introduccion" class="enlace-navegacion">1. Introducción</a>
-                    <a href="#conceptos" class="enlace-navegacion">2. Conceptos Clave</a>
-                    <a href="#amenazas" class="enlace-navegacion">3. Amenazas Reales</a>
-                    <a href="#redes" class="enlace-navegacion">4. Redes y WiFi</a>
-                    <a href="#higiene" class="enlace-navegacion">5. Higiene Digital</a>
-                    <a href="#legalidad" class="enlace-navegacion">6. Marco Legal</a>
-                    <a href="#glosario" class="enlace-navegacion">7. Glosario A-Z</a>
-                </nav>
-                <div class="mt-12 bg-slate-50 p-6 rounded-2xl border border-slate-200">
-                    <p class="text-xs font-black text-slate-700 mb-2">¿Necesitas ayuda?</p>
-                    <a href="protocolo-ayuda.html" class="text-xs font-black text-primario uppercase">Guía de Emergencia
-                        →</a>
-                </div>
-            </div>
-        </aside>
+ <!-- BARRA LATERAL -->
+ <aside class="md:w-1/4">
+ <div class="barra-lateral-fija border-r border-slate-200 pr-6 hidden md:block">
+ <h4 class="text-xs uppercase font-bold text-slate-600 mb-6 tracking-widest">Navegación</h4>
+ <nav class="space-y-1">
+ <a href="#introduccion" class="enlace-navegacion">1. Introducción</a>
+ <a href="#conceptos" class="enlace-navegacion">2. Conceptos Clave</a>
+ <a href="#amenazas" class="enlace-navegacion">3. Amenazas Reales</a>
+ <a href="#redes" class="enlace-navegacion">4. Redes y WiFi</a>
+ <a href="#higiene" class="enlace-navegacion">5. Higiene Digital</a>
+ <a href="#legalidad" class="enlace-navegacion">6. Marco Legal</a>
+ <a href="#glosario" class="enlace-navegacion">7. Glosario A-Z</a>
+ </nav>
+ <div class="mt-12 bg-slate-50 p-6 rounded border border-slate-200">
+ <p class="text-xs font-bold text-slate-700 mb-2">¿Necesitas ayuda?</p>
+ <a href="protocolo-ayuda.html" class="text-xs font-bold text-primario uppercase">Guía de Emergencia
+ →</a>
+ </div>
+ </div>
+ </aside>
 
-        <!-- CONTENIDO PRINCIPAL -->
-        <main class="md:w-3/4">
+ <!-- CONTENIDO PRINCIPAL -->
+ <main class="md:w-3/4">
 
-            <!-- INTRODUCCIÓN -->
-            <section id="introduccion" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-6">1. Introducción y Justificación</h2>
-                <p class="mb-6">
-                    Esta guía es mucho más que un manual; es una enciclopedia diseñada para proteger a los estudiantes
-                    del <span class="resaltado">Liceo Antonio Lemus Pérez</span>. En la era actual, la seguridad en
-                    internet no es una opción, es una necesidad de protección personal.
-                </p>
-                <div class="caja-termino">
-                    <span class="titulo-termino">La Tríada CIA (Seguridad de la Información)</span>
-                    Toda seguridad digital busca proteger tres cosas:
-                    <ul class="text-sm mt-3 space-y-2 font-medium">
-                        <li>• <span class="resaltado">Confidencialidad:</span> Que solo tú veas tus datos.</li>
-                        <li>• <span class="resaltado">Integridad:</span> Que nadie pueda cambiar tus datos sin permiso.
-                        </li>
-                        <li>• <span class="resaltado">Disponibilidad:</span> Que puedas entrar a tus datos cuando los
-                            necesites.</li>
-                    </ul>
-                </div>
-            </section>
+ <!-- INTRODUCCIÓN -->
+ <section id="introduccion" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-6">1. Introducción y Justificación</h2>
+ <p class="mb-6">
+ Esta guía es mucho más que un manual; es una enciclopedia diseñada para proteger a los estudiantes
+ del <span class="resaltado">Liceo Antonio Lemus Pérez</span>. En la era actual, la seguridad en
+ internet no es una opción, es una necesidad de protección personal.
+ </p>
+ <div class="caja-termino">
+ <span class="titulo-termino">La Tríada CIA (Seguridad de la Información)</span>
+ Toda seguridad digital busca proteger tres cosas:
+ <ul class="text-sm mt-3 space-y-2 font-medium">
+ <li>• <span class="resaltado">Confidencialidad:</span> Que solo tú veas tus datos.</li>
+ <li>• <span class="resaltado">Integridad:</span> Que nadie pueda cambiar tus datos sin permiso.
+ </li>
+ <li>• <span class="resaltado">Disponibilidad:</span> Que puedas entrar a tus datos cuando los
+ necesites.</li>
+ </ul>
+ </div>
+ </section>
 
-            <!-- CONCEPTOS -->
-            <section id="conceptos" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8">2. Conceptos que debes entender</h2>
-                <p class="mb-8">Para hablar de seguridad, primero debemos entender las palabras que usan los expertos en
-                    un lenguaje simple:</p>
+ <!-- CONCEPTOS -->
+ <section id="conceptos" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8">2. Conceptos que debes entender</h2>
+ <p class="mb-8">Para hablar de seguridad, primero debemos entender las palabras que usan los expertos en
+ un lenguaje simple:</p>
 
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-3">Identidad Digital</h3>
-                        <p>Es el "Tú" virtual. Se forma por tus fotos, tus comentarios, lo que compras y lo que
-                            compartas. Todo esto deja una <span class="definicion-linea">Huella Digital</span> (el
-                            rastro que dejas en internet para siempre).</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-3">Cifrado (Encriptación)</h3>
-                        <p>Es como meter tu información en una caja fuerte digital. Solo quien tiene la "llave" (tu
-                            contraseña) puede leer lo que hay dentro. Si un hacker roba datos cifrados, solo verá letras
-                            y números sin sentido.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-3">Servidores y Nube</h3>
-                        <p>Cuando guardas algo en "la nube", en realidad lo estás guardando en la computadora gigante de
-                            otra empresa (como Google o Facebook) ubicada en otro país.</p>
-                    </div>
-                </div>
-            </section>
+ <div class="space-y-8">
+ <div>
+ <h3 class="text-2xl font-bold mb-3">Identidad Digital</h3>
+ <p>Es el "Tú" virtual. Se forma por tus fotos, tus comentarios, lo que compras y lo que
+ compartas. Todo esto deja una <span class="definicion-linea">Huella Digital</span> (el
+ rastro que dejas en internet para siempre).</p>
+ </div>
+ <div>
+ <h3 class="text-2xl font-bold mb-3">Cifrado (Encriptación)</h3>
+ <p>Es como meter tu información en una caja fuerte digital. Solo quien tiene la "llave" (tu
+ contraseña) puede leer lo que hay dentro. Si un hacker roba datos cifrados, solo verá letras
+ y números sin sentido.</p>
+ </div>
+ <div>
+ <h3 class="text-2xl font-bold mb-3">Servidores y Nube</h3>
+ <p>Cuando guardas algo en "la nube", en realidad lo estás guardando en la computadora gigante de
+ otra empresa (como Google o Facebook) ubicada en otro país.</p>
+ </div>
+ </div>
+ </section>
 
-            <!-- AMENAZAS -->
-            <section id="amenazas" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8 text-red-700">3. Amenazas Reales y Ataques</h2>
-                <p class="mb-4 font-black text-slate-700 uppercase text-xs tracking-widest">Catálogo de Riesgos</p>
+ <!-- AMENAZAS -->
+ <section id="amenazas" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8 text-red-700">3. Amenazas Reales y Ataques</h2>
+ <p class="mb-4 font-bold text-slate-700 uppercase text-xs tracking-widest">Catálogo de Riesgos</p>
 
-                <div class="rejilla-informacion">
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe868;</span>
-                        <b>Malware:</b> Todo programa malicioso o virus.
-                    </div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xead7;</span>
-                        <b>Phishing:</b> Engaño para robar tus claves.
-                    </div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe312;</span>
-                        <b>Keylogger:</b> Graba lo que escribes.
-                    </div>
-                    <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe898;</span>
-                        <b>Rootkit:</b> Virus que se esconde del antivirus.
-                    </div>
-                </div>
+ <div class="rejilla-informacion">
+ <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe868;</span>
+ <b>Malware:</b> Todo programa malicioso o virus.
+ </div>
+ <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xead7;</span>
+ <b>Phishing:</b> Engaño para robar tus claves.
+ </div>
+ <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe312;</span>
+ <b>Keylogger:</b> Graba lo que escribes.
+ </div>
+ <div class="info-pill"><span class="material-symbols-outlined text-red-500">&#xe898;</span>
+ <b>Rootkit:</b> Virus que se esconde del antivirus.
+ </div>
+ </div>
 
-                <div class="mt-8">
-                    <h3 class="text-2xl font-bold mb-4">Ingeniería Social</h3>
-                    <p>Es el "hackeo de personas". El atacante no rompe tu computadora, te engaña a ti usando tus
-                        emociones. Puede fingir ser un profesor, un directivo del liceo o un amigo en apuros para que le
-                        des información privada.</p>
-                </div>
-            </section>
+ <div class="mt-8">
+ <h3 class="text-2xl font-bold mb-4">Ingeniería Social</h3>
+ <p>Es el "hackeo de personas". El atacante no rompe tu computadora, te engaña a ti usando tus
+ emociones. Puede fingir ser un profesor, un directivo del liceo o un amigo en apuros para que le
+ des información privada.</p>
+ </div>
+ </section>
 
-            <!-- RIESGOS COTIDIANOS -->
-            <section id="cotidiano" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8 text-secundario-700">3.5 Riesgos del Día a Día: Guía de
-                    Supervivencia</h2>
-                <p class="mb-6">Como adolescentes, ustedes pasan la mayor parte del tiempo en estas plataformas. Aquí es
-                    donde los atacantes ponen sus trampas más inteligentes:</p>
+ <!-- RIESGOS COTIDIANOS -->
+ <section id="cotidiano" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8 text-secundario-700">3.5 Riesgos del Día a Día: Guía de
+ Supervivencia</h2>
+ <p class="mb-6">Como adolescentes, ustedes pasan la mayor parte del tiempo en estas plataformas. Aquí es
+ donde los atacantes ponen sus trampas más inteligentes:</p>
 
-                <div class="space-y-10">
-                    <!-- GAMING -->
-                    <div class="border-b border-slate-100 pb-8">
-                        <h3 class="text-2xl font-black text-secundario-900 mb-4 flex items-center gap-2">
-                            <span class="material-symbols-outlined">sports_esports</span> Peligros en el Gaming
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="p-4 bg-secundario-50 rounded-xl border border-blue-100 italic text-sm">
-                                <b>Estafas de Monedas (V-Bucks/Robux):</b> Sitios que prometen dinero gratis a cambio de
-                                ver anuncios o entrar en links. En realidad, te roban tu cuenta de juego para vender tus
-                                objetos a otros.
-                            </div>
-                            <div class="p-4 bg-secundario-50 rounded-xl border border-blue-100 italic text-sm">
-                                <b>El peligro de los "Hacks":</b> Scripts que prometen darte puntería perfecta (Aimbot).
-                                El 90% trae un virus que le da el control total de tu PC a un desconocido.
-                            </div>
-                        </div>
-                    </div>
+ <div class="space-y-10">
+ <!-- GAMING -->
+ <div class="border-b border-slate-100 pb-8">
+ <h3 class="text-2xl font-bold text-secundario-900 mb-4 flex items-center gap-2">
+ <span class="material-symbols-outlined">sports_esports</span> Peligros en el Gaming
+ </h3>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+ <div class="p-4 bg-secundario-50 rounded border border-blue-100 italic text-sm">
+ <b>Estafas de Monedas (V-Bucks/Robux):</b> Sitios que prometen dinero gratis a cambio de
+ ver anuncios o entrar en links. En realidad, te roban tu cuenta de juego para vender tus
+ objetos a otros.
+ </div>
+ <div class="p-4 bg-secundario-50 rounded border border-blue-100 italic text-sm">
+ <b>El peligro de los "Hacks":</b> Scripts que prometen darte puntería perfecta (Aimbot).
+ El 90% trae un virus que le da el control total de tu PC a un desconocido.
+ </div>
+ </div>
+ </div>
 
-                    <!-- REDES SOCIALES -->
-                    <div class="border-b border-slate-100 pb-8">
-                        <h3 class="text-2xl font-black text-pink-900 mb-4 flex items-center gap-2">
-                            <span class="material-symbols-outlined">share</span> Presión y Redes Sociales
-                        </h3>
-                        <p class="text-sm mb-4">No solo te roban datos, también intentan manipular lo que sientes:</p>
-                        <ul class="space-y-3 text-sm">
-                            <li>🚩 <b>Retos Virales (Challenges):</b> Muchos retos están diseñados para obtener datos
-                                tuyos (como el "recorrido de tu casa") o poner en riesgo tu vida.</li>
-                            <li>🚩 <b>Cuentas de "Chismes" del Liceo:</b> Perfiles anónimos que publican fotos
-                                capturadas sin permiso. Participar compartiendo o siguiendo estas cuentas es una falta
-                                grave a la ética digital.</li>
-                            <li>🚩 <b>El "FOMO":</b> El miedo a perderte de algo. Las apps te mandan notificaciones para
-                                que nunca sueltes el teléfono, afectando tu sueño y tus estudios.</li>
-                        </ul>
-                    </div>
+ <!-- REDES SOCIALES -->
+ <div class="border-b border-slate-100 pb-8">
+ <h3 class="text-2xl font-bold text-pink-900 mb-4 flex items-center gap-2">
+ <span class="material-symbols-outlined">share</span> Presión y Redes Sociales
+ </h3>
+ <p class="text-sm mb-4">No solo te roban datos, también intentan manipular lo que sientes:</p>
+ <ul class="space-y-3 text-sm">
+ <li>🚩 <b>Retos Virales (Challenges):</b> Muchos retos están diseñados para obtener datos
+ tuyos (como el "recorrido de tu casa") o poner en riesgo tu vida.</li>
+ <li>🚩 <b>Cuentas de "Chismes" del Liceo:</b> Perfiles anónimos que publican fotos
+ capturadas sin permiso. Participar compartiendo o siguiendo estas cuentas es una falta
+ grave a la ética digital.</li>
+ <li>🚩 <b>El "FOMO":</b> El miedo a perderte de algo. Las apps te mandan notificaciones para
+ que nunca sueltes el teléfono, afectando tu sueño y tus estudios.</li>
+ </ul>
+ </div>
 
-                    <!-- WHATSAPP VENEZUELA -->
-                    <div>
-                        <h3 class="text-2xl font-black text-green-900 mb-4 flex items-center gap-2">
-                            <span class="material-symbols-outlined">chat</span> Estafas en WhatsApp (Caso Venezuela)
-                        </h3>
-                        <p class="text-sm mb-4">En nuestro país, los estafadores son expertos en inventar historias:</p>
-                        <div class="tarjeta-aviso-premium alerta-esmeralda">
-                            <div class="contenido-relativo">
-                                <h4><span class="material-symbols-outlined">&#xad12;</span> Estafa Bono Patria /
-                                    WhatsApp</h4>
-                                <p>Llegan mensajes diciendo que saliste seleccionado para un beneficio y debes entrar en
-                                    un link. Ese link clona tu WhatsApp o te pide datos personales. Desconfía de
-                                    cualquier noticia que no sea de una fuente oficial.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+ <!-- WHATSAPP VENEZUELA -->
+ <div>
+ <h3 class="text-2xl font-bold text-green-900 mb-4 flex items-center gap-2">
+ <span class="material-symbols-outlined">chat</span> Estafas en WhatsApp (Caso Venezuela)
+ </h3>
+ <p class="text-sm mb-4">En nuestro país, los estafadores son expertos en inventar historias:</p>
+ <div class="tarjeta-aviso-premium alerta-esmeralda">
+ <div class="contenido-relativo">
+ <h4><span class="material-symbols-outlined">&#xad12;</span> Estafa Bono Patria /
+ WhatsApp</h4>
+ <p>Llegan mensajes diciendo que saliste seleccionado para un beneficio y debes entrar en
+ un link. Ese link clona tu WhatsApp o te pide datos personales. Desconfía de
+ cualquier noticia que no sea de una fuente oficial.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-            <!-- REDES -->
-            <section id="redes" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8">4. Seguridad en Redes y WiFi</h2>
-                <p class="mb-6">El Wi-Fi es como una señal de radio: si no eres cuidadoso, cualquiera que esté cerca
-                    puede "escuchar" lo que envías.</p>
+ <!-- REDES -->
+ <section id="redes" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8">4. Seguridad en Redes y WiFi</h2>
+ <p class="mb-6">El Wi-Fi es como una señal de radio: si no eres cuidadoso, cualquiera que esté cerca
+ puede "escuchar" lo que envías.</p>
 
-                <div class="caja-termino">
-                    <span class="titulo-termino">Ataque de Intercepción (Man-in-the-Middle)</span>
-                    Es cuando un atacante se mete entre tu celular y el WiFi del lugar. Él puede ver cada sitio que
-                    visitas y cada contraseña que escribes.
-                </div>
+ <div class="caja-termino">
+ <span class="titulo-termino">Ataque de Intercepción (Man-in-the-Middle)</span>
+ Es cuando un atacante se mete entre tu celular y el WiFi del lugar. Él puede ver cada sitio que
+ visitas y cada contraseña que escribes.
+ </div>
 
-                <ul class="lista-pasos space-y-4">
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-primario">check_circle</span>
-                        <span><b>Usa HTTPS:</b> Siempre verifica que las páginas tengan el candado verde. La "S"
-                            significa que tu conexión es segura.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-primario">check_circle</span>
-                        <span><b>Evita WiFi Abierto:</b> Si el WiFi de una plaza o tienda no pide clave, no lo uses para
-                            entrar a redes sociales o bancos.</span>
-                    </li>
-                </ul>
-            </section>
+ <ul class="lista-pasos space-y-4">
+ <li class="flex items-start gap-3">
+ <span class="material-symbols-outlined text-primario">check_circle</span>
+ <span><b>Usa HTTPS:</b> Siempre verifica que las páginas tengan el candado verde. La "S"
+ significa que tu conexión es segura.</span>
+ </li>
+ <li class="flex items-start gap-3">
+ <span class="material-symbols-outlined text-primario">check_circle</span>
+ <span><b>Evita WiFi Abierto:</b> Si el WiFi de una plaza o tienda no pide clave, no lo uses para
+ entrar a redes sociales o bancos.</span>
+ </li>
+ </ul>
+ </section>
 
-            <!-- HIGIENE -->
-            <section id="higiene" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8">5. Higiene Digital (Buenas Prácticas)</h2>
-                <p class="mb-6">Cuidar tu computadora o celular es como cuidar tu salud física. Estos hábitos te
-                    salvarán de muchos ataques:</p>
+ <!-- HIGIENE -->
+ <section id="higiene" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8">5. Higiene Digital (Buenas Prácticas)</h2>
+ <p class="mb-6">Cuidar tu computadora o celular es como cuidar tu salud física. Estos hábitos te
+ salvarán de muchos ataques:</p>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="p-6 bg-slate-50 rounded-2xl">
-                        <h4 class="font-black text-primario mb-2">Actualizaciones</h4>
-                        <p class="text-sm">Cuando tu teléfono pide actualizarse, es porque está "cerrando huecos" por
-                            donde entran los hackers. Hazlo siempre de inmediato.</p>
-                    </div>
-                    <div class="p-6 bg-slate-50 rounded-2xl">
-                        <h4 class="font-black text-primario mb-2">Copias de Seguridad</h4>
-                        <p class="text-sm">Guarda tus trabajos y fotos importantes en un pendrive o disco externo. Si te
-                            ataca un virus tipo <span class="resaltado">Ransomware</span>, podrás recuperar tus
-                            archivos.</p>
-                    </div>
-                </div>
-            </section>
+ <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+ <div class="p-6 bg-slate-50 rounded">
+ <h4 class="font-bold text-primario mb-2">Actualizaciones</h4>
+ <p class="text-sm">Cuando tu teléfono pide actualizarse, es porque está "cerrando huecos" por
+ donde entran los hackers. Hazlo siempre de inmediato.</p>
+ </div>
+ <div class="p-6 bg-slate-50 rounded">
+ <h4 class="font-bold text-primario mb-2">Copias de Seguridad</h4>
+ <p class="text-sm">Guarda tus trabajos y fotos importantes en un pendrive o disco externo. Si te
+ ataca un virus tipo <span class="resaltado">Ransomware</span>, podrás recuperar tus
+ archivos.</p>
+ </div>
+ </div>
+ </section>
 
-            <!-- LEGALIDAD -->
-            <section id="legalidad" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-6">6. Marco Legal en Venezuela</h2>
-                <p class="mb-6">
-                    En Venezuela existe la Ley Especial contra los Delitos Informáticos. Es muy importante que sepas
-                    que lo que haces en internet tiene consecuencias legales reales:
-                </p>
-                <ul class="space-y-4 text-sm font-medium">
-                    <li class="p-4 border border-slate-200 rounded-lg">• El acceso indebido a cuentas ajenas es un
-                        delito penado con prisión.</li>
-                    <li class="p-4 border border-slate-200 rounded-lg">• La difusión de información o fotos privadas sin
-                        permiso es ilegal.</li>
-                    <li class="p-4 border border-slate-200 rounded-lg">• El acoso digital o amenazas tiene castigos
-                        graves en nuestra legislación.</li>
-                </ul>
-            </section>
+ <!-- LEGALIDAD -->
+ <section id="legalidad" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-6">6. Marco Legal en Venezuela</h2>
+ <p class="mb-6">
+ En Venezuela existe la Ley Especial contra los Delitos Informáticos. Es muy importante que sepas
+ que lo que haces en internet tiene consecuencias legales reales:
+ </p>
+ <ul class="space-y-4 text-sm font-medium">
+ <li class="p-4 border border-slate-200 rounded-lg">• El acceso indebido a cuentas ajenas es un
+ delito penado con prisión.</li>
+ <li class="p-4 border border-slate-200 rounded-lg">• La difusión de información o fotos privadas sin
+ permiso es ilegal.</li>
+ <li class="p-4 border border-slate-200 rounded-lg">• El acoso digital o amenazas tiene castigos
+ graves en nuestra legislación.</li>
+ </ul>
+ </section>
 
-            <!-- GLOSARIO -->
-            <section id="glosario" class="tarjeta-guia">
-                <h2 class="text-4xl font-black mb-8">7. Glosario de Conceptos A-Z</h2>
-                <div class="space-y-6">
-                    <details class="border-b border-slate-100 pb-4">
-                        <summary class="font-black text-primario cursor-pointer hover:underline text-xl">Antivirus
-                            (Software de Seguridad)</summary>
-                        <p class="pl-4 pt-2 text-sm text-slate-600">Programa diseñado para detectar, bloquear y eliminar
-                            programas maliciosos de tu dispositivo.</p>
-                    </details>
-                    <details class="border-b border-slate-100 pb-4">
-                        <summary class="font-black text-primario cursor-pointer hover:underline text-xl">Backdoor
-                            (Puerta
-                            Trasera)</summary>
-                        <p class="pl-4 pt-2 text-sm text-slate-600">Un acceso secreto que los hackers dejan en un
-                            programa para poder entrar cuando quieran.</p>
-                    </details>
-                    <details class="border-b border-slate-100 pb-4">
-                        <summary class="font-black text-primario cursor-pointer hover:underline text-xl">Cookies (Migas
-                            de Datos)</summary>
-                        <p class="pl-4 pt-2 text-sm text-slate-600">Pequeños archivos que guardan los sitios web en tu
-                            navegador para recordarte. Se pueden usar para robar sesiones.</p>
-                    </details>
-                    <details class="border-b border-slate-100 pb-4">
-                        <summary class="font-black text-primario cursor-pointer hover:underline text-xl">Proxy</summary>
-                        <p class="pl-4 pt-2 text-sm text-slate-600">Un intermediario entre tu computadora e internet que
-                            puede ocultar tu dirección IP real.</p>
-                    </details>
-                </div>
-            </section>
+ <!-- GLOSARIO -->
+ <section id="glosario" class="tarjeta-guia">
+ <h2 class="text-4xl font-bold mb-8">7. Glosario de Conceptos A-Z</h2>
+ <div class="space-y-6">
+ <details class="border-b border-slate-100 pb-4">
+ <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Antivirus
+ (Software de Seguridad)</summary>
+ <p class="pl-4 pt-2 text-sm text-slate-600">Programa diseñado para detectar, bloquear y eliminar
+ programas maliciosos de tu dispositivo.</p>
+ </details>
+ <details class="border-b border-slate-100 pb-4">
+ <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Backdoor
+ (Puerta
+ Trasera)</summary>
+ <p class="pl-4 pt-2 text-sm text-slate-600">Un acceso secreto que los hackers dejan en un
+ programa para poder entrar cuando quieran.</p>
+ </details>
+ <details class="border-b border-slate-100 pb-4">
+ <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Cookies (Migas
+ de Datos)</summary>
+ <p class="pl-4 pt-2 text-sm text-slate-600">Pequeños archivos que guardan los sitios web en tu
+ navegador para recordarte. Se pueden usar para robar sesiones.</p>
+ </details>
+ <details class="border-b border-slate-100 pb-4">
+ <summary class="font-bold text-primario cursor-pointer hover:underline text-xl">Proxy</summary>
+ <p class="pl-4 pt-2 text-sm text-slate-600">Un intermediario entre tu computadora e internet que
+ puede ocultar tu dirección IP real.</p>
+ </details>
+ </div>
+ </section>
 
-        </main>
-    </div>
+ </main>
+ </div>
 
-    <!-- FOOTER INSTITUCIONAL -->
-    <footer class="bg-primario text-white py-16 px-6 mt-12">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-secundario font-black tracking-widest uppercase mb-6">Proyecto de Alfabetización Digital</p>
-            <div class="flex flex-wrap justify-center gap-8 mb-12 opacity-80">
-                <span class="font-bold">ELVIS CORDOVA</span>
-                <span class="font-bold">HENYER GUIPE</span>
-                <span class="font-bold">JESUS GIRALDO</span>
-                <span class="font-bold">LUIS RUIZ</span>
-            </div>
-            <div class="border-t border-white/10 pt-8">
-                <p class="text-sm opacity-60">© 2026 Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo
-                    Russian" (UPTOS CR)</p>
-                <p class="text-sm opacity-60">Liceo Bolivariano Antonio Lemus Pérez · Cumaná, Venezuela</p>
-            </div>
-        </div>
-    </footer>
+ <!-- FOOTER INSTITUCIONAL -->
+ <footer class="bg-primario text-white py-16 px-6 mt-12">
+ <div class="max-w-7xl mx-auto text-center">
+ <p class="text-secundario font-bold tracking-widest uppercase mb-6">Proyecto de Alfabetización Digital</p>
+ <div class="flex flex-wrap justify-center gap-8 mb-12 opacity-80">
+ <span class="font-bold">ELVIS CORDOVA</span>
+ <span class="font-bold">HENYER GUIPE</span>
+ <span class="font-bold">JESUS GIRALDO</span>
+ <span class="font-bold">LUIS RUIZ</span>
+ </div>
+ <div class="border-t border-white/10 pt-8">
+ <p class="text-sm opacity-60">© 2026 Universidad Politécnica Territorial del Oeste de Sucre "Clodosbaldo
+ Russian" (UPTOS CR)</p>
+ <p class="text-sm opacity-60">Liceo Bolivariano Antonio Lemus Pérez · Cumaná, Venezuela</p>
+ </div>
+ </div>
+ </footer>
 
-    <script src="../scripts/logica-tema.js"></script>
+ <script src="../scripts/logica-tema.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js').then(reg => {
+                    console.log('SW registrado', reg.scope);
+                }).catch(err => console.error('SW Fallo', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

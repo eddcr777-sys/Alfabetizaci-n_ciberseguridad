@@ -11,13 +11,13 @@
 }
 
 body {
-    font-family: 'Public Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Manrope', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .dark body {

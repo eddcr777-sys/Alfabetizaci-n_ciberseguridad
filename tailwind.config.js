@@ -9,57 +9,59 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Paleta Estrictamente Verde (Sin rastros de azul)
-        "primario": "#043a0aff",
+        // Colores tradicionales e institucionales (más sobrios)
+        "primario": "#0F5132", // Verde oscuro clásico
         "en-primario": "#ffffff",
-        "contenedor-primario": "#022c22",
-        "en-contenedor-primario": "#022c22",
-        "primario-container": "#022c22",
-        "on-primary-container": "#022c22",
-        "primario-fixed": "#d1fae5",
-        "primario-fixed-dim": "#a7f3d0",
-        "on-primary-fixed": "#064e3b",
+        "contenedor-primario": "#D1E7DD", // Verde muy claro clásico
+        "en-contenedor-primario": "#0F5132",
+        "primario-container": "#D1E7DD",
+        "on-primary-container": "#0F5132",
+        "primario-fixed": "#D1E7DD",
+        "primario-fixed-dim": "#A3CFBB",
+        "on-primary-fixed": "#051B11",
 
-        "secundario": "#021308ff",
+        "secundario": "#052C65", // Azul marino clásico
         "en-secundario": "#ffffff",
-        "contenedor-secundario": "#ecfdf5",
-        "en-contenedor-secundario": "#064e3b",
-        "secundario-container": "#ecfdf5",
-        "on-secondary-container": "#064e3b",
+        "contenedor-secundario": "#CFE2FF",
+        "en-contenedor-secundario": "#052C65",
+        "secundario-container": "#CFE2FF",
+        "on-secondary-container": "#052C65",
 
-        "terciario": "#022c09ff",
+        "terciario": "#495057", // Gris oscuro clásico
         "en-terciario": "#ffffff",
 
-        "error": "#b91c1c",
+        "error": "#DC3545", // Rojo estándar
         "en-error": "#ffffff",
 
         "fondo": "#ffffff",
-        "en-fondo": "#022c22",
+        "en-fondo": "#212529",
 
         "superficie": "#ffffff",
-        "en-superficie": "#022c22",
-        "variante-superficie": "#f0fdf4",
-        "en-variante-superficie": "#166534",
-        "en-superficie-variant": "#64748b",
+        "en-superficie": "#212529",
+        "variante-superficie": "#F8F9FA", // Gris muy claro (fondo clásico)
+        "en-variante-superficie": "#212529",
+        "en-superficie-variant": "#495057",
 
-        "contorno": "#d1fae5",
-        "variante-contorno": "#ecfdf5",
-        "outline-variant": "#e2e8f0",
+        "contorno": "#DEE2E6",
+        "variante-contorno": "#E9ECEF",
+        "outline-variant": "#DEE2E6",
 
         "on-primary": "#ffffff",
 
-        "white-container-low": "#f8fafc",
-        "white-container-lowest": "#f1f5f9",
+        "white-container-low": "#F8F9FA",
+        "white-container-lowest": "#FFFFFF",
       },
       borderRadius: {
-        "defecto": "0.5rem",
-        "grande": "0.75rem",
-        "extra-grande": "1rem",
+        // Redondos tradicionales (eliminando los bordes tipo píldora o burbuja exagerados)
+        "defecto": "0.25rem",
+        "grande": "0.3rem",
+        "extra-grande": "0.5rem",
       },
       fontFamily: {
-        "titulares": ["Manrope", "sans-serif"],
-        "cuerpo": ["Public Sans", "sans-serif"],
-        "etiquetas": ["Public Sans", "sans-serif"],
+        // Tipografía clásica, estándar y profesional de sistema
+        "titulares": ["Arial", "Helvetica", "sans-serif"],
+        "cuerpo": ["Arial", "Helvetica", "sans-serif"],
+        "etiquetas": ["Arial", "Helvetica", "sans-serif"],
       }
     },
   },

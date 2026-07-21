@@ -2,208 +2,222 @@
 <html class="light" lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nosotros | El Equipo de Desarrollo</title>
-    <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
-    <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
-    
-    <link rel="stylesheet" href="../estilos/estilos-base.css" />
-    <style>
-        .tarjeta-creador {
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+ <meta charset="utf-8" />
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <title>Nosotros | El Equipo de Desarrollo</title>
+ <link rel="stylesheet" href="../estilos/tailwind-compilado.css" />
+ <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+ 
+ <link rel="stylesheet" href="../estilos/estilos-base.css" />
+ <style>
+ .tarjeta-creador {
+ transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
 
-        .tarjeta-creador:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 77, 64, 0.12);
-        }
+ .tarjeta-creador:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 30px 60px rgba(0, 77, 64, 0.12);
+ }
 
-        .brillo-avatar {
-            position: relative;
-        }
+ .brillo-avatar {
+ position: relative;
+ }
 
-        .brillo-avatar::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            background: linear-gradient(45deg, #22C55E, #064E3B);
-            border-radius: 50%;
-            z-index: -1;
-            opacity: 0.3;
-        }
-    </style>
+ .brillo-avatar::after {
+ content: '';
+ position: absolute;
+ inset: -4px;
+ background: linear-gradient(45deg, #22C55E, #064E3B);
+ border-radius: 50%;
+ z-index: -1;
+ opacity: 0.3;
+ }
+ </style>
+
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="theme-color" content="#0F5132" />
+    <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
 </head>
 
 <body class="bg-white text-en-superficie selection:bg-primario-fixed selection:text-on-primary-fixed">
-    <!-- Navegación -->
-    <nav class="bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-primario/5">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 md:h-24">
-            <div class="flex items-center gap-3">
-                <div
-                    class="w-10 h-10 bg-primario rounded-xl flex items-center justify-center shadow-lg shadow-primario/20">
-                    <span class="material-symbols-outlined text-white">school</span>
-                </div>
-                <div class="text-lg md:text-xl font-black text-[#064E3B] tracking-tighter uppercase leading-none">
-                    L.B. Antonio <br /><span class="text-xs tracking-widest opacity-70">Lemus Pérez</span>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-10 items-center">
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
-                <a class="text-[#064E3B] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primario"
-                <a href="index3.html">
-                    <button
-                        class="bg-primario text-on-primary px-6 py-2.5 rounded-2xl font-bold hover:shadow-lg hover:shadow-primario/30 transition-all activo:scale-95">Accesibilidad</button>
-                </a>
-            </div>
-            <button class="md:hidden text-primario">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
-        </div>
-    </nav>
+ <!-- Navegación -->
+ <nav class="bg-white bg-white border-b sticky top-0 z-50 border-b border-primario/5">
+ <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20 md:h-24">
+ <div class="flex items-center gap-3">
+ <div
+ class="w-10 h-10 bg-primario rounded flex items-center justify-center shadow-sm ">
+ <span class="material-symbols-outlined text-white">school</span>
+ </div>
+ <div class="text-lg md:text-xl font-bold text-[#064E3B] tracking-normal uppercase leading-none">
+ L.B. Antonio <br /><span class="text-xs tracking-widest opacity-70">Lemus Pérez</span>
+ </div>
+ </div>
+ <div class="hidden md:flex gap-10 items-center">
+ <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
+ <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
+ <a class="text-en-superficie-variant font-medium hover:text-primario transition-colors"
+ <a class="text-[#064E3B] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-primario"
+ <a href="index3.html">
+ <button
+ class="bg-primario text-on-primary px-6 py-2.5 rounded font-bold hover:shadow-sm transition-all activo:scale-95">Accesibilidad</button>
+ </a>
+ </div>
+ <button class="md:hidden text-primario">
+ <span class="material-symbols-outlined">menu</span>
+ </button>
+ </div>
+ </nav>
 
-    <!-- Hero Section -->
-    <header class="py-24 px-6 bg-gradient-to-b from-[#f4faff] to-surface relative overflow-hidden">
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            <div class="inline-flex items-center gap-2 bg-primario/10 text-primario px-4 py-1.5 rounded-full mb-8">
-                <span class="material-symbols-outlined text-sm">groups</span>
-                <span class="text-xs font-black uppercase tracking-[0.2em]">Detrás del Código</span>
-            </div>
-            <h1 class="text-5xl md:text-7xl font-black text-primario tracking-tight mb-8">
-                Conoce a los <br />Creadores.
-            </h1>
-            <p class="text-xl md:text-2xl text-en-superficie-variant leading-relaxed max-w-2xl mx-auto font-medium">
-                Somos estudiantes de la UPTOS "Clodosbaldo Russian", unidos por la misión de fortalecer la seguridad
-                digital en nuestra comunidad académica.
-            </p>
-        </div>
-        <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0 0 L100 100 M100 0 L0 100" stroke="currentColor" stroke-width="0.1" />
-            </svg>
-        </div>
-    </header>
+ <!-- Hero Section -->
+ <header class="py-24 px-6 bg-primario to-surface relative overflow-hidden">
+ <div class="max-w-4xl mx-auto text-center relative z-10">
+ <div class="inline-flex items-center gap-2 bg-primario/10 text-primario px-4 py-1.5 rounded-full mb-8">
+ <span class="material-symbols-outlined text-sm">groups</span>
+ <span class="text-xs font-bold uppercase tracking-[0.2em]">Detrás del Código</span>
+ </div>
+ <h1 class="text-5xl md:text-5xl font-bold text-primario tracking-normal mb-8">
+ Conoce a los <br />Creadores.
+ </h1>
+ <p class="text-xl md:text-2xl text-en-superficie-variant leading-relaxed max-w-2xl mx-auto font-medium">
+ Somos estudiantes de la UPTOS "Clodosbaldo Russian", unidos por la misión de fortalecer la seguridad
+ digital en nuestra comunidad académica.
+ </p>
+ </div>
+ <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none">
+ <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+ <path d="M0 0 L100 100 M100 0 L0 100" stroke="currentColor" stroke-width="0.1" />
+ </svg>
+ </div>
+ </header>
 
-    <!-- Team Grid -->
-    <section class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+ <!-- Team Grid -->
+ <section class="py-32 px-6">
+ <div class="max-w-7xl mx-auto">
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-                <!-- Elvis Cordova -->
-                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 tarjeta-creador text-center">
-                    <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
-                        <div
-                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
-                            <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Elvis Cordova</h3>
-                    <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
-                    <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Encargado del desarrollo web
-                        y la creación de entornos digitales seguros para las nuevas generaciones.</p>
-                </div>
+ <!-- Elvis Cordova -->
+ <div class="bg-white p-8 rounded-md border border-outline-variant/10 tarjeta-creador text-center">
+ <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
+ <div
+ class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+ <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
+ </div>
+ </div>
+ <h3 class="text-2xl font-bold text-[#111d23] mb-2 uppercase tracking-normal">Elvis Cordova</h3>
+ <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+ <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Encargado del desarrollo web
+ y la creación de entornos digitales seguros para las nuevas generaciones.</p>
+ </div>
 
-                <!-- Henyer Guipe -->
-                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 tarjeta-creador text-center">
-                    <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
-                        <div
-                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
-                            <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Henyer Guipe</h3>
-                    <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
-                    <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Comprometido con la creación de
-                        herramientas que protejan a los estudiantes del Lemus Pérez.</p>
-                </div>
+ <!-- Henyer Guipe -->
+ <div class="bg-white p-8 rounded-md border border-outline-variant/10 tarjeta-creador text-center">
+ <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
+ <div
+ class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+ <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
+ </div>
+ </div>
+ <h3 class="text-2xl font-bold text-[#111d23] mb-2 uppercase tracking-normal">Henyer Guipe</h3>
+ <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+ <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Comprometido con la creación de
+ herramientas que protejan a los estudiantes del Lemus Pérez.</p>
+ </div>
 
-                <!-- Jesus Giraldo -->
-                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 tarjeta-creador text-center">
-                    <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
-                        <div
-                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
-                            <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Jesus Giraldo</h3>
-                    <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
-                    <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Enfocado en la investigación técnica
-                        y la alfabetización digital para la prevención.</p>
-                </div>
+ <!-- Jesus Giraldo -->
+ <div class="bg-white p-8 rounded-md border border-outline-variant/10 tarjeta-creador text-center">
+ <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
+ <div
+ class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+ <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
+ </div>
+ </div>
+ <h3 class="text-2xl font-bold text-[#111d23] mb-2 uppercase tracking-normal">Jesus Giraldo</h3>
+ <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+ <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Enfocado en la investigación técnica
+ y la alfabetización digital para la prevención.</p>
+ </div>
 
-                <!-- Luis Ruiz -->
-                <div class="bg-white p-8 rounded-[3rem] border border-outline-variant/10 tarjeta-creador text-center">
-                    <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
-                        <div
-                            class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-xl">
-                            <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-black text-[#111d23] mb-2 uppercase tracking-tighter">Luis Ruiz</h3>
-                    <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
-                    <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Buscando democratizar el acceso a la
-                        ciberseguridad mediante recursos simples y efectivos.</p>
-                </div>
+ <!-- Luis Ruiz -->
+ <div class="bg-white p-8 rounded-md border border-outline-variant/10 tarjeta-creador text-center">
+ <div class="w-32 h-32 mx-auto mb-8 brillo-avatar">
+ <div
+ class="w-full h-full bg-slate-100 rounded-full flex items-center justify-center overflow-hidden border-4 border-white shadow-md">
+ <span class="material-symbols-outlined text-5xl text-primario/30">account_circle</span>
+ </div>
+ </div>
+ <h3 class="text-2xl font-bold text-[#111d23] mb-2 uppercase tracking-normal">Luis Ruiz</h3>
+ <p class="text-primario font-bold text-sm uppercase tracking-widest mb-6">Desarrollador</p>
+ <p class="text-en-superficie-variant text-sm leading-relaxed mb-6">Buscando democratizar el acceso a la
+ ciberseguridad mediante recursos simples y efectivos.</p>
+ </div>
 
-            </div>
-        </div>
-    </section>
+ </div>
+ </div>
+ </section>
 
-    <!-- Philosophy -->
-    <section class="py-32 px-6 bg-white-container-low">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-black text-primario mb-12">Nuestra Meta</h2>
-            <p class="text-2xl text-en-superficie-variant leading-relaxed">
-                Este proyecto no es solo una evaluación académica; es nuestro aporte al Liceo Bolivariano Antonio Lemus
-                Pérez. Queremos que cada estudiante se sienta seguro navegando en este nuevo mundo digital.
-            </p>
-            <div class="mt-16 pt-16 border-t border-outline-variant/10">
-                <p class="text-xs font-black uppercase tracking-[0.3em] opacity-40 mb-4 text-[#064E3B]">En colaboración
-                    con</p>
-                <p class="text-xl font-black text-[#064E3B] opacity-70">UPTOS "CLODOSBALDO RUSSIAN" - CUMANÁ</p>
-            </div>
-        </div>
-    </section>
+ <!-- Philosophy -->
+ <section class="py-32 px-6 bg-white-container-low">
+ <div class="max-w-4xl mx-auto text-center">
+ <h2 class="text-3xl font-bold text-primario mb-12">Nuestra Meta</h2>
+ <p class="text-2xl text-en-superficie-variant leading-relaxed">
+ Este proyecto no es solo una evaluación académica; es nuestro aporte al Liceo Bolivariano Antonio Lemus
+ Pérez. Queremos que cada estudiante se sienta seguro navegando en este nuevo mundo digital.
+ </p>
+ <div class="mt-16 pt-16 border-t border-outline-variant/10">
+ <p class="text-xs font-bold uppercase tracking-[0.3em] opacity-40 mb-4 text-[#064E3B]">En colaboración
+ con</p>
+ <p class="text-xl font-bold text-[#064E3B] opacity-70">UPTOS "CLODOSBALDO RUSSIAN" - CUMANÁ</p>
+ </div>
+ </div>
+ </section>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-outline-variant/5 py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-                <div class="md:col-span-2">
-                    <div class="flex items-center gap-3 mb-8">
-                        <div class="w-8 h-8 bg-primario rounded-lg flex items-center justify-center">
-                            <span class="material-symbols-outlined text-white text-sm">school</span>
-                        </div>
-                        <span class="text-2xl font-black text-[#064E3B] tracking-tighter uppercase">CE Antonio Lemus
-                            Pérez</span>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-black text-primario uppercase tracking-widest text-xs mb-8">Navegación</h4>
-                    <ul class="space-y-4 font-bold text-en-superficie-variant text-sm">
-                        <li><a href="index.html" class="hover:text-primario transition-colors">Inicio</a></li>
-                        <li><a href="justificacion.html" class="hover:text-primario transition-colors">Proyecto</a></li>
-                        <li><a href="index2.html" class="hover:text-primario transition-colors">Manual</a></li>
-                        <li><a href="nosotros.html"
-                                class="hover:text-primario transition-colors text-primario">Nosotros</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-black text-primario uppercase tracking-widest text-xs mb-8">Institución</h4>
-                    <p class="text-en-superficie-variant font-medium text-sm">Cumaná, Estado Sucre, Venezuela. Alianza
-                        Educativa 2026.</p>
-                </div>
-            </div>
-            <div class="pt-12 border-t border-outline-variant/10 text-center">
-                <p class="text-sm font-medium text-en-superficie-variant opacity-60">
-                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
-                </p>
-            </div>
-        </div>
-    </footer>
-    <script src="../scripts/logica-tema.js"></script>
+ <!-- Footer -->
+ <footer class="bg-white border-t border-outline-variant/5 py-24 px-6">
+ <div class="max-w-7xl mx-auto">
+ <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+ <div class="md:col-span-2">
+ <div class="flex items-center gap-3 mb-8">
+ <div class="w-8 h-8 bg-primario rounded-lg flex items-center justify-center">
+ <span class="material-symbols-outlined text-white text-sm">school</span>
+ </div>
+ <span class="text-2xl font-bold text-[#064E3B] tracking-normal uppercase">CE Antonio Lemus
+ Pérez</span>
+ </div>
+ </div>
+ <div>
+ <h4 class="font-bold text-primario uppercase tracking-widest text-xs mb-8">Navegación</h4>
+ <ul class="space-y-4 font-bold text-en-superficie-variant text-sm">
+ <li><a href="index.html" class="hover:text-primario transition-colors">Inicio</a></li>
+ <li><a href="justificacion.html" class="hover:text-primario transition-colors">Proyecto</a></li>
+ <li><a href="index2.html" class="hover:text-primario transition-colors">Manual</a></li>
+ <li><a href="nosotros.html"
+ class="hover:text-primario transition-colors text-primario">Nosotros</a></li>
+ </ul>
+ </div>
+ <div>
+ <h4 class="font-bold text-primario uppercase tracking-widest text-xs mb-8">Institución</h4>
+ <p class="text-en-superficie-variant font-medium text-sm">Cumaná, Estado Sucre, Venezuela. Alianza
+ Educativa 2026.</p>
+ </div>
+ </div>
+ <div class="pt-12 border-t border-outline-variant/10 text-center">
+ <p class="text-sm font-medium text-en-superficie-variant opacity-60">
+ © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+ </p>
+ </div>
+ </div>
+ </footer>
+ <script src="../scripts/logica-tema.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js').then(reg => {
+                    console.log('SW registrado', reg.scope);
+                }).catch(err => console.error('SW Fallo', err));
+            });
+        }
+    </script>
 </body>
 
 </html>

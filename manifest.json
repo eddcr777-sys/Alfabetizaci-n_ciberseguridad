@@ -1,0 +1,17 @@
+{
+  "name": "Alfabetización Digital LBALP",
+  "short_name": "LBALP Digital",
+  "description": "Manual de Alfabetización y Ciberseguridad para la comunidad del Liceo Bolivariano Antonio Lemus Pérez",
+  "start_url": "/paginas/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0F5132",
+  "icons": [
+    {
+      "src": "activos/iconos/icono.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
