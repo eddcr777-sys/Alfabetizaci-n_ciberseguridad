@@ -1,56 +1,352 @@
 /* ==========================================================================
-   MÓDULO 2: PROTECCIÓN DE CUENTAS - VERDE ESMERALDA (0 BORDES REDONDEADOS)
-   ========================================================================= */
+   Variables de Entorno
+   ========================================================================== */
 :root {
-    --color-principal: #10B981;
-    --color-principal-hover: #059669;
-    --color-fondo-body: var(--color-fondo);
-    --color-fondo-seccion: var(--color-superficie);
-    --color-texto: var(--color-texto-principal);
-    --color-texto-suave: var(--color-texto-secundario);
-    --color-borde: var(--color-borde);
-    --radio-borde: 0px !important;
+    /* Paleta Institucional */
+    --color-primario: #0F5132;
+    --color-primario-oscuro: #0a3622;
+    --color-acento: #198754;
+    
+    /* Escala de Grises */
+    --color-texto-principal: #212529;
+    --color-texto-secundario: #495057;
+    --color-fondo-base: #f8f9fa;
+    --color-fondo-superficie: #ffffff;
+    --color-borde: #dee2e6;
+    
+    /* Estados de Interfaz */
+    --color-alerta-fondo: #fff3cd;
+    --color-alerta-texto: #856404;
+    --color-alerta-borde: #ffeeba;
+    --color-peligro: #dc3545;
+    --color-exito: #198754;
+    
+    /* Tipografía y Espaciado */
+    --fuente-principal: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --radio-borde: 0.5rem;
+    --transicion-estandar: all 0.3s ease;
 }
 
-.dark {
-    --color-principal: #6EE7B7;
-    --color-principal-hover: #A7F3D0;
+/* ==========================================================================
+   Reset Estructural
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-*, *::before, *::after {
-    border-radius: 0 !important;
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo-base);
+    line-height: 1.6;
 }
 
-.seccion {
-    background: var(--color-superficie);
-    border-radius: 0 !important;
+
+
+
+/* ==========================================================================
+   Contenedor Principal y Secciones
+   ========================================================================== */
+.contenedor-principal {
+   
+    margin: 3rem auto;
+    padding: 0 1rem;
+    
+}
+
+.seccion-contenido {
+    margin-bottom: 3.5rem;
+    
+}
+
+.titulo-seccion {
+    font-size: 1.75rem;
+    color: var(--color-primario-oscuro);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--color-borde);
+    padding-bottom: 0.5rem;
+}
+
+.icono-seccion {
+    color: var(--color-acento);
+}
+
+.subtitulo-seccion {
+    font-size: 1.25rem;
+    color: var(--color-texto-principal);
+    margin: 2rem 0 1rem 0;
+}
+
+.parrafo-seccion {
+    font-size: 1.125rem;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+}
+
+.texto-resaltado {
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+/* ==========================================================================
+   Componentes Específicos
+   ========================================================================== */
+/* Alertas */
+.panel-alerta {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: var(--radio-borde);
+    margin-bottom: 1.5rem;
+}
+
+.alerta-advertencia {
+    background-color: var(--color-alerta-fondo);
+    color: var(--color-alerta-texto);
+    border: 1px solid var(--color-alerta-borde);
+}
+
+.icono-alerta {
+    font-size: 1.5rem;
+    color: #d39e00;
+}
+
+/* Tarjetas (Grid) */
+.cuadricula-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta-informacion {
+    background-color: var(--color-fondo-superficie);
     border: 1px solid var(--color-borde);
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    box-shadow: var(--sombra-recta);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-.evaluador-clave,
-.simulador-pass {
-    background-color: var(--color-superficie-variante);
-    border: 2px solid var(--color-principal);
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 0 !important;
+.cabecera-tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primario);
 }
 
-.medidor-fuerza {
-    height: 0.75rem;
+.titulo-tarjeta {
+    font-size: 1.125rem;
+}
+
+.panel-interactivo {
+    background-color: var(--color-fondo-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    
+    /* Claves para evitar que se corte al expandir contenido */
+    height: auto;
+    min-height: fit-content;
+    overflow: visible; 
+}
+
+.cabecera-interactiva {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.instruccion-interactiva {
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+}
+
+/* Formulario e Inputs */
+.entrada-datos {
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+    font-family: monospace;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    margin-bottom: 1rem;
+    transition: var(--transicion-estandar);
+}
+
+.entrada-datos:focus {
+    outline: none;
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(15, 81, 50, 0.2);
+}
+
+/* Medidor de Seguridad */
+.contenedor-medidor {
+    height: 8px;
     background-color: var(--color-borde);
-    margin: 1rem 0;
-    border-radius: 0 !important;
+    border-radius: 4px;
     overflow: hidden;
+    margin-bottom: 0.5rem;
 }
 
-.barra-fuerza {
+.barra-medidor {
     height: 100%;
-    background-color: var(--color-principal);
     width: 0%;
+    background-color: var(--color-peligro); /* Estado por defecto en JS */
     transition: width 0.3s ease, background-color 0.3s ease;
-    border-radius: 0 !important;
+}
+
+.etiqueta-estado {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-texto-secundario);
+    margin-bottom: 1.5rem;
+    text-align: right;
+}
+
+/* Lista de Validación */
+.lista-validacion {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.item-validacion {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Elementos de Evaluación (Quiz) */
+/* ==========================================================================
+   Elementos de Evaluación (Quiz)
+   ========================================================================== */
+.elemento-evaluacion {
+    cursor: pointer;
+    background-color: var(--color-fondo-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transicion-estandar);
+}
+
+/* Limpia el margen y borde inferior del último elemento para que no desborde */
+.elemento-evaluacion:last-child {
+    margin-bottom: 0;
+}
+
+.texto-evaluacion {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.estado-evaluacion {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    border-radius: var(--radio-borde);
+    font-size: 0.9rem;
+    margin-top: 0.75rem; /* Pequeño respiro arriba del estado desplegado */
+}
+
+.estado-critico {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.estado-optimo {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.icono-estado {
+    font-size: 1.25rem;
+}
+
+
+/* ==========================================================================
+   Pie de Página
+   ========================================================================== */
+.pie-pagina {
+    background-color: var(--color-fondo-superficie);
+    border-top: 1px solid var(--color-borde);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.texto-pie {
+    color: var(--color-texto-secundario);
+    font-size: 0.875rem;
+}
+
+.btn-interactivo {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-interactivo:hover {
+    background-color: #1d4ed8;
+}
+
+.elemento-evaluacion{
+    cursor: pointer;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: var(--transicion-estandar);
+    background-color: var(--color-fondo-superficie);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+
+}
+
+.enlace-video-bonito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 12px 16px;
+    background-color: var(--color-fondo-secundario, #f8fafc);
+    border: 1px solid var(--color-borde, #e2e8f0);
+    border-radius: 8px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.enlace-video-bonito:hover {
+    background-color: #eff6ff;
+    border-color: #3b82f6;
+    transform: translateY(-1px);
+}
+
+.enlace-video-bonito .icono-externo {
+    margin-left: auto;
+    font-size: 1.1rem;
+    color: #64748b;
 }
