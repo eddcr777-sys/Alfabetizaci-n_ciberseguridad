@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="../estilos/estilos-base.css" />
   <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
   <link rel="stylesheet" href="../estilos/auditoria-digital.css" />
+  <link rel="stylesheet" href="../estilos/proteccion-cuentas.css">
+
   <script src="../scripts/logica-tema.js"></script>
   <link rel="manifest" href="../manifest.json" />
   <meta name="theme-color" content="#0F5132" />
@@ -21,24 +23,54 @@
 
 <body>
 
-  <!-- HEADER & TOOLBAR -->
+  <!-- Navegación Superior Unificada -->
+  <nav class="barra-navegacion">
+      <div class="contenedor contenedor-navegacion">
+          <div class="marca-navegacion">
+              <div class="icono-logo">
+                  <span class="material-symbols-outlined">&#xe80c;</span>
+              </div>
+              <div class="titulo-navegacion">
+                  L.B. Antonio Lemus Pérez
+              </div>
+          </div>
+          <div class="enlaces-navegacion">
+              <a class="enlace-nav" href="index.html">Inicio</a>
+              <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+              <a class="enlace-nav active" href="index2.html">Manual</a>
+              <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+              <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+              <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
+                  <span class="material-symbols-outlined">dark_mode</span>
+              </button>
+          </div>
+          <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+              <span class="material-symbols-outlined">&#xe5d2;</span>
+          </button>
+      </div>
+      <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+      <div id="menu-movil" class="menu-lateral oculto">
+          <div class="cabecera-menu">
+              <span class="titulo-menu">Menú</span>
+              <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                  <span class="material-symbols-outlined">&#xe5cd;</span>
+              </button>
+          </div>
+          <div class="cuerpo-menu">
+              <a class="enlace-menu" href="index.html">Inicio</a>
+              <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+              <a class="enlace-menu active" href="index2.html">Manual</a>
+              <a class="enlace-menu" href="nosotros.html">Nosotros</a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- HEADER DE MÓDULO UNIFICADO -->
   <header class="cabecera-pagina">
     <div class="contenedor-cabecera">
-      <div class="barra-herramientas">
-        <a href="./index2.html" class="boton-regresar">
-          <span class="material-symbols-outlined">arrow_back</span>
-          <span>Volver al Manual</span>
-        </a>
-        <button onclick="alternarModoOscuro()" class="boton-tema" id="btn-tema">
-          <span class="material-symbols-outlined" id="icono-tema">dark_mode</span>
-          <span id="texto-tema">Tema Oscuro</span>
-        </button>
-      </div>
-
-      <div class="encabezado-info">
-        <h1 class="titulo-destacado">Herramientas de Auditoría Digital</h1>
-        <p class="subtitulo">Módulo Especial · Manual de Seguridad Digital · L.B. Antonio Lemus Pérez</p>
-      </div>
+      <span class="insignia-modulo">Módulo 1 · Auditoría Digital</span>
+      <h1 class="titulo-destacado">Herramientas de Auditoría Digital</h1>
+      <p class="subtitulo">Aprende a analizar tu huella digital y el impacto de los algoritmos con herramientas interactivas simples.</p>
     </div>
   </header>
 
@@ -50,18 +82,18 @@
       <section class="tarjeta-modulo">
         <div class="encabezado-modulo">
           <div class="icono-modulo">
-            <span class="material-symbols-outlined">psychology</span>
+            <i data-lucide="cpu"></i>
           </div>
           <h2 class="titulo-modulo">1. El Auditor de Algoritmos</h2>
         </div>
 
         <p class="descripcion-modulo">
-          ¿Sabes por qué ves lo que ves en redes? El algoritmo analiza tu interacción para mantenerte conectado el mayor tiempo posible.
+          ¿Sabes por qué ves cierto contenido en redes? El algoritmo evalúa tus clics para mostrarte anuncios y recomendaciones.
         </p>
 
         <div class="instruccion-caja">
-          <span class="material-symbols-outlined" style="color: var(--color-primario);">ads_click</span>
-          <span>Haz clic en las publicaciones que creas que han sido colocadas por el algoritmo.</span>
+          <i data-lucide="mouse-pointer-click" style="color: var(--color-primario);"></i>
+          <span>Haz clic en las publicaciones para descubrir cuáles fueron puestas por el algoritmo.</span>
         </div>
 
         <div class="contenedor-feed">
@@ -69,7 +101,7 @@
             <span class="etiqueta-post">Amigo: @luis_05</span>
             <p class="contenido-post">¡Ganamos el partido de fútbol en el liceo hoy! 🏆</p>
             <div class="mensaje-explicativo">
-              ✅ <strong>Orgánico:</strong> Este contenido pertenece a tus contactos directos e interacciones reales.
+              <i data-lucide="check-circle-2" style="color: #059669;"></i> <strong>Orgánico:</strong> Contenido real de tus contactos directos.
             </div>
           </div>
 
@@ -77,15 +109,15 @@
             <span class="etiqueta-post">Sugerido para ti</span>
             <p class="contenido-post">Mira estas zapatillas con 50% de descuento. ¡Cómpralas ya! 🔥</p>
             <div class="mensaje-explicativo">
-              🚩 <strong>Detectado:</strong> Recomendación inyectada según tus búsquedas recientes e intereses.
+              <i data-lucide="alert-triangle" style="color: #10B981;"></i> <strong>Recomendado:</strong> Contenido inyectado por el algoritmo según tus intereses.
             </div>
           </div>
 
           <div class="tarjeta-post" data-tipo="algoritmo" onclick="revelarPost(this)">
             <span class="etiqueta-post">Publicidad Pagada</span>
-            <p class="contenido-post">¿Quieres ser millonario en 2 días? Haz clic aquí y descarga el curso.</p>
+            <p class="contenido-post">¿Quieres ser millonario en 2 días? Clic aquí para ver el curso.</p>
             <div class="mensaje-explicativo">
-              🚩 <strong>Publicidad Directa:</strong> Anuncio pagado con micro-segmentación enfocado en tu perfil.
+              <i data-lucide="alert-octagon" style="color: #10B981;"></i> <strong>Anuncio Pagado:</strong> Publicidad micro-segmentada orientada a tu perfil.
             </div>
           </div>
         </div>
@@ -95,13 +127,13 @@
       <section class="tarjeta-modulo">
         <div class="encabezado-modulo">
           <div class="icono-modulo">
-            <span class="material-symbols-outlined">verified_user</span>
+            <i data-lucide="shield-check"></i>
           </div>
-          <h2 class="titulo-modulo">2. Auditoría de Seguridad Personal</h2>
+          <h2 class="titulo-modulo">2. Diagnóstico de Seguridad Personal</h2>
         </div>
 
         <p class="descripcion-modulo">
-          Realiza un diagnóstico de tus hábitos digitales. Marca solo las opciones que tengas activas en tus cuentas actuales.
+          Realiza un diagnóstico rápido de tus hábitos. Marca las casillas que tengas activas en tus cuentas actuales.
         </p>
 
         <div class="barra-seguridad-contenedor">
@@ -122,7 +154,7 @@
             <input type="checkbox" class="checkbox-auditoria" onchange="actualizarSeguridad()">
             <div>
               <strong class="item-auditoria-titulo">Verificación en 2 Pasos (2FA)</strong>
-              <span class="item-auditoria-subtexto">Requiero un código temporal o app para verificar inicios de sesión.</span>
+              <span class="item-auditoria-subtexto">Requiero un código temporal en mi teléfono para iniciar sesión.</span>
             </div>
           </li>
 
@@ -130,15 +162,15 @@
             <input type="checkbox" class="checkbox-auditoria" onchange="actualizarSeguridad()">
             <div>
               <strong class="item-auditoria-titulo">Perfil Restringido</strong>
-              <span class="item-auditoria-subtexto">Solo mi círculo cercano de contactos puede acceder a mis publicaciones.</span>
+              <span class="item-auditoria-subtexto">Solo mi círculo de amigos conocidos puede ver lo que publico.</span>
             </div>
           </li>
 
           <li class="item-auditoria" onclick="toggleCheckbox(this)">
             <input type="checkbox" class="checkbox-auditoria" onchange="actualizarSeguridad()">
             <div>
-              <strong class="item-auditoria-titulo">Protección Activa</strong>
-              <span class="item-auditoria-subtexto">Mantengo el sistema operativo y las aplicaciones siempre actualizadas.</span>
+              <strong class="item-auditoria-titulo">Actualizaciones Activas</strong>
+              <span class="item-auditoria-subtexto">Mantengo el sistema operativo y las aplicaciones siempre al día.</span>
             </div>
           </li>
         </ul>
@@ -149,118 +181,21 @@
 
   <!-- FOOTER -->
   <footer class="pie-pagina">
-    <div class="contenedor-pie">
-      <div class="grid-pie">
-        <div>
-          <div class="marca-pie">
-            <div class="logo-pie-icono">
-              <span class="material-symbols-outlined" style="font-size: 1.1rem;">security</span>
-            </div>
-            <span class="titulo-pie">CE Antonio Lemus Pérez</span>
-          </div>
-          <p class="descripcion-pie">
-            Iniciativa educativa orientada a promover la seguridad digital, el pensamiento crítico sobre los algoritmos y la ciudadanía responsable en la web.
-          </p>
+        <div class="contenedor-pie">
+            <p class="texto-pie">
+                &copy; 2026 Liceo Bolivariano Antonio Lemus Pérez. Arquitectura de software y seguridad.
+            </p>
         </div>
-
-        <div>
-          <h4 class="encabezado-pie">Navegación</h4>
-          <ul class="enlaces-pie">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="justificacion.html">Justificación</a></li>
-            <li><a href="index2.html">Manual Digital</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="index3.html">Accesibilidad</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="encabezado-pie">Contacto</h4>
-          <p style="font-size: 0.9rem; color: var(--texto-secundario);">
-            Cumaná, Estado Sucre, Venezuela.
-          </p>
-        </div>
-      </div>
-
-      <div class="inferior-pie">
-        <p>© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.</p>
-        <a href="nosotros.html" class="creditos-pie">
-          Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
-        </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
   <!-- LÓGICA INTERACTIVA MEJORADA -->
+  <script src="../scripts/logica-auditoria.js">  </script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
-    // Revelar Post Algoritmo u Orgánico
-    function revelarPost(elemento) {
-      elemento.classList.toggle('revelado');
-    }
-
-    // Toggle de Checkboxes al hacer clic en el contenedor
-    function toggleCheckbox(item) {
-      const cb = item.querySelector('.checkbox-auditoria');
-      cb.checked = !cb.checked;
-      item.classList.toggle('activo', cb.checked);
-      actualizarSeguridad();
-    }
-
-    // Actualizar Barra de Progreso de Seguridad
-    function actualizarSeguridad() {
-      const checkboxes = document.querySelectorAll('.checkbox-auditoria');
-      const total = checkboxes.length;
-      let marcados = 0;
-
-      checkboxes.forEach(cb => {
-        const padre = cb.closest('.item-auditoria');
-        if (cb.checked) {
-          marcados++;
-          padre.classList.add('activo');
-        } else {
-          padre.classList.remove('activo');
-        }
-      });
-
-      const porcentaje = Math.round((marcados / total) * 100);
-      const barra = document.getElementById('barra-seguridad-relleno');
-      const texto = document.getElementById('texto-progreso');
-
-      barra.style.width = porcentaje + '%';
-      texto.textContent = `Nivel de Seguridad: ${porcentaje}%`;
-    }
-
-    // Alternar Modo Oscuro
-    function alternarModoOscuro() {
-      const body = document.body;
-      body.classList.toggle('modo-oscuro');
-      const esOscuro = body.classList.contains('modo-oscuro');
-
-      document.getElementById('icono-tema').textContent = esOscuro ? 'light_mode' : 'dark_mode';
-      document.getElementById('texto-tema').textContent = esOscuro ? 'Tema Claro' : 'Tema Oscuro';
-
-      localStorage.setItem('tema_preferido', esOscuro ? 'oscuro' : 'claro');
-    }
-
-    // Cargar Tema Guardado
-    window.addEventListener('DOMContentLoaded', () => {
-      const temaGuardado = localStorage.getItem('tema_preferido');
-      if (temaGuardado === 'oscuro') {
-        document.body.classList.add('modo-oscuro');
-        document.getElementById('icono-tema').textContent = 'light_mode';
-        document.getElementById('texto-tema').textContent = 'Tema Claro';
-      }
-    });
-
-    // Registrar Service Worker
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js').then(reg => {
-          console.log('SW registrado correctamente', reg.scope);
-        }).catch(err => console.error('Fallo en SW', err));
-      });
+    if (typeof lucide !== 'undefined') {
+      lucide.createIcons();
     }
   </script>
 </body>
-
 </html>

@@ -11,10 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
     <!-- Estilos -->
+    
+   
+    <link rel="stylesheet" href="../estilos/software-pirata.css" />
     <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
     <link rel="stylesheet" href="../estilos/estilos-base.css" />
     <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
-    <link rel="stylesheet" href="../estilos/software-pirata.css" />
+    <link rel="stylesheet" href="../estilos/redes-sociales.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/proteccion-cuentas.css">
     <script src="../scripts/logica-tema.js"></script>
 
     <!-- Manifest y PWA -->
@@ -23,80 +28,108 @@
 </head>
 <body>
 
-    <!-- CABECERA UNIFICADA -->
+    <!-- Navegación Superior Unificada -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav active" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu" href="index.html">Inicio</a>
+                <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+                <a class="enlace-menu active" href="index2.html">Manual</a>
+                <a class="enlace-menu" href="nosotros.html">Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA UNIFICADA DE MÓDULO -->
     <header class="cabecera-pagina">
         <div class="contenedor-cabecera">
-            <nav class="barra-herramientas">
-                <a href="../index2.html" class="boton-regresar">
-                    <span class="material-symbols-outlined">arrow_back</span> 
-                    <span>Volver al Manual de Temas</span>
-                </a>
-                <button type="button" id="btn-tema" class="boton-tema" aria-label="Cambiar tema">
-                    <span class="material-symbols-outlined" id="icono-tema">dark_mode</span> 
-                    <span id="texto-tema">Tema</span>
-                </button>
-            </nav>
-            <div class="encabezado-info">
-                <span class="insignia-modulo">Módulo 5 de 5 · Seguridad Digital</span>
-                <h1 class="titulo-destacado">¿Por qué es peligroso descargar programas piratas?</h1>
-                <p class="subtitulo">Aprende a identificar los riesgos ocultos detrás del software no oficial y protege tus equipos contra códigos maliciosos.</p>
-            </div>
+            <span class="insignia-modulo">Módulo 5 · Software Pirata y Virus</span>
+            <h1 class="titulo-destacado">¿Por qué es peligroso descargar programas piratas?</h1>
+            <p class="subtitulo">Aprende a identificar los riesgos ocultos detrás del software no oficial y protege tus equipos contra códigos maliciosos.</p>
         </div>
     </header>
 
-    <main class="contenedor-principal">
+<main class="main-container">
         
-        <!-- SECCIÓN 1 -->
-        <section class="seccion">
-            <div class="seccion-cabecera">
-                <span class="numero-seccion">01</span>
-                <h2 class="texto-titulo-grande">¿Qué es el software pirata?</h2>
+        <section class="card-section">
+            <div class="section-header">
+                <span class="badge">01</span>
+                <h2 class="section-title">¿Qué es el software pirata?</h2>
             </div>
-            <p class="texto-grande">
-                El <span class="palabra-clave">software pirata</span> es cualquier programa de computadora que ha sido modificado ilegalmente (mediante cracks, parches o activadores) para evitar pagar la licencia comercial original.
+            <p class="text">
+                El <span class="highlight">software pirata</span> es cualquier programa de computadora que ha sido modificado ilegalmente (mediante cracks, parches o activadores) para evitar pagar la licencia comercial original.
             </p>
-            <div class="bloque-definicion">
-                <div class="etiqueta-def">
+            <div class="definition-box">
+                <div class="definition-label">
                     <span class="material-symbols-outlined">menu_book</span> 
                     <span>¿Qué es el Malware?</span>
                 </div>
-                <div class="texto-def">
+                <div class="definition-text">
                     Es el término técnico para cualquier programa malicioso (derivado de <em>malicious software</em>). Bajo esta categoría caen los virus, troyanos, programas espía (spyware) y el temido ransomware que bloquea tus archivos a cambio de dinero.
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 2 -->
-        <section class="seccion">
-            <div class="seccion-cabecera">
-                <span class="numero-seccion">02</span>
-                <h2 class="texto-titulo-grande">¿Qué hay realmente dentro de un "crack"?</h2>
+        <section class="card-section">
+            <div class="section-header">
+                <span class="badge">02</span>
+                <h2 class="section-title">¿Qué hay realmente dentro de un "crack"?</h2>
             </div>
             
-            <div class="rejilla-2">
-                <div class="tarjeta">
-                    <div class="tarjeta-icono rojo">
+            <div class="grid-2">
+                <div class="feature-card">
+                    <div class="card-icon red-icon">
                         <span class="material-symbols-outlined">keyboard</span>
                     </div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Registrador de Teclas (Keylogger)</h3>
+                    <div class="card-body">
+                        <h3 class="card-title">Registrador de Teclas (Keylogger)</h3>
                         <p>Un software espía silencioso que registra cada pulsación en tu teclado, capturando tus contraseñas, claves bancarias y mensajes privados.</p>
                     </div>
                 </div>
 
-                <div class="tarjeta">
-                    <div class="tarjeta-icono rojo">
+                <div class="feature-card">
+                    <div class="card-icon red-icon">
                         <span class="material-symbols-outlined">door_open</span>
                     </div>
-                    <div class="tarjeta-contenido">
-                        <h3 class="tarjeta-titulo">Puerta Trasera (Backdoor)</h3>
+                    <div class="card-body">
+                        <h3 class="card-title">Puerta Trasera (Backdoor)</h3>
                         <p>Crea un acceso oculto e irreversible en tu sistema. El atacante puede encender tu cámara web remotamente, robar tus fotos o usar tu PC para ataques en red.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="caja-alerta">
-                <div class="alerta-icono">
+            <div class="alert-box">
+                <div class="alert-icon">
                     <span class="material-symbols-outlined">warning</span>
                 </div>
                 <div>
@@ -105,74 +138,98 @@
             </div>
         </section>
 
-        <!-- SECCIÓN TALLER INTERACTIVO -->
-        <section class="seccion">
-            <div class="seccion-cabecera">
-                <span class="numero-seccion">Taller</span>
-                <h2 class="texto-titulo-grande">El Laberinto de Descargas</h2>
+        <section class="card-section">
+            <div class="section-header">
+                <span class="badge">Taller</span>
+                <h2 class="section-title">El Laberinto de Descargas</h2>
             </div>
-            <p class="texto-descripcion-taller">Pon a prueba tu instinto digital. Simula hacer clic en una trampa típica de internet:</p>
+            <p class="text">Pon a prueba tu instinto digital. Simula hacer clic en una trampa típica de internet:</p>
             
-            <div class="sim-descarga">
-                <div class="sim-barra">
-                    <div class="sim-puntos">
-                        <span class="circulo rojo"></span>
-                        <span class="circulo amarillo"></span>
-                        <span class="circulo verde"></span>
+            <div class="simulation-box">
+                <div class="simulation-bar">
+                    <div class="simulation-dots">
+                        <span class="dot red-dot"></span>
+                        <span class="dot yellow-dot"></span>
+                        <span class="dot green-dot"></span>
                     </div>
-                    <div class="sim-url-contenedor">
-                        <span class="material-symbols-outlined icono-candado">lock_open</span> 
-                        <span class="sim-url">http://megadescargas-gratis.xyz/photoshop-crack-2026</span>
+                    <div class="simulation-url">
+                        <span class="material-symbols-outlined lock-icon">lock_open</span> 
+                        <span>http://megadescargas-gratis.xyz/photoshop-crack-2026</span>
                     </div>
                 </div>
-                <div class="sim-cuerpo">
+                <div class="simulation-body">
                     <h3>Adobe Photoshop CC 2026 FULL — Activado para siempre</h3>
-                    <p class="sim-sub">Servidor de descarga ultra rápida (Sin anuncios molestos)</p>
-                    <button type="button" class="boton-trampa" onclick="mostrarTrampa()">
+                    <p class="simulation-sub">Servidor de descarga ultra rápida (Sin anuncios molestos)</p>
+                    <button type="button" class="btn-trap" id="btn-descarga-taller">
                         <span class="material-symbols-outlined">download</span> DESCARGAR AHORA — Versión Full Gratis
                     </button>
-                    <div class="mensaje-trampa" id="mensaje-alerta-taller">
+                    <div class="trap-message" id="mensaje-alerta-taller">
                         <span class="material-symbols-outlined">gpp_bad</span>
-                        <div><strong>¡Caíste en la trampa!</strong> Al hacer clic, simularías descargar un archivo ejecutable infectado que instalaría un troyano en segundo plano. ¡Evita sitios de procedencia dudosa!</div>
+                        <div>
+                            <strong>¡Caíste en la trampa!</strong> Al hacer clic, simularías descargar un archivo ejecutable infectado que instalaría un troyano en segundo plano. ¡Evita sitios de procedencia dudosa!
+                          
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN 3: ALTERNATIVAS -->
-        <section class="seccion">
-            <div class="seccion-cabecera">
-                <span class="numero-seccion">03</span>
-                <h2 class="texto-titulo-grande">Alternativas gratuitas y 100% seguras</h2>
+        <section class="card-section">
+            <div class="section-header">
+                <span class="badge">Bonus</span>
+                <h2 class="section-title">Comprueba tu Aprendizaje</h2>
             </div>
-            <p class="texto-grande" style="margin-bottom: 2rem;">No necesitas arriesgar tu equipo ni infringir leyes para obtener herramientas profesionales. Existen excelentes opciones legales y gratuitas:</p>
+            <p class="text">Responde la siguiente pregunta de seguridad informática:</p>
+            
+            <div class="quiz-box">
+                <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">¿Qué debes hacer si un programa "crackeado" te pide desactivar el antivirus para instalarse?</h3>
+                <div class="quiz-options">
+                    <button type="button" class="btn-option" data-correcto="false">A) Desactivarlo temporalmente solo durante la instalación y luego volverlo a encender.</button>
+                    <button type="button" class="btn-option" data-correcto="true">B) Desconfiar inmediatamente, cerrar el instalador y buscar una alternativa legal o gratuita.</button>
+                    <button type="button" class="btn-option" data-correcto="false">C) Desinstalar el antivirus por completo para evitar que bloquee futuros programas.</button>
+                </div>
+                <div class="quiz-feedback" id="feedback-quiz"></div>
+                <div style="margin-top: 1rem;">
+                    <button type="button" class="btn-reset" id="btn-reiniciar-quiz" style="display: none;">
+                        <span class="material-symbols-outlined">replay</span> Intentar el quiz de nuevo
+                    </button>
+                </div>
+            </div>
+        </section>
 
-            <div class="contenedor-alternativas">
-                <div class="tarjeta-alternativa">
-                    <div class="bloque-pirata">
-                        <span class="etiqueta-riesgo">Peligroso / Pirata</span>
-                        <span class="nombre-software">Adobe Photoshop</span>
+        <section class="card-section">
+            <div class="section-header">
+                <span class="badge">03</span>
+                <h2 class="section-title">Alternativas gratuitas y 100% seguras</h2>
+            </div>
+            <p class="text" style="margin-bottom: 2rem;">No necesitas arriesgar tu equipo ni infringir leyes para obtener herramientas profesionales. Existen excelentes opciones legales y gratuitas:</p>
+
+            <div class="alternatives-container">
+                <div class="alternative-card">
+                    <div class="pirate-block">
+                        <span class="tag-danger">Peligroso / Pirata</span>
+                        <span class="software-name">Adobe Photoshop</span>
                     </div>
-                    <div class="flecha-cambio">
+                    <div class="arrow-block">
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </div>
-                    <div class="bloque-libre">
-                        <span class="etiqueta-seguro">Seguro y Libre</span>
-                        <span class="nombre-software">GIMP o Photopea.com <small>(Funciona directo en el navegador)</small></span>
+                    <div class="safe-block">
+                        <span class="tag-safe">Seguro y Libre</span>
+                        <span class="software-name">GIMP o Photopea.com <small>(Funciona directo en el navegador)</small></span>
                     </div>
                 </div>
 
-                <div class="tarjeta-alternativa">
-                    <div class="bloque-pirata">
-                        <span class="etiqueta-riesgo">Peligroso / Pirata</span>
-                        <span class="nombre-software">Microsoft Office Activado por Parches</span>
+                <div class="alternative-card">
+                    <div class="pirate-block">
+                        <span class="tag-danger">Peligroso / Pirata</span>
+                        <span class="software-name">Microsoft Office Activado por Parches</span>
                     </div>
-                    <div class="flecha-cambio">
+                    <div class="arrow-block">
                         <span class="material-symbols-outlined">arrow_forward</span>
                     </div>
-                    <div class="bloque-libre">
-                        <span class="etiqueta-seguro">Seguro y Libre</span>
-                        <span class="nombre-software">Google Docs / Sheets o LibreOffice <small>(Gratis y oficiales)</small></span>
+                    <div class="safe-block">
+                        <span class="tag-safe">Seguro y Libre</span>
+                        <span class="software-name">Google Docs / Sheets o LibreOffice <small>(Gratis y oficiales)</small></span>
                     </div>
                 </div>
             </div>
@@ -180,43 +237,16 @@
 
     </main>
 
-    <!-- PIE DE PÁGINA UNIFICADO -->
-    <footer class="pie-pagina">
+     <footer class="pie-pagina">
         <div class="contenedor-pie">
-            <div class="grid-pie">
-                <div>
-                    <div class="marca-pie">
-                        <div class="logo-pie-icono"><span class="material-symbols-outlined">school</span></div>
-                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
-                    </div>
-                    <p class="texto-pie-institucional">Formando estudiantes con conciencia y seguridad digital en Cumaná.</p>
-                </div>
-                <div>
-                    <h4 class="encabezado-pie">Navegación</h4>
-                    <ul class="enlaces-pie">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../index2.html">Manual Digital</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="encabezado-pie">Contacto Institucional</h4>
-                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
-                </div>
-            </div>
-            <div class="inferior-pie">
-                <p>© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.</p>
-            </div>
+            <p class="texto-pie">
+                &copy; 2026 Liceo Bolivariano Antonio Lemus Pérez. Arquitectura de software y seguridad.
+            </p>
         </div>
     </footer>
 
-    <!-- Scripts de Tema e Interactividad -->
-    <script src="../scripts/logica-tema.js"></script>
-    <script>
-        function mostrarTrampa() {
-            const alerta = document.getElementById('mensaje-alerta-taller');
-            alerta.style.display = 'flex';
-            alerta.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }
-    </script>
+
+    <script src="../scripts/modulo5.js"></script>
+    <script src="../scripts/logica-pirateria.js"></script>
 </body>
 </html>

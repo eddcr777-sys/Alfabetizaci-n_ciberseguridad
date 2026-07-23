@@ -9,16 +9,60 @@
     <!-- Fuentes y Estilos -->
     <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
     <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
     <link rel="stylesheet" href="../estilos/main.css" />
     <link rel="stylesheet" href="../estilos/manual-estudiante.css" />
     <link rel="stylesheet" href="../estilos/componentes-premium.css" />
     <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
+    <script src="../scripts/logica-tema.js"></script>
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0a261a" />
 </head>
 
 <body>
+
+    <!-- Navegación Superior Unificada -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav active" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu" href="index.html">Inicio</a>
+                <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+                <a class="enlace-menu active" href="index2.html">Manual</a>
+                <a class="enlace-menu" href="nosotros.html">Nosotros</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- BARRA DE PROGRESO -->
     <div class="barra-progreso-fija">

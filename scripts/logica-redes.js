@@ -50,9 +50,10 @@ function actualizarResultado() {
 
     if (marcados === 0) {
         resultado.innerHTML = `
-            <div style="font-size:2rem;margin-bottom:0.5rem;">🚨</div>
-            <strong>CRÍTICO — Tu perfil está completamente expuesto.</strong>
-            <div style="font-size:0.9rem;margin-top:0.5rem;font-weight:600;">Activa al menos una medida de seguridad para comenzar.</div>
+            <div style="font-size:2rem;margin-bottom:0.2rem; margin-left:1rem ">🚨</div>
+            <div style="margin-left:1rem; margin-bottom:0.5rem;"><strong>CRÍTICO — Tu perfil está completamente expuesto.</strong></div>
+            
+            <div style="font-size:0.9rem;margin-top:0.2rem;font-weight:600; margin-left:1rem; margin-bottom:2.5rem; padding:1rem;">Activa al menos una medida de seguridad para comenzar.</div>
             <div class="barra-progreso-contenedor"><div class="barra-progreso-relleno" style="width:${porcentaje}%;background:#b71c1c;"></div></div>
         `;
         resultado.style.background = '#ffebee';
@@ -60,9 +61,9 @@ function actualizarResultado() {
         resultado.style.borderColor = '#b71c1c';
     } else if (marcados <= 2) {
         resultado.innerHTML = `
-            <div style="font-size:2rem;margin-bottom:0.5rem;">⚠️</div>
-            <strong>AVISO — Solo ${marcados} de ${total} protecciones activas (${porcentaje}%). ¡Hay mucho por mejorar!</strong>
-            <div style="font-size:0.9rem;margin-top:0.5rem;font-weight:600;">Activa más medidas para proteger tu privacidad.</div>
+            <div style="font-size:2rem;margin-bottom:0.5rem ; margin-left:1rem">⚠️</div>
+            <div style="margin-left:1rem; margin-bottom:0.5rem;"><strong>AVISO — Solo ${marcados} de ${total} protecciones activas (${porcentaje}%). ¡Hay mucho por mejorar!</strong></div>
+            <div style="font-size:0.9rem;margin-top:0.5rem;font-weight:600; margin-left:1rem; margin-bottom:2.5rem; padding:1rem;">Activa más medidas para proteger tu privacidad.</div>
             <div class="barra-progreso-contenedor"><div class="barra-progreso-relleno" style="width:${porcentaje}%;background:#e65100;"></div></div>
         `;
         resultado.style.background = '#fff3e0';
@@ -70,9 +71,9 @@ function actualizarResultado() {
         resultado.style.borderColor = '#e65100';
     } else if (marcados <= 4) {
         resultado.innerHTML = `
-            <div style="font-size:2rem;margin-bottom:0.5rem;">🟡</div>
-            <strong>MODERADO — ${marcados} de ${total} (${porcentaje}%): Vas bien, pero aún tienes puntos vulnerables.</strong>
-            <div style="font-size:0.9rem;margin-top:0.5rem;font-weight:600;">¡Casi lo logras! Activa las protecciones que faltan.</div>
+            <div style="font-size:2rem;margin-bottom:0.5rem; margin-left:1rem">🟡</div>
+            <div style="margin-left:1rem; margin-bottom:0.5rem;"><strong>MODERADO — ${marcados} de ${total} (${porcentaje}%): Vas bien, pero aún tienes puntos vulnerables.</strong></div>
+            <div style="font-size:0.9rem;margin-top:0.5rem;font-weight:600; margin-left:1rem; margin-bottom:2.5rem; padding:1rem;">¡Casi lo logras! Activa las protecciones que faltan.</div>
             <div class="barra-progreso-contenedor"><div class="barra-progreso-relleno" style="width:${porcentaje}%;background:#f57f17;"></div></div>
         `;
         resultado.style.background = '#fffde7';

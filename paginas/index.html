@@ -128,7 +128,7 @@
                 <div class="tarjeta-icono">
                     <span class="material-symbols-outlined" style="font-size: 2.25rem;">&#xe8f4;</span>
                 </div>
-                <h2 class="titulo-tarjeta">Nuestra Visión</h2>
+                <h2 class="tituloh2">Nuestra Visión</h2>
                 <p class="texto-tarjeta">
                     Ser un referente colectivo e integrador que forme ciudadanos integrales, socializando la
                     relación entre escuela, familia y comunidad, potenciando el trabajo liberador y el aprendizaje
@@ -211,7 +211,7 @@
                         <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe65f;</span>
                         <span style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em;">Proyecto Institucional 2025-2026</span>
                     </div>
-                    <h2 style="font-size: 2.25rem; font-weight: bold; margin-bottom: 2rem; line-height: 1.1;">
+                    <h2 class="tituloh2">
                         Alfabetización Digital: Protegiendo a nuestra Comunidad.
                     </h2>
                     <p style="font-size: 1.25rem; font-weight: 500; opacity: 0.8; margin-bottom: 3rem; line-height: 1.625;">
@@ -282,6 +282,13 @@
                     console.log('SW registrado', reg.scope);
                 }).catch(err => console.error('SW Fallo', err));
             });
+        }
+    </script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
         }
     </script>
 </body>

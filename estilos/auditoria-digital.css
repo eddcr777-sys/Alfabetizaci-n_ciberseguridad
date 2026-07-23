@@ -1,14 +1,13 @@
 /* ==========================================================================
-   MÓDULO 1: AUDITORÍA DIGITAL - VERDE MENTA CLARO (0 BORDES REDONDEADOS)
+   MÓDULO 1: AUDITORÍA DIGITAL - ESTILOS COMPLETOS Y ACCESIBLES (0 BORDES RECTOS)
    ========================================================================== */
+
 :root {
-    --modulo-bg-claro: #F0FDF4;
+    --modulo-bg-claro: var(--color-superficie-variante);
     --modulo-primario: #059669;
     --modulo-primario-hover: #047857;
     --modulo-acento: #34D399;
     --modulo-borde: #A7F3D0;
-    --radio-tarjeta: 0px !important;
-    --radio-elemento: 0px !important;
 }
 
 .dark {
@@ -19,84 +18,348 @@
     --modulo-borde: rgba(52, 211, 153, 0.3);
 }
 
+/* FORZAR BORDES RECTOS EN TODO EL MÓDULO */
 *, *::before, *::after {
     border-radius: 0 !important;
 }
 
-.insignia-modulo {
-    border-color: var(--modulo-primario) !important;
-    color: var(--modulo-primario) !important;
+/* 1. LAYOUT PRINCIPAL Y DASHBOARD */
+.contenedor-principal {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 2rem 4rem 2rem;
 }
 
-.taller-bloque,
-.sim-descarga,
-.simulador-interactivo {
-    background-color: var(--color-superficie-variante);
-    border: 2px solid var(--modulo-borde);
-    padding: 2rem;
-    margin: 2rem 0;
-    border-radius: 0 !important;
+.grid-dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: start;
 }
 
-.taller-cabecera {
+@media (min-width: 992px) {
+    .grid-dashboard {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+/* 2. TARJETAS DE MÓDULO ACCESIBLES */
+.tarjeta-modulo {
+    background-color: var(--color-superficie);
+    border: 2px solid var(--color-borde);
+    padding: 2.25rem;
+    margin-bottom: 2.25rem;
+    box-shadow: var(--sombra-recta);
+    transition: all 0.2s ease;
+}
+
+.tarjeta-modulo:hover {
+    border-color: var(--modulo-primario);
+    box-shadow: var(--sombra-recta-hover);
+}
+
+.encabezado-modulo {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--color-borde);
+    margin-bottom: 1.25rem;
     padding-bottom: 1rem;
+    border-bottom: 2px solid var(--color-borde);
 }
 
-.taller-icono {
-    width: 3rem;
-    height: 3rem;
+.icono-modulo {
+    width: 3.25rem;
+    height: 3.25rem;
+    background-color: var(--color-superficie-contenedor);
+    border: 1.5px solid var(--modulo-primario);
+    color: var(--modulo-primario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.titulo-modulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin: 0;
+}
+
+.descripcion-modulo {
+    color: var(--color-texto-secundario);
+    font-size: 1.05rem;
+    line-height: 1.7 !important;
+    margin-bottom: 1.5rem;
+}
+
+.instruccion-caja {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    background-color: var(--color-superficie-contenedor);
+    border: 1px solid var(--color-borde);
+    padding: 1.1rem 1.35rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    margin-bottom: 1.75rem;
+}
+
+/* 3. SIMULADOR DE FEED ALGORÍTMICO (POSTS) */
+.contenedor-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.tarjeta-post {
+    background-color: var(--color-superficie-variante);
+    border: 2px solid var(--color-borde);
+    padding: 1.35rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.tarjeta-post:hover {
+    border-color: var(--modulo-primario);
+    transform: translateY(-2px);
+}
+
+.etiqueta-post {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.65rem;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    color: var(--color-primario);
+    margin-bottom: 0.75rem;
+}
+
+.contenido-post {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-texto-principal);
+    line-height: 1.6 !important;
+    margin: 0;
+}
+
+.mensaje-explicativo {
+    display: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid transparent;
+    line-height: 1.6 !important;
+}
+
+/* Estados del Post al hacer clic */
+.tarjeta-post.revelado[data-tipo="organico"] {
+    border-color: #059669;
+    background-color: var(--color-superficie);
+}
+.tarjeta-post.revelado[data-tipo="organico"] .mensaje-explicativo {
+    display: block;
+    background-color: var(--color-superficie-contenedor);
+    color: #059669;
+    border-color: #A7F3D0;
+}
+
+.tarjeta-post.revelado[data-tipo="algoritmo"] {
+    border-color: #10B981;
+    background-color: var(--color-superficie);
+}
+.tarjeta-post.revelado[data-tipo="algoritmo"] .mensaje-explicativo {
+    display: block;
+    background-color: var(--color-superficie-variante);
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+/* 4. AUDITORÍA DE SEGURIDAD PERSONAL (CHECKLIST) */
+.barra-seguridad-contenedor {
+    background-color: var(--color-superficie-variante);
+    border: 1px solid var(--color-borde);
+    height: 1.25rem;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+.barra-seguridad-relleno {
+    height: 100%;
+    width: 0%;
     background-color: var(--modulo-primario);
+    transition: width 0.4s ease;
+}
+
+.texto-progreso {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    text-align: right;
+    margin-bottom: 1.75rem;
+}
+
+.lista-auditoria {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.item-auditoria {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 1.5px solid var(--color-borde);
+    background-color: var(--color-superficie-variante);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.item-auditoria:hover {
+    border-color: var(--modulo-primario);
+    background-color: var(--color-superficie);
+}
+
+.item-auditoria.activo {
+    border-color: var(--modulo-primario);
+    background-color: var(--color-superficie-contenedor);
+}
+
+.checkbox-auditoria {
+    width: 1.35rem;
+    height: 1.35rem;
+    margin-top: 0.25rem;
+    accent-color: var(--modulo-primario);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.item-auditoria-titulo {
+    display: block;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 0.25rem;
+}
+
+.item-auditoria-subtexto {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--color-texto-secundario);
+    line-height: 1.5 !important;
+}
+
+/* 5. ESTILOS DEL PIE DE PÁGINA DEL MÓDULO */
+.pie-pagina {
+    background-color: var(--color-superficie);
+    border-top: 2px solid var(--color-borde);
+    padding: 4rem 0 2rem 0;
+    margin-top: 4rem;
+}
+
+.contenedor-pie {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.grid-pie {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-pie {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+.marca-pie {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.logo-pie-icono {
+    background-color: var(--color-primario);
     color: var(--color-texto-inverso);
+    width: 2.25rem;
+    height: 2.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.taller-titulo {
-    font-size: 1.5rem;
+.titulo-pie {
     font-weight: 700;
-    color: var(--modulo-primario);
-}
-
-/* Tablas e Inputs con bordes rectos */
-.tabla-auditoria {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-}
-
-.tabla-auditoria th,
-.tabla-auditoria td {
-    padding: 1rem;
-    border: 1px solid var(--color-borde);
-    text-align: left;
-}
-
-.tabla-auditoria th {
-    background-color: var(--color-superficie-contenedor);
+    font-size: 1.1rem;
     color: var(--color-primario);
+}
+
+.descripcion-pie {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+    line-height: 1.6 !important;
+}
+
+.encabezado-pie {
+    font-size: 0.85rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    color: var(--color-primario);
 }
 
-.campo-entrada,
-.input-auditoria {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    background-color: var(--color-superficie);
-    border: 1px solid var(--color-borde);
-    color: var(--color-texto-principal);
-    font-size: 1rem;
-    outline: none;
-    border-radius: 0 !important;
+.enlaces-pie {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0;
 }
 
-.campo-entrada:focus,
-.input-auditoria:focus {
-    border-color: var(--modulo-primario);
-    box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+.enlaces-pie a {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.enlaces-pie a:hover {
+    color: var(--color-primario);
+}
+
+.inferior-pie {
+    border-top: 1px solid var(--color-borde);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: var(--color-texto-atenuado);
+}
+
+.creditos-pie {
+    color: var(--color-texto-secundario);
+    font-weight: 600;
+}
+
+.creditos-pie:hover {
+    color: var(--color-primario);
 }

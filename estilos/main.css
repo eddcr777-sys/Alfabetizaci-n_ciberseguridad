@@ -72,6 +72,15 @@ img {
   display: block;
 }
 
+.tituloh2 {
+  text-align: center;
+  color: var(--color-blanco);
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
 /* ==========================================================================
    UTILIDADES
    ========================================================================== */
