@@ -1,118 +1,128 @@
-/* Estilos Base - El Arboreto Seguro */
+/* ==========================================================================
+   ESTILOS BASE - SISTEMA DE DISEÑO EN CSS PURO (VERDE CLARO Y MODO OSCURO)
+   ========================================================================== */
 
-:root {
-    --color-institucional: #011c06; 
-    --color-secundario: #023a13;    
-    --color-acento: #2ac522;        
+/* FORZAR BORDES RECTOS EN TODO EL PROYECTO (0 BORDES REDONDEADOS) */
+*,
+*::before,
+*::after,
+div,
+section,
+article,
+header,
+footer,
+nav,
+aside,
+main,
+button,
+input,
+textarea,
+select,
+span,
+a,
+img,
+svg,
+.tarjeta,
+.boton,
+.caja-alerta,
+.bloque-definicion,
+.insignia-modulo {
+    border-radius: 0 !important;
 }
 
-.material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+:root {
+    /* Paleta de Colores Claros - Gama de Verdes Suaves */
+    --color-fondo: #F4FBF7;
+    --color-superficie: #FFFFFF;
+    --color-superficie-variante: #EAF5F0;
+    --color-superficie-contenedor: #DDF0E6;
+    
+    --color-primario: #1B4D31;
+    --color-primario-hover: #123722;
+    --color-secundario: #2E7D32;
+    --color-secundario-claro: #E8F5E9;
+    
+    --color-acento: #059669;
+    --color-acento-suave: #D1FAE5;
+    
+    --color-borde: #D0E3D7;
+    --color-borde-foco: #2E7D32;
+    
+    --color-texto-principal: #132A1C;
+    --color-texto-secundario: #3B5846;
+    --color-texto-atenuado: #63826F;
+    --color-texto-inverso: #FFFFFF;
+
+    /* Sombra suave con bordes limpios */
+    --sombra-recta: 0 4px 12px rgba(27, 77, 49, 0.06);
+    --sombra-recta-hover: 0 8px 24px rgba(27, 77, 49, 0.12);
+    
+    /* Tipografía */
+    --fuente-principal: Arial, Helvetica, sans-serif;
+    --max-width: 80rem;
+}
+
+/* MODO OSCURO OPTIMIZADO EN GAMA VERDE OSCURA / ESMEALDA */
+.dark {
+    --color-fondo: #0B120E;
+    --color-superficie: #121E18;
+    --color-superficie-variante: #1A2B23;
+    --color-superficie-contenedor: #22372C;
+    
+    --color-primario: #34D399;
+    --color-primario-hover: #6EE7B7;
+    --color-secundario: #A7F3D0;
+    --color-secundario-claro: #133324;
+    
+    --color-acento: #10B981;
+    --color-acento-suave: #064E3B;
+    
+    --color-borde: rgba(52, 211, 153, 0.2);
+    --color-borde-foco: #34D399;
+    
+    --color-texto-principal: #E6F7EF;
+    --color-texto-secundario: #A7F3D0;
+    --color-texto-atenuado: #6EE7B7;
+    --color-texto-inverso: #0B120E;
+
+    --sombra-recta: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --sombra-recta-hover: 0 8px 24px rgba(52, 211, 153, 0.15);
+}
+
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1,
-h2,
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-.dark body {
-    background-color: #020617 !important;
-    color: #FFFFFF !important;
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
 }
 
-.dark h1:not(.text-transparent),
-.dark h2:not(.text-transparent),
-.dark h3:not(.text-transparent) {
-    color: #FFFFFF;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Fondos base y tarjetas de todas las subpáginas */
-.dark .bg-superficie,
-.dark .bg-superficie-container-lowest,
-.dark .bg-superficie-container-low,
-.dark .bg-white,
-.dark .tarjeta-guia,
-.dark .tarjeta-institucional,
-.dark .tarjeta-capitulo {
-    background-color: #022C22 !important;
-    color: #FFFFFF !important;
-}
-
-/* Navegación semi-transparente y Menús */
-.dark nav {
-    background-color: rgba(2, 6, 23, 0.8) !important;
-}
-
-/* Cajas e íconos verde oscuro y fondos primarios */
-.dark .bg-\[\#064E3B\],
-.dark footer.bg-primario,
-.dark header.bg-primario {
-    background-color: #022C22 !important;
-}
-
-/* Textos regulares y secundarios */
-.dark .text-en-superficie,
-.dark .text-en-superficie-variant,
-.dark p,
-.dark li {
-    color: #D1FAE5 !important;
-}
-
-/* Títulos y textos destacados */
-.dark .text-\[\#064E3B\],
-.dark .text-primario {
-    color: #4ADE80 !important;
-}
-
-.dark .text-secundario {
-    color: #34D399 !important;
-}
-
-/* Fondos especiales de portada y cabeceras */
-.dark .gradiente-portada,
-.dark .gradiente-cabecera,
-.dark .gradiente-encabezado,
-.dark .cabecera-pagina {
-    background: radial-gradient(circle at top right, #022C22, #020617) !important;
-    color: #FFFFFF !important;
-}
-
-/* Formularios */
-.dark input,
-.dark textarea,
-.dark select {
-    background-color: #020617 !important;
-    color: #FFFFFF !important;
-    border-color: #064E3B !important;
-}
-
-.dark input:focus,
-.dark textarea:focus {
-    border-color: #4ADE80 !important;
-}
-
-/* Cajas específicas */
-.dark .taller-bloque,
-.dark .bloque-definicion,
-.dark .caja-alerta,
-.dark .tarjeta,
-.dark .pregunta-cuestionario,
-.dark .bloque-recuerda {
-    background-color: #022C22 !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    color: #D1FAE5 !important;
-}
-
-.dark a:hover {
-    color: #4ADE80 !important;
-}
-
-/* ICONOS */
+/* Material Symbols Adjustments */
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined' !important;
     display: inline-flex !important;
@@ -120,39 +130,14 @@ h3 {
     justify-content: center !important;
     vertical-align: middle !important;
     font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24 !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Utilidades rápidas */
-.texto-mediano { font-size: 1.1rem; }
-.texto-grande { font-size: 1.2rem; }
-.texto-pequeno { font-size: 0.9rem; }
-.texto-muy-pequeno { font-size: 0.85rem; }
-.texto-diminuto { font-size: 0.75rem; }
-.texto-enorme { font-size: 2.5rem; }
-.margen-superior-medio { margin-top: 1.5rem; }
-.margen-superior-grande { margin-top: 3rem; }
-.margen-superior-enorme { margin-top: 8rem; }
-.margen-inferior-pequeno { margin-bottom: 0.5rem; }
-.margen-inferior-normal { margin-bottom: 1rem; }
-.margen-inferior-medio { margin-bottom: 1.5rem; }
-.margen-inferior-grande { margin-bottom: 3rem; }
-.margen-inferior-enorme { margin-bottom: 5rem; }
-.flex-separado { display: flex; align-items: center; gap: 10px; }
-.cuadricula-separada { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-.cuadricula-doble { display: grid; grid-template-columns: 1fr 1fr; }
-.texto-gris { color: #64748b; }
-.texto-rojo { color: #dc2626; }
-.texto-azul { color: #2563eb; }
-.texto-verde { color: #059669; }
-.fondo-alerta-naranja { border-color:#f59e0b; background:#fffbeb; color:#92400e; }
-.fondo-gris-claro { background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 0.75rem; }
-.texto-grueso { font-weight: 800; }
+/* Clases de Utilidad de Texto */
 .texto-centrado { text-align: center; }
-.fuente-especial { font-family: 'Outfit', sans-serif; }
-
-
-
-
-
-
+.texto-grueso { font-weight: 700; }
+.texto-mediano { font-size: 1.1rem; }
+.texto-grande { font-size: 1.25rem; }
+.texto-pequeno { font-size: 0.9rem; }
+.texto-diminuto { font-size: 0.75rem; }
+.texto-enorme { font-size: 2.25rem; }
+.oculto { display: none !important; }

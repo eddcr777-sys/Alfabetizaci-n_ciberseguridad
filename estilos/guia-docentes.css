@@ -1,7 +1,11 @@
 :root {
     --primario: #042f2e;
-    --peligro: #991b1b;
-    --seguro: #1e40af;
+    --peligro: #1b9948;
+    --seguro: #1e8faf;
+}
+
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
 
 body {

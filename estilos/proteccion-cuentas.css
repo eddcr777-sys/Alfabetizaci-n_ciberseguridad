@@ -1,180 +1,56 @@
-/* Variables y Tema Claro (Por Defecto) */
+/* ==========================================================================
+   MÓDULO 2: PROTECCIÓN DE CUENTAS - VERDE ESMERALDA (0 BORDES REDONDEADOS)
+   ========================================================================= */
 :root {
-    --color-principal: #0F5132;
-    --color-principal-hover: #0a3822;
-    --color-fondo-body: #f8fafc;
-    --color-fondo-seccion: #ffffff;
-    --color-texto: #1e293b;
-    --color-texto-suave: #475569;
-    --color-borde: #e2e8f0;
-    --color-alerta-bg: #fffbeb;
-    --color-alerta-borde: #f59e0b;
-    --color-alerta-texto: #b45309;
-    --radio-borde: 12px;
-    --transicion: all 0.3s ease;
+    --color-principal: #10B981;
+    --color-principal-hover: #059669;
+    --color-fondo-body: var(--color-fondo);
+    --color-fondo-seccion: var(--color-superficie);
+    --color-texto: var(--color-texto-principal);
+    --color-texto-suave: var(--color-texto-secundario);
+    --color-borde: var(--color-borde);
+    --radio-borde: 0px !important;
 }
 
-/* Tema Oscuro */
-[data-theme="dark"] {
-    --color-principal: #4ade80;
-    --color-fondo-body: #0f172a;
-    --color-fondo-seccion: #1e293b;
-    --color-texto: #f1f5f9;
-    --color-texto-suave: #94a3b8;
-    --color-borde: #334155;
-    --color-alerta-bg: #451a03;
-    --color-alerta-borde: #f59e0b;
-    --color-alerta-texto: #fde68a;
+.dark {
+    --color-principal: #6EE7B7;
+    --color-principal-hover: #A7F3D0;
 }
 
-body {
-    font-family: system-ui, -apple-system, sans-serif;
-    color: var(--color-texto);
-    background-color: var(--color-fondo-body);
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    transition: background-color var(--transicion), color var(--transicion);
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
-
-/* Estructura */
-.contenedor, .contenedor-centrado-ancho {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-    box-sizing: border-box;
-}
-
-.seccion-espaciada { padding-top: 2.5rem; padding-bottom: 3.5rem; }
 
 .seccion {
-    background: var(--color-fondo-seccion);
-    border-radius: var(--radio-borde);
+    background: var(--color-superficie);
+    border-radius: 0 !important;
     border: 1px solid var(--color-borde);
     padding: 2rem;
     margin-bottom: 2.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: background-color var(--transicion), border-color var(--transicion);
+    box-shadow: var(--sombra-recta);
 }
 
-/* Cabecera */
-.cabecera-pagina {
-    background-color: #0F5132;
-    color: #ffffff;
-    padding: 2.5rem 0;
-    border-bottom: 4px solid #157347;
+.evaluador-clave,
+.simulador-pass {
+    background-color: var(--color-superficie-variante);
+    border: 2px solid var(--color-principal);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 0 !important;
 }
 
-.rastro-navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+.medidor-fuerza {
+    height: 0.75rem;
+    background-color: var(--color-borde);
+    margin: 1rem 0;
+    border-radius: 0 !important;
+    overflow: hidden;
 }
 
-.boton-regresar, .boton-tema {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #ffffff;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.15);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: none;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: var(--transicion);
+.barra-fuerza {
+    height: 100%;
+    background-color: var(--color-principal);
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    border-radius: 0 !important;
 }
-
-.boton-regresar:hover, .boton-tema:hover { background: rgba(255, 255, 255, 0.25); }
-
-/* Textos */
-.titulo-destacado { font-size: 2.2rem; margin: 0 0 0.5rem 0; font-weight: 700; }
-.texto-titulo-grande { font-size: 1.6rem; color: var(--color-principal); margin-top: 0; display: flex; align-items: center; gap: 0.5rem; }
-.texto-gris-oscuro { color: var(--color-texto-suave); }
-.palabra-clave { font-weight: 600; color: #166534; background-color: #e8f5e9; padding: 0.1rem 0.4rem; border-radius: 4px; }
-[data-theme="dark"] .palabra-clave { background-color: #064e3b; color: #a7f3d0; }
-
-/* Tarjetas */
-.rejilla-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
-.tarjeta {
-    background-color: var(--color-fondo-body);
-    border: 1px solid var(--color-borde);
-    border-radius: 10px;
-    padding: 1.25rem;
-    transition: var(--transicion);
-}
-.tarjeta-titulo { font-weight: 700; font-size: 1.1rem; color: var(--color-principal); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-
-/* Alertas */
-.caja-alerta {
-    background-color: var(--color-alerta-bg);
-    border-left: 4px solid var(--color-alerta-borde);
-    color: var(--color-alerta-texto);
-    padding: 1rem 1.25rem;
-    border-radius: 6px;
-    margin: 1.5rem 0;
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-}
-
-/* Taller 1 - Clave */
-.taller-bloque {
-    background-color: var(--color-fondo-body);
-    border: 2px dashed var(--color-borde);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-}
-.entrada-clave {
-    width: 100%;
-    padding: 0.8rem 1rem;
-    font-size: 1rem;
-    border: 2px solid var(--color-borde);
-    border-radius: 8px;
-    box-sizing: border-box;
-    background-color: var(--color-fondo-seccion);
-    color: var(--color-texto);
-    outline: none;
-    transition: var(--transicion);
-}
-.entrada-clave:focus { border-color: var(--color-principal); }
-
-.contenedor-barra-fuerza { height: 10px; background-color: var(--color-borde); border-radius: 5px; overflow: hidden; margin-top: 1rem; }
-.barra-fuerza-relleno { height: 100%; width: 0%; background-color: #ef4444; transition: all 0.4s ease; }
-.etiqueta-fuerza { font-weight: 600; margin-top: 0.5rem; font-size: 0.95rem; }
-
-.checks-clave { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 1rem; }
-.check-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--color-texto-suave); transition: color 0.3s ease; }
-.check-item.cumplido { color: #22c55e; }
-.check-item.cumplido .material-symbols-outlined { color: #22c55e; }
-
-/* Taller 2 - Quiz */
-.quiz-bloque { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
-.pregunta-cuestionario {
-    background-color: var(--color-fondo-body);
-    border: 1px solid var(--color-borde);
-    padding: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transicion);
-}
-.pregunta-cuestionario:hover { border-color: var(--color-principal); }
-.pregunta-cuestionario .estado {
-    display: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding-top: 0.5rem;
-    margin-top: 0.5rem;
-    border-top: 1px dashed var(--color-borde);
-}
-.pregunta-cuestionario.revelado .estado { display: flex; align-items: center; gap: 0.5rem; }
-.estado.peligroso { color: #ef4444; }
-.estado.seguro { color: #22c55e; }
-
-/* Pie */
-.pie-pagina { background-color: #052e16; color: #cbd5e1; padding: 2rem 0; text-align: center; }
-.align-middle { vertical-align: middle; }

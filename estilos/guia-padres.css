@@ -1,8 +1,12 @@
 :root {
-    --acento: #1e3a8a;
-    --advertencia: #d97706;
+    --acento: #1b4d31;
+    --advertencia: #2e7d32;
     --fondo-paso: #FFFFFF;
-    --fondo-pro: #fefce8;
+    --fondo-pro: #f4fbf7;
+}
+
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
 
 

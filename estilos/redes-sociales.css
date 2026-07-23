@@ -1,241 +1,61 @@
 /* ==========================================================================
-   Redes Sociales Seguras - Estilos Específicos
+   MÓDULO 3: REDES SOCIALES - VERDE SABIA / TEAL SUAVE (0 BORDES REDONDEADOS)
    ========================================================================== */
+:root {
+    --modulo-redes: #0D9488;
+    --modulo-redes-hover: #0F766E;
+    --modulo-redes-bg: #F0FDFA;
+    --modulo-redes-borde: #99F6E4;
+}
 
-/* Estilos de la cabecera */
+.dark {
+    --modulo-redes: #2DD4BF;
+    --modulo-redes-hover: #5EEAD4;
+    --modulo-redes-bg: #134E4A;
+    --modulo-redes-borde: rgba(45, 212, 191, 0.3);
+}
+
+*, *::before, *::after {
+    border-radius: 0 !important;
+}
+
 .cabecera-pagina {
-  background-color: #9d00ff;
-  color: #ffffff;
-  padding: 3.5rem 1.5rem 4rem 1.5rem;
-  border-bottom: 4px solid #9d00ff;
+    background: linear-gradient(135deg, var(--color-superficie-variante) 0%, var(--modulo-redes-bg) 100%);
+    color: var(--color-texto-principal);
+    padding: 3rem 1.5rem;
+    border-bottom: 2px solid var(--modulo-redes);
 }
 
 .titulo-destacado {
-  font-family: 'Outfit', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+    color: var(--modulo-redes);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
 }
-
-.subtitulo {
-  font-size: 1.15rem;
-  opacity: 0.9;
-  font-weight: 400;
-}
-
-/* Secciones y Bloques Informativos */
-.seccion {
-  margin-bottom: 4rem;
-  color: #9d00ff;
-}
-
 
 .palabra-clave {
-  background: #ffffff;
-  color: #9d00ff;
-  padding: 0.15rem 0.4rem;
-  border-radius: 4px;
-  font-weight: 700;
+    background: var(--color-superficie-contenedor);
+    color: var(--modulo-redes);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0 !important;
+    font-weight: 700;
+    border: 1px solid var(--modulo-redes-borde);
 }
 
 .bloque-definicion {
-  background: #f8fafc;
-  border-left: 4px solid #2563eb;
-  border-radius: 0 12px 12px 0;
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0 2rem 0;
+    background: var(--color-superficie-variante);
+    border-left: 4px solid var(--modulo-redes);
+    border-radius: 0 !important;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .etiqueta-def {
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-  color: #1e40af;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.texto-def {
-  color: #475569;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-/* Alertas */
-.caja-alerta {
-  background-color: #fffffffb;
-  border-left: 4px solid #9d00ff;
-  color: #9d00ff;
-  padding: 1.25rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  margin: 1.5rem 0;
-}
-
-/* Grid de Tarjetas de Riesgos */
-.rejilla-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.tarjeta {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 1.75rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.tarjeta:hover {
-  transform: translateY(-3px);
-}
-
-.tarjeta-titulo {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #9d00ff;
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tarjeta p {
-  color: #64748b;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Taller Interactivo: Auditoría */
-.taller-bloque {
-  background: #ffffff;
-  border: 2px dashed #9d00ff;
-  border-radius: 16px;
-  padding: 2rem;
-  margin-top: 1.5rem;
-}
-
-.taller-titulo {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: #9d00ff;
-  margin-bottom: 0.5rem;
-}
-
-.taller-instruccion {
-  color: #64748b;
-  margin-bottom: 1.5rem;
-}
-
-.elemento-lista-verificacion {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  background: #f0fdf4;
-  margin-bottom: 0.75rem;
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.2s ease;
-}
-
-.elemento-lista-verificacion:hover {
-  background: #dcfce7;
-}
-
-.elemento-lista-verificacion input[type="checkbox"] {
-  width: 1.2rem;
-  height: 1.2rem;
-  accent-color: #9d00ff;
-  cursor: pointer;
-}
-
-.resultado-privacidad {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  border-radius: 8px;
-  font-weight: 700;
-  text-align: center;
-  display: none;
-}
-
-/* Reglas de Oro */
-.bloque-recuerda {
-  background: #0f172a;
-  color: #ffffff;
-  padding: 2.5rem;
-  border-radius: 16px;
-}
-
-.bloque-recuerda h3 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #9d00ff;
-  margin-bottom: 1.5rem;
-}
-
-.lista-reglas {
-  list-style: none;
-  padding: 0;
-}
-
-.lista-reglas li {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-  color: #cbd5e1;
-}
-
-/* Soporte Modo Oscuro */
-body.modo-oscuro .bloque-definicion {
-  background: #000000;
-  border-left-color: #9d00ff;
-}
-
-body.modo-oscuro .etiqueta-def {
-  color: #ffffff;
-}
-
-body.modo-oscuro .texto-def {
-  color: #cbd5e1;
-}
-
-body.modo-oscuro .tarjeta {
-  background: #000000;
-  border-color: #334155;
-}
-
-body.modo-oscuro .tarjeta-titulo {
-  color: #9d00ff;
-}
-
-body.modo-oscuro .tarjeta p {
-  color: #94a3b8;
-}
-
-body.modo-oscuro .taller-bloque {
-  background: #0f172a;
-  border-color: #9d00ff;
-}
-
-body.modo-oscuro .elemento-lista-verificacion {
-  background: #000000;
-  color: #f1f5f9;
-}
-
-body.modo-oscuro .elemento-lista-verificacion:hover {
-  background: #334155;
+    font-weight: 700;
+    color: var(--modulo-redes);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }

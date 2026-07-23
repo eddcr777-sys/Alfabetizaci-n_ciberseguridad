@@ -1,506 +1,102 @@
+/* ==========================================================================
+   MÓDULO 1: AUDITORÍA DIGITAL - VERDE MENTA CLARO (0 BORDES REDONDEADOS)
+   ========================================================================== */
+:root {
+    --modulo-bg-claro: #F0FDF4;
+    --modulo-primario: #059669;
+    --modulo-primario-hover: #047857;
+    --modulo-acento: #34D399;
+    --modulo-borde: #A7F3D0;
+    --radio-tarjeta: 0px !important;
+    --radio-elemento: 0px !important;
+}
 
-    /* ==========================================================================
-       VARIABLES DE TEMA & BASE
-       ========================================================================== */
-    :root {
-      --bg-cuerpo: #f8fafc;
-      --bg-tarjeta: #ffffff;
-      --bg-subtil: #f1f5f9;
-      --texto-principal: #0f172a;
-      --texto-secundario: #475569;
-      --texto-mutado: #64748b;
-      --color-primario: #0f5132;
-      --color-primario-hover: #0b3d26;
-      --color-primario-suave: #e8f5e9;
-      --color-exito: #16a34a;
-      --bg-exito-suave: #dcfce7;
-      --color-alerta: #dc2626;
-      --bg-alerta-suave: #fee2e2;
-      --borde-color: #e2e8f0;
-      --sombra-suave: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
-      --sombra-elevada: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-      --radio-tarjeta: 16px;
-      --radio-elemento: 10px;
-      --transicion: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+.dark {
+    --modulo-bg-claro: #064E3B;
+    --modulo-primario: #34D399;
+    --modulo-primario-hover: #6EE7B7;
+    --modulo-acento: #059669;
+    --modulo-borde: rgba(52, 211, 153, 0.3);
+}
 
-    /* MODO OSCURO */
-    body.modo-oscuro {
-      --bg-cuerpo: #090d16;
-      --bg-tarjeta: #111827;
-      --bg-subtil: #1f2937;
-      --texto-principal: #f8fafc;
-      --texto-secundario: #cbd5e1;
-      --texto-mutado: #94a3b8;
-      --color-primario: #2e7d32;
-      --color-primario-hover: #388e3c;
-      --color-primario-suave: rgba(46, 125, 50, 0.15);
-      --borde-color: #1e293b;
-      --sombra-suave: 0 4px 20px -2px rgba(0, 0, 0, 0.3);
-      --sombra-elevada: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-    }
+*, *::before, *::after {
+    border-radius: 0 !important;
+}
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+.insignia-modulo {
+    border-color: var(--modulo-primario) !important;
+    color: var(--modulo-primario) !important;
+}
 
-    body {
-      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg-cuerpo);
-      color: var(--texto-principal);
-      line-height: 1.6;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+.taller-bloque,
+.sim-descarga,
+.simulador-interactivo {
+    background-color: var(--color-superficie-variante);
+    border: 2px solid var(--modulo-borde);
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 0 !important;
+}
 
-    /* ==========================================================================
-       HEADER & NAVEGACIÓN
-       ========================================================================== */
-    .cabecera-pagina {
-      background: var(--bg-tarjeta);
-      border-bottom: 1px solid var(--borde-color);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(8px);
-    }
+.taller-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 1rem;
+}
 
-    .contenedor-cabecera {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 1.25rem 2rem;
-    }
+.taller-icono {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--modulo-primario);
+    color: var(--color-texto-inverso);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    .barra-herramientas {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
+.taller-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--modulo-primario);
+}
 
-    .boton-regresar {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--texto-secundario);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: var(--radio-elemento);
-      background: var(--bg-subtil);
-      transition: var(--transicion);
-    }
+/* Tablas e Inputs con bordes rectos */
+.tabla-auditoria {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
 
-    .boton-regresar:hover {
-      color: var(--color-primario);
-      transform: translateX(-3px);
-    }
+.tabla-auditoria th,
+.tabla-auditoria td {
+    padding: 1rem;
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
 
-    .boton-tema {
-      background: var(--bg-subtil);
-      border: 1px solid var(--borde-color);
-      color: var(--texto-principal);
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.875rem;
-      font-weight: 600;
-      transition: var(--transicion);
-    }
+.tabla-auditoria th {
+    background-color: var(--color-superficie-contenedor);
+    color: var(--color-primario);
+    font-weight: 700;
+}
 
-    .boton-tema:hover {
-      background: var(--borde-color);
-    }
+.campo-entrada,
+.input-auditoria {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+    outline: none;
+    border-radius: 0 !important;
+}
 
-    .encabezado-info .titulo-destacado {
-      font-size: 1.85rem;
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      color: var(--texto-principal);
-    }
-
-    .encabezado-info .subtitulo {
-      font-size: 0.95rem;
-      color: var(--texto-mutado);
-      margin-top: 0.25rem;
-    }
-
-    /* ==========================================================================
-       LAYOUT PRINCIPAL (DASHBOARD ESCRITORIO DE 2 COLUMNAS)
-       ========================================================================== */
-    .contenedor-principal {
-      max-width: 1400px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-      flex: 1;
-    }
-
-    .grid-dashboard {
-      display: grid;
-      grid-template-columns: 1.3fr 1fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    /* TARJETAS MÓDULO */
-    .tarjeta-modulo {
-      background: var(--bg-tarjeta);
-      border: 1px solid var(--borde-color);
-      border-radius: var(--radio-tarjeta);
-      padding: 2rem;
-      box-shadow: var(--sombra-suave);
-      transition: var(--transicion);
-    }
-
-    .tarjeta-modulo:hover {
-      box-shadow: var(--sombra-elevada);
-    }
-
-    .encabezado-modulo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .icono-modulo {
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
-      background: var(--color-primario-suave);
-      color: var(--color-primario);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .titulo-modulo {
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
-
-    .descripcion-modulo {
-      color: var(--texto-secundario);
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .instruccion-caja {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      background: var(--bg-subtil);
-      padding: 0.85rem 1.1rem;
-      border-radius: var(--radio-elemento);
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--texto-secundario);
-      margin-bottom: 1.5rem;
-    }
-
-    /* ==========================================================================
-       MÓDULO 1: FEED INTERACTIVO (ALGORITMO)
-       ========================================================================== */
-    .contenedor-feed {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .tarjeta-post {
-      background: var(--bg-tarjeta);
-      border: 2px solid var(--borde-color);
-      border-radius: var(--radio-elemento);
-      padding: 1.25rem;
-      cursor: pointer;
-      position: relative;
-      transition: var(--transicion);
-      user-select: none;
-    }
-
-    .tarjeta-post:hover {
-      border-color: var(--texto-mutado);
-      transform: translateY(-2px);
-    }
-
-    .etiqueta-post {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 6px;
-      background: var(--bg-subtil);
-      color: var(--texto-mutado);
-      margin-bottom: 0.75rem;
-    }
-
-    .contenido-post {
-      font-size: 1rem;
-      font-weight: 500;
-      color: var(--texto-principal);
-      margin-bottom: 0.5rem;
-    }
-
-    .mensaje-explicativo {
-      display: none;
-      font-size: 0.875rem;
-      font-weight: 600;
-      padding: 0.75rem;
-      border-radius: 8px;
-      margin-top: 0.75rem;
-      animation: fadeIn 0.3s ease;
-    }
-
-    /* Estados del Post al hacer clic */
-    .tarjeta-post.revelado[data-tipo="organico"] {
-      border-color: var(--color-exito);
-    }
-    .tarjeta-post.revelado[data-tipo="organico"] .mensaje-explicativo {
-      display: block;
-      background: var(--bg-exito-suave);
-      color: var(--color-exito);
-    }
-
-    .tarjeta-post.revelado[data-tipo="algoritmo"] {
-      border-color: var(--color-alerta);
-    }
-    .tarjeta-post.revelado[data-tipo="algoritmo"] .mensaje-explicativo {
-      display: block;
-      background: var(--bg-alerta-suave);
-      color: var(--color-alerta);
-    }
-
-    /* ==========================================================================
-       MÓDULO 2: AUDITORÍA DE SEGURIDAD (CHECKLIST)
-       ========================================================================== */
-    .barra-seguridad-contenedor {
-      background: var(--bg-subtil);
-      height: 12px;
-      border-radius: 999px;
-      overflow: hidden;
-      margin-bottom: 0.5rem;
-    }
-
-    .barra-seguridad-relleno {
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(90deg, #f59e0b, var(--color-exito));
-      border-radius: 999px;
-      transition: width 0.4s ease;
-    }
-
-    .texto-progreso {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--texto-mutado);
-      text-align: right;
-      margin-bottom: 1.5rem;
-    }
-
-    .lista-auditoria {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .item-auditoria {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1rem;
-      border: 1px solid var(--borde-color);
-      border-radius: var(--radio-elemento);
-      background: var(--bg-tarjeta);
-      cursor: pointer;
-      transition: var(--transicion);
-    }
-
-    .item-auditoria:hover {
-      background: var(--bg-subtil);
-    }
-
-    .item-auditoria.activo {
-      border-color: var(--color-primario);
-      background: var(--color-primario-suave);
-    }
-
-    .checkbox-auditoria {
-      width: 20px;
-      height: 20px;
-      margin-top: 2px;
-      accent-color: var(--color-primario);
-      cursor: pointer;
-    }
-
-    .item-auditoria-titulo {
-      display: block;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--texto-principal);
-    }
-
-    .item-auditoria-subtexto {
-      display: block;
-      font-size: 0.85rem;
-      color: var(--texto-secundario);
-      margin-top: 0.2rem;
-    }
-
-    /* ==========================================================================
-       FOOTER
-       ========================================================================== */
-    .pie-pagina {
-      background: var(--bg-tarjeta);
-      border-top: 1px solid var(--borde-color);
-      margin-top: auto;
-      padding: 3rem 2rem 1.5rem;
-    }
-
-    .contenedor-pie {
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .grid-pie {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .marca-pie {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .logo-pie-icono {
-      background: var(--color-primario);
-      color: #ffffff;
-      width: 32px;
-      height: 32px;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .titulo-pie {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .descripcion-pie {
-      color: var(--texto-mutado);
-      font-size: 0.9rem;
-      max-width: 400px;
-    }
-
-    .encabezado-pie {
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 1rem;
-      color: var(--texto-principal);
-    }
-
-    .enlaces-pie {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .enlaces-pie a {
-      color: var(--texto-secundario);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: var(--transicion);
-    }
-
-    .enlaces-pie a:hover {
-      color: var(--color-primario);
-    }
-
-    .inferior-pie {
-      border-top: 1px solid var(--borde-color);
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.85rem;
-      color: var(--texto-mutado);
-    }
-
-    .creditos-pie {
-      color: var(--texto-secundario);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .creditos-pie:hover {
-      color: var(--color-primario);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-4px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ==========================================================================
-       MEDIA QUERIES (REDISEÑO RESPONSIVO MÓVIL)
-       ========================================================================== */
-    @media (max-width: 900px) {
-      .grid-dashboard {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .contenedor-principal {
-        padding: 1.5rem 1rem;
-      }
-
-      .contenedor-cabecera {
-        padding: 1rem;
-      }
-
-      .encabezado-info .titulo-destacado {
-        font-size: 1.4rem;
-      }
-
-      .grid-pie {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .inferior-pie {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      /* Adaptación táctil en móvil */
-      .item-auditoria, .tarjeta-post {
-        min-height: 48px;
-      }
-
-      .boton-regresar, .boton-tema {
-        min-height: 44px;
-      }
-    }
- 
+.campo-entrada:focus,
+.input-auditoria:focus {
+    border-color: var(--modulo-primario);
+    box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.2);
+}

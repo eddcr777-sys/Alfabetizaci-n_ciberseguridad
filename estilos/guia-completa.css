@@ -1,8 +1,12 @@
 :root {
     --primario: #1a4d33;
-    --secundario: #d4af37;
+    --secundario: #2ac522;
     --fondo-claro: #FFFFFF;
     --texto-principal: #022C22;
+}
+
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
 
 body {

@@ -1,89 +1,68 @@
 /* ==========================================
-   COMPONENTES PREMIUM (TARJETAS DE AVISO)
+   COMPONENTES PREMIUM - ADAPTADOS A CSS PURO CON BORDES RECTOS
    ========================================== */
 .contenedor-tarjeta-alerta {
     position: relative;
-    padding: 2.25rem;
-    border-radius: 2rem;
-    border-width: 2px;
-    border-style: solid;
-    margin: 2.5rem 0;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 2rem;
+    border-radius: 0 !important;
+    border: 2px solid var(--color-primario);
+    margin: 2rem 0;
+    transition: all 0.2s ease;
     overflow: hidden;
     text-align: left;
+    background-color: var(--color-superficie-variante);
 }
 
 .contenedor-tarjeta-alerta:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px -10px rgba(0,0,0,0.1);
-}
-
-.contenedor-tarjeta-alerta::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    right: -20px;
-    width: 120px;
-    height: 120px;
-    background: currentColor;
-    opacity: 0.04;
-    border-radius: 50%;
-    pointer-events: none;
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-recta-hover);
 }
 
 .contenedor-tarjeta-alerta h4 {
     display: flex;
     align-items: center;
-    gap: 0.85rem;
-    font-size: 1.35rem !important;
-    font-weight: 900 !important;
-    margin-bottom: 1.25rem !important;
+    gap: 0.75rem;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
     line-height: 1.2 !important;
+    color: var(--color-primario);
 }
 
 .contenedor-tarjeta-alerta p {
-    font-size: 1.05rem !important;
-    line-height: 1.7 !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
     margin: 0 !important;
     font-weight: 500 !important;
+    color: var(--color-texto-secundario);
 }
 
-/* Variantes de Color */
-.alerta-rosa { background: #fff1f2; border-color: #fecdd3; color: #9f1239; }
-.dark .alerta-rosa { background: #4c0519; border-color: #9f1239; color: #fecaca; }
+/* Variantes de Color en Tonos Verdes Claros / Esmeralda */
+.alerta-esmeralda,
+.alerta-rosa,
+.alerta-purpura,
+.alerta-azul,
+.alerta-ambar,
+.alerta-cian,
+.alerta-naranja,
+.alerta-amarillo {
+    background-color: var(--color-superficie-variante);
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
 
-.alerta-purpura { background: #faf5ff; border-color: #f3e8ff; color: #6b21a8; }
-.dark .alerta-purpura { background: #2e1065; border-color: #6b21a8; color: #ddd6fe; }
+.dark .contenedor-tarjeta-alerta p {
+    color: var(--color-texto-secundario) !important;
+}
 
-.alerta-azul { background: #f0f9ff; border-color: #e0f2fe; color: #075985; }
-.dark .alerta-azul { background: #082f49; border-color: #075985; color: #bae6fd; }
-
-.alerta-ambar { background: #fffbeb; border-color: #fef3c7; color: #92400e; }
-.dark .alerta-ambar { background: #451a03; border-color: #92400e; color: #fde68a; }
-
-.alerta-esmeralda { background: #ecfdf5; border-color: #d1fae5; color: #065f46; }
-.dark .alerta-esmeralda { background: #064e3b; border-color: #059669; color: #d1fae5; }
-
-.alerta-cian { background: #ecfeff; border-color: #cffafe; color: #083344; }
-.dark .alerta-cian { background: #083344; border-color: #10B981; color: #cffafe; }
-
-.alerta-naranja { background: #fff7ed; border-color: #ffedd5; color: #9a3412; }
-.dark .alerta-naranja { background: #431407; border-color: #9a3412; color: #ffedd5; }
-
-.alerta-amarillo { background: #fefce8; border-color: #fef9c3; color: #854d0e; }
-.dark .alerta-amarillo { background: #422006; border-color: #854d0e; color: #fef9c3; }
-
-.dark .contenedor-tarjeta-alerta p { color: rgba(255, 255, 255, 0.8) !important; }
-
-.contenido-relativo { position: relative; z-index: 1; }
+.contenido-relativo {
+    position: relative;
+    z-index: 1;
+}
 
 @media (max-width: 768px) {
-    .contenedor-tarjeta-alerta { padding: 1.25rem; border-radius: 1.25rem; margin: 1rem 0; }
-    .contenedor-tarjeta-alerta h4 { font-size: 1.1rem !important; }
-    .contenedor-tarjeta-alerta p { font-size: 0.9rem !important; }
-}
-
-@media (max-width: 480px) {
-    .contenedor-tarjeta-alerta { padding: 1rem; border-radius: 1rem; }
-    .contenedor-tarjeta-alerta h4 { font-size: 1rem !important; }
+    .contenedor-tarjeta-alerta {
+        padding: 1.25rem;
+        margin: 1rem 0;
+    }
 }

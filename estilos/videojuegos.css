@@ -1,91 +1,37 @@
 /* ==========================================================================
-   Videojuegos Seguros - Tema Morado / Gaming
+   MÓDULO 6: VIDEOJUEGOS SEGUROS - VERDE PISTACHO / LIMA (0 BORDES REDONDEADOS)
    ========================================================================== */
 :root {
-  --bg-cuerpo: #f8fafc;
-  --bg-tarjeta: #ffffff;
-  --bg-subtil: #f1f5f9;
-  --texto-principal: #0f172a;
-  --texto-secundario: #475569;
-  --texto-mutado: #64748b;
-  --borde-color: #e2e8f0;
-  
-  /* Color Característico: Morado / Gaming */
-  --modulo-color: #7c3aed;
-  --modulo-hover: #6d28d9;
-  --modulo-suave: #f5f3ff;
-  --modulo-borde: #c4b5fd;
-
-  --sombra-suave: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
-  --sombra-elevada: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
-  --radio-tarjeta: 16px;
-  --radio-elemento: 10px;
-  --transicion: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --modulo-color: #22C55E;
+    --modulo-hover: #16A34A;
+    --modulo-suave: #F4FBF7;
+    --modulo-borde: #86EFAC;
+    --radio-tarjeta: 0px !important;
+    --radio-elemento: 0px !important;
 }
 
-body.modo-oscuro {
-  --bg-cuerpo: #090d16;
-  --bg-tarjeta: #111827;
-  --bg-subtil: #1f2937;
-  --texto-principal: #f8fafc;
-  --texto-secundario: #cbd5e1;
-  --texto-mutado: #94a3b8;
-  --borde-color: #1e293b;
-  
-  --modulo-color: #a78bfa;
-  --modulo-hover: #c4b5fd;
-  --modulo-suave: rgba(124, 58, 237, 0.15);
-  --modulo-borde: #4c1d95;
+.dark {
+    --modulo-color: #86EFAC;
+    --modulo-hover: #A7F3D0;
+    --modulo-suave: #064E3B;
+    --modulo-borde: rgba(134, 239, 172, 0.3);
 }
 
-/* Las mismas reglas base del CSS anterior (reset, tipografía, flexbox)... */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-cuerpo); color: var(--texto-principal); line-height: 1.6; transition: background-color 0.3s ease, color 0.3s ease; min-height: 100vh; display: flex; flex-direction: column; }
-
-/* HEADER Y FOOTER SON IDÉNTICOS AL CSS DE SOFTWARE-PIRATA (Usa las mismas clases) */
-.cabecera-pagina { background: var(--bg-tarjeta); border-bottom: 1px solid var(--borde-color); position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
-.contenedor-cabecera { max-width: 1400px; margin: 0 auto; padding: 1.25rem 2rem;    
-
-    /* En el contenedor de la cabecera: */
-
+*, *::before, *::after {
+    border-radius: 0 !important;
 }
-.barra-herramientas { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.boton-regresar { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--texto-secundario); text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: var(--radio-elemento); background: var(--bg-subtil); transition: var(--transicion); }
-.boton-regresar:hover { color: var(--modulo-color); transform: translateX(-3px); }
-.boton-tema { background: var(--bg-subtil); border: 1px solid var(--borde-color); color: var(--texto-principal); padding: 0.5rem 1rem; border-radius: 999px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; font-weight: 600; transition: var(--transicion); }
-.boton-tema:hover { background: var(--borde-color); }
-.encabezado-info .titulo-destacado { font-size: 1.85rem; font-weight: 700; color: var(--texto-principal); }
-.encabezado-info .subtitulo { font-size: 0.95rem; color: var(--texto-mutado); margin-top: 0.25rem; }
-.contenedor-principal { max-width: 1400px; width: 100%; margin: 0 auto; padding: 2.5rem 2rem; flex: 1; }
-.seccion { margin-bottom: 3rem; }
-.texto-titulo-grande { font-size: 1.5rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; color: var(--modulo-color); margin-bottom: 1rem; }
-.texto-grande { color: var(--texto-secundario); font-size: 1.05rem; margin-bottom: 1rem; }
 
-/* REJILLAS Y TARJETAS */
-.rejilla-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-.tarjeta { background: var(--bg-tarjeta); border: 1px solid var(--borde-color); border-radius: var(--radio-tarjeta); padding: 1.5rem; box-shadow: var(--sombra-suave); transition: var(--transicion); }
-.tarjeta:hover { border-color: var(--modulo-borde); transform: translateY(-3px); box-shadow: var(--sombra-elevada); }
-.tarjeta-titulo { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; color: var(--texto-principal); }
-.tarjeta p { color: var(--texto-secundario); font-size: 0.95rem; }
+.insignia-modulo {
+    border-color: var(--modulo-color) !important;
+    color: var(--modulo-color) !important;
+}
 
-/* QUIZ INTERACTIVO DE VIDEOJUEGOS */
-.pregunta-cuestionario { background: var(--bg-tarjeta); border: 1px solid var(--borde-color); padding: 1.25rem; border-radius: var(--radio-elemento); margin-bottom: 1rem; cursor: pointer; transition: var(--transicion); display: flex; flex-direction: column; }
-.pregunta-cuestionario:hover { background: var(--bg-subtil); border-color: var(--modulo-borde); }
-.respuesta-cuestionario { display: none; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--borde-color); font-size: 0.9rem; font-weight: 600; }
-.pregunta-cuestionario.activa .respuesta-cuestionario { display: block; }
-
-/* REUTILIZABLES */
-.bloque-definicion { background: var(--modulo-suave); border-left: 4px solid var(--modulo-color); padding: 1.25rem; border-radius: 0 var(--radio-elemento) var(--radio-elemento) 0; margin: 1.5rem 0; }
-.etiqueta-def { font-weight: 700; color: var(--modulo-color); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
-
-.pie-pagina { background: var(--bg-tarjeta); border-top: 1px solid var(--borde-color); margin-top: auto; padding: 3rem 2rem 1.5rem; }
-.contenedor-pie { max-width: 1400px; margin: 0 auto; }
-.grid-pie { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
-.marca-pie { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-.logo-pie-icono { background: var(--modulo-color); color: #ffffff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-.titulo-pie { font-weight: 700; font-size: 1.1rem; }
-.encabezado-pie { font-size: 0.9rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
-.enlaces-pie { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.enlaces-pie a { color: var(--texto-secundario); text-decoration: none; font-size: 0.9rem; transition: var(--transicion); }
-.enlaces-pie a:hover { color: var(--modulo-color); }
-.inferior-pie { border-top: 1px solid var(--borde-color); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--texto-mutado); }
+.tarjeta,
+.simulador-gaming {
+    background-color: var(--color-superficie);
+    border: 2px solid var(--modulo-borde);
+    padding: 1.75rem;
+    margin: 1.5rem 0;
+    border-radius: 0 !important;
+    box-shadow: var(--sombra-recta);
+}
