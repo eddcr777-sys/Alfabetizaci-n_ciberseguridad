@@ -27,7 +27,7 @@ body.pagina-segura {
 }
 
 .contenedor-principal {
-    max-width: 800px;
+  
     margin: 0 auto;
     padding: 2.5rem 1.5rem;
 }
@@ -65,8 +65,8 @@ body.pagina-segura {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: var(--color-secundario);
-    border: 2px solid #FFECB5;
+    background-color: #2c9a614f;
+    border: 2px solid #0fb117;
     padding: 1.25rem;
     border-radius: var(--radio-borde);
     margin-bottom: 2.5rem;
@@ -75,12 +75,12 @@ body.pagina-segura {
 
 .icono-alerta {
     font-size: 2rem;
-    color: #664D03;
+    color: #af870d;
 }
 
 .texto-alerta {
     font-size: 1.05rem;
-    color: #664D03;
+    color: #087e12;
 }
 
 .seccion-bloques {
@@ -124,7 +124,95 @@ body.pagina-segura {
 .margen-abajo-pequeno {
     margin-bottom: 1rem;
 }
+/* ==========================================================================
+   ESTILOS PARA LA SECCIÓN DE CENTROS DE AYUDA Y RUTAS
+   ========================================================================== */
 
+.ayuda-borde {
+    border-color: #0d6efd !important;
+}
+
+.color-ayuda {
+    color: #0d6efd !important;
+}
+
+.grid-centros-ayuda {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+}
+
+@media(min-width: 768px) {
+    .grid-centros-ayuda {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tarjeta-ayuda {
+    background-color: #F8F9FA;
+    border: 2px solid var(--color-borde);
+    padding: 1.25rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tarjeta-ayuda:hover {
+    border-color: #0d6efd;
+    transform: translateY(-2px);
+    background-color: #FFFFFF;
+}
+
+.icono-mini-ayuda {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tarjeta-ayuda h3 {
+    font-size: 1.1rem;
+    color: var(--color-primario);
+    margin: 0 0 0.5rem 0;
+}
+
+.tarjeta-ayuda p {
+    font-size: 0.95rem;
+    color: #495057;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.enlace-externo-ayuda {
+    display: inline-block;
+    background-color: #E7F1FF;
+    color: #0d6efd;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.enlace-externo-ayuda:hover {
+    background-color: #cfe2ff;
+    text-decoration: underline;
+}
+
+.texto-interno-ayuda {
+    display: inline-block;
+    background-color: #D1E7DD;
+    color: #0F5132;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
 /* Estilos de comparación / decodificador de enlaces */
 .grid-comparacion {
     display: grid;

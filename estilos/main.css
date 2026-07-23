@@ -334,8 +334,7 @@ img {
 .portada {
   position: relative;
   padding: 2.5rem 0 4rem 0;
-background: #094821;
-background: linear-gradient(to left, #bfc7c200 0%, #FFFFFF 50%, #2e9455 100%);
+  
 
 }
 
