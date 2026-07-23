@@ -26,6 +26,7 @@
     --borde: rgba(94, 234, 212, 0.3);
 }
 
+
 *, *::before, *::after {
     border-radius: 0 !important;
 }
