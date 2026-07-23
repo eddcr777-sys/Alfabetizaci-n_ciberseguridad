@@ -334,7 +334,9 @@ img {
 .portada {
   position: relative;
   padding: 2.5rem 0 4rem 0;
-  background: radial-gradient(circle at top right, #f0fdf4, #ffffff);
+background: #094821;
+background: linear-gradient(to left, #bfc7c200 0%, #FFFFFF 50%, #2e9455 100%);
+
 }
 
 .dark .portada {
@@ -347,6 +349,8 @@ img {
   gap: 2.5rem;
   align-items: center;
 }
+
+
 
 @media (min-width: 1024px) {
   .cuadricula-portada {
@@ -444,6 +448,8 @@ img {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
+
+
 
 @media (min-width: 768px) {
   .cuadricula-2 {

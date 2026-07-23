@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-
 <html class="light" lang="es">
-
 <head>
- <meta charset="utf-8" />
- <meta content="width=device-width, initial-scale=1.0" name="viewport" />
- <title>Modo Accesible | Antonio Lemus Pérez</title>
-  <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
- 
- 
- <link rel="stylesheet" href="../estilos/estilos-accesible.css" />
- <link rel="stylesheet" href="../estilos/estilos-base.css" />
-    <link rel="stylesheet" href="../estilos/main.css" />
-    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>¿Qué es el Phishing? | L.B. Antonio Lemus Pérez</title>
+    
+    <!-- Enlaces a Estilos -->
+    <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+    <link rel="stylesheet" href="../estilos/estilos-accesible.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/estilos-neurodivergencia.css" />
+    <link rel="stylesheet" href="../estilos/main.css">
+
 
     <link rel="manifest" href="../manifest.json" />
     <meta name="theme-color" content="#0F5132" />
     <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
 </head>
 
-<body class="fondo-blanco font-body text-en-superficie">
- <!-- Barra de Navegación Superior -->
- <!-- Navegación -->
+<body class="pagina-segura">
+
+       <!-- Navegación Superior Unificada -->
     <nav class="barra-navegacion">
         <div class="contenedor contenedor-navegacion">
             <div class="marca-navegacion">
@@ -32,29 +31,21 @@
                     L.B. Antonio Lemus Pérez
                 </div>
             </div>
-
-            <!-- Menú Escritorio -->
             <div class="enlaces-navegacion">
-                <a class="enlace-nav active" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="index.html">Inicio</a>
                 <a class="enlace-nav" href="justificacion.html">Proyecto</a>
-                <a class="enlace-nav" href="index2.html">Manual</a>
+                <a class="enlace-nav active" href="index2.html">Manual</a>
                 <a class="enlace-nav" href="nosotros.html">Nosotros</a>
                 <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
-                <button onclick="alternarModoOscuro()" class="boton-delineado" style="padding: 0.5rem; border-color: transparent; color: var(--color-primario); background: transparent; cursor: pointer;" title="Cambiar Tema">
+                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
                     <span class="material-symbols-outlined">dark_mode</span>
                 </button>
             </div>
-
-            <!-- Botón Hamburguesa -->
             <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
                 <span class="material-symbols-outlined">&#xe5d2;</span>
             </button>
         </div>
-        
-        <!-- Overlay del Drawer -->
         <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
-
-        <!-- Menu Drawer Lateral -->
         <div id="menu-movil" class="menu-lateral oculto">
             <div class="cabecera-menu">
                 <span class="titulo-menu">Menú</span>
@@ -63,156 +54,162 @@
                 </button>
             </div>
             <div class="cuerpo-menu">
-                <a class="enlace-menu active" href="index.html">
-                    <span class="material-symbols-outlined">&#xe88a;</span> Inicio
-                </a>
-                <a class="enlace-menu" href="justificacion.html">
-                    <span class="material-symbols-outlined">&#xe88e;</span> Proyecto
-                </a>
-                <a class="enlace-menu" href="index2.html">
-                    <span class="material-symbols-outlined">&#xe865;</span> Manual
-                </a>
-                <a class="enlace-menu" href="nosotros.html">
-                    <span class="material-symbols-outlined">&#xe7fb;</span> Nosotros
-                </a>
-                <div style="margin-top: 2rem;">
-                    <button onclick="alternarModoOscuro()" class="boton boton-delineado" style="width: 100%; margin-bottom: 1rem; color: var(--color-primario); border-color: var(--color-primario); background: transparent; cursor: pointer;">
-                        <span class="material-symbols-outlined">dark_mode</span> Cambiar Tema
-                    </button>
-                    <a href="index3.html" class="boton boton-primario" style="width: 100%;">
-                        Accesibilidad
-                    </a>
-                </div>
+                <a class="enlace-menu" href="index.html">Inicio</a>
+                <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+                <a class="enlace-menu active" href="index2.html">Manual</a>
+                <a class="enlace-menu" href="nosotros.html">Nosotros</a>
             </div>
         </div>
     </nav>
- <main class="ancho-maximo-medio margen-x-auto px-8 py-16">
- <!-- Sección de Encabezado -->
- <header class="espaciado-nd texto-centrado border-b-4 border-primario pb-8">
- <h1 class="font-headline texto-titulo-enorme  texto-principal margen-abajo-normal leading-tight">¿Qué es el Phishing?</h1>
- <p class="texto-titulo-pequeno altura-linea-relajada text-en-superficie">Aprende a protegerte de los correos falsos de forma
- sencilla.</p>
- </header>
- <!-- Pulso de Concienciación -->
- <div class="caja-flexible elementos-centrados brecha-normal bg-secundario-container relleno-medio bordes-redondeados espaciado-nd borde-nd">
- <span class="posicion-relativa caja-flexible h-4 w-4">
- <span
- class="animate-ping posicion-absoluta caja-flexible-en-linea alto-completo ancho-completo bordes-circulares bg-primario-fixed-dim opacity-75"></span>
- <span class="posicion-relativa caja-flexible-en-linea bordes-circulares h-4 w-4 fondo-principal"></span>
- </span>
- <p class=" texto-muy-grande text-on-secondary-container">Consejo: Nunca des tu contraseña por correo
- electrónico o mensajes.</p>
- </div>
- <!-- Bloques de Contenido -->
- <section class="brecha-y-gigante">
- <div class="bg-white-container-lowest relleno-muy-grande bordes-redondeados borde-nd">
- <div class="caja-flexible items-start brecha-grande">
- <span class="material-symbols-outlined texto-titulo-enorme texto-principal" data-icono="correo">mail</span>
- <div>
- <h2 class="texto-titulo-medio  margen-abajo-normal">1. Los Mensajes Falsos</h2>
- <p class="texto-muy-grande altura-linea-relajada">
- A veces recibes mensajes que dicen ser de tu banco, de juegos o de redes sociales. Pero son
- falsos. Quieren engañarte para robar tu información personal.
- </p>
- </div>
- </div>
- </div>
- <div class="bg-white-container-lowest relleno-muy-grande bordes-redondeados borde-nd">
- <div class="caja-flexible items-start brecha-grande">
- <span class="material-symbols-outlined texto-titulo-enorme texto-principal" data-icono="advertencia">warning</span>
- <div>
- <h2 class="texto-titulo-medio  margen-abajo-normal">2. Señales de Peligro</h2>
- <ul class="list-disc ml-6 space-y-4 texto-muy-grande">
- <li>Te piden que hagas algo muy rápido (urgencia).</li>
- <li>El mensaje tiene errores de ortografía.</li>
- <li>Te piden tu contraseña o datos secretos.</li>
- </ul>
- </div>
- </div>
- </div>
- <div class="bg-white-container-lowest relleno-muy-grande bordes-redondeados borde-nd">
- <div class="caja-flexible items-start brecha-grande">
- <span class="material-symbols-outlined texto-titulo-enorme texto-principal"
- data-icono="circulo_verificado">check_circle</span>
- <div>
- <h2 class="texto-titulo-medio  margen-abajo-normal">3. Qué debes hacer</h2>
- <div class="cuadricula columnas-1 brecha-normal">
- <div class="caja-flexible elementos-centrados brecha-normal relleno-normal bg-white-container-low rounded-lg">
- <span class=" texto-titulo-pequeno texto-principal">A</span>
- <span class="texto-muy-grande">No hagas clic en ningún botón o mensaje extraño.</span>
- </div>
- <div class="caja-flexible elementos-centrados brecha-normal relleno-normal bg-white-container-low rounded-lg">
- <span class=" texto-titulo-pequeno texto-principal">B</span>
- <span class="texto-muy-grande">Borra el mensaje de inmediato.</span>
- </div>
- <div class="caja-flexible elementos-centrados brecha-normal relleno-normal bg-white-container-low rounded-lg">
- <span class=" texto-titulo-pequeno texto-principal">C</span>
- <span class="texto-muy-grande">Avisa a tus padres o profesores si tienes dudas.</span>
- </div>
- </div>
- </div>
- </div>
- </div>
- </section>
- <div class="margen-arriba-enorme texto-centrado">
- <a href="index2.html">
- <button
- class="boton-primario texto-titulo-pequeno  px-12 py-6 bordes-redondeados nd-border transicion-transformacion">
- ¡Entendido, volver al manual!
- </button>
- </a>
- </div>
- </main>
- <!-- Footer -->
- <!-- Pie de Página -->
-    <footer class="pie-pagina">
-        <div class="contenedor">
-            <div class="cuadricula-pie">
-                <div class="columna-principal-pie">
-                    <div class="marca-pie">
-                        <div class="logo-pie">
-                            <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe80c;</span>
-                        </div>
-                        <span class="titulo-pie">CE Antonio Lemus Pérez</span>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="encabezado-pie">Navegación</h4>
-                    <ul class="enlaces-pie">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="justificacion.html">Justificación</a></li>
-                        <li><a href="index2.html">Manual Digital</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="index3.html">Accesibilidad</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="encabezado-pie">Contacto</h4>
-                    <p class="texto-pie">Cumaná, Estado Sucre, Venezuela.</p>
-                </div>
-            </div>
 
-            <div class="inferior-pie">
-                <p class="derechos-pie">
-                    © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
-                </p>
-                <a href="nosotros.html" class="creditos-pie">
-                    Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
-                </a>
+    <!-- Contenido Principal -->
+    <main class="contenedor-principal">
+        
+        <!-- Encabezado Claro -->
+        <header class="encabezado-seccion">
+            <span class="etiqueta-badge">Centro de Ciberseguridad Accesible</span>
+            <h1 class="titulo-principal">¿Qué es el Phishing y cómo blindarte?</h1>
+            <p class="subtitulo-principal">Herramientas visuales, juegos y consejos sencillos para navegar con total seguridad y confianza.</p>
+        </header>
+
+        <!-- Alerta / Consejo Destacado -->
+        <div class="alerta-consejo">
+            <span class="material-symbols-outlined icono-alerta">lightbulb</span>
+            <div class="texto-alerta">
+                <strong>Regla de oro:</strong> Ningún banco, empresa de videojuegos o red social te pedirá contraseñas ni códigos secretos por correo o mensaje. ¡Desconfía siempre!
             </div>
         </div>
-    </footer>
- <script src="../scripts/logica-tema.js"></script>
 
+        <!-- Bloques de Contenido Organizados -->
+        <section class="seccion-bloques">
+            
+            <!-- Bloque 1 -->
+            <div class="tarjeta-explicacion">
+                <div class="tarjeta-header">
+                    <span class="material-symbols-outlined icono-tarjeta">mail</span>
+                    <h2>1. ¿Qué son los mensajes falsos?</h2>
+                </div>
+                <p class="texto-cuerpo">
+                    Son mensajes diseñados para parecer reales. Utilizan los logos de empresas conocidas para ganar tu confianza rápidamente y lograr que entregues datos privados sin darte cuenta.
+                </p>
+            </div>
+
+            <!-- Bloque 2: NUEVO - Decodificador de Enlaces -->
+            <div class="tarjeta-explicacion alerta-borde">
+                <div class="tarjeta-header">
+                    <span class="material-symbols-outlined icono-tarjeta color-advertencia">search</span>
+                    <h2>2. El truco del enlace falso (Detector visual)</h2>
+                </div>
+                <p class="texto-cuerpo margen-abajo-pequeno">
+                    Los estafadores cambian pequeñas letras para confundirte. Mira la diferencia entre un enlace seguro y uno trampa:
+                </p>
+                <div class="grid-comparacion">
+                    <div class="caja-ejemplo verdadero">
+                        <span class="etiqueta-ejemplo verde">OFICIAL ✔️</span>
+                        <p><strong>https://www.netflix.com</strong></p>
+                        <p class="motivo-falso"><em>Por qué es seguro:</em> El nombre está escrito correctamente y usa dominios legítimos.</p>
+                    </div>
+                    <div class="caja-ejemplo falso">
+                        <span class="etiqueta-ejemplo rojo">TRAMPA ❌</span>
+                        <p><strong>https://www.netf1ix-soporte.com</strong></p>
+                        <p class="motivo-falso"><em>Por qué falla:</em> Usa un número "1" en vez de una "i" y añade palabras extra.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloque 3: NUEVO - Mini-Quiz Interactivo -->
+            <div class="tarjeta-explicacion">
+                <div class="tarjeta-header">
+                    <span class="material-symbols-outlined icono-tarjeta">sports_esports</span>
+                    <h2>3. Pon a prueba tu intuición (Mini-Quiz)</h2>
+                </div>
+                <p class="texto-cuerpo margen-abajo-pequeno">
+                    ¿Sabrías qué hacer en esta situación? Responde a continuación:
+                </p>
+                <div class="caja-quiz">
+                    <p class="pregunta-quiz"><strong>Pregunta:</strong> "¿Si un correo de un juego te regala monedas gratis pero te pide escribir tu clave en una página externa, es seguro?"</p>
+                    <div class="botones-quiz">
+                        <button class="boton-opcion" onclick="verificarRespuesta(false)">Sí, quiero mis monedas</button>
+                        <button class="boton-opcion" onclick="verificarRespuesta(true)">No, es una estafa</button>
+                    </div>
+                    <div id="resultado-quiz" class="resultado-oculto"></div>
+                </div>
+            </div>
+
+            <!-- Bloque 4: NUEVO - Semáforo de Contraseñas -->
+            <div class="tarjeta-explicacion">
+                <div class="tarjeta-header">
+                    <span class="material-symbols-outlined icono-tarjeta">lock</span>
+                    <h2>4. Semáforo de Contraseñas Seguras</h2>
+                </div>
+                <p class="texto-cuerpo margen-abajo-pequeno">
+                    Aprende a construir claves que los hackers jamás puedan adivinar:
+                </p>
+                <ul class="lista-pasos">
+                    <li><span class="punto-viñeta">🔴</span> <strong>Mal:</strong> Poner tu fecha de nacimiento, tu nombre o secuencias como "123456". Son fáciles de adivinar.</li>
+                    <li><span class="punto-viñeta">🟡</span> <strong>Regular:</strong> Usar palabras comunes de diccionario sin ningún símbolo o número extra.</li>
+                    <li><span class="punto-viñeta">🟢</span> <strong>Bien (Imparable):</strong> Combinar tres palabras aleatorias con símbolos y números. Ejemplo: <em>Gato-Azul-2026!</em></li>
+                </ul>
+            </div>
+
+            <!-- Bloque 5: NUEVO - Buzón de Preguntas Frecuentes Desplegables -->
+            <div class="tarjeta-explicacion">
+                <div class="tarjeta-header">
+                    <span class="material-symbols-outlined icono-tarjeta">help_outline</span>
+                    <h2>5. Preguntas que quizás te haces</h2>
+                </div>
+                
+                <div class="contenedor-acordeon">
+                    <details class="item-acordeon">
+                        <summary>¿Me pueden hackear solo por abrir un correo?</summary>
+                        <p class="contenido-acordeon">No te preocupes. Abrir o leer un correo por sí solo no le da acceso a nadie a tus cosas. El peligro real ocurre si descargas un archivo extraño o escribes tus datos en un enlace falso.</p>
+                    </details>
+
+                    <details class="item-acordeon">
+                        <summary>¿Los virus o estafas avisan con sonidos o alarmas?</summary>
+                        <p class="contenido-acordeon">Muchas páginas falsas usan alertas falsas con ruidos o mensajes exagerados de "¡Tu teléfono está infectado!" solo para asustarte y obligarte a hacer clic. Mantén la calma y cierra la ventana.</p>
+                    </details>
+
+                    <details class="item-acordeon">
+                        <summary>¿Qué hago si ya di mis datos por error?</summary>
+                        <p class="contenido-acordeon">No entres en pánico. Lo primero y más importante es cambiar tu contraseña inmediatamente ingresando de forma oficial a la app, activar la verificación en dos pasos y avisar a un adulto de confianza.</p>
+                    </details>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Botón de Retorno -->
+        <div class="contenedor-boton-final">
+            <a href="index2.html" class="boton-grande-accion">
+                ¡Entendido, volver al manual!
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="contenedor">
+            <p>© 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.</p>
+            <a href="nosotros.html" class="creditos-pie">Desarrollado por: Cordova / Guipe / Giraldo / Ruiz</a>
+        </div>
+    </footer>
+
+    <!-- Script Interactivo para el Mini-Quiz -->
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('../sw.js').then(reg => {
-                    console.log('SW registrado', reg.scope);
-                }).catch(err => console.error('SW Fallo', err));
-            });
+        function verificarRespuesta(esCorrecto) {
+            const contenedorResultado = document.getElementById('resultado-quiz');
+            contenedorResultado.classList.remove('resultado-oculto');
+            
+            if (esCorrecto) {
+                contenedorResultado.className = 'resultado-quiz correcto';
+                contenedorResultado.innerHTML = '🎉 <strong>¡Correcto!</strong> Jamás entregues claves a cambio de regalos. Las empresas reales nunca operan así.';
+            } else {
+                contenedorResultado.className = 'resultado-quiz incorrecto';
+                contenedorResultado.innerHTML = '⚠️ <strong>Incorrecto.</strong> Es una trampa clásica de phishing para robar tus datos. ¡Cuidado!';
+            }
         }
     </script>
 </body>
-
 </html>
