@@ -5,33 +5,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('capa-menu-movil');
 
     if (btnMenu && menuMovil && overlay) {
-        function openMenu() {
-            menuMovil.classList.remove('hidden');
-            overlay.classList.remove('hidden');
+        function abrirMenu() {
+            menuMovil.classList.remove('oculto');
+            overlay.classList.remove('oculto');
+            btnMenu.setAttribute('aria-expanded', 'true');
             
-            // Timeout para permitir que la clase display block se aplique antes de animar
-            setTimeout(() => {
-                menuMovil.classList.remove('translate-x-full');
-                overlay.classList.remove('opacity-0');
-            }, 10);
+            // Forzar reflujo para activar la transición CSS
+            void menuMovil.offsetWidth;
             
-            document.body.style.overflow = 'hidden'; // Evitar scroll de fondo
+            menuMovil.classList.add('activo');
+            overlay.classList.add('activo');
+            
+            document.body.style.overflow = 'hidden'; // Evitar scroll en el fondo
         }
 
-        function closeMenu() {
-            menuMovil.classList.add('translate-x-full');
-            overlay.classList.add('opacity-0');
+        function cerrarMenu() {
+            menuMovil.classList.remove('activo');
+            overlay.classList.remove('activo');
+            btnMenu.setAttribute('aria-expanded', 'false');
             
             setTimeout(() => {
-                menuMovil.classList.add('hidden');
-                overlay.classList.add('hidden');
-            }, 300); // Igual a la duracion de la animacion CSS
+                menuMovil.classList.add('oculto');
+                overlay.classList.add('oculto');
+            }, 300); // Sincronizado con la transición CSS
             
             document.body.style.overflow = '';
         }
 
-        btnMenu.addEventListener('click', openMenu);
-        if (btnCerrar) btnCerrar.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
+        btnMenu.addEventListener('click', abrirMenu);
+        if (btnCerrar) btnCerrar.addEventListener('click', cerrarMenu);
+        overlay.addEventListener('click', cerrarMenu);
+
+        // Permitir cerrar el menú al presionar la tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuMovil.classList.contains('activo')) {
+                cerrarMenu();
+            }
+        });
     }
 });
