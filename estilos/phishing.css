@@ -1,55 +1,574 @@
 /* ==========================================================================
-   MÓDULO 4: PHISHING / DETECCIÓN - VERDE OLIVA / LIMA CLARO (0 BORDES RECTOS)
+   1. ESTILOS GENERALES Y UTILIDADES BÁSICAS
    ========================================================================== */
-:root {
-    --modulo-phishing: #65A30D;
-    --modulo-phishing-hover: #4D7C0F;
-    --modulo-phishing-bg: #F7FEE7;
-    --modulo-phishing-borde: #D9F99D;
+.hidden { 
+  display: none !important; 
 }
 
-.dark {
-    --modulo-phishing: #A3E635;
-    --modulo-phishing-hover: #BEF264;
-    --modulo-phishing-bg: #1E293B;
-    --modulo-phishing-borde: rgba(163, 230, 53, 0.3);
+.container { 
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 1rem; 
 }
 
-*, *::before, *::after {
-    border-radius: 0 !important;
+.py-5 { 
+  padding-top: 3rem; 
+  padding-bottom: 3rem; 
 }
 
-.cabecera-pagina {
-    background: linear-gradient(135deg, var(--color-superficie-variante) 0%, var(--modulo-phishing-bg) 100%);
-    color: var(--color-texto-principal);
-    padding: 3rem 1.5rem;
-    border-bottom: 2px solid var(--modulo-phishing);
+/* --- Texto y Tipografía --- */
+.section { 
+  margin-bottom: 3.5rem; 
 }
 
-.titulo-destacado {
-    color: var(--modulo-phishing);
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
+.section-title { 
+  font-size: 1.75rem; 
+  font-weight: 700; 
+  color: var(--color-principal, #0F5132); 
+  margin-bottom: 1rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
 }
 
-.subtitulo {
-    font-size: 1.15rem;
-    color: var(--color-texto-secundario);
+.section-text { 
+  font-size: 1.1rem; 
+  color: #374151; 
+  line-height: 1.7; 
+  margin-bottom: 1.25rem; 
 }
 
-.sim-correo,
-.tarjeta-phishing {
-    background-color: var(--color-superficie);
-    border: 2px solid var(--modulo-phishing-borde);
-    padding: 1.75rem;
-    margin: 1.5rem 0;
-    border-radius: 0 !important;
-    box-shadow: var(--sombra-recta);
+.highlight { 
+  font-weight: bold; 
+  color: #0F5132; 
+  background: rgba(15, 81, 50, 0.08); 
+  padding: 0.1rem 0.3rem; 
+  border-radius: 4px; 
 }
 
-.sim-correo-cabecera {
-    border-bottom: 1px solid var(--color-borde);
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+
+/* ==========================================================================
+   2. CABECERA DE PÁGINA
+   ========================================================================== */
+.page-header { 
+  background: linear-gradient(135deg, #0F5132, #198754); 
+  color: white; 
+  padding: 3rem 0; 
+  text-align: center; 
+  margin-bottom: 2rem; 
+}
+
+.badge-module { 
+  display: inline-block; 
+  background: rgba(255, 255, 255, 0.2); 
+  padding: 0.3rem 0.8rem; 
+  border-radius: 20px; 
+  font-size: 0.85rem; 
+  font-weight: 600; 
+  margin-bottom: 0.75rem; 
+}
+
+.page-title { 
+  font-size: 2.2rem; 
+  font-weight: 800; 
+  margin-bottom: 0.5rem; 
+}
+
+.page-subtitle { 
+  font-size: 1.1rem; 
+  opacity: 0.9; 
+  max-width: 700px; 
+  margin: 0 auto; 
+}
+
+
+/* ==========================================================================
+   3. CAJAS DE DEFINICIÓN, PROTOCOLO Y TARJETAS
+   ========================================================================== */
+.definition-box, 
+.protocol-box { 
+  background: #f8fafc; 
+  border-left: 4px solid #0F5132; 
+  padding: 1.5rem; 
+  border-radius: 0 8px 8px 0; 
+  margin-bottom: 1.5rem; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+.definition-header { 
+  font-weight: 700; 
+  color: #0F5132; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  margin-bottom: 0.5rem; 
+}
+
+.definition-body { 
+  color: #4b5563; 
+  line-height: 1.6; 
+}
+
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1.5rem; 
+  margin-top: 1.5rem; 
+}
+
+.card { 
+  background: white; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 8px; 
+  padding: 1.5rem; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); 
+  transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+.card:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.card-title { 
+  font-size: 1.15rem; 
+  font-weight: 700; 
+  color: #1f2937; 
+  margin-bottom: 0.75rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+}
+
+
+/* ==========================================================================
+   4. TALLER 1: SIMULADOR DE CORREO
+   ========================================================================== */
+.workshop-instruction { 
+  background: #eff6ff; 
+  color: #1e40af; 
+  padding: 1rem; 
+  border-radius: 6px; 
+  font-weight: 600; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.email-simulator { 
+  background: white; 
+  border: 1px solid #d1d5db; 
+  border-radius: 8px; 
+  overflow: visible; /* Cambiado de hidden a visible para permitir que floten las alertas */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); 
+}
+
+.email-topbar { 
+  background: #f3f4f6; 
+  padding: 0.75rem 1rem; 
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
+  font-size: 0.85rem; 
+  color: #6b7280; 
+  border-bottom: 1px solid #e5e7eb; 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.email-topbar .dot { 
+  width: 12px; 
+  height: 12px; 
+  border-radius: 50%; 
+  display: inline-block; 
+}
+
+.email-body { 
+  padding: 1.5rem; 
+  position: relative; /* Contexto de posicionamiento seguro */
+}
+
+.email-field { 
+  display: flex; 
+  gap: 0.75rem; 
+  align-items: center; 
+  margin-bottom: 1rem; 
+  font-size: 1rem; 
+  position: relative; /* Asegura flujo correcto para elementos interactivos */
+}
+
+.email-label { 
+  font-weight: bold; 
+  color: #4b5563; 
+  min-width: 60px; 
+}
+
+.email-divider { 
+  border: 0; 
+  border-top: 1px solid #e5e7eb; 
+  margin: 1.5rem 0; 
+}
+
+.email-action-container { 
+  text-align: center; 
+  margin: 2rem 0; 
+}
+
+.email-footer-note { 
+  font-size: 0.85rem; 
+  text-align: center; 
+  color: #9ca3af; 
+  margin-top: 1.5rem; 
+  border-top: 1px solid #f3f4f6; 
+  padding-top: 1rem; 
+}
+
+/* --- Elementos Peligrosos Interactivos (Simulador Correo CORREGIDOS) --- */
+.danger-wrapper { 
+  position: relative; 
+  display: inline-block; 
+  cursor: pointer; 
+}
+
+.danger-signal { 
+  background-color: #fee2e2; 
+  color: #b91c1c; 
+  border-bottom: 2px dashed #ef4444; 
+  padding: 0.1rem 0.4rem; 
+  border-radius: 4px; 
+  transition: background 0.2s; 
+}
+
+.danger-signal:hover { 
+  background-color: #fecaca; 
+}
+
+.btn-danger-action { 
+  display: inline-block; 
+  padding: 0.75rem 1.5rem; 
+  background: #dc2626; 
+  color: white !important; 
+  font-weight: bold; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  border-bottom: none !important; 
+}
+
+/* Corrección para que la caja de explicación flote limpia y exteriormente */
+.danger-explanation { 
+  display: none; 
+  position: absolute; 
+  left: 0; 
+  top: calc(100% + 8px); /* Separado adecuadamente del elemento emisor */
+  background: white; 
+  border: 2px solid #dc2626; 
+  padding: 1rem; 
+  border-radius: 6px; 
+  width: 320px; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+  z-index: 99999; /* Elevado para evitar que quede por debajo de otros bloques */
+  font-size: 0.9rem; 
+  color: #1f2937; 
+  text-align: left; 
+}
+
+.danger-wrapper.open .danger-explanation { 
+  display: block; 
+}
+
+.counter-signals { 
+  text-align: center; 
+  font-size: 0.9rem; 
+  color: #6b7280; 
+  margin-top: 1rem; 
+}
+
+
+/* ==========================================================================
+   5. TALLER 2: VERIFICADOR DE URLS
+   ========================================================================== */
+.url-verifier { 
+  background: white; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 8px; 
+  padding: 1.5rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); 
+}
+
+.url-verifier-header { 
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
+  margin-bottom: 1.5rem; 
+  background: #f8fafc; 
+  padding: 1rem; 
+  border-radius: 6px; 
+}
+
+.verifier-icon { 
+  font-size: 2rem; 
+}
+
+.url-verifier-title { 
+  font-weight: 700; 
+  font-size: 1.1rem; 
+  color: #1f2937; 
+}
+
+.url-verifier-subtitle { 
+  font-size: 0.9rem; 
+  color: #6b7280; 
+}
+
+.url-card { 
+  background: #fafafa; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 6px; 
+  padding: 1rem; 
+  margin-bottom: 1rem; 
+  cursor: pointer; 
+  transition: all 0.2s; 
+}
+
+.url-card:hover { 
+  border-color: #9ca3af; 
+}
+
+.url-browser-bar { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+  background: white; 
+  padding: 0.5rem 0.75rem; 
+  border-radius: 4px; 
+  border: 1px solid #d1d5db; 
+  font-family: monospace; 
+  font-size: 0.9rem; 
+  overflow-x: auto; 
+}
+
+.url-dots { 
+  display: flex; 
+  gap: 4px; 
+}
+
+.url-dots .dot { 
+  width: 8px; 
+  height: 8px; 
+  border-radius: 50%; 
+}
+
+.url-field-display { 
+  display: flex; 
+  flex-wrap: wrap; 
+  flex-grow: 1; 
+}
+
+.url-lock { 
+  font-size: 0.9rem; 
+}
+
+/* Partes de URL coloreadas */
+.protocol-secure { color: #059669; font-weight: bold; }
+.protocol-insecure { color: #dc2626; font-weight: bold; }
+.domain-main { color: #2563eb; font-weight: bold; }
+.domain-fake { color: #dc2626; font-weight: bold; }
+.domain-dubious { color: #d97706; font-weight: bold; }
+.subdomain, .subdomain-fake { color: #4b5563; }
+.path { color: #6b7280; }
+.trick-letter { background: #fee2e2; color: #dc2626; padding: 0 2px; border-radius: 2px; }
+
+.url-status { 
+  margin-top: 1rem; 
+  padding-top: 1rem; 
+  border-top: 1px dashed #e5e7eb; 
+}
+
+.url-badge { 
+  display: inline-block; 
+  padding: 0.25rem 0.75rem; 
+  border-radius: 4px; 
+  font-weight: bold; 
+  font-size: 0.85rem; 
+  margin-bottom: 0.75rem; 
+}
+
+.url-badge.secure { background: #d1fae5; color: #065f46; }
+.url-badge.danger { background: #fee2e2; color: #991b1b; }
+.url-badge.dubious { background: #fef3c7; color: #92400e; }
+
+.url-analysis { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.5rem; 
+  font-size: 0.9rem; 
+}
+
+.analysis-item { 
+  display: flex; 
+  gap: 0.5rem; 
+  align-items: baseline; 
+}
+
+.analysis-label { 
+  font-weight: bold; 
+  min-width: 90px; 
+  color: #374151; 
+}
+
+.analysis-value { color: #4b5563; }
+.analysis-item.ok .analysis-value { color: #065f46; }
+.analysis-item.bad .analysis-value { color: #991b1b; }
+
+.url-instruction { 
+  font-size: 0.8rem; 
+  color: #9ca3af; 
+  text-align: right; 
+  margin-top: 0.5rem; 
+  margin-bottom: 0; 
+}
+
+.verifier-progress { 
+  margin-top: 1.5rem; 
+  font-size: 0.9rem; 
+  color: #4b5563; 
+  text-align: center; 
+}
+
+.verifier-progress-bar-container { 
+  background: #e5e7eb; 
+  height: 8px; 
+  border-radius: 4px; 
+  margin-top: 0.5rem; 
+  overflow: hidden; 
+}
+
+.verifier-progress-fill { 
+  background: #0F5132; 
+  height: 100%; 
+  width: 0%; 
+  transition: width 0.3s ease; 
+}
+
+
+/* ==========================================================================
+   6. PROTOCOLO Y LISTAS
+   ========================================================================== */
+.protocol-list { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.75rem; 
+}
+
+.protocol-list li { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+  font-size: 1.05rem; 
+  color: #374151; 
+}
+
+.text-danger { color: #dc2626; }
+.text-warning { color: #d97706; }
+.text-primary { color: #2563eb; }
+.text-success { color: #059669; }
+
+
+/* ==========================================================================
+   7. FOOTER COMÚN
+   ========================================================================== */
+.footer { 
+  background: #1f2937; 
+  color: white; 
+  padding: 3rem 0 1.5rem 0; 
+  margin-top: 4rem; 
+}
+
+.footer-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 2rem; 
+  margin-bottom: 2rem; 
+}
+
+.footer-brand { 
+  display: flex; 
+  align-items: center; 
+  gap: 0.75rem; 
+  margin-bottom: 1rem; 
+}
+
+.footer-logo { 
+  background: #0F5132; 
+  width: 32px; 
+  height: 32px; 
+  border-radius: 6px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+}
+
+.footer-title { 
+  font-weight: bold; 
+  font-size: 1.1rem; 
+}
+
+.footer-heading { 
+  font-size: 1rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
+  color: #9ca3af; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+}
+
+.footer-links { 
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.5rem; 
+}
+
+.footer-links a { 
+  color: #d1d5db; 
+  text-decoration: none; 
+  transition: color 0.2s; 
+}
+
+.footer-links a:hover { 
+  color: white; 
+}
+
+.footer-text { 
+  color: #d1d5db; 
+  font-size: 0.95rem; 
+}
+
+.footer-bottom { 
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+  padding-top: 1.5rem; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 1rem; 
+  font-size: 0.9rem; 
+  color: #9ca3af; 
+}
+
+.footer-credits { 
+  color: #d1d5db; 
+  text-decoration: none; 
+}
+
+.footer-credits:hover { 
+  text-decoration: underline; 
 }

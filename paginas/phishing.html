@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Phishing y Engaños | L.B. Antonio Lemus Pérez</title>
+    <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
+    <link rel="stylesheet" href="../estilos/estilos-base.css" />
+    <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
+    <link rel="stylesheet" href="../estilos/phishing.css" />
+    <link rel="stylesheet" href="../estilos/main.css" />
+    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
+    <script src="../scripts/logica-tema.js"></script>
+
+    <link rel="manifest" href="../manifest.json" />
+    <meta name="theme-color" content="#0F5132" />
+    <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
+    <link rel="stylesheet" href="../estilos/phishing.css">
+</head>
+<body>
+
+    <!-- Navegación Superior Unificada -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav active" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu" href="index.html">Inicio</a>
+                <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+                <a class="enlace-menu active" href="index2.html">Manual</a>
+                <a class="enlace-menu" href="nosotros.html">Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Cabecera de módulo unificada -->
+    <header class="cabecera-pagina">
+        <div class="contenedor-cabecera">
+            <span class="insignia-modulo">Módulo 4 · Detección de Phishing</span>
+            <h1 class="titulo-destacado">¿Cómo detectar mensajes falsos y engaños en internet?</h1>
+            <p class="subtitulo">Aprende a identificar anzuelos cibernéticos, páginas clonadas y correos fraudulentos antes de hacer clic.</p>
+        </div>
+    </header>
+
+<main class="container py-5">
+
+    <!-- SECCIÓN 1 -->
+    <section class="section">
+        <h2 class="section-title">1. ¿Qué es el "Pesca de Datos" o Phishing?</h2>
+        <p class="section-text">
+            Existe un tipo de engaño por internet llamado <span class="highlight">Phishing</span> (se pronuncia "fishing", que en inglés significa "pescar"). 
+            El nombre viene de que los criminales "lanzan un anzuelo" (un mensaje falso) esperando que tú "piques" y entregues tus datos.
+        </p>
+        
+        <div class="definition-box">
+            <div class="definition-header"><span class="material-symbols-outlined">menu_book</span> ¿Qué es el Phishing?</div>
+            <div class="definition-body">Es cuando alguien te manda un mensaje falso que parece real (de tu banco, de Instagram, de Netflix, etc.) para que entres en un enlace y escribas tu contraseña en una página falsa. Así te roban la cuenta sin necesidad de hackear nada.</div>
+        </div>
+
+        <p class="section-text">
+            Para lograrlo, usan técnicas psicológicas llamadas <span class="highlight">Ingeniería Social</span>.
+        </p>
+
+        <div class="definition-box">
+            <div class="definition-header"><span class="material-symbols-outlined">menu_book</span> ¿Qué es la Ingeniería Social?</div>
+            <div class="definition-body">No es hackear computadoras, es hackear personas. Usan el miedo ("¡Tu cuenta se cerrará!"), la urgencia ("¡Tienes 24 horas!") o la curiosidad ("Mira quién te está viendo el perfil") para que reacciones sin pensar.</div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <div class="card-title"><span class="material-symbols-outlined">mail</span> Phishing por Correo</div>
+                <p>El más común. Recibes un correo que parece de Gmail, tu banco o Instagram. Tiene un botón que te lleva a una página idéntica a la original, pero falsa.</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><span class="material-symbols-outlined">smartphone</span> Engaño por Mensaje (Smishing)</div>
+                <p>Por WhatsApp o SMS te mandan un link con el mensaje "Ganaste un premio" o "Tu pedido está retenido". El link descarga un virus o te lleva a una página falsa.</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><span class="material-symbols-outlined">call</span> Engaño por Llamada (Vishing)</div>
+                <p>Te llama una persona fingiendo ser del banco o de soporte técnico. Te piden datos "para verificar tu identidad". Ningún banco real te pedirá tu clave por teléfono.</p>
+            </div>
+            <div class="card">
+                <div class="card-title"><span class="material-symbols-outlined">track_changes</span> Engaño Personalizado (Spear Phishing)</div>
+                <p>Un ataque más peligroso donde el criminal investiga tus redes sociales y sabe tu nombre, colegio o gustos para hacer el mensaje más creíble y confiable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TALLER 1: SIMULADOR DE CORREO -->
+    <section class="section">
+        <h2 class="section-title"><span class="material-symbols-outlined">science</span> Taller 1: Detecta las Señales de Alarma</h2>
+        <div class="workshop-instruction">
+            <span class="material-symbols-outlined">lightbulb</span> Toca las partes que están resaltadas en rojo para descubrir por qué este correo es una trampa.
+        </div>
+
+        <div class="email-simulator">
+            <div class="email-topbar">
+                <span class="dot" style="background:#ef4444"></span>
+                <span class="dot" style="background:#fbbf24"></span>
+                <span class="dot" style="background:#22c55e"></span>
+                <span class="email-bar-title">Bandeja de Entrada — Gmail</span>
+            </div>
+            <div class="email-body">
+                <div class="email-field">
+                    <span class="email-label">De:</span>
+                    <div class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal">seguridad-banco@gmail.com</span>
+                        <div class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 1: Un banco real (@bancovenezuela.com) nunca usaría una cuenta gratuita de Gmail. Esta dirección es falsa.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="email-field">
+                    <span class="email-label">Asunto:</span>
+                    <div class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal"><span class="material-symbols-outlined">warning</span> URGENTE: Tu cuenta será bloqueada</span>
+                        <div class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 2: Los estafadores usan la urgencia para que te asustes y no pienses con calma. Un banco nunca te amenazaría así por correo.
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="email-divider"/>
+
+                <p class="section-text">
+                    Estimado 
+                    <span class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal">usuario</span>,
+                        <span class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 3: El mensaje es genérico. Si fuera tu banco real, pondría tu nombre y apellido completos.
+                        </span>
+                    </span>
+                </p>
+
+                <p class="section-text">
+                    Hemos detectado un problema de seguridad. Debe verificar su cuenta 
+                    <span class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal">antes de 2 horas</span>
+                        <span class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 4: Otra vez usan la presión del tiempo. Es una trampa psicológica muy común.
+                        </span>
+                    </span>
+                    o será suspendida.
+                </p>
+
+                <div class="email-action-container">
+                    <span class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal btn-danger-action">Verificar Cuenta Ahora <span class="material-symbols-outlined">arrow_forward</span></span>
+                        <span class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 5: Este botón te lleva a una página falsa que se ve igual al banco pero es del hacker. ¡Nunca hagas clic!
+                        </span>
+                    </span>
+                </div>
+
+                <div class="email-footer-note">
+                    <span class="danger-wrapper" onclick="this.classList.toggle('open')">
+                        <span class="danger-signal">© 2026 Banco Seguro. Todos los derechos reserbados.</span>
+                        <span class="danger-explanation">
+                            <span class="material-symbols-outlined text-danger">report</span> SEÑAL 6: Observa la mala ortografía ("reserbados" con B). Las empresas serias no cometen estos errores.
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <p class="counter-signals">Toca cada zona roja para aprender. Hay 6 en total. <span class="material-symbols-outlined">search</span></p>
+    </section>
+
+    <!-- TALLER 2: VERIFICADOR DE URLS -->
+    <section class="section">
+        <h2 class="section-title"><span class="material-symbols-outlined">science</span> Taller 2: ¿Es segura esta dirección web?</h2>
+        <p class="section-text">
+            La <span class="highlight">URL</span> es la dirección de una página web, lo que ves en la barra de tu navegador (ej: www.google.com).
+        </p>
+        <div class="definition-box">
+            <div class="definition-header"><span class="material-symbols-outlined">menu_book</span> ¿Cómo leer una URL con seguridad?</div>
+            <div class="definition-body">
+                Una URL tiene partes importantes. Ejemplo: <strong>https://www.instagram.com/login</strong><br/>
+                • <strong>https://</strong> → El sitio tiene seguridad cifrada (el candado verde). Si dice solo "http://" sin la "s", es inseguro.<br/>
+                • <strong>www.instagram.com</strong> → El "dominio", el nombre real del sitio. Siempre verifica que sea exactamente el correcto.<br/>
+                • <strong>/login</strong> → La página dentro del sitio.
+            </div>
+        </div>
+
+        <div class="url-verifier">
+            <div class="url-verifier-header">
+                <span class="verifier-icon">🔍</span>
+                <div>
+                    <div class="url-verifier-title">¿Cuál es el enlace real?</div>
+                    <p class="url-verifier-subtitle">Toca cada enlace para analizar si es seguro, falso o dudoso. ¡Descubre por qué!</p>
+                </div>
+            </div>
+
+            <!-- URL 1 -->
+            <div class="url-card" id="url-1" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-secure">https://</span><span class="url-part domain-main">www.instagram.com</span><span class="url-part path">/accounts/login</span>
+                    </div>
+                    <span class="url-lock">🔒</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge secure">✅ SEGURA</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item ok"><span class="analysis-label">Protocolo</span><span class="analysis-value">✔ <strong>https://</strong> — Conexión cifrada y segura</span></div>
+                        <div class="analysis-item ok"><span class="analysis-label">Dominio</span><span class="analysis-value">✔ <strong>instagram.com</strong> — Dominio oficial correcto</span></div>
+                        <div class="analysis-item ok"><span class="analysis-label">Ruta</span><span class="analysis-value">✔ <strong>/accounts/login</strong> — Página de inicio de sesión real</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <!-- URL 2 -->
+            <div class="url-card" id="url-2" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-insecure">http://</span><span class="url-part domain-fake">instagram-seguridad.xyz</span><span class="url-part path">/login</span>
+                    </div>
+                    <span class="url-lock danger">⚠️</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge danger">❌ ENLACE FALSO</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item bad"><span class="analysis-label">Protocolo</span><span class="analysis-value">✖ <strong>http://</strong> sin "s" — SIN cifrado. Tus datos viajan expuestos</span></div>
+                        <div class="analysis-item bad"><span class="analysis-label">Dominio</span><span class="analysis-value">✖ <strong>instagram-seguridad.xyz</strong> — No es Instagram. El ".xyz" es un dominio barato y sospechoso</span></div>
+                        <div class="analysis-item ok"><span class="analysis-label">Ruta</span><span class="analysis-value">~ <strong>/login</strong> — La ruta parece normal, pero todo el resto es falso</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <!-- URL 3 -->
+            <div class="url-card" id="url-3" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-secure">https://</span><span class="url-part domain-fake"><span class="trick-letter">ln</span>stagram.com</span><span class="url-part path">/login</span>
+                    </div>
+                    <span class="url-lock danger">⚠️</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge danger">❌ TRAMPA VISUAL</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item ok"><span class="analysis-label">Protocolo</span><span class="analysis-value">~ <strong>https://</strong> — Tiene "s", pero eso no garantiza que el sitio sea real</span></div>
+                        <div class="analysis-item bad"><span class="analysis-label">Dominio</span><span class="analysis-value">✖ ¡El dominio dice <strong>"lnstagram"</strong> con una "l" minúscula! La "I" (mayúscula) y la "l" (minúscula) son casi idénticas visualmente. Este truco se llama <strong>Typosquatting</strong>.</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <!-- URL 4 -->
+            <div class="url-card" id="url-4" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-secure">https://</span><span class="url-part subdomain">mail.</span><span class="url-part domain-main">google.com</span><span class="url-part path">/mail/</span>
+                    </div>
+                    <span class="url-lock">🔒</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge secure">✅ SEGURA</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item ok"><span class="analysis-label">Protocolo</span><span class="analysis-value">✔ <strong>https://</strong> — Conexión segura</span></div>
+                        <div class="analysis-item ok"><span class="analysis-label">Subdominio</span><span class="analysis-value">✔ <strong>mail.</strong> — Es un servicio oficial dentro de Google</span></div>
+                        <div class="analysis-item ok"><span class="analysis-label">Dominio</span><span class="analysis-value">✔ <strong>google.com</strong> — Dominio oficial de Google</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <!-- URL 5 -->
+            <div class="url-card" id="url-5" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-secure">https://</span><span class="url-part subdomain-fake">google.</span><span class="url-part domain-fake">seguridad-verifica.com</span>
+                    </div>
+                    <span class="url-lock danger">⚠️</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge danger">❌ TRAMPA DE SUBDOMINIO</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item ok"><span class="analysis-label">Protocolo</span><span class="analysis-value">~ <strong>https://</strong> — Tiene "s", pero el sitio sigue siendo falso</span></div>
+                        <div class="analysis-item bad"><span class="analysis-label">Truco</span><span class="analysis-value">✖ La palabra "google" es solo un subdominio decorativo. El <strong>dominio real es "seguridad-verifica.com"</strong>, que no tiene nada que ver con Google.</span></div>
+                        <div class="analysis-item bad"><span class="analysis-label">Regla</span><span class="analysis-value">⚡ Siempre lee la URL <strong>de derecha a izquierda</strong> desde el primer punto antes del primer /</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <!-- URL 6 -->
+            <div class="url-card" id="url-6" onclick="analizarUrl(this)">
+                <div class="url-browser-bar">
+                    <div class="url-dots">
+                        <span class="dot" style="background:#ef4444;"></span>
+                        <span class="dot" style="background:#f59e0b;"></span>
+                        <span class="dot" style="background:#22c55e;"></span>
+                    </div>
+                    <div class="url-field-display">
+                        <span class="url-part protocol-secure">https://</span><span class="url-part domain-dubious">bit.ly</span><span class="url-part path">/3xLm9qZ</span>
+                    </div>
+                    <span class="url-lock dubious">❓</span>
+                </div>
+                <div class="url-status hidden">
+                    <div class="url-badge dubious">⚠️ DUDOSA</div>
+                    <div class="url-analysis">
+                        <div class="analysis-item bad"><span class="analysis-label">Problema</span><span class="analysis-value">✖ <strong>bit.ly</strong> es un acortador de links. Oculta completamente a dónde llevas al hacer clic.</span></div>
+                        <div class="analysis-item bad"><span class="analysis-label">Riesgo</span><span class="analysis-value">⚡ Los atacantes usan acortadores para disfrazar URLs peligrosas. Puedes usar <strong>unshorten.it</strong> para ver el destino real antes de entrar.</span></div>
+                    </div>
+                </div>
+                <p class="url-instruction">Toca para analizar</p>
+            </div>
+
+            <div class="verifier-progress">
+                <span id="urls-revisadas">0</span> de 6 analizadas
+                <div class="verifier-progress-bar-container">
+                    <div class="verifier-progress-fill" id="barra-urls"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOCOLO -->
+    <section class="section">
+        <div class="protocol-box">
+            <h3><span class="material-symbols-outlined">assignment</span> Protocolo: ¿Qué hacer si recibes un mensaje sospechoso?</h3>
+            <ul class="protocol-list">
+                <li><span class="material-symbols-outlined text-danger">block</span> NO hagas clic en ningún enlace, aunque el mensaje parezca urgente.</li>
+                <li><span class="material-symbols-outlined text-warning">mail</span> Verifica siempre el remitente: ¿el correo tiene el dominio oficial o es un Gmail/Hotmail raro?</li>
+                <li><span class="material-symbols-outlined text-primary">search</span> Revisa la URL antes de escribir tu contraseña: busca errores en el nombre o ausencia de "https".</li>
+                <li><span class="material-symbols-outlined text-warning">delete</span> Borra el mensaje y márcalo como "Spam" o "Phishing" en tu correo.</li>
+                <li><span class="material-symbols-outlined text-success">vpn_key</span> Si ingresaste tu clave por error, cámbiala de inmediato desde el sitio oficial.</li>
+                <li><span class="material-symbols-outlined text-primary">forum</span> Avisa a un profesor o directivo para proteger a tus compañeros.</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<!-- Pie de Página -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="material-symbols-outlined">&#xe80c;</span>
+                    </div>
+                    <span class="footer-title">CE Antonio Lemus Pérez</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-heading">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="justificacion.html">Justificación</a></li>
+                    <li><a href="index2.html">Manual Digital</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="index3.html">Accesibilidad</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contacto</h4>
+                <p class="footer-text">Cumaná, Estado Sucre, Venezuela.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="footer-copyright">
+                © 2026 Liceo Bolivariano Antonio Lemus Pérez. Todos los derechos reservados.
+            </p>
+            <a href="nosotros.html" class="footer-credits">
+                Desarrollado por: Cordova / Guipe / Giraldo / Ruiz
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="../scripts/logica-phishing.js"></script>
+<script src="../scripts/logica-tema.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('../sw.js').catch(err => console.error('SW Fallo', err));
+        });
+    }
+</script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+</script>
+</body>
+</html>
