@@ -334,6 +334,7 @@ img {
 .portada {
   position: relative;
   padding: 2.5rem 0 4rem 0;
+  background-color: var(--color-fondo-variante);
   
 
 }
@@ -682,3 +683,232 @@ img {
 .creditos-pie:hover {
   opacity: 1;
 }
+
+  /* Efectos Hover Dinámicos para Personal */
+        .tarjeta-hover-zoom {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .tarjeta-hover-zoom:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px -6px rgba(15, 81, 50, 0.25);
+            border-color: var(--color-primario);
+        }
+        .tarjeta-hover-zoom::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--color-primario);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+            transform-origin: right;
+        }
+        .tarjeta-hover-zoom:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Tarjetas Grandes y Desplegables (Aplicado tanto a Labores como a Personal) */
+        .tarjeta-grande-desplegable {
+            cursor: pointer;
+            transition: all 0.35s ease;
+            border: 2px solid rgba(15, 81, 50, 0.15);
+            background: var(--color-fondo-tarjeta, #ffffff);
+            border-radius: var(--radio-md, 12px);
+
+            position: relative;
+            overflow: hidden;
+        }
+        .tarjeta-grande-desplegable:hover {
+            border-color: var(--color-primario);
+            box-shadow: 0 16px 32px -8px rgba(15, 81, 50, 0.2);
+            transform: translateY(-4px);
+        }
+        .contenido-desplegable-grande {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease-out, opacity 0.3s ease-out, margin-top 0.3s ease-out;
+            margin-top: 0;
+        }
+        .tarjeta-grande-desplegable.activa .contenido-desplegable-grande {
+            max-height: 400px;
+            opacity: 1;
+            margin-top: 1.25rem;
+        }
+.indicador-desplegar {
+    position: absolute !important;
+    top: 0.7rem !important;
+        color: #000000 !important;
+    right: 0.8rem !important;
+    
+    /* Forzar dimensiones exactas iguales para que sea un círculo */
+    width: 1rem !important;
+    height: 1rem !important;
+    min-width: 2rem !important;
+    min-height: 2rem !important;
+    
+    /* Centrar contenido */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #8787877e !important;
+    
+    /* Resetear cualquier padding que lo deforme */
+    padding: 0 !important;
+    
+    /* Apariencia */
+  
+
+    border-radius: 50% !important;
+    font-size: 1rem !important;  
+    
+    /* Efecto blur / sombra nativa */
+    box-shadow: 0 4px 10px rgba(237, 235, 235, 0.1) !important;
+    backdrop-filter: blur(9px) !important;
+    -webkit-backdrop-filter: blur(9px) !important;
+    background-color: #76777837;
+    
+    transition: transform 0.3s ease !important;
+}
+        .tarjeta-grande-desplegable.activa .indicador-desplegar {
+            transform: rotate(180deg);
+        }
+
+        .h3ti {
+            color: var(--color-blanco);
+        }
+
+        /* Avatar con estilo Cover en tarjetas desplegables */
+        .avatar-cover-grande {
+            width: 100%;
+            height: 220px;
+            border-radius: var(--radio-md, 8px);
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+
+            position: relative;
+
+            
+        }
+        .avatar-cover-grande img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+        .tarjeta-grande-desplegable:hover .avatar-cover-grande img {
+            transform: scale(1.06);
+        }
+
+        /* Carrusel a Pantalla Completa Estilo Cover */
+        .contenedor-carrusel-cover {
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            height: 75vh;
+            min-height: 500px;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .pista-carrusel-cover {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+        .pista-carrusel-cover::-webkit-scrollbar {
+            display: none;
+        }
+        .item-carrusel-cover {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        .item-carrusel-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: brightness(0.75);
+            transition: transform 6s ease;
+        }
+        .item-carrusel-cover:hover img {
+            transform: scale(1.04);
+        }
+        .overlay-carrusel-cover {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 4rem 2rem 3rem 2rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .overlay-carrusel-cover h3 {
+            font-size: 2.75rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        .overlay-carrusel-cover p {
+            font-size: 1.25rem;
+            max-width: 48rem;
+            opacity: 0.95;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* Controles flotantes sobre el cover */
+        .controles-cover {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 10;
+        }
+        .boton-cover {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+        .boton-cover:hover {
+            background-color: var(--color-primario);
+            border-color: var(--color-primario);
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 768px) {
+            .contenedor-carrusel-cover {
+                height: 55vh;
+            }
+            .overlay-carrusel-cover h3 {
+                font-size: 1.8rem;
+            }
+            .overlay-carrusel-cover p {
+                font-size: 1rem;
+            }
+        }

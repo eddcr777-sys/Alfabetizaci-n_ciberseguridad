@@ -1,127 +1,274 @@
+/* ==========================================================================
+   VARIABLES Y NORMALIZACIÓN
+   ========================================================================== */
 :root {
-    --acento: #1b4d31;
-    --advertencia: #2e7d32;
-    --fondo-paso: #FFFFFF;
+    /* Paleta Principal */
+    --color-primario: #0F5132;
+    --color-primario-oscuro: #0c4128;
+    --color-fondo: #ffffff;
+    --color-texto-principal: #0f172a;
+    --color-texto-secundario: #475569;
+    
+    /* Variables de Componentes */
     --fondo-pro: #f4fbf7;
+    --borde-pro: #ca8a04;
+    --fondo-paso: #ffffff;
+    --borde-paso: #e2e8f0;
+    --fondo-alerta: #fffbeb;
+    
+    /* Tipografía */
+    --fuente-titulos: 'Outfit', sans-serif;
+    --fuente-texto: 'Public Sans', sans-serif;
 }
 
 *, *::before, *::after {
-    border-radius: 0 !important;
+    box-sizing: border-box;
+    border-radius: 0; /* Directiva de diseño existente */
+    margin: 0;
+    padding: 0;
 }
-
 
 body {
-    font-family: 'Public Sans', sans-serif;
-    background: #fff;
-    color: #022C22;
-    line-height: 1.5;
+    font-family: var(--fuente-texto);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.6;
+    border-top: 8px solid #1e3a8a;
 }
 
-h1, h2, h3 {
-    font-family: 'Outfit', sans-serif;
+/* ==========================================================================
+   DISEÑO ESTRUCTURAL (LAYOUT)
+   ========================================================================== */
+.contenedor-principal {
+
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
 }
 
-.tarjeta-paso {
-    background: var(--fondo-paso);
-    border: 1px solid #ECFDF5;
-    border-radius: 1.25rem;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
+.seccion-espaciada {
+    margin-bottom: 4rem;
 }
 
-.tarjeta-pro {
-    background: var(--fondo-pro);
-    border: 2px solid #ca8a04;
-    border-radius: 1.5rem;
-    padding: 2rem;
-    margin-top: 3rem;
+.cuadricula-2-columnas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
-.paso-instruccion {
+@media (min-width: 768px) {
+    .cuadricula-2-columnas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.flex-centro {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
+    align-items: center;
+    gap: 0.5rem;
 }
+
+.mt-2 { margin-top: 0.5rem; }
+
+/* ==========================================================================
+   TIPOGRAFÍA
+   ========================================================================== */
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    line-height: 1.2;
+}
+
+.etiqueta-superior {
+    color: var(--color-texto-secundario);
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .titulo-principal { font-size: 3rem; }
+}
+
+.titulo-seccion {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #0f172a;
+}
+
+.texto-descriptivo {
+    font-size: 0.9rem;
+    color: #334155;
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   MÓDULOS DE COMPONENTES
+   ========================================================================== */
+/* Tarjeta Protección Principal */
+.tarjeta-pro {
+    background-color: var(--fondo-pro);
+    border: 2px solid var(--borde-pro);
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-pro.border-rojo {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.titulo-seccion-ambar { color: #78350f; font-size: 1.5rem; margin-bottom: 1rem; }
+.titulo-seccion-roja { color: #991b1b; font-size: 1.5rem; margin-bottom: 1rem; }
+.texto-informativo-ambar { color: #92400e; font-size: 0.85rem; margin-bottom: 1.5rem; }
+.texto-informativo-rojo { color: #7f1d1d; font-size: 0.85rem; margin-bottom: 1.5rem; }
+
+/* Sub-tarjetas de Aviso */
+.tarjeta-aviso-premium {
+    padding: 1rem;
+    border-left: 4px solid;
+    background-color: var(--color-fondo);
+}
+.alerta-ambar { border-left-color: #f59e0b; }
+.alerta-azul { border-left-color: #3b82f6; }
+.alerta-esmeralda { border-left-color: #10b981; }
+.alerta-naranja { border-left-color: #f97316; }
+
+.tarjeta-aviso-premium h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.tarjeta-aviso-premium p { font-size: 0.85rem; color: #475569; }
+
+/* Tarjetas de Advertencia Crítica (Phishing) */
+.tarjeta-alerta-critica {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.etiqueta-critica {
+    background: #fee2e2;
+    color: #991b1b;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 0.2rem 0.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+/* Tarjetas Tutoriales Redes */
+.tarjeta-paso {
+    background-color: var(--fondo-paso);
+    border: 1px solid var(--borde-paso);
+    padding: 1.5rem;
+}
+.titulo-tarjeta { font-size: 1.1rem; margin-bottom: 1rem; }
+.lista-pasos { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.75rem; }
+.paso-item { display: flex; align-items: center; gap: 0.5rem; }
 
 .icono-numero {
-    background: var(--acento);
+    background-color: var(--color-primario);
     color: white;
-    width: 24px;
-    height: 24px;
-    border-radius: 6px;
-    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    font-weight: 800;
-    margin-top: 2px;
+    font-size: 0.7rem;
+    font-weight: bold;
 }
 
-.etiqueta-roja {
-    font-size: 9px;
-    font-weight: 800;
-    padding: 2px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    display: inline-block;
+/* Etiquetas Colores */
+.etiqueta-verde { background: #dcfce3; color: #15803d; font-size: 0.6rem; font-weight: bold; padding: 2px 6px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+.etiqueta-rosa { background: #fce7f3; color: #be185d; font-size: 0.6rem; font-weight: bold; padding: 2px 6px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+
+/* Listas Protocolo Extorsión */
+.lista-protocolo { display: flex; flex-direction: column; gap: 1rem; }
+.paso-protocolo {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    background: #ffffff;
+    padding: 1rem;
+    border: 1px solid #fecaca;
+}
+.numero-critico {
+    background: #dc2626;
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
 }
 
-/* ==========================================
-   MODO OSCURO
-   ========================================== */
-.dark body { background-color: #020617; color: #FFFFFF; }
+/* Triage */
+.tarjeta-triage {
+    background-color: #f8fafc;
+    border: 2px solid #cbd5e1;
+    padding: 2rem;
+}
+.titulo-triage { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; }
+.lista-triage { display: flex; flex-direction: column; gap: 1rem; list-style: none; font-size: 0.85rem; }
+.lista-triage li { display: flex; gap: 0.5rem; align-items: flex-start; }
+.icono-rojo-inline { color: #dc2626; font-size: 1.2rem; }
+.icono-ambar-inline { color: #d97706; font-size: 1.2rem; }
 
+/* ==========================================================================
+   MODO OSCURO (INVERSIÓN DE ESTADO)
+   ========================================================================== */
+.dark body { 
+    background-color: #020617; 
+    color: #e2e8f0; 
+}
+
+.dark .titulo-principal, 
+.dark .titulo-seccion, 
+.dark .titulo-triage,
+.dark .titulo-tarjeta { 
+    color: #ffffff; 
+}
+
+.dark .texto-descriptivo {
+    color: #94a3b8;
+}
+
+/* Adaptación Tarjetas Principales */
 .dark .tarjeta-pro {
-    background-color: #451a03 !important; /* Ámbar muy oscuro */
-    border-color: #92400e !important;
+    background-color: #451a03;
+    border-color: #92400e;
+}
+.dark .titulo-seccion-ambar,
+.dark .texto-informativo-ambar { color: #fef3c7; }
+
+.dark .tarjeta-pro.border-rojo {
+    background-color: #450a0a;
+    border-color: #991b1b;
+}
+.dark .titulo-seccion-roja,
+.dark .texto-informativo-rojo { color: #fee2e2; }
+
+.dark .tarjeta-aviso-premium { background-color: rgba(0, 0, 0, 0.3); }
+.dark .tarjeta-aviso-premium p { color: #cbd5e1; }
+
+.dark .tarjeta-alerta-critica, 
+.dark .tarjeta-paso,
+.dark .paso-protocolo {
+    background-color: #0f172a;
+    border-color: #334155;
 }
 
-.dark .tarjeta-pro h2, 
-.dark .tarjeta-pro p,
-.dark .tarjeta-pro h4 {
-    color: #fef3c7 !important; /* Texto ámbar claro legible */
-}
-
-.dark .tarjeta-pro div[class*="bg-white"] {
-    background-color: rgba(0, 0, 0, 0.2) !important;
-    border-color: rgba(251, 191, 36, 0.2) !important;
-}
-
-.dark .tarjeta-paso {
-    background-color: #022C22 !important;
-    border-color: #334155 !important;
-    color: #FFFFFF !important;
-}
-
-.dark .tarjeta-paso h3 {
-    color: #FFFFFF !important;
-}
-
-.dark .tarjeta-paso p {
-    color: #D1FAE5 !important;
-}
-
-.dark .etiqueta-roja {
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    color: #FFFFFF !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-}
-
-.dark .icono-numero {
-    background-color: #3b82f6 !important;
-}
-
-.dark h1, .dark h2, .dark .text-slate-900 {
-    color: #FFFFFF !important;
-}
-
-.dark .text-secundario-800, .dark .text-secundario-900 {
-    color: #60a5fa !important;
-}
-
-.dark .text-amber-800, .dark .text-amber-900 {
-    color: #fcd34d !important;
-}
+.dark .texto-pasos { color: #cbd5e1; }
+.dark .tarjeta-triage { background-color: #0f172a; border-color: #334155; }

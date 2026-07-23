@@ -295,6 +295,10 @@ body {
     font-size: 0.875rem;
 }
 
+.creditos-pie {
+    color: var(--color-texto-secundario);
+    font-size: 0.6rem;
+}
 .btn-interactivo {
     margin-top: 12px;
     padding: 8px 14px;

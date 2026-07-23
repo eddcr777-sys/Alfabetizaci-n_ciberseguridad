@@ -1,192 +1,199 @@
-// ============================================================
-// LÓGICA MANUAL MAESTRO — Barra progreso, nav activa,
-// estadísticas animadas, quiz interactivo, botón subir
-// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
 
-// ── 1. BARRA DE PROGRESO DE LECTURA ──────────────────────
-window.addEventListener('scroll', function () {
-    const docAltura = document.documentElement.scrollHeight - window.innerHeight;
-    const porcentaje = docAltura > 0 ? (window.scrollY / docAltura) * 100 : 0;
-    const barra = document.getElementById('barra-lectura-relleno');
-    if (barra) barra.style.width = porcentaje + '%';
+    // ── 1. MODO OSCURO MEJORADO ────────────────────────
+    const btnTema = document.getElementById('btn-tema');
+    const iconoTema = document.getElementById('icono-tema');
+    const textoTema = document.getElementById('texto-tema');
 
-    // Botón flotante "volver arriba"
-    const boton = document.getElementById('boton-subir');
-    if (boton) {
-        boton.style.display = window.scrollY > 400 ? 'flex' : 'none';
-    }
-});
-
-// ── 2. NAVEGACIÓN ACTIVA EN SIDEBAR ──────────────────────
-const secciones = document.querySelectorAll('section[id]');
-const itemsNavegacion = document.querySelectorAll('.item-navegacion');
-
-const observadorNav = new IntersectionObserver(function (entradas) {
-    entradas.forEach(function (entrada) {
-        if (entrada.isIntersecting) {
-            const idActual = entrada.target.getAttribute('id');
-            itemsNavegacion.forEach(function (item) {
-                item.classList.remove('activo');
-                if (item.getAttribute('href') === '#' + idActual) {
-                    item.classList.add('activo');
-                }
-            });
-        }
-    });
-}, { rootMargin: '-30% 0px -65% 0px' });
-
-secciones.forEach(function (sec) { observadorNav.observe(sec); });
-
-// ── 3. ESTADÍSTICAS ANIMADAS (contadores) ────────────────
-function animarContador(elemento, objetivo, sufijo) {
-    sufijo = sufijo || '%';
-    let actual = 0;
-    const duracion = 1800;
-    const pasos = 60;
-    const incremento = objetivo / pasos;
-    const intervalo = duracion / pasos;
-
-    const temporizador = setInterval(function () {
-        actual += incremento;
-        if (actual >= objetivo) {
-            actual = objetivo;
-            clearInterval(temporizador);
-        }
-        elemento.textContent = Math.round(actual) + (objetivo === 1 ? '' : sufijo);
-    }, intervalo);
-}
-
-// Usar IntersectionObserver para disparar cuando sean visibles
-const contenedorEstadisticas = document.getElementById('contador-1');
-if (contenedorEstadisticas) {
-    const obsContadores = new IntersectionObserver(function (entradas) {
-        if (entradas[0].isIntersecting) {
-            animarContador(document.getElementById('contador-1'), 83, '%');
-            animarContador(document.getElementById('contador-2'), 1, '');
-            animarContador(document.getElementById('contador-3'), 70, '%');
-            obsContadores.disconnect();
-        }
-    }, { threshold: 0.5 });
-    obsContadores.observe(contenedorEstadisticas);
-}
-
-// ── 4. QUIZ INTERACTIVO ───────────────────────────────────
-const feedbackTextos = {
-    correcto: [
-        '✅ ¡Correcto! Eso es exactamente lo que haría un ciudadano digital inteligente.',
-        '✅ ¡Perfecto! Tienes buenos instintos de seguridad.',
-        '✅ ¡Muy bien! Esa es la decisión correcta.',
-        '✅ ¡Excelente! Esa es la actitud de alguien que cuida su seguridad.',
-        '✅ ¡Correcto! Sabías exactamente qué hace el 2FA.',
-    ],
-    incorrecto: [
-        '❌ Incorrecto. Esa respuesta te haría caer en una trampa de phishing. Nunca hagas clic en enlaces urgentes.',
-        '❌ Incorrecto. Las contraseñas cortas y simples se descifran en segundos. Necesitas mezcla de letras, números y símbolos.',
-        '❌ Incorrecto. Dar datos a desconocidos en línea es peligroso aunque lleven mucho tiempo hablándote.',
-        '❌ Incorrecto. Los programas piratas casi siempre contienen virus ocultos. Hay alternativas legales gratuitas.',
-        '❌ Incorrecto. El 2FA es un código de seguridad extra que protege tu cuenta aunque el atacante ya tenga tu contraseña.',
-    ],
-};
-
-let preguntaActual = 0;
-let puntajeTotal = 0;
-let quizTerminado = false;
-
-document.addEventListener('DOMContentLoaded', function () {
-    const preguntas = document.querySelectorAll('.pregunta-cuestionario');
-    if (preguntas.length === 0) return;
-
-    // Mostrar solo la primera pregunta al inicio
-    preguntas.forEach(function (p, i) {
-        p.style.display = i === 0 ? 'block' : 'none';
-    });
-
-    // Asignar eventos a todos los botones de opción
-    document.querySelectorAll('.opcion-cuestionario').forEach(function (boton) {
-        boton.addEventListener('click', function () {
-            if (quizTerminado) return;
-
-            const preguntaDiv = this.closest('.pregunta-cuestionario');
-            // Evitar doble respuesta en la misma pregunta
-            if (preguntaDiv.classList.contains('respondida')) return;
-            preguntaDiv.classList.add('respondida');
-
-            const correcta = preguntaDiv.dataset.correcta;
-            const elegida = this.dataset.valor;
-            const esCorrecta = elegida === correcta;
-            const feedback = preguntaDiv.querySelector('.retroalimentacion-cuestionario');
-            const indice = Array.from(preguntas).indexOf(preguntaDiv);
-
-            if (esCorrecta) puntajeTotal++;
-
-            // Resaltar opciones
-            preguntaDiv.querySelectorAll('.opcion-cuestionario').forEach(function (btn) {
-                btn.disabled = true;
-                if (btn.dataset.valor === correcta) {
-                    btn.classList.add('opcion-correcta');
-                } else if (btn.dataset.valor === elegida && !esCorrecta) {
-                    btn.classList.add('opcion-incorrecta');
-                }
-            });
-
-            // Mostrar feedback
-            feedback.textContent = esCorrecta
-                ? feedbackTextos.correcto[indice]
-                : feedbackTextos.incorrecto[indice];
-            feedback.style.display = 'block';
-            feedback.className = 'retroalimentacion-cuestionario ' + (esCorrecta ? 'retroalimentacion-correcta' : 'retroalimentacion-incorrecta');
-
-            // Ir a siguiente pregunta o mostrar resultado
-            setTimeout(function () {
-                preguntaActual++;
-                if (preguntaActual < preguntas.length) {
-                    preguntas[preguntaActual].style.display = 'block';
-                    preguntas[preguntaActual].scrollIntoView({ behavior: 'smooth', block: 'center' });
-                } else {
-                    mostrarResultadoQuiz(preguntas.length);
-                }
-            }, 1800);
+    if (btnTema) {
+        btnTema.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const esOscuro = document.documentElement.classList.contains('dark');
+            
+            if (iconoTema) iconoTema.textContent = esOscuro ? 'light_mode' : 'dark_mode';
+            if (textoTema) textoTema.textContent = esOscuro ? 'Modo Claro' : 'Modo Oscuro';
         });
-    });
-});
-
-function mostrarResultadoQuiz(total) {
-    quizTerminado = true;
-    const resultado = document.getElementById('quiz-resultado-final');
-    if (!resultado) return;
-
-    const porcentaje = Math.round((puntajeTotal / total) * 100);
-    let emoji, mensaje, color, colorBorde;
-
-    if (puntajeTotal === total) {
-        emoji = '🏆'; mensaje = '¡Perfecto! Eres un Ciudadano Digital modelo. Comparte este manual con tus compañeros.';
-        color = '#d4af37'; colorBorde = '#92400e';
-    } else if (puntajeTotal >= 4) {
-        emoji = '🛡️'; mensaje = 'Excelente nivel de seguridad. Repasa los temas donde fallaste para ser el mejor.';
-        color = '#22c55e'; colorBorde = '#14532d';
-    } else if (puntajeTotal >= 3) {
-        emoji = '⚡'; mensaje = 'Bien, pero hay áreas que necesitas reforzar. Lee nuevamente los capítulos relacionados.';
-        color = '#f59e0b'; colorBorde = '#78350f';
-    } else {
-        emoji = '📚'; mensaje = 'Necesitas repasar el manual con más atención. Tu seguridad digital depende de ello.';
-        color = '#ef4444'; colorBorde = '#7f1d1d';
     }
 
-    resultado.style.display = 'block';
-    resultado.style.background = 'rgba(255,255,255,0.07)';
-    resultado.style.border = '3px solid ' + colorBorde;
-    resultado.innerHTML = `
-        <div style="font-size:3.5rem;margin-bottom:0.75rem;">${emoji}</div>
-        <div style="font-size:2.5rem;font-weight:900;color:${color};margin-bottom:0.5rem;">
-            ${puntajeTotal} / ${total}
-        </div>
-        <div style="font-size:1rem;font-weight:700;color:rgba(255,255,255,0.75);margin-bottom:1rem;">
-            ${mensaje}
-        </div>
-        <div style="background:rgba(255,255,255,0.1);border-radius:999px;height:12px;overflow:hidden;max-width:300px;margin:0 auto;">
-            <div style="width:${porcentaje}%;height:100%;background:${color};border-radius:999px;transition:width 1s ease;"></div>
-        </div>
-        <p style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:1rem;">${porcentaje}% de respuestas correctas</p>
-    `;
-    resultado.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}
+    // ── 2. BARRA DE PROGRESO DE LECTURA ───────────────
+    window.addEventListener('scroll', () => {
+        const docAltura = document.documentElement.scrollHeight - window.innerHeight;
+        const porcentaje = docAltura > 0 ? (window.scrollY / docAltura) * 100 : 0;
+        const barra = document.getElementById('barra-lectura-relleno');
+        if (barra) barra.style.width = porcentaje + '%';
+    });
+
+    // ── 3. SCROLLSPY DE NAVEGACIÓN ─────────────────────
+    const secciones = document.querySelectorAll('section[id]');
+    const itemsNavegacion = document.querySelectorAll('.item-navegacion');
+
+    if (secciones.length > 0 && itemsNavegacion.length > 0) {
+        const observadorNav = new IntersectionObserver((entradas) => {
+            entradas.forEach((entrada) => {
+                if (entrada.isIntersecting) {
+                    const idActual = entrada.target.getAttribute('id');
+                    itemsNavegacion.forEach((item) => {
+                        item.classList.remove('activo');
+                        if (item.getAttribute('href') === '#' + idActual) {
+                            item.classList.add('activo');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        secciones.forEach((sec) => observadorNav.observe(sec));
+    }
+
+    // ── 4. LÓGICA DEL EXAMEN REBELDE (MEME EDITION) ────
+    let puntajeTotal = 0;
+    let preguntasRespondidas = 0;
+    let rachaActual = 0;
+
+    const feedbacksMeme = {
+        exito: [
+            "🚬 ABSOLUTE CINEMA. Mente de tiburón ciberseguro. Ni los hackers de la NASA te sacan esa respuesta.",
+            "🔥 BASADO Esquivaste esa estafa como Neo en Matrix. Te ganas un boleto a la inmunidad digital.",
+            "🛡️ GOD LEVEL. Estás tan blindado que hasta el 2FA te pide permiso a ti para generarse.",
+            "😎 NADA DE SKILL ISSUE. Tienes los protocolos en las venas. Mantén la racha viva."
+        ],
+        error: [
+            "🤡 MOMENT DE HUMILDAD. El hacker en estos momentos bailando porque le diste todo en bandeja de plata.",
+            "❌ SKILL ISSUE DETECTADO. Esa respuesta la rompe hasta una calculadora Casio de 1998. Revisa ese capítulo urgente.",
+            "☠️ F EN EL CHAT. Le acabas de regalar la cuenta al 'Tuki_Hacker_2026'. ¡Ponle mente a la seguridad!",
+            "🤦‍♂️ NO MANES. Con esa decisión hasta la IA de tu teléfono se puso a llorar. Vuelve a leer la lección."
+        ]
+    };
+
+    function inicializarQuiz() {
+        const preguntas = document.querySelectorAll('.pregunta-cuestionario');
+        if (preguntas.length === 0) return;
+
+        document.querySelectorAll('.opcion-cuestionario').forEach((boton) => {
+            boton.addEventListener('click', function() {
+                const preguntaDiv = this.closest('.pregunta-cuestionario');
+                if (preguntaDiv.classList.contains('respondida')) return;
+                
+                preguntaDiv.classList.add('respondida');
+                preguntasRespondidas++;
+
+                const correcta = preguntaDiv.dataset.correcta;
+                const elegida = this.dataset.valor;
+                const esCorrecta = elegida === correcta;
+                const feedback = preguntaDiv.querySelector('.retroalimentacion-cuestionario');
+
+                // Lógica de Racha y Puntaje
+                const contadorRacha = document.getElementById('contador-racha');
+                const textoEstado = document.getElementById('texto-estado');
+
+                if (esCorrecta) {
+                    puntajeTotal++;
+                    rachaActual++;
+                    if (contadorRacha) contadorRacha.textContent = rachaActual;
+                    if (textoEstado) textoEstado.textContent = "¡Racha en llamas! Sigue así. 🔥";
+                } else {
+                    rachaActual = 0;
+                    if (contadorRacha) contadorRacha.textContent = rachaActual;
+                    if (textoEstado) textoEstado.textContent = "Escudo perforado. Ojo pelao... ⚠️";
+                    preguntaDiv.classList.add('shake');
+                }
+
+                // Deshabilitar botones de la pregunta respondida y aplicar colores
+                preguntaDiv.querySelectorAll('.opcion-cuestionario').forEach((btn) => {
+                    btn.disabled = true;
+                    if (btn.dataset.valor === correcta) {
+                        btn.classList.add('opcion-correcta');
+                    } else if (btn.dataset.valor === elegida && !esCorrecta) {
+                        btn.classList.add('opcion-incorrecta');
+                    }
+                });
+
+                // Seleccionar meme aleatorio
+                const arrayMeme = esCorrecta ? feedbacksMeme.exito : feedbacksMeme.error;
+                const mensajeRandom = arrayMeme[Math.floor(Math.random() * arrayMeme.length)];
+
+                if (feedback) {
+                    feedback.classList.remove('oculto');
+                    feedback.className = `retroalimentacion-cuestionario ${esCorrecta ? 'retro-exito' : 'retro-error'}`;
+                    feedback.innerHTML = mensajeRandom;
+                }
+
+                // Evaluar si finalizó todas las preguntas
+                if (preguntasRespondidas === preguntas.length) {
+                    setTimeout(() => {
+                        mostrarResultadoQuiz(preguntas.length);
+                    }, 600);
+                }
+            });
+        });
+
+        // Event listener para el botón de reinicio
+        const btnReiniciar = document.getElementById('btn-reiniciar-quiz');
+        if (btnReiniciar) {
+            btnReiniciar.addEventListener('click', reiniciarQuiz);
+        }
+    }
+
+    function mostrarResultadoQuiz(total) {
+        const resultadoContainer = document.getElementById('quiz-resultado-final');
+        const memeIcono = document.getElementById('meme-icono');
+        const titulo = document.getElementById('resultado-titulo');
+        const subtexto = document.getElementById('resultado-subtexto');
+
+        if (!resultadoContainer) return;
+
+        const porcentaje = Math.round((puntajeTotal / total) * 100);
+        resultadoContainer.classList.remove('oculto');
+
+        if (porcentaje === 100) {
+            if (memeIcono) memeIcono.textContent = "🗿";
+            if (titulo) titulo.textContent = `¡100% PERFECCIÓN! (${puntajeTotal}/${total})`;
+            if (subtexto) subtexto.innerHTML = "<strong>Nivel: Ciber-Dios Inviolable.</strong><br>Ni la CIA ni los hackers de Telegram pueden tocar tus datos. Tómate un café, te lo ganaste.";
+        } else if (porcentaje >= 75) {
+            if (memeIcono) memeIcono.textContent = "😎";
+            if (titulo) titulo.textContent = `¡Casi Leyenda! (${puntajeTotal}/${total})`;
+            if (subtexto) subtexto.innerHTML = "<strong>Nivel: Hacker Ético Casi Basado.</strong><br>Tienes muy buenos reflejos. Solo repasa el detalle que fallaste para no caer en trampas raras.";
+        } else if (porcentaje >= 50) {
+            if (memeIcono) memeIcono.textContent = "🧐";
+            if (titulo) titulo.textContent = `Pasaste rascando... (${puntajeTotal}/${total})`;
+            if (subtexto) subtexto.innerHTML = "<strong>Nivel: Ciudadano Promedio Vulnerable.</strong><br>Estás a un link de 'Monedas Gratis' de perder el Instagram. Repasa los capítulos del manual, compadre.";
+        } else {
+            if (memeIcono) memeIcono.textContent = "🤡";
+            if (titulo) titulo.textContent = `Skill Issue Crítico: (${puntajeTotal}/${total})`;
+            if (subtexto) subtexto.innerHTML = "<strong>Nivel: Premio Nobel al Más Extorsionable.</strong><br>Te urgiría leer el manual desde el Capítulo 01 antes de que te vendan el puente María Cristina por WhatsApp.";
+        }
+
+        resultadoContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function reiniciarQuiz() {
+        puntajeTotal = 0;
+        preguntasRespondidas = 0;
+        rachaActual = 0;
+
+        const contadorRacha = document.getElementById('contador-racha');
+        const textoEstado = document.getElementById('texto-estado');
+        const resultadoFinal = document.getElementById('quiz-resultado-final');
+
+        if (contadorRacha) contadorRacha.textContent = "0";
+        if (textoEstado) textoEstado.textContent = "Reintentando el desafío...";
+        if (resultadoFinal) resultadoFinal.classList.add('oculto');
+
+        document.querySelectorAll('.pregunta-cuestionario').forEach((pregunta) => {
+            pregunta.classList.remove('respondida', 'shake');
+            const feedback = pregunta.querySelector('.retroalimentacion-cuestionario');
+            if (feedback) feedback.classList.add('oculto');
+            
+            pregunta.querySelectorAll('.opcion-cuestionario').forEach((btn) => {
+                btn.disabled = false;
+                btn.classList.remove('opcion-correcta', 'opcion-incorrecta');
+            });
+        });
+
+        const quizFinalSec = document.getElementById('quiz-final');
+        if (quizFinalSec) quizFinalSec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Inicializar el cuestionario al cargar el DOM
+    inicializarQuiz();
+});

@@ -4,25 +4,30 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Manual Integral de Alfabetización Digital | Estudiantes</title>
+    <title>Manual Integral de Alfabetización y Seguridad Digital | L.B. Antonio Lemus Pérez</title>
     
-    <!-- Fuentes y Estilos -->
+    <!-- Google Fonts & Material Symbols -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <meta name="theme-color" content="#0a261a" />
+    
+    <!-- Hoja de estilos externa -->
+        <!-- Estilos de la aplicación -->
     <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
     <link rel="stylesheet" href="../estilos/estilos-base.css" />
     <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
+    <link rel="stylesheet" href="../estilos/redes-sociales.css" />
     <link rel="stylesheet" href="../estilos/main.css" />
-    <link rel="stylesheet" href="../estilos/manual-estudiante.css" />
-    <link rel="stylesheet" href="../estilos/componentes-premium.css" />
-    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
-    <script src="../scripts/logica-tema.js"></script>
+    <link rel="stylesheet" href="../estilos/proteccion-cuentas.css" />
+    <link rel="stylesheet" href="../estilos/manual-estudiante.css">
 
-    <link rel="manifest" href="../manifest.json" />
-    <meta name="theme-color" content="#0a261a" />
 </head>
 
 <body>
-
-    <!-- Navegación Superior Unificada -->
+ <!-- Navegación Superior Unificada -->
     <nav class="barra-navegacion">
         <div class="contenedor contenedor-navegacion">
             <div class="marca-navegacion">
@@ -39,9 +44,13 @@
                 <a class="enlace-nav active" href="index2.html">Manual</a>
                 <a class="enlace-nav" href="nosotros.html">Nosotros</a>
                 <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
-                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
-                    <span class="material-symbols-outlined">dark_mode</span>
+                
+                <!-- CORRECCIÓN: Se agregaron los IDs necesarios para el JavaScript -->
+                <button id="btn-tema" class="boton-tema" title="Cambiar Tema">
+                    <span id="icono-tema" class="material-symbols-outlined">dark_mode</span>
+                    <span id="texto-tema" style="display: none;">Modo Oscuro</span>
                 </button>
+                
             </div>
             <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
                 <span class="material-symbols-outlined">&#xe5d2;</span>
@@ -64,212 +73,287 @@
         </div>
     </nav>
 
-    <!-- BARRA DE PROGRESO -->
+    <!-- BARRA DE PROGRESO DE LECTURA -->
     <div class="barra-progreso-fija">
         <div class="barra-progreso-relleno" id="barra-lectura-relleno"></div>
     </div>
 
-    <!-- CABECERA INSTITUCIONAL SÓLIDA -->
+    <!-- ENCABEZADO INSTITUCIONAL -->
     <header class="gradiente-encabezado">
         <div class="contenedor-flotante-nav">
-            <nav class="nav-principal-manual">
-                <a href="index.html" class="enlace-retroceder">
-                    <span class="material-symbols-outlined">arrow_back</span> REGRESAR AL INICIO
-                </a>
-                <div class="controles-tema">
-                    <button onclick="alternarModoOscuro()" class="boton-circular-tema" title="Cambiar Tema">
-                        <span class="material-symbols-outlined">dark_mode</span>
-                    </button>
-                </div>
-            </nav>
+            <a href="index.html" class="enlace-retroceder">
+                <span class="material-symbols-outlined">arrow_back</span> REGRESAR AL INICIO
+            </a>
         </div>
-        
         <div class="hero-manual">
-            <p class="numero-capitulo" style="color: var(--color-secundario); margin-bottom: 1rem;">DOCUMENTACIÓN OFICIAL</p>
-            <h1 class="titulo-hero">L.B. Antonio Lemus Pérez</h1>
-            <p class="subtitulo-hero">Manual Integral de Seguridad y Ciudadanía Digital para Estudiantes</p>
+            <p class="etiqueta-oficial">DOCUMENTACIÓN OFICIAL ACADÉMICA</p>
+            <h1 class="titulo-hero">Manual Integral de Seguridad Digital</h1>
+            <p class="subtitulo-hero">Protección de datos, prevención de ciberdelitos y fomento de la responsabilidad digital en la comunidad estudiantil del L.B. Antonio Lemus Pérez.</p>
         </div>
     </header>
 
     <main class="contenedor-manual">
 
-        <!-- NAVEGACIÓN LATERAL (SÓLIDA) -->
+        <!-- NAVEGACIÓN LATERAL -->
         <aside class="barra-lateral">
             <nav class="nav-manual">
-                <p class="titulo-seccion-nav">Contenido del Manual</p>
-                <a href="#shock" class="item-navegacion activo">
-                    <span class="material-symbols-outlined">analytics</span> 01. La Realidad Cruda
-                </a>
-                <a href="#cuentas" class="item-navegacion">
-                    <span class="material-symbols-outlined">lock_open</span> 02. Blindaje de Cuentas
-                </a>
-                <a href="#redes" class="item-navegacion">
-                    <span class="material-symbols-outlined">public</span> 03. Redes Sociales
-                </a>
-                <a href="#ciberacoso" class="item-navegacion">
-                    <span class="material-symbols-outlined">gavel</span> 04. Ciberacoso
-                </a>
-                <a href="#engaños" class="item-navegacion">
-                    <span class="material-symbols-outlined">phishing</span> 05. Engaños
-                </a>
-                <a href="#ia" class="item-navegacion">
-                    <span class="material-symbols-outlined">memory</span> 06. IA y Deepfakes
-                </a>
-                <a href="#gaming" class="item-navegacion">
-                    <span class="material-symbols-outlined">sports_esports</span> 07. Videojuegos
-                </a>
-                <a href="#software" class="item-navegacion">
-                    <span class="material-symbols-outlined">terminal</span> 08. Software
-                </a>
-                <a href="#legal" class="item-navegacion">
-                    <span class="material-symbols-outlined">balance</span> 09. Responsabilidad
-                </a>
-                <a href="#apps" class="item-navegacion">
-                    <span class="material-symbols-outlined">inventory_2</span> 10. Herramientas
-                </a>
-                <a href="#ayuda" class="item-navegacion">
-                    <span class="material-symbols-outlined">emergency_home</span> 11. Protocolo SOS
-                </a>
+                <p class="titulo-seccion-nav">Capítulos del Manual</p>
+                <a href="#shock" class="item-navegacion activo"><span class="material-symbols-outlined">analytics</span> 01. Realidad Digital</a>
+                <a href="#cuentas" class="item-navegacion"><span class="material-symbols-outlined">lock_open</span> 02. Blindaje Cuentas</a>
+                <a href="#redes" class="item-navegacion"><span class="material-symbols-outlined">public</span> 03. Redes Sociales</a>
+                <a href="#ciberacoso" class="item-navegacion"><span class="material-symbols-outlined">gavel</span> 04. Ciberacoso</a>
+                <a href="#enganos" class="item-navegacion"><span class="material-symbols-outlined">phishing</span> 05. Engaños y Phishing</a>
+                <a href="#ia" class="item-navegacion"><span class="material-symbols-outlined">memory</span> 06. IA y Deepfakes</a>
+                <a href="#gaming" class="item-navegacion"><span class="material-symbols-outlined">sports_esports</span> 07. Videojuegos</a>
+                <a href="#software" class="item-navegacion"><span class="material-symbols-outlined">terminal</span> 08. Software y Malware</a>
+                <a href="#legal" class="item-navegacion"><span class="material-symbols-outlined">balance</span> 09. Marco Legal</a>
+                <a href="#apps" class="item-navegacion"><span class="material-symbols-outlined">inventory_2</span> 10. Herramientas</a>
+                <a href="#ayuda" class="item-navegacion"><span class="material-symbols-outlined">emergency</span> 11. Protocolo SOS</a>
+                <a href="#quiz-final" class="item-navegacion" style="color: var(--color-secundario);"><span class="material-symbols-outlined">sports_score</span> Examen Rebelde</a>
             </nav>
         </aside>
 
-        <!-- ÁREA DE CONTENIDO DOCUMENTAL -->
+        <!-- ÁREA DE CONTENIDO -->
         <div class="area-contenido">
 
-            <!-- CAPÍTULO 01 -->
+            <!-- CAPÍTULOS -->
             <section id="shock" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">CAPÍTULO 01</span>
-                    <h2 class="titulo-capitulo">Identidad y Valor Digital</h2>
+                    <h2 class="titulo-capitulo">Identidad y Valor de la Información Digital</h2>
                 </div>
-
                 <div class="cuerpo-capitulo">
-                    <p class="parrafo-destacado">
-                        En el ecosistema digital, tú no eres un "usuario". Eres un activo. Los criminales buscan personas vulnerables para monetizar su información.
-                    </p>
-
-                    <h3 style="margin-bottom: 1.5rem; font-size: 1.25rem;">Valoración en el mercado ilícito</h3>
+                    <p class="parrafo-destacado">En el ecosistema cibernético moderno, un usuario no es un mero espectador; es un activo computable. Los ciberdelincuentes monetizan perfiles de redes, correos y fotos cotidianas.</p>
                     <div class="lista-precios">
-                        <div class="fila-precio">
-                            <span>Perfil de Instagram (Uso para estafas)</span>
-                            <span class="etiqueta-precio">$5.00 - $15.00</span>
-                        </div>
-                        <div class="fila-precio">
-                            <span>Acceso a Correo Electrónico</span>
-                            <span class="etiqueta-precio">$10.00 - $25.00</span>
-                        </div>
-                        <div class="fila-precio">
-                            <span>Información Confidencial / Fotos</span>
-                            <span class="etiqueta-precio">VALOR CRÍTICO</span>
-                        </div>
-                    </div>
-
-                    <div class="tarjeta-aviso-premium aviso-azul" style="border-radius: 0;">
-                        <h4 style="margin-bottom: 1rem;">EL EFECTO DOMINÓ</h4>
-                        <p>
-                            El compromiso de una sola cuenta personal puede comprometer la seguridad de toda tu red de contactos (familiares y compañeros de clase).
-                        </p>
+                        <div class="fila-precio"><span>Perfil de Instagram / TikTok Activo</span><span class="etiqueta-precio">$5.00 — $15.00 USD</span></div>
+                        <div class="fila-precio"><span>Credencial de Correo Personal / Institucional</span><span class="etiqueta-precio">$10.00 — $25.00 USD</span></div>
+                        <div class="fila-precio"><span>Fotos Privadas + Datos de Identidad</span><span class="etiqueta-precio">EXTORSIÓN DIRECTA</span></div>
                     </div>
                 </div>
             </section>
 
-            <!-- CAPÍTULO 02 -->
             <section id="cuentas" class="tarjeta-capitulo">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo">CAPÍTULO 02</span>
-                    <h2 class="titulo-capitulo">Protocolos de Blindaje</h2>
+                    <h2 class="titulo-capitulo">Protocolos de Blindaje y Passphrases</h2>
                 </div>
-                
                 <div class="cuerpo-capitulo">
-                    <p class="parrafo-destacado">La contraseña es la primera línea de defensa. Una barrera débil garantiza una intrusión exitosa.</p>
+                    <p class="parrafo-destacado">Olvídate de cambiar la "a" por un "4" (ej. <i>M4r142026</i>). Los ataques por fuerza bruta rompen eso al instante. Emplea <strong>Frases de Paso (Passphrases)</strong> largas y únicas combinadas con 2FA.</p>
+                </div>
+            </section>
 
-                    <div style="margin: 2rem 0;">
-                        <h4 style="margin-bottom: 1rem;">Directrices de Seguridad de Contraseñas:</h4>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-borde);"><strong>01.</strong> Exclusión de datos personales (nombres, fechas).</li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-borde);"><strong>02.</strong> Complejidad estructural (mínimo 12 caracteres).</li>
-                            <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--color-borde);"><strong>03.</strong> Unicidad: Claves distintas para cada servicio crítico.</li>
-                        </ul>
-                    </div>
+            <section id="redes" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 03</span>
+                    <h2 class="titulo-capitulo">Privacidad y Redes Sociales</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p class="parrafo-destacado">Desactiva el GPS en tus fotos en vivo. La sobreexposición (oversharing) es el insumo principal para la ingeniería social.</p>
+                </div>
+            </section>
 
-                    <div class="tarjeta-aviso-premium aviso-purpura" style="border-radius: 0;">
-                        <h4>Verificación de Factores Múltiples (MFA)</h4>
-                        <p>Implemente la autenticación de dos pasos en servicios de mensajería y redes sociales. Es el mecanismo más efectivo contra el robo de identidad.</p>
+            <section id="ciberacoso" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 04</span>
+                    <h2 class="titulo-capitulo">Prevención de Ciberacoso y Grooming</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <div class="tarjeta-aviso-premium alerta-roja">
+                        <h4>PROTOCOLO DE ACCIÓN</h4>
+                        <p>1. No respondas al agresor. 2. Guarda capturas de pantalla con fecha y hora. 3. Denuncia a las autoridades del Liceo inmediatamente.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- CAPÍTULO 11: PROTOCOLO SOS -->
-            <section id="ayuda" class="tarjeta-capitulo" style="border-top: 6px solid var(--color-peligro);">
+            <section id="enganos" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 05</span>
+                    <h2 class="titulo-capitulo">Phishing, Smishing y Estafas</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>La ingeniería social aprovecha tres emociones: <strong>prisa, curiosidad y miedo</strong>. Si el mensaje exige acción inmediata, es 99% seguro una estafa.</p>
+                </div>
+            </section>
+
+            <section id="ia" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 06</span>
+                    <h2 class="titulo-capitulo">IA, Deepfakes y Clonación de Voz</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>Establece una <strong>palabra clave familiar secreta fuera de línea</strong> para verificar emergencias si reciben llamadas sospechosas con voz clonada.</p>
+                </div>
+            </section>
+
+            <section id="gaming" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 07</span>
+                    <h2 class="titulo-capitulo">Seguridad Gamer y Modding</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>Los generadores de Robux/V-Bucks y los "hacks" ejecutan <i>Infostealers</i> para robar todas las claves guardadas en tu navegador.</p>
+                </div>
+            </section>
+
+            <section id="software" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 08</span>
+                    <h2 class="titulo-capitulo">Malware y Software Seguro</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>Utiliza herramientas de Código Abierto (Open Source) en lugar de descargar activadores ejecutables piratas con troyanos integrados.</p>
+                </div>
+            </section>
+
+            <section id="legal" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 09</span>
+                    <h2 class="titulo-capitulo">Marco Legal y Ley de Delitos Informáticos</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>El acceso indebido a cuentas ajenas (Art. 6) y la difusión no consentida de imágenes privadas (Art. 22) conllevan sanciones penales graves.</p>
+                </div>
+            </section>
+
+            <section id="apps" class="tarjeta-capitulo">
+                <div class="encabezado-capitulo">
+                    <span class="numero-capitulo">CAPÍTULO 10</span>
+                    <h2 class="titulo-capitulo">Herramientas Recomendadas</h2>
+                </div>
+                <div class="cuerpo-capitulo">
+                    <p>Usa gestores de claves como <strong>Bitwarden</strong> y autenticadores como <strong>Aegis</strong> o <strong>Google Authenticator</strong>.</p>
+                </div>
+            </section>
+
+            <section id="ayuda" class="tarjeta-capitulo" style="border-top: 5px solid var(--color-peligro);">
                 <div class="encabezado-capitulo">
                     <span class="numero-capitulo" style="color: var(--color-peligro);">CAPÍTULO 11</span>
-                    <h2 class="titulo-capitulo">PROTOCOLO DE RESPUESTA SOS</h2>
+                    <h2 class="titulo-capitulo">Protocolo de Emergencia SOS</h2>
                 </div>
-                
-                <div class="cuerpo-capitulo">
-                    <p class="parrafo-destacado">Procedimiento operativo en caso de compromiso de seguridad o ataque inminente:</p>
-
-                    <div class="pasos-sos">
-                        <div class="paso-sos">
-                            <div class="numero-paso">01</div>
-                            <p><strong>Aislamiento</strong><br>Desconexión inmediata de redes de datos.</p>
-                        </div>
-                        <div class="paso-sos">
-                            <div class="numero-paso">02</div>
-                            <p><strong>Reporte</strong><br>Notificación a autoridades o adultos.</p>
-                        </div>
-                        <div class="paso-sos">
-                            <div class="numero-paso">03</div>
-                            <p><strong>Remediación</strong><br>Cambio masivo de credenciales.</p>
-                        </div>
-                    </div>
-
-                    <a href="protocolo-ayuda.html" class="boton-sos" style="width: 100%;">
-                        DESCARGAR GUÍA DE EMERGENCIA COMPLETA
-                    </a>
+                <div class="pasos-sos">
+                    <div class="paso-sos"><div class="numero-paso">1</div><strong>Aísla</strong><p>Desconecta el equipo de internet inmediatamente.</p></div>
+                    <div class="paso-sos"><div class="numero-paso">2</div><strong>Reporta</strong><p>Guarda evidencias y notifica a padres o profesores.</p></div>
+                    <div class="paso-sos"><div class="numero-paso">3</div><strong>Sanea</strong><p>Cambia claves desde otro dispositivo limpio.</p></div>
                 </div>
             </section>
 
-            <!-- QUIZ FINAL PROFESIONAL -->
+            <!-- EXAMEN INTERACTIVO -->
             <section id="quiz-final" class="tarjeta-capitulo">
-                <div class="encabezado-capitulo" style="border-bottom-color: rgba(255,255,255,0.2);">
-                    <span class="numero-capitulo" style="color: var(--color-secundario);">EVALUACIÓN DE CONOCIMIENTOS</span>
-                    <h2 class="titulo-capitulo" style="color: white;">Examen de Competencia Digital</h2>
-                </div>
-                
-                <div id="quiz-contenedor">
-                    <div class="pregunta-cuestionario" data-correcta="b">
-                        <p style="font-weight: 700; margin-bottom: 1.5rem;">01. ¿Cuál es el procedimiento correcto ante un mensaje de urgencia sospechoso?</p>
-                        <div class="quiz-opciones">
-                            <button class="opcion-cuestionario" data-valor="a">Verificar el enlace mediante clic directo.</button>
-                            <button class="opcion-cuestionario" data-valor="b">Ignorar la comunicación y validar en canales oficiales.</button>
-                            <button class="opcion-cuestionario" data-valor="c">Distribuir el mensaje para alerta temprana.</button>
-                        </div>
-                        <div class="retroalimentacion-cuestionario oculto" style="padding: 1rem; margin-top: 1rem; background: rgba(255,255,255,0.1); font-weight: 700;"></div>
-                    </div>
+                <div style="margin-bottom: 1.5rem;">
+                    <h2 class="titulo-capitulo" style="color: rgb(0, 0, 0);">⚡ Examen Rebelde de Competencia Digital</h2>
+                    <p style="opacity: 0.85; font-size: 0.95rem; margin-top: 0.25rem;">Demuestra si de verdad estás blindado o si te van a hackear hasta la freidora de aire.</p>
                 </div>
 
-                <div id="quiz-resultado-final" class="oculto" style="padding: 2rem; background: rgba(255,255,255,0.1); text-align: center; margin-top: 2rem;"></div>
+                <!-- Marcador de Racha -->
+                <div class="racha-contenedor">
+                    <span>Estado del Escudo: <strong id="texto-estado">A la espera de tus respuestas...</strong></span>
+                    <div class="racha-fuego">🔥 Racha: <span id="contador-racha">0</span></div>
+                </div>
+
+                <div id="quiz-contenedor">
+                    
+                    <!-- PREGUNTA 1 -->
+                    <div class="pregunta-cuestionario" data-correcta="b">
+                        <p class="pregunta-texto">1. Quieres ponerte una contraseña imparable. ¿Cuál escoges?</p>
+                        <div class="quiz-opciones">
+                            <button class="opcion-cuestionario" data-valor="a">
+                                <span>a) <code>Carlos2026*</code> (Fácil de recordar, súper moderna)</span>
+                                <span class="material-symbols-outlined">key</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="b">
+                                <span>b) <code>Mango.Guitarra-Saturno#88</code> (Passphrase larga e imprevista)</span>
+                                <span class="material-symbols-outlined">security</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="c">
+                                <span>c) <code>12345678</code> (Para qué complicarse la vida, ¿no?)</span>
+                                <span class="material-symbols-outlined">sentiment_very_dissatisfied</span>
+                            </button>
+                        </div>
+                        <div class="retroalimentacion-cuestionario oculto"></div>
+                    </div>
+
+                    <!-- PREGUNTA 2 -->
+                    <div class="pregunta-cuestionario" data-correcta="a">
+                        <p class="pregunta-texto">2. Te llega un WhatsApp: "¡GANASTE 500$ EN ROBUX/PAVOS! Toca este enlace urgente para reclamar". ¿Qué haces?</p>
+                        <div class="quiz-opciones">
+                            <button class="opcion-cuestionario" data-valor="a">
+                                <span>a) Ignoro y borro esa estafa. Nadie regala dinero en internet, bro.</span>
+                                <span class="material-symbols-outlined">block</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="b">
+                                <span>b) Entro volando, pongo mi clave y reenvío el link a 10 amigos.</span>
+                                <span class="material-symbols-outlined">ads_click</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="c">
+                                <span>c) Le respondo al bot pidiéndole rebaja o prueba de fe.</span>
+                                <span class="material-symbols-outlined">chat</span>
+                            </button>
+                        </div>
+                        <div class="retroalimentacion-cuestionario oculto"></div>
+                    </div>
+
+                    <!-- PREGUNTA 3 -->
+                    <div class="pregunta-cuestionario" data-correcta="c">
+                        <p class="pregunta-texto">3. Un supuesto amigo te pide por DM una foto de tu documento de identidad para "un concurso del colegio".</p>
+                        <div class="quiz-opciones">
+                            <button class="opcion-cuestionario" data-valor="a">
+                                <span>a) Se la envío de una, los amigos confían a ciegas.</span>
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="b">
+                                <span>b) Se la mando pero tapándole la foto con un sticker de gatito.</span>
+                                <span class="material-symbols-outlined">face</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="c">
+                                <span>c) Sospecho que le hackearon la cuenta. Lo llamo por teléfono a verificar.</span>
+                                <span class="material-symbols-outlined">call</span>
+                            </button>
+                        </div>
+                        <div class="retroalimentacion-cuestionario oculto"></div>
+                    </div>
+
+                    <!-- PREGUNTA 4 -->
+                    <div class="pregunta-cuestionario" data-correcta="b">
+                        <p class="pregunta-texto">4. ¿Para qué sirve realmente la Verificación en Dos Pasos (2FA)?</p>
+                        <div class="quiz-opciones">
+                            <button class="opcion-cuestionario" data-valor="a">
+                                <span>a) Para hacer más lento e incómodo el inicio de sesión sin motivo.</span>
+                                <span class="material-symbols-outlined">hourglass_empty</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="b">
+                                <span>b) Para pedir un código único en mi app aunque el hacker ya se sepa mi clave.</span>
+                                <span class="material-symbols-outlined">verified_user</span>
+                            </button>
+                            <button class="opcion-cuestionario" data-valor="c">
+                                <span>c) Es un programa que limpia virus acumulados en la pantalla.</span>
+                                <span class="material-symbols-outlined">cleaning_services</span>
+                            </button>
+                        </div>
+                        <div class="retroalimentacion-cuestionario oculto"></div>
+                    </div>
+
+                </div>
+
+                <!-- RESULTADO FINAL CON MEME BADGE -->
+                <div id="quiz-resultado-final" class="oculto">
+                    <span id="meme-icono" class="meme-badge">🗿</span>
+                    <h3 id="resultado-titulo" style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">Cargando veredicto...</h3>
+                    <p id="resultado-subtexto" style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 1.5rem;"></p>
+                    <button id="btn-reiniciar-quiz" class="boton-tema" style="margin: 0 auto; padding: 0.75rem 1.5rem; font-size: 1rem;">
+                        <span class="material-symbols-outlined">restart_alt</span> Reintentar el Examen
+                    </button>
+                </div>
             </section>
 
         </div>
     </main>
 
-    <footer class="pie-pagina-premium">
-        <div class="contenedor-pie">
-            <div>
-                <p style="font-weight: 800; font-size: 1.2rem; margin-bottom: 0.5rem;">L.B. Antonio Lemus Pérez</p>
-                <p>Cumaná, Estado Sucre, Venezuela.</p>
-            </div>
-            <div style="text-align: right; opacity: 0.6;">
-                <p>© 2026 Registro Académico Institucional</p>
-                <p>Desarrollado por: Cordova / Guipe / Giraldo / Ruiz</p>
-            </div>
-        </div>
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Liceo Bolivariano Antonio Lemus Pérez | Cumaná, Estado Sucre, Venezuela.</p>
+        <p style="opacity: 0.6; margin-top: 0.5rem; font-size: 0.8rem;">Desarrollado por: Córdova / Guipe / Giraldo / Ruiz</p>
     </footer>
 
-    <script src="../scripts/logica-manual.js"></script>
-    <script src="../scripts/logica-tema.js"></script>
+    <!-- Script ejecutable externo -->
+    <script src="../scripts/logica-manual.js" defer></script>
 </body>
-
 </html>

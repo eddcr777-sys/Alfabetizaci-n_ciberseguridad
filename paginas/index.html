@@ -103,7 +103,7 @@
                 </div>
             </div>
             <div class="contenedor-imagen-portada">
-                <img src="../activos/imagenes/institucion-abstracta.svg" alt="Institución" class="imagen-portada">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl3JZ7q7TecgP_TXiKeNMj89v94zTRGpjSxcOgtMki299vUuzvhbrFSOfG&s=10" alt="Institución" class="imagen-portada" style="border-radius: var(--radio-md);">
             </div>
         </div>
     </header>
@@ -112,7 +112,7 @@
     <section class="seccion-espaciada fondo-claro">
         <div class="contenedor cuadricula-2">
             <!-- Misión -->
-            <div class="tarjeta tarjeta-clara">
+            <div class="tarjeta tarjeta-clara tarjeta-hover-zoom">
                 <div class="tarjeta-icono">
                     <span class="material-symbols-outlined" style="font-size: 2.25rem;">&#xeb9b;</span>
                 </div>
@@ -124,7 +124,7 @@
                 </p>
             </div>
             <!-- Visión -->
-            <div class="tarjeta tarjeta-oscura">
+            <div class="tarjeta tarjeta-oscura tarjeta-hover-zoom">
                 <div class="tarjeta-icono">
                     <span class="material-symbols-outlined" style="font-size: 2.25rem;">&#xe8f4;</span>
                 </div>
@@ -169,24 +169,24 @@
                         </p>
                     </div>
                 </div>
-                
+
                 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div style="height: 16rem; border-radius: var(--radio-md); background-color: rgba(15, 81, 50, 0.05); display: flex; align-items: center; justify-content: center; borde-normal: 1px solid rgba(15, 81, 50, 0.1);">
+                        <div style="height: 16rem; border-radius: var(--radio-md); background-color: rgba(15, 81, 50, 0.05); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(15, 81, 50, 0.1);">
                             <div class="texto-centrado">
                                 <p style="font-size: 2.25rem; font-weight: bold; color: var(--color-primario);">1984</p>
                                 <p style="font-size: 0.875rem; font-weight: bold; opacity: 0.5; text-transform: uppercase; margin-top: 0.5rem; letter-spacing: 0.1em;">Fundación</p>
                             </div>
                         </div>
                         <div style="height: 12rem; border-radius: var(--radio-md); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                            <img src="../activos/imagenes/aula-abstracto.svg" alt="Aula" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Aula" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: 3rem;">
                         <div style="height: 12rem; border-radius: var(--radio-md); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                            <img src="../activos/imagenes/estudiante-abstracto.svg" alt="Estudiante" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Estudiante" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div style="height: 16rem; border-radius: var(--radio-md); background-color: var(--color-primario); display: flex; align-items: center; justify-content: center; borde-normal: 1px solid rgba(255,255,255,0.1); color: white;">
+                        <div style="height: 16rem; border-radius: var(--radio-md); background-color: var(--color-primario); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); color: white;">
                             <div class="texto-centrado">
                                 <p style="font-size: 2.25rem; font-weight: bold;">2026</p>
                                 <p style="font-size: 0.875rem; font-weight: bold; opacity: 0.5; text-transform: uppercase; margin-top: 0.5rem; letter-spacing: 0.1em;">Digitalización</p>
@@ -194,6 +194,286 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRAS LABORES E INICIATIVAS -->
+    <section class="seccion-espaciada fondo-claro">
+        <div class="contenedor">
+            <div style="text-align: center; max-width: 42rem; margin: 0 auto 3rem auto;">
+                <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Compromiso Social y Académico</h2>
+                <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Nuestras Labores e Iniciativas</h3>
+                <p style="font-size: 1rem; color: var(--color-texto-secundario); margin-top: 0.5rem; opacity: 0.8;">Toca cualquier tarjeta para desplegar su información completa.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <!-- Labor 1 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                     <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" alt="Formación Académica">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Formación Académica</h4>
+                        <p style="font-size: 1.05rem; opacity: 0.85; margin: 0;">Impartición de Educación Media General con altos estándares éticos, científicos y culturales orientados al desarrollo.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            Nuestro programa académico está enfocado en dotar a los estudiantes de competencias críticas y analíticas, promoviendo proyectos científicos y humanistas que preparan de forma sólida a cada joven para la educación universitaria.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Labor 2 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Tecnología y Ciberseguridad">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Tecnología y Ciberseguridad</h4>
+                        <p style="font-size: 1.05rem; opacity: 0.85; margin: 0;">Proyectos de inclusión y alfabetización digital en alianza estratégica con universidades e instituciones tecnológicas.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            Implementamos talleres de uso seguro de internet, programación básica y resguardo de la identidad digital, educando a toda la comunidad escolar frente a los desafíos tecnológicos actuales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Labor 3 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Atención Nutricional">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Atención Nutricional</h4>
+                        <p style="font-size: 1.05rem; opacity: 0.85; margin: 0;">Garantía del Programa de Alimentación Escolar (PAE) para fortalecer el bienestar integral de la comunidad estudiantil.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            A través de una gestión coordinada con los comités de alimentación, aseguramos raciones alimenticias balanceadas diariamente para optimizar el rendimiento cognitivo y físico de los alumnos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Labor 4 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80" alt="Vínculo Comunitario">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Vínculo Comunitario</h4>
+                        <p style="font-size: 1.05rem; opacity: 0.85; margin: 0;">Actividades culturales, deportivas y ambientales integrando constantemente a la escuela, la familia y la comunidad.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            Fomentamos jornadas ecológicas, festivales de canto, ferias socio-productivas y torneos deportivos abiertos que estrechan lazos de convivencia armónica en el municipio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARRUSEL INTEGRADO EN LABORES -->
+            <div style="margin-top: 3rem; text-align: center;">
+                <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Galería de Iniciativas en Acción</h4>
+                
+                <div class="contenedor-carrusel-cover" style="border-radius: var(--radio-md); overflow: hidden;">
+                    <div class="pista-carrusel-cover" id="pistaCoverLabores">
+                        <div class="item-carrusel-cover">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1920&q=90" alt="Jornada Educativa">
+                            <div class="overlay-carrusel-cover">
+                                <h3 class="h3ti">Jornadas Educativas</h3>
+                                <p>Acompañamiento cercano y personalizado para el enriquecimiento intelectual.</p>
+                            </div>
+                        </div>
+                        <div class="item-carrusel-cover">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=90" alt="Talleres Tecnológicos">
+                            <div class="overlay-carrusel-cover">
+                                <h3 class="h3ti">Talleres Tecnológicos</h3>
+                                <p>Espacios prácticos orientados a la ciberseguridad y alfabetización digital.</p>
+                            </div>
+                        </div>
+                        <div class="item-carrusel-cover">
+                            <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1920&q=90" alt="Comunidad Activa">
+                            <div class="overlay-carrusel-cover">
+                                <h3 class="h3ti">Comunidad Activa</h3>
+                                <p>Trabajo conjunto entre docentes, estudiantes y representantes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controles-cover">
+                        <button class="boton-cover" id="btnCoverIzquierdaLabores" type="button" aria-label="Anterior">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="boton-cover" id="btnCoverDerechaLabores" type="button" aria-label="Siguiente">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRA GALERÍA PRINCIPAL -->
+    <section class="seccion-espaciada fondo-alternativo" style="padding-left: 0; padding-right: 0;">
+        <div style="text-align: center; max-width: 42rem; margin: 0 auto 2rem auto; padding: 0 1.5rem;">
+            <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Instalaciones y Vida Escolar</h2>
+            <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Nuestra Galería en Pantalla Completa</h3>
+        </div>
+
+        <div class="contenedor-carrusel-cover">
+            <div class="pista-carrusel-cover" id="pistaCover">
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=90" alt="Campus Principal">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Campus Principal</h3>
+                        <p>Áreas comunes amplias y espacios abiertos diseñados para el desarrollo armónico de la juventud sucrense.</p>
+                    </div>
+                </div>
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=90" alt="Laboratorio Tecnológico">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Laboratorio Tecnológico</h3>
+                        <p>Espacios adaptados para las prácticas de alfabetización digital y ciberseguridad enlazados con la educación moderna.</p>
+                    </div>
+                </div>
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1920&q=90" alt="Clases Magistrales">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Clases Magistrales</h3>
+                        <p>Dinamismo y constante participación activa de los alumnos bajo la guía de un cuerpo docente altamente preparado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controles-cover">
+                <button class="boton-cover" id="btnCoverIzquierda" type="button" aria-label="Anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button class="boton-cover" id="btnCoverDerecha" type="button" aria-label="Siguiente">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: NUESTRO PERSONAL (TARJETAS Y GALERÍA CORREGIDA) -->
+    <section class="seccion-espaciada fondo-claro">
+        <div class="contenedor">
+            <div style="text-align: center; max-width: 42rem; margin: 0 auto 3rem auto;">
+                <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Talento Humano</h2>
+                <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Conoce a Nuestro Equipo</h3>
+                <p style="font-size: 1rem; color: var(--color-texto-secundario); margin-top: 0.5rem; opacity: 0.8;">Toca cualquier tarjeta para desplegar su información completa.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <!-- Personal 1 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Equipo Directivo">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.35rem; font-weight: bold; margin-bottom: 0.25rem;">Equipo Directivo</h4>
+                        <p style="font-size: 0.95rem; color: var(--color-primario); font-weight: bold; margin-bottom: 0.5rem;">Gestión y Liderazgo</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin: 0;">Encargados de coordinar la excelencia pedagógica, administrativa e institucional.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            El equipo directivo guía las políticas educativas de la institución con un enfoque humanista y de apertura tecnológica, asegurando una atención directa y cercana con los representantes y la comunidad escolar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Personal 2 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Cuerpo Docente">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.35rem; font-weight: bold; margin-bottom: 0.25rem;">Cuerpo Docente</h4>
+                        <p style="font-size: 0.95rem; color: var(--color-primario); font-weight: bold; margin-bottom: 0.5rem;">Profesorado Multidisciplinario</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin: 0;">Educadores guiados fuertemente por la enseñanza socio-ética y tecnológica.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            Nuestros profesores combinan la vocación tradicional de la enseñanza con metodologías modernas, promoviendo el pensamiento crítico, la investigación científica y la ciberseguridad en cada aula.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Personal 3 -->
+                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                    <div class="avatar-cover-grande">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Personal Administrativo">
+                    </div>
+                    <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
+                    <div style="padding: 2rem;">
+                        <h4 style="font-size: 1.35rem; font-weight: bold; margin-bottom: 0.25rem;">Personal Administrativo</h4>
+                        <p style="font-size: 0.95rem; color: var(--color-primario); font-weight: bold; margin-bottom: 0.5rem;">Soporte Operativo</p>
+                        <p style="font-size: 0.95rem; opacity: 0.8; margin: 0;">Garantizan el funcionamiento diario, control de matrícula y mantenimiento.</p>
+                    </div>
+                    <div class="contenido-desplegable-grande">
+                        <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 1rem 0;">
+                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.9; padding: 1rem;">
+                            El personal de apoyo administrativo y operativo asegura la correcta gestión de trámites estudiantiles, el orden de las instalaciones y el mantenimiento constante de los espacios escolares.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galería del Personal (Estructura Arreglada) -->
+        <div style="text-align: center; max-width: 42rem; margin: 0 auto 2rem auto; padding: 0 1.5rem;">
+            <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Galería del Personal</h2>
+            <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Nuestro Talento Humano</h3>
+        </div>
+
+        <div class="contenedor-carrusel-cover">
+            <div class="pista-carrusel-cover" id="pistaCoverPersonal">
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1920&q=90" alt="Equipo Directivo">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Equipo Directivo</h3>
+                        <p>Gestión y Liderazgo Institucional</p>
+                    </div>
+                </div>
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1920&q=90" alt="Cuerpo Docente">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Cuerpo Docente</h3>
+                        <p>Profesorado Multidisciplinario</p>
+                    </div>
+                </div>
+                <div class="item-carrusel-cover">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1920&q=90" alt="Personal Administrativo">
+                    <div class="overlay-carrusel-cover">
+                        <h3 class="h3ti">Personal Administrativo</h3>
+                        <p>Soporte Operativo y Técnico</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de Control para la Galería del Personal -->
+            <div class="controles-cover">
+                <button class="boton-cover" id="btnCoverIzquierdaPersonal" type="button" aria-label="Anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+                <button class="boton-cover" id="btnCoverDerechaPersonal" type="button" aria-label="Siguiente">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
             </div>
         </div>
     </section>
@@ -207,7 +487,7 @@
                 </div>
 
                 <div style="max-width: 48rem; position: relative; z-index: 10;">
-                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.375rem 1rem; border-radius: 9999px; margin-bottom: 2rem; borde-normal: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; background-color: rgba(255,255,255,0.1); padding: 0.375rem 1rem; border-radius: 9999px; margin-bottom: 2rem; border: 1px solid rgba(255,255,255,0.1);">
                         <span class="material-symbols-outlined" style="font-size: 0.875rem;">&#xe65f;</span>
                         <span style="font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em;">Proyecto Institucional 2025-2026</span>
                     </div>
@@ -218,7 +498,7 @@
                         En colaboración con la UPTOS CR, presentamos una propuesta integral para concientizar sobre los
                         riesgos en internet y promover la ciberseguridad como un escudo fundamental.
                     </p>
-                    <div style="display: flex; flex-direction: column; gap: 1.5rem; @media(min-width: 640px){ flex-direction: row; }">
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                         <a href="justificacion.html" class="boton boton-delineado" style="background-color: white; color: var(--color-primario);">
                             <span class="material-symbols-outlined">&#xe873;</span>
                             Ver Justificación
@@ -272,18 +552,12 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS JAVASCRIPT -->
     <script src="../scripts/menu-movil.js"></script>
     <script src="../scripts/logica-tema.js"></script>
+    <script src="../scripts/app.js"></script>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('../sw.js').then(reg => {
-                    console.log('SW registrado', reg.scope);
-                }).catch(err => console.error('SW Fallo', err));
-            });
-        }
-    </script>
+    
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>

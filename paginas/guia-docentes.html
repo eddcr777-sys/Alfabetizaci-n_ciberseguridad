@@ -1,112 +1,397 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
- <meta charset="utf-8" />
- <meta content="width=device-width, initial-scale=1.0" name="viewport" />
- <title>Plan Estratégico de Seguridad | Antonio Lemus Pérez</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan Estratégico de Seguridad | Antonio Lemus Pérez</title>
+  
   <link rel="stylesheet" href="../estilos/fuentes-locales.css" />
- <link rel="stylesheet" href="../estilos/guia-docentes.css" />
- <link rel="stylesheet" href="../estilos/componentes-premium.css" />
- <link rel="stylesheet" href="../estilos/estilos-base.css" />
-    <link rel="stylesheet" href="../estilos/main.css" />
-    <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
+  <link rel="stylesheet" href="../estilos/estilos-guia.css" />
+  <link rel="stylesheet" href="../estilos/guia-docentes.css" />
+  <link rel="stylesheet" href="../estilos/estilos-base.css" />
+  <link rel="stylesheet" href="../estilos/componentes-comunes.css" />
+  <link rel="stylesheet" href="../estilos/redes-sociales.css" />
+  <link rel="stylesheet" href="../estilos/main.css" />
+  <link rel="stylesheet" href="../estilos/proteccion-cuentas.css">
 
-    <link rel="manifest" href="../manifest.json" />
-    <meta name="theme-color" content="#0F5132" />
-    <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
+  <link rel="manifest" href="../manifest.json" />
+  <meta name="theme-color" content="#0f5132" />
+  <link rel="apple-touch-icon" href="../activos/iconos/icono.svg" />
 </head>
-<body class="p-0 border-t-8 border-teal-900 texto-pequeno">
+<body>
 
- <main class="max-w-5xl margen-x-auto px-8 py-16">
- <p class="text-teal-700  letras-separadas texto-diminuto margen-abajo-pequeno">DOCUMENTO TÉCNICO ESTRATÉGICO</p>
- <h1 class="texto-titulo-enorme md:text-4xl  margen-abajo-enorme letras-normales altura-linea-nula">PLAN DE ACCIÓN <br>PARA DOCENTES.</h1>
+       <!-- Navegación Superior Unificada -->
+    <nav class="barra-navegacion">
+        <div class="contenedor contenedor-navegacion">
+            <div class="marca-navegacion">
+                <div class="icono-logo">
+                    <span class="material-symbols-outlined">&#xe80c;</span>
+                </div>
+                <div class="titulo-navegacion">
+                    L.B. Antonio Lemus Pérez
+                </div>
+            </div>
+            <div class="enlaces-navegacion">
+                <a class="enlace-nav" href="index.html">Inicio</a>
+                <a class="enlace-nav" href="justificacion.html">Proyecto</a>
+                <a class="enlace-nav active" href="index2.html">Manual</a>
+                <a class="enlace-nav" href="nosotros.html">Nosotros</a>
+                <a class="boton boton-primario boton-pequeno" href="index3.html">Accesibilidad</a>
+                <button onclick="alternarModoOscuro()" class="boton-tema" title="Cambiar Tema">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+            <button id="boton-menu-movil" class="boton-menu-movil" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">&#xe5d2;</span>
+            </button>
+        </div>
+        <div id="capa-menu-movil" class="capa-menu-movil oculto"></div>
+        <div id="menu-movil" class="menu-lateral oculto">
+            <div class="cabecera-menu">
+                <span class="titulo-menu">Menú</span>
+                <button id="cerrar-menu-movil" class="cerrar-menu" aria-label="Cerrar menú">
+                    <span class="material-symbols-outlined">&#xe5cd;</span>
+                </button>
+            </div>
+            <div class="cuerpo-menu">
+                <a class="enlace-menu" href="index.html">Inicio</a>
+                <a class="enlace-menu" href="justificacion.html">Proyecto</a>
+                <a class="enlace-menu active" href="index2.html">Manual</a>
+                <a class="enlace-menu" href="nosotros.html">Nosotros</a>
+            </div>
+        </div>
+    </nav>
 
- <!-- SECCIÓN 3: PROTECCIÓN DE DATOS DE ALUMNOS -->
- <section class="escudo-datos mb-16">
- <h2 class="texto-titulo-pequeno  margen-abajo-medio text-secundario-900 caja-flexible elementos-centrados brecha-media">
- <span class="material-symbols-outlined texto-titulo-medio">privacy_tip</span> Protección de Datos de Alumnos
- </h2>
- <p class="texto-diminuto text-secundario-900  margen-abajo-grande mayusculas letras-separadas">Responsabilidad legal y ética sobre la privacidad del menor</p>
- 
- <div class="cuadricula columnas-1 columnas-2-md brecha-muy-grande">
- <!-- GESTIÓN DATOS -->
- <div class="tarjeta-aviso-premium alerta-azul" class="margen-cero">
- <div class="contenido-relativo">
- <h4><span class="material-symbols-outlined">&#xe897;</span> Información Sensible</h4>
- <p>Evite almacenar listados con Cédula, teléfonos o direcciones en nubes gratuitas o PCs públicas. Use archivos con contraseña si usa Pendrives.</p>
- </div>
- </div>
- <!-- IMÁGENES -->
- <div class="tarjeta-aviso-premium aviso-rosa" class="margen-cero">
- <div class="contenido-relativo">
- <h4><span class="material-symbols-outlined">&#xe439;</span> Uso de Imágenes</h4>
- <p>Publicar fotos de alumnos con el uniforme los expone a geolocalización. No publique fotos de clase en sus redes sociales personales.</p>
- </div>
- </div>
- </div>
- <div class="margen-arriba-grande relleno-normal  borde-normal border-blue-200 bordes-redondeados cursiva texto-diminuto text-secundario-800">
- <strong>Consejo Estratégico:</strong> Antes de usar una app nueva para poner notas o pasar asistencia, verifique dónde se guardan los datos. Si la app pide acceso a sus contactos o fotos, rechácela.
- </div>
- </section>
+    <header class="encabezado-documento">
+      <p class="etiqueta-subtitulo">DOCUMENTO TÉCNICO ESTRATÉGICO DE CIBERSEGURIDAD</p>
+      <h1 class="titulo-principal">PLAN DE ACCIÓN<br>PARA DOCENTES</h1>
+      <p class="bajada-principal">
+        Guía operativa de prevención, cumplimiento legal y respuesta inmediata ante incidentes tecnológicos en el entorno educativo.
+      </p>
+    </header> 
 
- <!-- MATRIZ DE RESPUESTA -->
- <section class="mb-16">
- <h2 class="texto-titulo-pequeno  margen-abajo-medio">1. Matriz de Respuesta a Incidentes</h2>
- <div class="overflow-x-auto">
- <div class="rejilla-matriz min-w-[700px]">
- <div class="celda-matriz cabecera-matriz">Incidente</div>
- <div class="celda-matriz cabecera-matriz">Acción Inmediata</div>
- <div class="celda-matriz cabecera-matriz">Ruta Legal / Técnica</div>
- 
- <div class="celda-matriz  text-red-700">Ciberacoso / Difamación</div>
- <div class="celda-matriz">Aislar equipos. No borrar chats. Captura de pantalla.</div>
- <div class="celda-matriz">Notificar Dirección. Art. 22 Ley Delitos Informáticos.</div>
- 
- <div class="celda-matriz  text-orange-700">Sospecha de Ransomware</div>
- <div class="celda-matriz">Desconexión total de la red. No apagar equipos.</div>
- <div class="celda-matriz">Reportar a soporte técnico UPTO-CR. Auditar puertos.</div>
- </div>
- </div>
- </section>
+ <main class="contenedor-principal">
+    
+    <!-- SECCIÓN 1: PROTECCIÓN DE DATOS DE ALUMNOS -->
+    <section class="seccion-bloque escudo-datos">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">privacy_tip</span>
+          Protección de Datos de Alumnos
+        </h2>
+        <p class="subtitulo-seccion">Responsabilidad legal y ética sobre la privacidad del menor</p>
+      </div>
 
- <!-- PROTOCOLOS -->
- <section class="mb-16">
- <h2 class="texto-titulo-pequeno  margen-abajo-medio">2. Higiene Tecnológica</h2>
- <div class="cuadricula columnas-1 columnas-2-md brecha-muy-grande">
- <div class="relleno-medio bg-slate-50 borde-normal borde-normal bordes-redondeados">
- <h3 class=" texto-diminuto mayusculas margen-abajo-normal text-teal-800">Control de Red</h3>
- <ul class="text-[11px] space-y-3 fuente-media">
- <li class="caja-flexible elementos-centrados brecha-pequena"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">settings_ethernet</span> <strong>DNS Escolar:</strong> Use 1.1.1.3 para bloqueo de contenido.</li>
- <li class="caja-flexible elementos-centrados brecha-pequena"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">lan</span> <strong>Aislamiento:</strong> Wi-Fi de alumnos ≠ Red administrativa.</li>
- </ul>
- </div>
- <div class="relleno-medio bg-slate-50 borde-normal borde-normal bordes-redondeados">
- <h3 class=" texto-diminuto mayusculas margen-abajo-normal text-teal-800">Laboratorio</h3>
- <ul class="text-[11px] space-y-3 fuente-media">
- <li class="caja-flexible elementos-centrados brecha-pequena"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">usb</span> <strong>Puertos:</strong> Inspección física mensual de CPUs.</li>
- <li class="caja-flexible elementos-centrados brecha-pequena"><span class="material-symbols-outlined align-middle" style="font-size:1.1rem;">password</span> <strong>Navegación:</strong> Inhabilitar autoguardado de claves.</li>
- </ul>
- </div>
- </div>
- </section>
+      <div class="rejilla-tarjetas">
+        <!-- TARJETA INFORMACIÓN SENSIBLE -->
+        <article class="tarjeta-informacion tarjeta-azul">
+          <header class="cabecera-tarjeta">
+            <span class="material-symbols-outlined icono-tarjeta">&#xe897;</span>
+            <h3 class="titulo-tarjeta">Información Sensible y Calificaciones</h3>
+          </header>
+          <p class="cuerpo-tarjeta">
+            Evite almacenar listados con cédulas, teléfonos, direcciones o diagnósticos médicos en nubes personales (Google Drive/Dropbox personal) o PC públicas.
+          </p>
+          <ul class="lista-verificacion">
+            <li><input type="checkbox" id="chk1"> <label for="chk1">Cifrar con contraseña los Excels de calificaciones</label></li>
+            <li><input type="checkbox" id="chk2"> <label for="chk2">Cerrar siempre la sesión en computadoras de sala de profesores</label></li>
+          </ul>
+        </article>
 
- <div class="border-t-2 border-slate-100 pt-12 caja-flexible columna-flexible md:flex-row justificar-espacios elementos-centrados brecha-grande">
+        <!-- TARJETA USO DE IMÁGENES -->
+        <article class="tarjeta-informacion tarjeta-rosa">
+          <header class="cabecera-tarjeta">
+            <span class="material-symbols-outlined icono-tarjeta">&#xe439;</span>
+            <h3 class="titulo-tarjeta">Fotografías y Redes Sociales</h3>
+          </header>
+          <p class="cuerpo-tarjeta">
+            Publicar fotos de alumnos con el uniforme expone su geolocalización. Queda estrictamente prohibido subir material del aula a redes sociales personales (TikTok, Instagram, Facebook).
+          </p>
+          <ul class="lista-verificacion">
+            <li><input type="checkbox" id="chk3"> <label for="chk3">Verificar consentimiento firmado de los representantes</label></li>
+            <li><input type="checkbox" id="chk4"> <label for="chk4">Difuminar rostros y logos escolares en publicaciones institucionales</label></li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
- <a href="protocolo-ayuda.html" class="boton-emergencia">
- <span class="material-symbols-outlined">support_agent</span> PROTOCOLO DE EMERGENCIA
- </a>
- </div>
- </main>
- <script src="../scripts/logica-tema.js"></script>
+    <!-- SECCIÓN 2: COMUNICACIÓN CON REPRESENTANTES (NUEVO) -->
+    <section class="seccion-bloque">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">forum</span>
+          1. Manejo Seguro de Canales de Comunicación
+        </h2>
+        <p class="subtitulo-seccion">Grupos de WhatsApp, Telegram y correos electrónicos</p>
+      </div>
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('../sw.js').then(reg => {
-                    console.log('SW registrado', reg.scope);
-                }).catch(err => console.error('SW Fallo', err));
-            });
-        }
-    </script>
+      <div class="rejilla-tarjetas">
+        <article class="tarjeta-protocolo">
+          <h3 class="subtitulo-bloque">
+            <span class="material-symbols-outlined">chat</span>
+            Grupos de Mensajería (WhatsApp/Telegram)
+          </h3>
+          <ul class="lista-pasos">
+            <li>
+              <span class="material-symbols-outlined">admin_panel_settings</span>
+              <div>
+                <strong>Configuración Unidireccional:</strong> Configure los grupos de WhatsApp escolares para que "Solo los administradores" puedan enviar mensajes. Esto evita el intercambio de cadenas, desinformación o conflictos entre representantes.
+              </div>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">schedule</span>
+              <div>
+                <strong>Derecho a la Desconexión:</strong> Establezca un horario de atención estricto en la descripción del grupo. Utilice WhatsApp Business para configurar respuestas automáticas fuera del horario laboral.
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="tarjeta-protocolo">
+          <h3 class="subtitulo-bloque">
+            <span class="material-symbols-outlined">mail</span>
+            Correos y Plataformas Virtuales
+          </h3>
+          <ul class="lista-pasos">
+            <li>
+              <span class="material-symbols-outlined">alternate_email</span>
+              <div>
+                <strong>Separación de Ámbitos:</strong> Use exclusivamente el correo institucional o un correo creado específicamente para el trabajo (ej: <em>profesor.nombre@gmail.com</em>). Nunca use su correo personal principal.
+              </div>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">group</span>
+              <div>
+                <strong>Copia Oculta (CCO):</strong> Al enviar correos masivos a los representantes, coloque siempre las direcciones en "CCO". Compartir los correos de todos vulnera su privacidad.
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: MATRIZ DE RESPUESTA A INCIDENTES -->
+    <section class="seccion-bloque">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">matrix</span>
+          2. Matriz Operativa de Respuesta a Incidentes
+        </h2>
+        <p class="subtitulo-seccion">Protocolos graduados según el tipo y la gravedad de la amenaza</p>
+      </div>
+
+      <div class="contenedor-tabla-desplazable">
+        <table class="tabla-matriz">
+          <thead>
+            <tr>
+              <th>Nivel / Tipo de Incidente</th>
+              <th>Acción Inmediata (Primeros 15 min)</th>
+              <th>Ruta Legal / Institucional</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="incidente-critico">
+                <span class="insignia insignia-roja">CRÍTICO</span>
+                <strong>Ciberacoso Escolar (Grooming / Sexting)</strong>
+              </td>
+              <td>
+                Contener la situación sin revictimizar. <strong>No exigir ver el dispositivo del alumno.</strong> Pedir al alumno que guarde pantallazos si es posible.
+              </td>
+              <td>
+                Notificar a la Dirección, Psicología y/o Defensoría Educativa de inmediato. Involucrar a los representantes bajo protocolo LOPNNA.
+              </td>
+            </tr>
+            <tr>
+              <td class="incidente-alto">
+                <span class="insignia insignia-naranja">ALTO</span>
+                <strong>Vulneración de Plataforma Escolar (Hackeo)</strong>
+              </td>
+              <td>
+                Si un alumno altera notas o un tercero accede a la clase de Classroom/Moodle, suspenda temporalmente el acceso o la reunión (Zoom/Meet).
+              </td>
+              <td>
+                Reportar a Soporte Técnico. Levantar acta de incidencia digital detallando qué cuentas o usuarios extraños ingresaron.
+              </td>
+            </tr>
+            <tr>
+              <td class="incidente-medio">
+                <span class="insignia insignia-amarilla">MEDIO</span>
+                <strong>Robo o Pérdida de Teléfono del Docente</strong>
+              </td>
+              <td>
+                Bloquear la línea telefónica y forzar el cierre de sesión de WhatsApp Web y correos institucionales desde otro equipo seguro.
+              </td>
+              <td>
+                Informar a Dirección para que notifique a representantes y estudiantes que no deben responder mensajes provenientes de su número.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- CONSEJO ESTRATÉGICO -->
+      <div class="caja-consejo">
+        <span class="material-symbols-outlined icono-consejo">lightbulb</span>
+        <div>
+          <strong>Uso de Inteligencia Artificial (IA):</strong> Nunca introduzca datos personales de sus alumnos, ni sus trabajos escritos con nombres y apellidos en herramientas de IA (como ChatGPT) para corregirlos. Las IAs utilizan esta información para entrenarse, violando la privacidad de los estudiantes.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: DIRECTORIOS Y PROCEDIMIENTOS -->
+    <section class="seccion-bloque">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">contact_emergency</span>
+          3. Herramientas de Apoyo
+        </h2>
+      </div>
+
+      <!-- DESPLEGABLES INTERACTIVOS DE EXTENSIÓN PROCEDIMENTAL -->
+      <div class="contenedor-acordeones">
+        <details class="acordeon-emergencia">
+          <summary>
+            <span><span class="material-symbols-outlined">gavel</span> Procedimiento ante Difamación del Docente en Redes</span>
+            <span class="material-symbols-outlined flecha-acordeon">expand_more</span>
+          </summary>
+          <div class="contenido-acordeon">
+            <ol class="lista-ordenada">
+              <li><strong>Documentación primaria:</strong> Tome capturas completas donde se aprecie la URL, perfil del emisor, fecha y hora del mensaje.</li>
+              <li><strong>No confronte en línea:</strong> No responda a provocaciones ni inicie debates públicos con representantes o alumnos.</li>
+              <li><strong>Acta de Incidencia:</strong> Redacte un informe impreso con las capturas impresas y preséntelo a la directiva para mediar o escalar a nivel legal.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="acordeon-emergencia">
+          <summary>
+            <span><span class="material-symbols-outlined">contact_support</span> Directorio de Contactos de Emergencia Institucional</span>
+            <span class="material-symbols-outlined flecha-acordeon">expand_more</span>
+          </summary>
+          <div class="contenido-acordeon">
+            <div class="rejilla-contactos">
+              <div class="item-contacto">
+                <strong>Defensoría Escolar / LOPNNA:</strong>
+                <span>defensoria@institucion.edu.ve</span>
+              </div>
+              <div class="item-contacto">
+                <strong>Coordinación Académica:</strong>
+                <span>coordinacion@institucion.edu.ve</span>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EXTRA A: DISPOSITIVOS PERSONALES Y CONTRASEÑAS -->
+    <section class="seccion-bloque">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">devices</span>
+          Uso de Dispositivos Personales (BYOD)
+        </h2>
+        <p class="subtitulo-seccion">Separación entre la vida personal y laboral en tu celular o laptop</p>
+      </div>
+
+      <div class="rejilla-tarjetas">
+        <article class="tarjeta-informacion tarjeta-azul">
+          <header class="cabecera-tarjeta">
+            <span class="material-symbols-outlined icono-tarjeta">&#xe32c;</span>
+            <h3 class="titulo-tarjeta">El Teléfono del Docente</h3>
+          </header>
+          <p class="cuerpo-tarjeta">
+            Si usa su celular personal para tomar fotos de la pizarra o recibir trabajos, los datos del colegio se mezclan con su vida privada, aumentando el riesgo de fugas accidentales.
+          </p>
+          <ul class="lista-verificacion">
+            <li><input type="checkbox" id="chk5"> <label for="chk5">Configurar un PIN o huella dactilar estricta en el celular</label></li>
+            <li><input type="checkbox" id="chk6"> <label for="chk6">Usar la función "Carpeta Segura" o perfiles de trabajo separados</label></li>
+          </ul>
+        </article>
+
+        <article class="tarjeta-informacion tarjeta-rosa">
+          <header class="cabecera-tarjeta">
+            <span class="material-symbols-outlined icono-tarjeta">&#xf042;</span>
+            <h3 class="titulo-tarjeta">Credenciales y Pendrives</h3>
+          </header>
+          <p class="cuerpo-tarjeta">
+            Los pendrives son la principal fuente de virus en salas de profesores. Evite guardar las contraseñas institucionales en un papelito o post-it pegado en su agenda.
+          </p>
+          <ul class="lista-verificacion">
+            <li><input type="checkbox" id="chk7"> <label for="chk7">Activar la Verificación en 2 Pasos (2FA) en su correo</label></li>
+            <li><input type="checkbox" id="chk8"> <label for="chk8">Escanear siempre el USB con el antivirus antes de abrir un archivo</label></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EXTRA B: AULAS VIRTUALES Y TRABAJOS DIGITALES -->
+    <section class="seccion-bloque">
+      <div class="cabecera-seccion">
+        <h2 class="titulo-seccion">
+          <span class="material-symbols-outlined icono-seccion">cast_for_education</span>
+          Aulas Virtuales y Recepción de Tareas
+        </h2>
+        <p class="subtitulo-seccion">Prevención de intrusiones y malware enviado por alumnos</p>
+      </div>
+
+      <div class="rejilla-tarjetas">
+        <article class="tarjeta-protocolo">
+          <h3 class="subtitulo-bloque">
+            <span class="material-symbols-outlined">video_camera_front</span>
+            Videollamadas (Zoom / Google Meet)
+          </h3>
+          <ul class="lista-pasos">
+            <li>
+              <span class="material-symbols-outlined">meeting_room</span>
+              <div>
+                <strong>Sala de Espera Activa:</strong> Nunca permita que los estudiantes entren antes que usted a la sala. Apruebe el ingreso verificando que el nombre coincida con la lista de clases.
+              </div>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">screen_share</span>
+              <div>
+                <strong>Bloqueo de Pantalla:</strong> Configure la llamada para que "Solo el anfitrión" pueda compartir pantalla o rayar la pizarra virtual. Esto evita el <em>Zoombombing</em> (imágenes inapropiadas en clase).
+              </div>
+            </li>
+          </ul>
+        </article>
+
+        <article class="tarjeta-protocolo">
+          <h3 class="subtitulo-bloque">
+            <span class="material-symbols-outlined">attachment</span>
+            Recepción de Trabajos
+          </h3>
+          <ul class="lista-pasos">
+            <li>
+              <span class="material-symbols-outlined">picture_as_pdf</span>
+              <div>
+                <strong>Exigir formato PDF:</strong> Pida a los estudiantes que envíen sus trabajos obligatoriamente en PDF. Los archivos de Word (.doc/.docx) pueden contener "macros" (pequeños virus ocultos).
+              </div>
+            </li>
+            <li>
+              <span class="material-symbols-outlined">link_off</span>
+              <div>
+                <strong>Cuidado con los enlaces:</strong> Si un alumno le envía por correo: <em>"Profe, no pude subir la tarea, descárguela de este link"</em>, <strong>no haga clic</strong> si no reconoce la plataforma (Drive, OneDrive).
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+</main>
+
+  <script src="../scripts/logica-tema.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('../sw.js')
+          .then(reg => console.log('SW registrado correctamente:', reg.scope))
+          .catch(err => console.error('Fallo en registro de SW:', err));
+      });
+    }
+  </script>
 </body>
 </html>
