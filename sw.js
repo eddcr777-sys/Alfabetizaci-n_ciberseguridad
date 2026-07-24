@@ -17,6 +17,7 @@ const urlsToCache = [
   '/scripts/menu-movil.js',
   '/scripts/logica-tema.js',
   '/scripts/app.js',
+  '/scripts/lucide.min.js',
   '/activos/iconos/icono.svg'
 ];
 
