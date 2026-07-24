@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../estilos/main.css" />
     <link rel="stylesheet" href="../estilos/utilidades-espanol.css" />
     
+    <!-- Carga única de la lógica del tema en el head -->
     <script src="../scripts/logica-tema.js"></script>
     
     <!-- PWA -->
@@ -104,14 +105,14 @@
                 </div>
             </div>
             <div class="contenedor-imagen-portada">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl3JZ7q7TecgP_TXiKeNMj89v94zTRGpjSxcOgtMki299vUuzvhbrFSOfG&s=10" alt="Institución" class="imagen-portada" style="border-radius: var(--radio-md);">
+                <img src="../imagenes/images.jpeg" alt="Institución" class="imagen-portada" style="border-radius: var(--radio-md);" width="640" height="426" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 50vw">
             </div>
         </div>
     </header>
 
     <!-- Misión y Visión -->
-    <section class="seccion-espaciada fondo-claro">
-        <div class="contenedor cuadricula-2">
+    <section class="seccion-espaciada fondo-claro" style="padding-top: 2rem; padding-bottom: 2rem;">
+        <div class="contenedor cuadricula-2" style="gap: 1.5rem;">
             <!-- Misión -->
             <div class="tarjeta tarjeta-clara tarjeta-hover-zoom">
                 <div class="tarjeta-icono">
@@ -140,10 +141,7 @@
     </section>
 
     <!-- Reseña Histórica -->
-    <section id="historia" class="seccion-espaciada fondo-alternativo" style="overflow: hidden; position: relative;">
-        <div style="position: absolute; top: 0; right: 0; padding: 10rem; opacity: 0.03; pointer-events: none;">
-            <span class="material-symbols-outlined" style="font-size: 37.5rem;">&#xea3e;</span>
-        </div>
+    <section id="historia" class="seccion-espaciada fondo-alternativo" style="overflow: hidden; position: relative; padding-top: 2.5rem; padding-bottom: 2.5rem;">
         <div class="contenedor">
             <div class="cuadricula-2" style="align-items: center;">
                 <div>
@@ -153,20 +151,13 @@
                     </h3>
                     <div style="font-size: 1.125rem; color: var(--color-texto-principal); line-height: 1.625; display: flex; flex-direction: column; gap: 2rem;">
                         <p>
-                            Nacimos en septiembre de 1984 como la <strong style="color: var(--color-primario);">E.B. “Creación
-                                Bolivariana”</strong>. En aquel entonces, operamos en las instalaciones de la hoy U.E.
-                            “José Silverio González” con una matrícula de 716 alumnos bajo la estrategia UGA.
+                            Nacimos en septiembre de 1984 como la <strong style="color: var(--color-primario);">E.B. “Creación Bolivariana”</strong>. En aquel entonces, operamos en las instalaciones de la hoy U.E. “José Silverio González” con una matrícula de 716 alumnos bajo la estrategia UGA.
                         </p>
                         <p>
-                            En enero de 1988, adoptamos con orgullo el nombre del insigne educador sucrense <strong
-                                style="color: var(--color-primario);">Antonio Lemus Pérez</strong>. Desde entonces, nos trasladamos a
-                            nuestra sede propia en la Avenida Las Industrias, consolidándonos como un núcleo vital para
-                            Cumaná.
+                            En enero de 1988, adoptamos con orgullo el nombre del insigne educador sucrense <strong style="color: var(--color-primario);">Antonio Lemus Pérez</strong>. Desde entonces, nos trasladamos a nuestra sede propia en la Avenida Las Industrias, consolidándonos como un núcleo vital para Cumaná.
                         </p>
                         <p>
-                            Hoy, el Liceo Bolivariano Antonio Lemus Pérez se mantiene como una de las instituciones más
-                            emblemáticas del Estado Sucre, evolucionando constantemente para integrar la tecnología y la
-                            innovación en el currículo nacional.
+                            Hoy, el Liceo Bolivariano Antonio Lemus Pérez se mantiene como una de las instituciones más emblemáticas del Estado Sucre, evolucionando constantemente para integrar la tecnología y la innovación en el currículo nacional.
                         </p>
                     </div>
                 </div>
@@ -180,12 +171,12 @@
                             </div>
                         </div>
                         <div style="height: 12rem; border-radius: var(--radio-md); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80" alt="Aula" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="../imagenes/le.jpeg" width="400" height="300" alt="Aula" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 1rem; padding-top: 3rem;">
                         <div style="height: 12rem; border-radius: var(--radio-md); overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Estudiante" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="../imagenes/lem.jpeg" width="400" height="300" alt="Estudiante" style="width: 100%; height: 100%; object-fit: cover; display: block;" loading="lazy" decoding="async">
                         </div>
                         <div style="height: 16rem; border-radius: var(--radio-md); background-color: var(--color-primario); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.1); color: var(--color-texto-inverso);">
                             <div class="texto-centrado">
@@ -208,11 +199,11 @@
                 <p style="font-size: 1rem; color: var(--color-texto-secundario); margin-top: 0.5rem; opacity: 0.8;">Toca cualquier tarjeta para desplegar su información completa.</p>
             </div>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
                 <!-- Labor 1 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                      <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=600&q=80" alt="Formación Académica">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/images.jpeg" alt="Formación Académica">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -228,9 +219,9 @@
                 </div>
 
                 <!-- Labor 2 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Tecnología y Ciberseguridad">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/lem.jpeg" alt="Tecnología y Ciberseguridad">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -246,9 +237,9 @@
                 </div>
 
                 <!-- Labor 3 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80" alt="Atención Nutricional">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/le.jpeg" alt="Atención Nutricional">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -264,9 +255,9 @@
                 </div>
 
                 <!-- Labor 4 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=600&q=80" alt="Vínculo Comunitario">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/lemu.jpeg" alt="Vínculo Comunitario">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -283,27 +274,27 @@
             </div>
 
             <!-- CARRUSEL INTEGRADO EN LABORES -->
-            <div style="margin-top: 3rem; text-align: center;">
+            <div style="margin-top: 1.5rem; text-align: center;">
                 <h4 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem;">Galería de Iniciativas en Acción</h4>
                 
                 <div class="contenedor-carrusel-cover" style="border-radius: var(--radio-md); overflow: hidden;">
                     <div class="pista-carrusel-cover" id="pistaCoverLabores">
                         <div class="item-carrusel-cover">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1280&q=70" alt="Jornada Educativa">
+                            <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/images.jpeg" alt="Jornada Educativa">
                             <div class="overlay-carrusel-cover">
                                 <h3 class="h3ti">Jornadas Educativas</h3>
                                 <p>Acompañamiento cercano y personalizado para el enriquecimiento intelectual.</p>
                             </div>
                         </div>
                         <div class="item-carrusel-cover">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1280&q=70" alt="Talleres Tecnológicos">
+                            <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/lem.jpeg" alt="Talleres Tecnológicos">
                             <div class="overlay-carrusel-cover">
                                 <h3 class="h3ti">Talleres Tecnológicos</h3>
                                 <p>Espacios prácticos orientados a la ciberseguridad y alfabetización digital.</p>
                             </div>
                         </div>
                         <div class="item-carrusel-cover">
-                            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=1280&q=70" alt="Comunidad Activa">
+                            <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/le.jpeg" alt="Comunidad Activa">
                             <div class="overlay-carrusel-cover">
                                 <h3 class="h3ti">Comunidad Activa</h3>
                                 <p>Trabajo conjunto entre docentes, estudiantes y representantes.</p>
@@ -325,7 +316,7 @@
     </section>
 
     <!-- SECCIÓN: NUESTRA GALERÍA PRINCIPAL -->
-    <section class="seccion-espaciada fondo-alternativo" style="padding-left: 0; padding-right: 0;">
+    <section class="seccion-espaciada fondo-alternativo" style="padding-left: 0; padding-right: 0; padding-top: 1.5rem; padding-bottom: 1.5rem;">
         <div style="text-align: center; max-width: 42rem; margin: 0 auto 2rem auto; padding: 0 1.5rem;">
             <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Instalaciones y Vida Escolar</h2>
             <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Nuestra Galería en Pantalla Completa</h3>
@@ -334,21 +325,21 @@
         <div class="contenedor-carrusel-cover">
             <div class="pista-carrusel-cover" id="pistaCover">
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1280&q=70" alt="Campus Principal">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/images.jpeg" alt="Campus Principal">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Campus Principal</h3>
                         <p>Áreas comunes amplias y espacios abiertos diseñados para el desarrollo armónico de la juventud sucrense.</p>
                     </div>
                 </div>
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1280&q=70" alt="Laboratorio Tecnológico">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/lem.jpeg" alt="Laboratorio Tecnológico">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Laboratorio Tecnológico</h3>
                         <p>Espacios adaptados para las prácticas de alfabetización digital y ciberseguridad enlazados con la educación moderna.</p>
                     </div>
                 </div>
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1280&q=70" alt="Clases Magistrales">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/le.jpeg" alt="Clases Magistrales">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Clases Magistrales</h3>
                         <p>Dinamismo y constante participación activa de los alumnos bajo la guía de un cuerpo docente altamente preparado.</p>
@@ -367,7 +358,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN: NUESTRO PERSONAL (TARJETAS Y GALERÍA CORREGIDA) -->
+    <!-- SECCIÓN: NUESTRO PERSONAL -->
     <section class="seccion-espaciada fondo-claro">
         <div class="contenedor">
             <div style="text-align: center; max-width: 42rem; margin: 0 auto 3rem auto;">
@@ -378,9 +369,9 @@
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
                 <!-- Personal 1 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Equipo Directivo">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/lemu.jpeg" alt="Equipo Directivo">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -397,9 +388,9 @@
                 </div>
 
                 <!-- Personal 2 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Cuerpo Docente">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/images.jpeg" alt="Cuerpo Docente">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -416,9 +407,9 @@
                 </div>
 
                 <!-- Personal 3 -->
-                <div class="tarjeta-grande-desplegable" onclick="this.classList.toggle('activa')">
+                <div class="tarjeta-grande-desplegable">
                     <div class="avatar-cover-grande">
-                        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Personal Administrativo">
+                        <img loading="lazy" decoding="async" width="600" height="220" src="../imagenes/lem.jpeg" alt="Personal Administrativo">
                     </div>
                     <span class="material-symbols-outlined indicador-desplegar">expand_more</span>
                     <div style="padding: 2rem;">
@@ -436,7 +427,7 @@
             </div>
         </div>
 
-        <!-- Galería del Personal (Estructura Arreglada) -->
+        <!-- Galería del Personal -->
         <div style="text-align: center; max-width: 42rem; margin: 0 auto 2rem auto; padding: 0 1.5rem;">
             <h2 style="font-size: 1.125rem; font-weight: bold; color: var(--color-primario); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.5rem;">Galería del Personal</h2>
             <h3 style="font-size: 2.25rem; font-weight: bold; line-height: 1.2;">Nuestro Talento Humano</h3>
@@ -445,21 +436,21 @@
         <div class="contenedor-carrusel-cover">
             <div class="pista-carrusel-cover" id="pistaCoverPersonal">
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1280&q=70" alt="Equipo Directivo">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/lemu.jpeg" alt="Equipo Directivo">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Equipo Directivo</h3>
                         <p>Gestión y Liderazgo Institucional</p>
                     </div>
                 </div>
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1280&q=70" alt="Cuerpo Docente">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/images.jpeg" alt="Cuerpo Docente">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Cuerpo Docente</h3>
                         <p>Profesorado Multidisciplinario</p>
                     </div>
                 </div>
                 <div class="item-carrusel-cover">
-                    <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1280&q=70" alt="Personal Administrativo">
+                    <img loading="lazy" decoding="async" width="1200" height="800" src="../imagenes/lem.jpeg" alt="Personal Administrativo">
                     <div class="overlay-carrusel-cover">
                         <h3 class="h3ti">Personal Administrativo</h3>
                         <p>Soporte Operativo y Técnico</p>
@@ -467,7 +458,6 @@
                 </div>
             </div>
 
-            <!-- Botones de Control para la Galería del Personal -->
             <div class="controles-cover">
                 <button class="boton-cover" id="btnCoverIzquierdaPersonal" type="button" aria-label="Anterior">
                     <span class="material-symbols-outlined">chevron_left</span>
@@ -544,11 +534,8 @@
     </footer>
 
     <!-- SCRIPTS JAVASCRIPT -->
-    <script src="../scripts/menu-movil.js"></script>
-    <script src="../scripts/logica-tema.js"></script>
     <script src="../scripts/app.js"></script>
 
-    
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
