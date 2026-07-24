@@ -87,3 +87,26 @@
     font-size: 1.25rem;
     color: #22C55E;
 }
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .tarjeta,
+.dark .simulador-gaming,
+.dark .pregunta-cuestionario {
+    background-color: #111827;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .pregunta-cuestionario .respuesta-cuestionario {
+    background-color: #052e16;
+    color: #dcfce7;
+    border-left-color: #4ade80;
+}
+
+.dark .tarjeta-titulo {
+    color: #bbf7d0;
+}

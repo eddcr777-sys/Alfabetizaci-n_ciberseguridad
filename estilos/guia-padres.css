@@ -272,3 +272,32 @@ h1, h2, h3, h4 {
 
 .dark .texto-pasos { color: #cbd5e1; }
 .dark .tarjeta-triage { background-color: #0f172a; border-color: #334155; }
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .titulo-principal,
+.dark .titulo-seccion,
+.dark .titulo-triage,
+.dark .titulo-tarjeta {
+    color: #f8fafc;
+}
+
+.dark .texto-descriptivo,
+.dark .tarjeta-aviso-premium p,
+.dark .texto-pasos {
+    color: #e2e8f0;
+}
+
+.dark .tarjeta-pro,
+.dark .tarjeta-aviso-premium,
+.dark .tarjeta-alerta-critica,
+.dark .tarjeta-paso,
+.dark .paso-protocolo,
+.dark .tarjeta-triage {
+    background-color: #111827;
+    border-color: #334155;
+    color: #f8fafc;
+}

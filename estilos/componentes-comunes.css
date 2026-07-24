@@ -8,8 +8,31 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.3 !important;
     margin-top: 0;
     margin-bottom: 1.25rem;
-    color: var(--color-primario);
+    color: var(--color-texto-principal);
     word-break: break-word;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: var(--color-primario);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .titulo-destacado,
+.dark .titulo-caja,
+.dark .titulo-pie,
+.dark .encabezado-pie,
+.dark .titulo-menu {
+    color: var(--color-primario);
 }
 
 p, li, span, label {
@@ -49,6 +72,70 @@ p:last-child {
     padding: 0 2rem;
 }
 
+.dark body,
+.dark .seccion,
+.dark .cabecera-pagina,
+.dark .caja-modulo-accesible,
+.dark .tarjeta-modulo-maestro,
+.dark .caja-alerta,
+.dark .bloque-definicion,
+.dark .pie-pagina,
+.dark .barra-navegacion,
+.dark .menu-lateral,
+.dark .tarjeta-clara,
+.dark .tarjeta-grande-desplegable {
+    color: var(--color-texto-principal);
+}
+
+.dark p,
+.dark li,
+.dark span,
+.dark label,
+.dark small,
+.dark strong,
+.dark em {
+    color: var(--color-texto-secundario);
+}
+
+.dark .boton,
+.dark .boton-delineado,
+.dark .boton-tema,
+.dark .boton-secundario {
+    color: var(--color-texto-principal);
+    border-color: var(--color-borde);
+    background-color: var(--color-superficie);
+}
+
+.dark .boton-primario {
+    color: var(--color-texto-inverso);
+    background-color: var(--color-primario);
+}
+
+.dark .boton-primario:hover {
+    background-color: var(--color-primario-hover);
+}
+
+.dark .caja-modulo-accesible,
+.dark .tarjeta-modulo-maestro,
+.dark .caja-alerta,
+.dark .bloque-definicion,
+.dark .tarjeta-clara,
+.dark .tarjeta-grande-desplegable {
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+}
+
+.dark .tarjeta-oscura {
+    background-color: var(--color-superficie-contenedor);
+    color: var(--color-texto-principal);
+    border-color: var(--color-borde);
+}
+
+.dark .tarjeta-oscura .tarjeta-icono {
+    background-color: var(--color-superficie-variante);
+    color: var(--color-primario);
+}
+
 .seccion {
     padding: 3.5rem 0;
     border-bottom: 2px solid var(--color-borde);
@@ -66,6 +153,15 @@ p:last-child {
     top: 0;
     z-index: 100;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark .barra-navegacion,
+.dark .cabecera-menu,
+.dark .cuerpo-menu,
+.dark .menu-lateral,
+.dark .pie-pagina {
+    background-color: var(--color-superficie);
+    color: var(--color-texto-principal);
 }
 
 .contenedor-navegacion {

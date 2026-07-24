@@ -171,3 +171,33 @@ h4 {
     border-color: #059669 !important;
     color: #d1fae5 !important;
 }
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: #f8fafc;
+}
+
+.dark .tarjeta-guia,
+.dark .caja-termino,
+.dark .pildora-informacion {
+    background-color: #022c22;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .enlace-navegacion {
+    color: #cbd5e1;
+}
+
+.dark .enlace-navegacion:hover {
+    background-color: #334155;
+    color: #bbf7d0;
+}
+

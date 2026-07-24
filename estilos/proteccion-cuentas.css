@@ -354,3 +354,52 @@ body {
     font-size: 1.1rem;
     color: #64748b;
 }
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .titulo-seccion,
+.dark .subtitulo-seccion,
+.dark .cabecera-interactiva,
+.dark .titulo-tarjeta,
+.dark .cabecera-tarjeta {
+    color: #f8fafc;
+}
+
+.dark .parrafo-seccion,
+.dark .instruccion-interactiva,
+.dark .item-validacion,
+.dark .texto-pie,
+.dark .creditos-pie,
+.dark .texto-evaluacion,
+.dark .estado-evaluacion {
+    color: #e2e8f0;
+}
+
+.dark .tarjeta-informacion,
+.dark .panel-interactivo,
+.dark .elemento-evaluacion,
+.dark .pie-pagina,
+.dark .enlace-video-bonito {
+    background-color: #111827;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .entrada-datos {
+    background-color: #0f172a;
+    color: #f8fafc;
+    border-color: #475569;
+}
+
+.dark .estado-critico {
+    background-color: #7f1d1d;
+    color: #fee2e2;
+}
+
+.dark .estado-optimo {
+    background-color: #064e3b;
+    color: #d1fae5;
+}

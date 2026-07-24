@@ -572,3 +572,78 @@
 .footer-credits:hover { 
   text-decoration: underline; 
 }
+
+.dark body {
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+.dark .section-title,
+.dark .definition-header,
+.dark .card-title,
+.dark .url-verifier-title,
+.dark .page-title {
+  color: #f8fafc;
+}
+
+.dark .section-text,
+.dark .definition-body,
+.dark .email-label,
+.dark .analysis-label,
+.dark .analysis-value,
+.dark .protocol-list li,
+.dark .url-verifier-subtitle,
+.dark .url-instruction {
+  color: #e5e7eb;
+}
+
+.dark .definition-box,
+.dark .protocol-box,
+.dark .card,
+.dark .email-simulator,
+.dark .url-verifier,
+.dark .url-card,
+.dark .danger-explanation,
+.dark .url-verifier-header {
+  background-color: #111827;
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+.dark .highlight {
+  background: rgba(52, 211, 153, 0.16);
+  color: #bbf7d0;
+}
+
+.dark .workshop-instruction,
+.dark .email-topbar {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+.dark .danger-signal {
+  background-color: #7f1d1d;
+  color: #fee2e2;
+}
+
+.dark .url-browser-bar {
+  background-color: #0f172a;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark .url-badge.secure {
+  background-color: #064e3b;
+  color: #d1fae5;
+}
+
+.dark .url-badge.danger {
+  background-color: #7f1d1d;
+  color: #fee2e2;
+}
+
+.dark .url-badge.dubious {
+  background-color: #713f12;
+  color: #fde68a;
+}

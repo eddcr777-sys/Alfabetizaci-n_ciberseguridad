@@ -174,3 +174,36 @@
     margin: 0 !important;
 }
 
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .bloque-definicion,
+.dark .taller-bloque,
+.dark .bloque-recuerda {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .etiqueta-def,
+.dark .taller-titulo,
+.dark .titulo-recuerda,
+.dark .resultado-privacidad {
+    color: #f8fafc;
+}
+
+.dark .taller-instruccion,
+.dark .item-regla,
+.dark .elemento-lista-verificacion span,
+.dark .texto-def {
+    color: #e2e8f0;
+}
+
+.dark .palabra-clave {
+    background-color: #111827;
+    color: #86efac;
+    border-color: #34d399;
+}
+

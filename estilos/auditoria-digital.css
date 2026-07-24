@@ -363,3 +363,45 @@
 .creditos-pie:hover {
     color: var(--color-primario);
 }
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .tarjeta-modulo,
+.dark .tarjeta-post,
+.dark .item-auditoria,
+.dark .pie-pagina {
+    background-color: #111827;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .titulo-modulo,
+.dark .item-auditoria-titulo,
+.dark .titulo-pie,
+.dark .encabezado-pie {
+    color: #f8fafc;
+}
+
+.dark .descripcion-modulo,
+.dark .item-auditoria-subtexto,
+.dark .descripcion-pie,
+.dark .enlaces-pie a,
+.dark .inferior-pie {
+    color: #e2e8f0;
+}
+
+.dark .instruccion-caja,
+.dark .mensaje-explicativo,
+.dark .barra-seguridad-contenedor {
+    background-color: #0f172a;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .etiqueta-post {
+    background-color: #052e16;
+    color: #bbf7d0;
+}

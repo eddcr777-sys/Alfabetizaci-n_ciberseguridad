@@ -24,17 +24,16 @@
 }
 
 .dark {
-  /* Colores Modo Oscuro: Estrictamente 3 colores (Gris, Verde, Blanco) */
-  --color-primario: #0F5132; 
-  --color-primario-hover: #16a34a;
-  --color-secundario: #0F5132; 
-  --color-texto-principal: #ffffff; /* Todo texto principal en blanco para contraste */
-  --color-texto-secundario: #ffffff; /* Forzado a blanco en oscuro para máxima visibilidad */
-  --color-texto-claro: #ffffff;
-  --color-blanco: #2a2a2c; /* Tarjetas en gris oscuro */
-  --color-fondo: #1f1f21; /* Fondo gris pedido */
-  --color-fondo-variante: #2a2a2c; /* Contenedores secundarios en gris */
-  --color-borde: rgba(255, 255, 255, 0.1);
+  --color-primario: #075b26;
+  --color-primario-hover: #1baa4f;
+  --color-secundario: #BBF7D0;
+  --color-texto-principal: #F8FFF9;
+  --color-texto-secundario: #DCEFE2;
+  --color-texto-claro: #A7D4B4;
+  --color-blanco: #ffffff;
+  --color-fondo: #07110C;
+  --color-fondo-variante: #76777646;
+  --color-borde: rgba(89, 121, 100, 0.612);
 }
 
 /* ==========================================================================
@@ -383,13 +382,18 @@ img {
 .titulo-portada {
   font-size: 2.25rem;
   font-weight: bold;
-  color: var(--color-primario);
+  color: var(--color-texto-principal);
   margin-bottom: 1.5rem;
   line-height: 1.1;
 }
 
-.dark .titulo-portada {
-  color: #ffffff;
+.dark .titulo-portada,
+.dark .titulo-tarjeta,
+.dark .titulo-pie,
+.dark .encabezado-pie,
+.dark .titulo-menu,
+.dark .titulo-navegacion {
+  color: #f8fff9;
 }
 
 @media (min-width: 768px) {
@@ -402,6 +406,10 @@ img {
   font-size: 1.125rem;
   color: var(--color-texto-secundario);
   margin-bottom: 2rem;
+}
+
+.dark .subtitulo-portada {
+  color: #dcefe2;
 }
 
 .acciones-portada {
@@ -447,7 +455,7 @@ img {
 }
 
 .fondo-claro {
-  background-color: var(--color-blanco);
+  background-color: var(--color-fondo);
 }
 
 .fondo-alternativo {
@@ -523,7 +531,7 @@ img {
   font-size: 2.25rem;
   font-weight: bold;
   margin-bottom: 2rem;
-  color: #000000;
+  color: var(--color-texto-principal);
 }
 
 .tarjeta-clara .titulo-tarjeta {
@@ -531,17 +539,25 @@ img {
 }
 
 .dark .tarjeta-clara .titulo-tarjeta {
-  color: #ffffff;
+  color: var(--color-primario);
 }
 
 /* Corrección explícita para tarjetas oscuras y fondos verdes en modo oscuro */
 .dark .tarjeta-oscura,
 .dark .tarjeta-oscura .titulo-tarjeta,
 .dark .tarjeta-oscura .texto-tarjeta {
-  color: #ffffff !important;
+  color: var(--color-texto-principal) !important;
 }
 .tituloh2 {
   color: #ffffff;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.dark .tituloh2 {
+  color: #f8fff9;
 }
 
 .texto-tarjeta {
@@ -630,6 +646,23 @@ img {
 
 .dark .pie-pagina {
   background-color: var(--color-fondo);
+}
+
+.dark .subtitulo-portada,
+.dark .texto-tarjeta,
+.dark .enlaces-pie,
+.dark .texto-pie,
+.dark .derechos-pie,
+.dark .enlace-nav,
+.dark .enlace-menu {
+  color: var(--color-texto-secundario);
+}
+
+.dark .enlace-nav:hover,
+.dark .enlace-nav.active,
+.dark .enlace-menu:hover,
+.dark .enlace-menu.active {
+  color: var(--color-primario);
 }
 
 .cuadricula-pie {
@@ -885,18 +918,20 @@ img {
     min-height: 500px;
     overflow: hidden;
     background-color: #000;
-    content-visibility: auto;
-    contain-intrinsic-size: 100vw 500px;
 }
 .pista-carrusel-cover {
     display: flex;
     width: 100%;
     height: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    overscroll-behavior: contain;
+    overscroll-behavior-x: contain;
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
 }
         .pista-carrusel-cover::-webkit-scrollbar {
             display: none;
@@ -907,7 +942,6 @@ img {
     height: 100%;
     scroll-snap-align: start;
     position: relative;
-    contain: content;
 }
 .item-carrusel-cover::before {
     content: "";
@@ -922,13 +956,11 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 6s ease;
-    will-change: transform;
-    transform: translateZ(0);
+    transition: transform 0.35s ease;
     backface-visibility: hidden;
 }
 .item-carrusel-cover:hover img {
-    transform: scale(1.04) translateZ(0);
+    transform: scale(1.02);
 }
         .overlay-carrusel-cover {
             position: absolute;
@@ -947,6 +979,7 @@ img {
             font-weight: bold;
             margin-bottom: 0.75rem;
             text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            color: color: var(--color-blanco);
         }
         .overlay-carrusel-cover p {
             font-size: 1.25rem;

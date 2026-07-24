@@ -16,7 +16,7 @@
     --fuente-cuerpo: 'Public Sans', sans-serif;
 }
 
-:root.dark {
+.dark {
     --color-fondo: #0f172a;
     --color-fondo-alterno: #020617;
     --color-texto: #f8fafc;
@@ -471,6 +471,50 @@ h1, h2, h3, h4 {
     text-align: center; 
     font-size: 0.9rem; 
     border-top: 3px solid var(--color-secundario); 
+}
+
+.dark body {
+    background-color: #020617;
+    color: #f8fafc;
+}
+
+.dark .gradiente-encabezado {
+    background: linear-gradient(135deg, #0f172a 0%, #052e16 100%);
+    color: #f8fafc;
+    border-bottom-color: #22c55e;
+}
+
+.dark .enlace-retroceder {
+    color: #f8fafc;
+}
+
+.dark .nav-manual,
+.dark .tarjeta-capitulo,
+.dark .parrafo-destacado,
+.dark .lista-precios,
+.dark .fila-precio {
+    background-color: #111827;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+.dark .item-navegacion {
+    color: #e2e8f0;
+}
+
+.dark .item-navegacion:hover,
+.dark .item-navegacion.activo {
+    background-color: #1f2937;
+    color: #bbf7d0;
+}
+
+.dark .titulo-capitulo,
+.dark .numero-capitulo {
+    color: #f8fafc;
+}
+
+.dark .etiqueta-precio {
+    color: #fca5a5;
 }
 
 .oculto { 
