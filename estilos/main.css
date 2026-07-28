@@ -853,10 +853,10 @@ img {
    RESPONSIVE / MÓVIL
    ========================================================================== */
 @media (max-width: 767px) {
-  .seccion-espaciada { padding: 2.5rem 0; }
-  .contenedor { padding: 0 0.85rem; }
+  .seccion-espaciada { padding: 2rem 0; }
+  .contenedor { padding: 0 0.75rem; }
 
-  .contenedor-navegacion { height: 3.75rem; }
+  .contenedor-navegacion { height: 3.5rem; }
   .marca-navegacion { gap: 0.5rem; min-width: 0; }
   .icono-logo { width: 2rem; height: 2rem; flex-shrink: 0; }
 
@@ -887,7 +887,7 @@ img {
     height: 55vw;
     max-height: 18rem;
     object-fit: cover;
-    border-radius: 0 0 1.25rem 1.25rem;
+    border-radius: 0;
     box-shadow: none;
   }
 
@@ -896,19 +896,9 @@ img {
     z-index: 2;
     margin-top: -2rem;
     background: var(--color-fondo);
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 0;
     padding: 1.5rem 1rem 0.5rem;
     box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.06);
-  }
-
-  .contenido-portada::before {
-    content: "";
-    display: block;
-    width: 2.5rem;
-    height: 3px;
-    border-radius: 2px;
-    background: var(--color-primario);
-    margin: 0 auto 1.25rem auto;
   }
 
   .titulo-portada { font-size: 1.65rem; }
@@ -916,26 +906,22 @@ img {
 
   /* Tarjetas edge-to-edge estilo nativo */
   .tarjeta { 
-    padding: 1.5rem 1rem; 
-    border-left: 3px solid var(--color-primario); 
-    margin-left: -0.85rem;
-    margin-right: -0.85rem;
+    padding: 1.25rem 0.85rem; 
+    border-left: 4px solid var(--color-primario); 
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    border-radius: 0;
+    box-shadow: none !important;
   }
   .tarjeta-oscura { border-left-color: rgba(255, 255, 255, 0.4); }
-  .tarjeta-icono { width: 3.25rem; height: 3.25rem; margin-bottom: 1.25rem; }
-  .titulo-tarjeta { font-size: 1.5rem; margin-bottom: 0.85rem; }
+  .tarjeta-icono { width: 3rem; height: 3rem; margin-bottom: 1rem; }
+  .titulo-tarjeta { font-size: 1.35rem; margin-bottom: 0.75rem; }
   .texto-tarjeta { font-size: 0.95rem; }
 
-  div[style*="repeat(auto-fit, minmax(300px, 1fr))"] {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0 !important;
-  }
-
   .tarjeta-grande-desplegable {
-    width: calc(100% + 1.7rem);
-    margin-left: -0.85rem;
-    margin-right: -0.85rem;
+    width: calc(100% + 1.5rem);
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
     border-radius: 0;
     border: none;
     border-top: 1px solid var(--color-borde);
@@ -943,59 +929,21 @@ img {
     transform: none !important;
   }
 
-  .tarjeta-grande-desplegable:first-child { border-top: none; }
-
-  .avatar-cover-grande {
-    border-radius: 0;
-    height: 180px;
-    margin-bottom: 0;
-  }
-
-  .tarjeta-grande-desplegable > div[style="padding: 2rem;"] {
-    padding: 1.25rem 1rem !important;
-  }
-
-  .contenedor-carrusel-cover { height: 55vh; min-height: 340px; }
+  .contenedor-carrusel-cover { height: 50vh; min-height: 320px; }
 
   .overlay-carrusel-cover {
-    padding: 1.5rem 1rem 5rem 1rem;
+    padding: 1.5rem 1rem 4rem 1rem;
   }
 
-  .overlay-carrusel-cover h3 { font-size: 1.35rem; margin-bottom: 0.4rem; }
-  .overlay-carrusel-cover p { font-size: 0.85rem; max-width: 100%; }
+  .overlay-carrusel-cover h3 { font-size: 1.25rem; margin-bottom: 0.4rem; }
+  .overlay-carrusel-cover p { font-size: 0.85rem; }
 
-  .controles-cover {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: auto;
-    justify-content: space-between;
-    gap: 0;
-    padding: 3.5rem 1rem 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
-  }
-
-  .boton-cover {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.25);
-  }
-
-  /* Footer — visible y compacto */
-  .pie-pagina { padding: 2.5rem 0 2rem; border-top: none; position: relative; }
-  .pie-pagina::before {
-    content: "";
-    display: block;
-    width: 2.5rem;
-    height: 3px;
-    border-radius: 2px;
-    background: var(--color-primario);
-    margin: 0 auto 2rem auto;
-  }
-  .cuadricula-pie { gap: 2rem; margin-bottom: 2rem; text-align: center; }
-  .marca-pie { justify-content: center; }
+  /* Footer — compacto y centrado */
+  .pie-pagina { padding: 2.5rem 0 1.5rem; }
+  .cuadricula-pie { display: flex; flex-direction: column; gap: 1.5rem; text-align: center; }
+  .marca-pie { justify-content: center; margin-bottom: 1.25rem; }
+  .encabezado-pie { margin-bottom: 1rem; }
   .inferior-pie { padding-top: 1.5rem; }
-  .creditos-pie { letter-spacing: 0.12em; }
 }
 
 @media (max-width: 420px) {

@@ -3,10 +3,10 @@
    ========================================================================== */
 .palabra-clave {
     background: var(--color-superficie-contenedor);
-    color: var(--modulo-redes);
+    color: var(--color-primario);
     padding: 0.2rem 0.5rem;
     font-weight: 700;
-    border: 1px solid var(--modulo-redes-borde);
+    border: 1px solid var(--color-borde);
     display: inline-block;
 }
 
@@ -14,65 +14,47 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 0.75rem !important;
-    
     width: 100% !important;
-    height: auto !important; /* Previene la superposición vertical */
+    height: auto !important;
     padding: 1.25rem 1.5rem !important;
-    
-    background-color: var(--color-superficie-contenedor, #f8f9fa) !important;
-    border: 1px solid var(--modulo-redes-borde, #e0e0e0) !important;
-    border-left: 5px solid var(--modulo-redes) !important; /* Mantiene la coherencia visual del módulo */
+    background-color: var(--color-superficie-contenedor) !important;
+    border: 1px solid var(--color-borde) !important;
+    border-left: 5px solid var(--color-primario) !important;
     box-sizing: border-box !important;
     margin-bottom: 1.5rem;
 }
 
-
-
 .etiqueta-def {
     display: flex !important;
     align-items: center !important;
-    flex-wrap: wrap !important; /* Permite que el título baje si no cabe pero sin romper letras */
+    flex-wrap: wrap !important;
     gap: 0.6rem !important;
-    
     font-weight: 700 !important;
     font-size: 1.15rem !important;
-    color: var(--modulo-redes) !important;
-    line-height: 1.4 !important; /* Evita que las líneas del título se muerdan entre sí */
+    color: var(--color-primario) !important;
+    line-height: 1.4 !important;
 }
 
-/* Manejo correcto del icono de Google Material Symbols / Icons */
-.texto-etiqueta-def {
-    font-family: 'Material Symbols Outlined', 'Material Icons', sans-serif !important;
-    font-size: 1.4rem !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    line-height: 1 !important;
-    white-space: nowrap !important; /* CRUCIAL: Impide que 'pin_drop' se separe verticalmente */
-    display: inline-block !important;
-    flex-shrink: 0 !important;
-}
 /* =========================================
    ESTILOS PARA EL TALLER DE AUDITORÍA
    ========================================= */
-
 .taller-bloque {
-    background-color: #f8fafc; /* Gris muy claro */
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    background-color: var(--color-superficie-variante);
+    border: 1px solid var(--color-borde);
     padding: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--sombra-recta);
 }
 
 .taller-titulo {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1e293b;
+    color: var(--color-primario);
     margin-bottom: 0.5rem;
 }
 
 .taller-instruccion {
     font-size: 1rem;
-    color: #475569;
+    color: var(--color-texto-secundario);
     margin-bottom: 1.5rem;
 }
 
@@ -84,25 +66,24 @@
     margin-bottom: 1rem;
     cursor: pointer;
     padding: 0.5rem;
-    border-radius: 8px;
     transition: background-color 0.2s ease;
 }
 
 .elemento-lista-verificacion:hover {
-    background-color: #f1f5f9;
+    background-color: var(--color-superficie-contenedor);
 }
 
 .checkbox-auditoria {
     width: 1.25rem;
     height: 1.25rem;
-    margin-top: 0.15rem; /* Alinea visualmente la caja con el texto */
+    margin-top: 0.15rem;
     cursor: pointer;
-    accent-color: var(--modulo-redes, #0ea5e9); /* Toma el color de tu variable si existe */
+    accent-color: var(--color-primario);
 }
 
 .elemento-lista-verificacion span {
     font-size: 1.05rem;
-    color: #334155;
+    color: var(--color-texto-secundario);
     line-height: 1.4;
 }
 
@@ -110,21 +91,19 @@
 .resultado-privacidad {
     margin-top: 1.5rem;
     padding-top: 1rem;
-    border-top: 1px solid #cbd5e1;
-    font-weight: 600;
+    border-top: 1px solid var(--color-borde);
+    font-weight: 800;
     font-size: 1.1rem;
-    color: #0f5132; /* Verde de tu PWA */
+    color: var(--color-primario);
 }
 
 
 /* =========================================
    ESTILOS PARA LAS REGLAS DE ORO
    ========================================= */
-
 .bloque-recuerda {
-    background-color: #f0fdf4; /* Fondo verde muy sutil */
-    border-left: 5px solid #22c55e; /* Borde verde brillante a la izquierda */
-    border-radius: 8px;
+    background-color: var(--color-superficie-variante);
+    border-left: 5px solid var(--color-primario);
     padding: 1.5rem;
     margin-top: 2rem;
 }
@@ -132,16 +111,15 @@
 .titulo-recuerda {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #166534; /* Verde oscuro */
+    color: var(--color-primario);
     margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    
 }
 
 .lista-reglas {
-    list-style: none; /* Quita los puntos por defecto */
+    list-style: none;
     padding: 0;
     margin: 0.5rem;
 }
@@ -151,7 +129,7 @@
     align-items: center;
     gap: 0.75rem;
     font-size: 1.1rem;
-    color: #374151;
+    color: var(--color-texto-secundario);
     margin-bottom: 1rem;
     line-height: 1.4;
 }
@@ -160,50 +138,59 @@
     margin-bottom: 0;
 }
 
-.icono-regla {
-    /* Toma la variable de color si la tienes en tu sistema, sino usa un morado por defecto */
-    color: var(--modulo-redes, #8b5cf6); 
-    flex-shrink: 0; /* Evita que el icono se aplaste si el texto es muy largo */
-    font-size: 1.4rem !important; /* Tamaño más grande para iconos de lista */
-    font-style: normal !important; 
-}
 .texto-def {
     font-size: 1rem !important;
-    line-height: 1.6 !important; /* Espaciado cómodo entre líneas */
-    color: var(--color-texto-principal, #333333) !important;
+    line-height: 1.6 !important;
+    color: var(--color-texto-secundario) !important;
     margin: 0 !important;
 }
 
-.dark body {
-    background-color: #020617;
-    color: #f8fafc;
-}
-
-.dark .bloque-definicion,
-.dark .taller-bloque,
-.dark .bloque-recuerda {
-    background-color: #0f172a;
-    border-color: #334155;
-    color: #f8fafc;
-}
-
+/* ==========================================================================
+   MODO OSCURO (REFORZADO)
+   ========================================================================== */
 .dark .etiqueta-def,
 .dark .taller-titulo,
 .dark .titulo-recuerda,
 .dark .resultado-privacidad {
-    color: #f8fafc;
+    color: var(--color-texto-principal) !important;
 }
 
 .dark .taller-instruccion,
 .dark .item-regla,
 .dark .elemento-lista-verificacion span,
 .dark .texto-def {
-    color: #e2e8f0;
+    color: var(--color-texto-secundario) !important;
+}
+
+.dark .bloque-definicion,
+.dark .taller-bloque,
+.dark .bloque-recuerda {
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+    color: var(--color-texto-principal);
 }
 
 .dark .palabra-clave {
-    background-color: #111827;
-    color: #86efac;
-    border-color: #34d399;
+    background-color: var(--color-superficie-variante);
+    color: var(--color-primario);
+    border-color: var(--color-borde);
 }
 
+/* ==========================================================================
+   RESPONSIVIDAD NATIVA
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .taller-bloque,
+    .bloque-definicion,
+    .bloque-recuerda {
+        padding: 1.25rem 0.85rem !important;
+        margin-left: -0.75rem !important;
+        margin-right: -0.75rem !important;
+        border-left-width: 4px !important;
+        border-right: none !important;
+        box-shadow: none;
+    }
+
+    .taller-titulo { font-size: 1.15rem; }
+    .item-regla, .elemento-lista-verificacion span { font-size: 0.95rem; }
+}

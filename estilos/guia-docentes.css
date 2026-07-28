@@ -2,14 +2,11 @@
    VARIABLES GLOBALES Y TEMA DE DISEÑO
    ========================================================================== */
 :root {
-  --color-primario: #0f5132;
-  --color-primario-oscuro: #0a3822;
-  --color-secundario: #052c65;
-  --color-fondo: #ffffff;
-  --color-tarjeta: #ffffff;
-  --color-texto: #020617;
-  --color-texto-atenuado: #475569;
-  --color-borde: #e2e8f0;
+  --color-primario-guia: var(--color-primario);
+  --color-secundario-guia: var(--color-secundario);
+  --color-texto-guia: var(--color-texto-principal);
+  --color-texto-atenuado-guia: var(--color-texto-secundario);
+  --color-borde-guia: var(--color-borde);
   
   /* Alertas y Severidad */
   --color-rojo-alerta: #dc2626;
@@ -23,24 +20,11 @@
   --color-rosa-alerta: #be185d;
   --color-rosa-fondo: #fdf2f8;
 
-  --fuente-base: 'Public Sans', system-ui, -apple-system, sans-serif;
-  --fuente-titulos: 'Outfit', system-ui, -apple-system, sans-serif;
-  --fuente-codigo: 'JetBrains Mono', monospace;
-
-  --radio-borde: 0.75rem;
-  --sombra-suave: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --transicion-rapida: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --fuente-base: var(--fuente-principal);
 }
 
 /* Modo Oscuro Cuidado */
 .dark {
-  --color-fondo: #020617;
-  --color-tarjeta: #0f172a;
-  --color-texto: #f8fafc;
-  --color-texto-atenuado: #94a3b8;
-  --color-borde: #1e293b;
-  --color-primario: #2dd4bf;
-
   --color-azul-fondo: #1e3a8a;
   --color-azul-alerta: #93c5fd;
   --color-rosa-fondo: #831843;
@@ -55,14 +39,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border-radius: 0 !important;
 }
 
 body {
   font-family: var(--fuente-base);
   background-color: var(--color-fondo);
-  color: var(--color-texto);
+  color: var(--color-texto-principal);
   line-height: 1.6;
-  border-top: 8px solid var(--color-primario);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -70,16 +54,15 @@ body {
    ESTRUCTURA GENERAL
    ========================================================================== */
 .encabezado-documento {
-    margin-top: 10rem;
+    margin-top: 5rem;
     text-align: center;
     padding: 3rem 1.5rem;
-    
 }
 
 .contenedor-principal {
-
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3rem 2rem;
 }
 
 .seccion-bloque {
@@ -92,12 +75,11 @@ body {
 }
 
 .titulo-principal {
-  font-family: var(--fuente-titulos);
   font-size: 2.25rem;
   line-height: 1.1;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--color-texto);
+  color: var(--color-primario);
   margin-bottom: 0.75rem;
 }
 
@@ -110,28 +92,19 @@ body {
 }
 
 .bajada-principal {
-  font-size: 1rem;
-  color: var(--color-texto-atenuado);
-  max-width: 45ch;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: var(--color-texto-secundario);
+  max-width: 55rem;
+  margin: 2rem auto;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
 }
 
 .titulo-seccion {
-  font-family: var(--fuente-titulos);
   font-size: 1.35rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--color-texto);
-}
-
-.icono-seccion {
   color: var(--color-primario);
 }
 
@@ -160,38 +133,26 @@ body {
 
 .tarjeta-informacion {
   padding: 1.5rem;
-  border-radius: var(--radio-borde);
   border: 1px solid var(--color-borde);
-  box-shadow: var(--sombra-suave);
+  box-shadow: var(--sombra-recta);
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  background-color: var(--color-superficie);
 }
 
-.tarjeta-azul {
-  background-color: var(--color-azul-fondo);
-  border-color: rgba(29, 78, 216, 0.2);
-}
-
-.tarjeta-rosa {
-  background-color: var(--color-rosa-fondo);
-  border-color: rgba(190, 24, 93, 0.2);
-}
-
-.cabecera-tarjeta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+.tarjeta-azul { background-color: var(--color-azul-fondo); border-color: rgba(29, 78, 216, 0.2); }
+.tarjeta-rosa { background-color: var(--color-rosa-fondo); border-color: rgba(190, 24, 93, 0.2); }
 
 .titulo-tarjeta {
-  font-family: var(--fuente-titulos);
   font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primario);
 }
 
 .cuerpo-tarjeta {
-  font-size: 0.875rem;
-  color: var(--color-texto);
+  font-size: 0.95rem;
+  color: var(--color-texto-secundario);
 }
 
 /* Listas de verificación interactivas */
@@ -202,41 +163,19 @@ body {
   gap: 0.5rem;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
-  border-top: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-.dark .lista-verificacion {
-  border-top-color: rgba(255, 255, 255, 0.15);
-}
-
-.lista-verificacion li {
-  font-size: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.lista-verificacion input[type="checkbox"] {
-  accent-color: var(--color-primario);
-  cursor: pointer;
+  border-top: 1px dashed var(--color-borde);
 }
 
 .caja-consejo {
   margin-top: 1.5rem;
   padding: 1rem 1.25rem;
-  border-radius: var(--radio-borde);
-  background-color: var(--color-tarjeta);
+  background-color: var(--color-superficie-variante);
   border: 1px solid var(--color-borde);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  box-shadow: var(--sombra-suave);
-}
-
-.icono-consejo {
-  color: var(--color-amarillo-alerta);
-  flex-shrink: 0;
+  box-shadow: var(--sombra-recta);
 }
 
 /* ==========================================================================
@@ -245,8 +184,8 @@ body {
 .contenedor-tabla-desplazable {
   overflow-x: auto;
   border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  box-shadow: var(--sombra-suave);
+  box-shadow: var(--sombra-recta);
+  background-color: var(--color-superficie);
 }
 
 .tabla-matriz {
@@ -255,181 +194,129 @@ body {
   text-align: left;
   min-width: 650px;
   font-size: 0.85rem;
-  background-color: var(--color-tarjeta);
 }
 
 .tabla-matriz th {
-  background-color: var(--color-fondo);
+  background-color: var(--color-superficie-variante);
   padding: 1rem;
-  font-family: var(--fuente-titulos);
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   border-bottom: 2px solid var(--color-borde);
+  color: var(--color-primario);
 }
 
 .tabla-matriz td {
   padding: 1rem;
   border-bottom: 1px solid var(--color-borde);
   vertical-align: top;
+  color: var(--color-texto-secundario);
 }
-
-.tabla-matriz tr:last-child td {
-  border-bottom: none;
-}
-
-.insignia {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.65rem;
-  font-weight: 800;
-  margin-bottom: 0.35rem;
-}
-
-.insignia-roja { background-color: var(--color-rojo-fondo); color: var(--color-rojo-alerta); }
-.insignia-naranja { background-color: var(--color-naranja-fondo); color: var(--color-naranja-alerta); }
-.insignia-amarilla { background-color: var(--color-amarillo-fondo); color: var(--color-amarillo-alerta); }
 
 /* ==========================================================================
    PROTOCOLOS Y ELEMENTOS DESPLEGABLES
    ========================================================================== */
 .tarjeta-protocolo {
   padding: 1.25rem;
-  background-color: var(--color-tarjeta);
+  background-color: var(--color-superficie);
   border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-}
-
-.subtitulo-bloque {
-  font-size: 0.9rem;
-  font-family: var(--fuente-titulos);
-  text-transform: uppercase;
-  color: var(--color-primario);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.lista-pasos {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  font-size: 0.8rem;
-}
-
-.lista-pasos li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-code {
-  font-family: var(--fuente-codigo);
-  background-color: var(--color-borde);
-  padding: 0.1rem 0.3rem;
-  border-radius: 0.2rem;
-  font-size: 0.8em;
-}
-
-/* Acordeones Interactivos (<details>) */
-.contenedor-acordeones {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
 .acordeon-emergencia {
   border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  background-color: var(--color-tarjeta);
+  background-color: var(--color-superficie);
   overflow: hidden;
-  transition: var(--transicion-rapida);
+  margin-bottom: 0.75rem;
 }
 
 .acordeon-emergencia summary {
-  padding: 1rem;
-  font-weight: 600;
-  font-size: 0.85rem;
+  padding: 1.1rem;
+  font-weight: 700;
+  font-size: 0.95rem;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-}
-
-.acordeon-emergencia summary:hover {
-  background-color: var(--color-borde);
-}
-
-.flecha-acordeon {
-  transition: transform 0.2s ease;
-}
-
-.acordeon-emergencia[open] .flecha-acordeon {
-  transform: rotate(180deg);
+  background-color: var(--color-superficie-variante);
+  color: var(--color-primario);
 }
 
 .contenido-acordeon {
-  padding: 1rem;
+  padding: 1.25rem;
   border-top: 1px solid var(--color-borde);
-  font-size: 0.8rem;
-  background-color: var(--color-fondo);
+  font-size: 0.95rem;
+  background-color: var(--color-superficie);
+  color: var(--color-texto-secundario);
 }
 
-.lista-ordenada {
-  padding-left: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.rejilla-contactos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.item-contacto {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-tarjeta);
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  border: 1px solid var(--color-borde);
-}
-
-.dark body {
-  background-color: #020617;
-  color: #f8fafc;
-}
-
+/* ==========================================================================
+   MODO OSCURO (REFORZADO)
+   ========================================================================== */
 .dark .titulo-principal,
 .dark .titulo-seccion,
 .dark .titulo-tarjeta,
-.dark .titulo-documento {
-  color: #f8fafc;
+.dark .titulo-documento,
+.dark .acordeon-emergencia summary {
+  color: var(--color-texto-principal) !important;
 }
 
 .dark .tarjeta-informacion,
 .dark .caja-consejo,
 .dark .contenedor-tabla-desplazable,
 .dark .tabla-matriz,
-.dark .item-contacto {
-  background-color: #111827;
-  border-color: #334155;
-  color: #f8fafc;
+.dark .item-contacto,
+.dark .acordeon-emergencia,
+.dark .contenido-acordeon,
+.dark .tarjeta-protocolo {
+  background-color: var(--color-superficie);
+  border-color: var(--color-borde);
+  color: var(--color-texto-principal);
 }
 
 .dark .cuerpo-tarjeta,
 .dark .bajada-principal,
 .dark .subtitulo-seccion,
 .dark .texto-tabla,
-.dark .lista-verificacion li {
-  color: #e2e8f0;
+.dark .lista-verificacion li,
+.dark .tabla-matriz td,
+.dark .contenido-acordeon p,
+.dark .lista-ordenada li {
+  color: var(--color-texto-secundario) !important;
 }
 
+.dark .tabla-matriz th {
+  background-color: var(--color-superficie-variante);
+  color: var(--color-texto-principal);
+}
+
+/* ==========================================================================
+   RESPONSIVIDAD NATIVA
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .contenedor-principal { 
+        padding: 1.5rem 0.75rem !important; 
+    }
+
+    .encabezado-documento {
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .titulo-principal {
+        font-size: 1.75rem !important;
+    }
+
+    .bajada-principal {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .tarjeta-informacion,
+    .acordeon-emergencia,
+    .contenedor-tabla-desplazable,
+    .tarjeta-protocolo {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none;
+    }
+}

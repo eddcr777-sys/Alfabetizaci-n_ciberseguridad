@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 .dark .titulo-pie,
 .dark .encabezado-pie,
 .dark .titulo-menu {
-    color: var(--color-texto-principal);
+    color: var(--color-texto-principal) !important;
 }
 
 p, li, span, label {
@@ -61,6 +61,7 @@ p:last-child {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 2rem;
+    transition: padding 0.3s ease;
 }
 
 .dark body,
@@ -222,13 +223,6 @@ p:last-child {
     background-color: var(--color-superficie-variante);
 }
 
-.boton-menu-movil {
-    padding: 0.5rem;
-    color: var(--color-primario);
-
-    background-color: var(--color-superficie-variante);
-}
-
 /* =====================================================================
    MENÚ LATERAL MÓVIL — DISEÑO PREMIUM CON GLASSMORPHISM Y TRANSICIONES
    ===================================================================== */
@@ -238,7 +232,10 @@ p:last-child {
     z-index: 150;
     opacity: 0;
     pointer-events: none;
-
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .capa-menu-movil.activo {
@@ -251,15 +248,15 @@ p:last-child {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 88%;
-    max-width: 22rem;
+    width: 85%;
+    max-width: 20rem;
     background-color: var(--color-superficie);
-    border-left: none;
-    box-shadow: -16px 0 48px rgba(0, 0, 0, 0.25), -4px 0 12px rgba(0, 0, 0, 0.1);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
     z-index: 200;
     display: flex;
     flex-direction: column;
-   
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
     overflow: hidden;
 }
@@ -268,74 +265,46 @@ p:last-child {
     transform: translateX(0);
 }
 
-/* Cabecera del Drawer — Gradiente premium */
 .cabecera-menu {
-    padding: 1.35rem 1.25rem;
-    border-bottom: none;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-superficie);
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-primario-hover) 100%);
     position: relative;
-}
-
-.dark .cabecera-menu {
-    background: linear-gradient(135deg, #172B20 0%, #0F211C 100%);
-    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-texto-inverso);
 }
 
 .titulo-menu {
     font-weight: 800;
-    color: var(--color-texto-principal);
+    color: var(--color-texto-inverso) !important;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-}
-
-.dark .titulo-menu {
-    color: var(--color-texto-principal);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
 }
 
 .cerrar-menu {
-    padding: 0.5rem;
-    color: var(--color-texto-principal);
-    border: 1px solid var(--color-primario);
-    border-radius: 2rem;
-    background-color: var(--color-primario);
-    cursor: pointer;
-    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    color: var(--color-texto-inverso);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
-    min-height: 40px;
+    cursor: pointer;
     transition: all 0.2s ease;
 }
 
-.cerrar-menu:hover,
-.cerrar-menu:focus {
-    color: #ffffff;
-    border-color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.2);
+.cerrar-menu:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
 }
 
-.dark .cerrar-menu {
-    color: var(--color-texto-principal);
-    border-color: var(--color-borde);
-    background-color: var(--color-superficie-variante);
-}
-
-.dark .cerrar-menu:hover,
-.dark .cerrar-menu:focus {
-    border-color: var(--color-primario);
-    background-color: var(--color-superficie-contenedor);
-}
-
-/* Cuerpo del Drawer — Links limpios sin bordes individuales */
 .cuerpo-menu {
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0;
     overflow-y: auto;
     flex: 1;
 }
@@ -343,21 +312,18 @@ p:last-child {
 .enlace-menu {
     display: flex;
     align-items: center;
-    gap: 0.85rem;
-    padding: 1rem 1.35rem;
+    gap: 1rem;
+    padding: 1.1rem 1.5rem;
     color: var(--color-texto-principal);
     font-weight: 600;
-    font-size: 0.95rem;
-    border: none;
-    border-left: 3px solid transparent;
-    background-color: transparent;
-    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
+    font-size: 1rem;
+    border-left: 4px solid transparent;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-bottom: 1px solid var(--color-borde);
 }
 
-/* Separador sutil entre enlaces */
-.enlace-menu + .enlace-menu {
-    border-top: 1px solid var(--color-borde);
+.enlace-menu:last-child {
+    border-bottom: none;
 }
 
 .enlace-menu:hover,
@@ -365,47 +331,39 @@ p:last-child {
     background-color: var(--color-superficie-variante);
     color: var(--color-primario);
     border-left-color: var(--color-primario);
-    padding-left: 1.65rem;
+    transform: translateX(6px);
 }
 
 .enlace-menu.active {
-    background-color: var(--color-primario);
-    color: var(--color-texto-inverso);
-    border-left-color: transparent;
-    font-weight: 700;
-}
-
-.dark .enlace-menu:hover,
-.dark .enlace-menu:focus {
-    background-color: var(--color-superficie-variante);
+    background-color: var(--color-superficie-contenedor);
     color: var(--color-primario);
     border-left-color: var(--color-primario);
+    font-weight: 800;
+}
+
+.dark .cabecera-menu {
+    background: linear-gradient(135deg, var(--color-superficie-variante) 0%, var(--color-superficie-contenedor) 100%);
+}
+
+.dark .titulo-menu {
+    color: var(--color-primario) !important;
+}
+
+.dark .cerrar-menu {
+    background: var(--color-superficie-variante);
+    border-color: var(--color-borde);
+    color: var(--color-primario);
 }
 
 .dark .enlace-menu.active {
-    background-color: var(--color-primario);
-    color: var(--color-texto-inverso);
-}
-
-/* Botón hamburguesa */
-.boton-menu-movil {
-    padding: 0.6rem;
-    min-width: 44px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primario);
-    border: 1.5px solid var(--color-borde);
     background-color: var(--color-superficie-variante);
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.boton-menu-movil:hover,
-.boton-menu-movil:focus {
-    background-color: var(--color-superficie-contenedor);
-    border-color: var(--color-primario);
+/* Pie del Drawer con Toggle de Tema */
+.pie-menu {
+    padding: 1.5rem;
+    border-top: 1px solid var(--color-borde);
+    background-color: var(--color-superficie-variante);
 }
 
 /* 4. CABECERA DESPEJADA DE MÓDULOS (SIN BOTONES REDUNDANTES) */
@@ -614,7 +572,7 @@ p:last-child {
 
 .rejilla-2 {
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: 1fr;
     gap: 2.25rem;
 }
 
@@ -777,16 +735,15 @@ p:last-child {
         overflow-x: hidden;
     }
 
-    /* Contenedor global — menos padding para sensación nativa */
+    /* Contenedor global — menos padding para sensación nativa (full-bleed) */
     .contenedor {
-        padding: 0 0.85rem;
+        padding: 0 0.75rem;
     }
 
     .contenedor-navegacion {
-        min-height: 3.75rem;
+        min-height: 3.5rem;
         height: auto;
         padding: 0.5rem 0;
-        gap: 0.5rem;
     }
 
     .marca-navegacion {
@@ -795,99 +752,107 @@ p:last-child {
     }
 
     .titulo-navegacion {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         line-height: 1.2;
-        max-width: 9rem;
+        max-width: 8rem;
     }
 
     .boton-menu-movil {
-        min-width: 42px;
-        min-height: 42px;
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0.4rem;
     }
 
-    /* Secciones — padding reducido */
+    /* Secciones — padding vertical reducido */
     .seccion {
-        padding: 1.75rem 0;
+        padding: 1.5rem 0;
     }
 
     .cabecera-pagina {
-        padding: 1.75rem 0;
+        padding: 1.5rem 0;
         margin-bottom: 1rem;
     }
 
     .titulo-destacado {
-        font-size: clamp(1.5rem, 5vw + 0.75rem, 2.15rem);
+        font-size: clamp(1.4rem, 6vw, 1.85rem);
     }
 
     .subtitulo {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
-    /* Tarjetas y cajas — estilo edge-to-edge nativo */
+    /* Tarjetas y cajas — estilo edge-to-edge nativo (sin bordes laterales, sin radius) */
     .caja-modulo-accesible,
     .tarjeta-modulo-maestro {
-        padding: 1.15rem 0.85rem;
-        margin-bottom: 1rem;
-        margin-left: -0.85rem;
-        margin-right: -0.85rem;
+        padding: 1rem 0.85rem;
+        margin-bottom: 0.75rem;
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
         border-left: none;
         border-right: none;
         box-shadow: none;
+        border-radius: 0 !important;
     }
 
     .caja-alerta,
     .bloque-definicion {
-        padding: 1rem 0.85rem;
-        margin-bottom: 1rem;
+        padding: 0.85rem;
+        margin: 1rem -0.75rem;
+        border-left-width: 4px;
+        border-right: none;
+        border-radius: 0 !important;
     }
 
     .caja-modulo-cabecera {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.6rem;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.75rem;
     }
 
     .icono-caja {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.25rem;
+        height: 2.25rem;
     }
 
     .titulo-caja {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
 
-    /* Botones full-width en móvil */
-    .acciones-portada {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .acciones-portada .boton,
+    /* Botones full-width en móvil para aprovechar el ancho */
+    .acciones-portada,
+    .caja-modulo-accesible .boton,
+    .tarjeta-modulo-maestro .boton,
     .caja-alerta .boton,
-    .bloque-definicion .boton,
-    .caja-modulo-accesible .boton {
+    .bloque-definicion .boton {
         width: 100%;
+        display: flex;
     }
 
     /* Grids — gap reducido */
     .rejilla-2,
     .rejilla-3 {
-        gap: 1rem;
+        gap: 0.75rem;
     }
 
-    /* Footer — compacto */
+    /* Footer — simplificado y centrado */
     .pie-pagina {
         padding: 2.5rem 0 1.5rem 0;
         margin-top: 2.5rem;
     }
 
     .cuadricula-pie {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
         margin-bottom: 1.5rem;
+        text-align: center;
     }
 
     .marca-pie {
-        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .enlaces-pie {
+        align-items: center;
     }
 
     .titulo-pie {
@@ -895,7 +860,7 @@ p:last-child {
     }
 
     .texto-pie {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 }
 

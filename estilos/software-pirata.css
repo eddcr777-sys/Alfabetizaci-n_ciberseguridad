@@ -1,30 +1,20 @@
 :root {
-    --primary-color: #16A34A;
-    --primary-hover: #15803D;
-    --bg-color: #F8FAF9;
-    --surface-color: #FFFFFF;
-    --surface-variant: #F0FDF4;
-    --container-color: #E2E8F0;
-    --text-main: #0F172A;
-    --text-muted: #475569;
-    --border-color: #CBD5E1;
+    --primary-color: var(--color-primario);
+    --primary-hover: var(--color-primario-hover);
+    --bg-color: var(--color-fondo);
+    --surface-color: var(--color-superficie);
+    --surface-variant: var(--color-superficie-variante);
+    --container-color: var(--color-superficie-contenedor);
+    --text-main: var(--color-texto-principal);
+    --text-muted: var(--color-texto-secundario);
+    --border-color: var(--color-borde);
     --danger-color: #EF4444;
     --warning-color: #F59E0B;
-    --box-shadow: 4px 4px 0px rgba(22, 163, 74, 0.2);
+    --box-shadow: var(--sombra-recta);
     --box-shadow-red: 4px 4px 0px rgba(239, 68, 68, 0.2);
 }
 
 .dark {
-    --primary-color: #4ADE80;
-    --primary-hover: #86EFAC;
-    --bg-color: #0B120E;
-    --surface-color: #121E18;
-    --surface-variant: #182B21;
-    --container-color: #1E293B;
-    --text-main: #F8FAFC;
-    --text-muted: #94A3B8;
-    --border-color: #334155;
-    --box-shadow: 4px 4px 0px rgba(74, 222, 128, 0.2);
     --box-shadow-red: 4px 4px 0px rgba(239, 68, 68, 0.3);
 }
 
@@ -36,7 +26,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: var(--fuente-principal);
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
@@ -59,7 +49,6 @@ body {
     font-size: 2.75rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
-    letter-spacing: -0.025em;
 }
 
 .subtitle {
@@ -70,7 +59,7 @@ body {
 
 .main-container {
     margin: 3rem auto;
-    padding: 0 1.5rem;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
@@ -80,7 +69,7 @@ body {
     background-color: var(--surface-color);
     border: 2px solid var(--border-color);
     padding: 2.5rem;
-    box-shadow: 4px 4px 0px var(--border-color);
+    box-shadow: var(--box-shadow);
 }
 
 .section-header {
@@ -92,21 +81,17 @@ body {
 
 .badge {
     background-color: var(--primary-color);
-    color: #000;
+    color: var(--color-texto-inverso);
     font-weight: 800;
     font-size: 1.1rem;
     padding: 0.25rem 0.75rem;
-    border: 2px solid #000;
-}
-
-.dark .badge {
-    color: #0B120E;
+    border: 2px solid var(--primary-color);
 }
 
 .section-title {
     font-size: 1.75rem;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    color: var(--primary-color);
 }
 
 .text {
@@ -125,8 +110,8 @@ body {
 
 .definition-box {
     background-color: var(--surface-variant);
-    border-left: 5px solid var(--primary-color);
     border: 2px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
     padding: 1.5rem;
     margin-top: 1.5rem;
 }
@@ -164,7 +149,8 @@ body {
 
 .feature-card:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--primary-color);
+    box-shadow: var(--sombra-recta-hover);
+    border-color: var(--primary-color);
 }
 
 .card-icon {
@@ -175,6 +161,7 @@ body {
     justify-content: center;
     height: fit-content;
     border: 2px solid var(--border-color);
+    color: var(--primary-color);
 }
 
 .red-icon {
@@ -186,6 +173,7 @@ body {
 .card-title {
     font-size: 1.15rem;
     font-weight: 700;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -238,6 +226,7 @@ body {
     width: 0.75rem;
     height: 0.75rem;
     display: inline-block;
+    border-radius: 50% !important;
 }
 
 .red-dot { background-color: var(--danger-color); }
@@ -258,11 +247,6 @@ body {
     overflow-x: auto;
 }
 
-.lock-icon {
-    color: var(--danger-color);
-    font-size: 1rem;
-}
-
 .simulation-body {
     padding: 2rem;
     text-align: center;
@@ -271,6 +255,7 @@ body {
 .simulation-body h3 {
     font-size: 1.35rem;
     font-weight: 700;
+    color: var(--primary-color);
     margin-bottom: 0.5rem;
 }
 
@@ -304,19 +289,15 @@ body {
 .btn-reset {
     background-color: var(--container-color);
     color: var(--text-main);
-    font-weight: 400;
+    font-weight: 700;
     font-size: 0.9rem;
-    padding: 0.5rem ;
+    padding: 0.5rem 1rem;
     border: 1px solid var(--border-color);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.1s ease;
-}
-
-.btn-reset:hover {
-    background-color: var(--border-color);
 }
 
 .trap-message {
@@ -335,12 +316,6 @@ body {
     display: flex;
 }
 
-.trap-message .material-symbols-outlined {
-    color: var(--danger-color);
-    font-size: 2rem;
-    flex-shrink: 0;
-}
-
 .quiz-box {
     background-color: var(--surface-variant);
     border: 2px solid var(--primary-color);
@@ -348,23 +323,17 @@ body {
     margin-top: 2rem;
 }
 
-.quiz-options {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
 .btn-option {
     background-color: var(--surface-color);
     border: 2px solid var(--border-color);
     padding: 1rem;
     text-align: left;
-    font-weight: 600;
+    font-weight: 700;
     font-family: inherit;
     color: var(--text-main);
     cursor: pointer;
     transition: all 0.1s ease;
+    margin-bottom: 0.75rem;
 }
 
 .btn-option:hover {
@@ -384,18 +353,6 @@ body {
     color: var(--danger-color);
 }
 
-.quiz-feedback {
-    margin-top: 1rem;
-    font-weight: 700;
-    display: none;
-}
-
-.alternatives-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
 .alternative-card {
     background-color: var(--surface-color);
     border: 2px solid var(--border-color);
@@ -403,31 +360,6 @@ body {
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
     box-shadow: var(--box-shadow);
-}
-
-@media (max-width: 768px) {
-    .alternative-card {
-        grid-template-columns: 1fr;
-    }
-    .arrow-block {
-        transform: rotate(90deg);
-        padding: 0.5rem 0;
-    }
-}
-
-.pirate-block {
-    background-color: rgba(239, 68, 68, 0.05);
-    padding: 1.5rem;
-    border-right: 2px solid var(--border-color);
-}
-
-.alternative-card > div:last-child {
-    border-right: none;
-}
-
-.safe-block {
-    background-color: rgba(22, 163, 74, 0.05);
-    padding: 1.5rem;
 }
 
 .tag-danger {
@@ -444,7 +376,7 @@ body {
 .tag-safe {
     display: inline-block;
     background-color: var(--primary-color);
-    color: #000;
+    color: var(--color-texto-inverso);
     font-size: 0.75rem;
     font-weight: 800;
     padding: 0.2rem 0.5rem;
@@ -452,171 +384,90 @@ body {
     border: 1px solid #000;
 }
 
-.dark .tag-safe {
-    color: #0B120E;
+/* ==========================================================================
+   MODO OSCURO (REFORZADO)
+   ========================================================================== */
+.dark .main-title,
+.dark .section-title,
+.dark .card-title,
+.dark .simulation-body h3,
+.dark .definition-label {
+    color: var(--color-texto-principal) !important;
 }
 
-.software-name {
-    display: block;
-    font-weight: 700;
-    font-size: 1.05rem;
+.dark .subtitle,
+.dark .text,
+.dark .card-body p,
+.dark .simulation-sub,
+.dark .definition-text,
+.dark .trap-message,
+.dark .quiz-feedback {
+    color: var(--color-texto-secundario) !important;
 }
 
-.software-name small {
-    display: block;
-    font-weight: 400;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 0.25rem;
+.dark .card-section,
+.dark .feature-card,
+.dark .simulation-box,
+.dark .simulation-url,
+.dark .quiz-box,
+.dark .alternative-card,
+.dark .btn-option {
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+    color: var(--color-texto-principal);
 }
 
-.arrow-block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    color: var(--primary-color);
-    font-size: 1.5rem;
+.dark .simulation-bar,
+.dark .card-icon,
+.dark .btn-reset {
+    background-color: var(--color-superficie-variante);
+    border-color: var(--color-borde);
+    color: var(--color-texto-principal);
 }
 
-.footer {
-    background-color: var(--surface-color);
-    border-top: 3px solid var(--primary-color);
-    padding: 3rem 1.5rem 1.5rem;
-    margin-top: 4rem;
+.dark .trap-message {
+    background-color: rgba(239, 68, 68, 0.15);
+    border-color: var(--danger-color);
 }
 
-.container-footer {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-}
-
-.footer-logo {
-    background-color: var(--primary-color);
-    color: #000;
-    padding: 0.5rem;
-    border: 2px solid #000;
-    display: flex;
-}
-
-.dark .footer-logo {
-    color: #0B120E;
-}
-
-.footer-title {
-    font-weight: 800;
-    font-size: 1.1rem;
-}
-
-.footer-text-institution, .footer-text {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.footer-heading {
-    font-weight: 700;
-    font-size: 1.05rem;
-    margin-bottom: 1rem;
-    color: var(--text-main);
-}
-
-.footer-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-}
-
-.theme-toggle {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: var(--primary-color);
-    color: #000;
-    border: 2px solid #000;
-    width: 3.5rem;
-    height: 3.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 4px 4px 0px #000;
-    z-index: 1000;
-    transition: transform 0.1s ease;
-}
-
-.dark .theme-toggle {
-    color: #0B120E;
-}
-
-.theme-toggle:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px #000;
-}
-
+/* ==========================================================================
+   RESPONSIVIDAD NATIVA
+   ========================================================================== */
 @media screen and (max-width: 768px) {
     .main-container { 
-        padding: 0 !important; 
-        margin: 1.5rem 0 !important; 
+        padding: 0.75rem !important; 
+        margin: 1rem 0 !important; 
     }
     
     .header { 
-        padding: 2rem 1.25rem !important; 
+        padding: 2.5rem 1.25rem !important; 
     }
     
     .card-section,
     .simulation-box,
-    .quiz-box { 
-        padding: 1.5rem 1.25rem !important; 
-        margin-left: 0 !important; 
-        margin-right: 0 !important; 
+    .quiz-box,
+    .alternative-card { 
+        padding: 1.25rem 0.85rem !important; 
+        margin-left: -0.75rem !important; 
+        margin-right: -0.75rem !important; 
         border-left: none !important; 
         border-right: none !important; 
-        width: 100% !important; 
+        width: calc(100% + 1.5rem) !important; 
         box-shadow: none !important; 
+    }
+
+    .feature-card {
+        padding: 1rem;
+        box-shadow: none;
     }
     
     .grid-2 { 
         display: flex !important; 
         flex-direction: column !important; 
-        gap: 1.25rem !important; 
+        gap: 1rem !important; 
     }
     
     .main-title { font-size: 2rem !important; }
-    .subtitle { font-size: 1rem !important; }
     
     .simulation-bar { 
         flex-direction: column; 
@@ -629,13 +480,13 @@ body {
         width: 100%; 
         justify-content: center; 
     }
-    
-    .footer { 
-        padding: 2rem 1.25rem 1.5rem !important; 
+
+    .arrow-block {
+        transform: rotate(90deg);
+        padding: 0.5rem 0;
     }
-    
-    .footer-grid { 
-        grid-template-columns: 1fr !important; 
-        gap: 1.5rem !important; 
+
+    .alternative-card {
+        grid-template-columns: 1fr;
     }
 }
