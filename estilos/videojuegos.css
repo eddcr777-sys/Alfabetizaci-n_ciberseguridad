@@ -1,18 +1,18 @@
-
+/* ==========================================================================
+   MÓDULO VIDEOJUEGOS - ESTILOS CENTRALIZADOS
+   ========================================================================== */
 :root {
-    --modulo-color: #22C55E;
-    --modulo-hover: #16A34A;
-    --modulo-suave: #F4FBF7;
-    --modulo-borde: #86EFAC;
-    --radio-tarjeta: 0px !important;
-    --radio-elemento: 0px !important;
+    --modulo-primario: var(--color-primario);
+    --modulo-hover: var(--color-primario-hover);
+    --modulo-suave: var(--color-superficie-variante);
+    --modulo-borde: var(--color-borde);
 }
 
 .dark {
-    --modulo-color: #86EFAC;
-    --modulo-hover: #A7F3D0;
-    --modulo-suave: #064E3B;
-    --modulo-borde: rgba(134, 239, 172, 0.3);
+    --modulo-primario: var(--color-primario);
+    --modulo-hover: var(--color-primario-hover);
+    --modulo-suave: var(--color-superficie-variante);
+    --modulo-borde: var(--color-borde);
 }
 
 *, *::before, *::after {
@@ -20,8 +20,8 @@
 }
 
 .insignia-modulo {
-    border-color: var(--modulo-color) !important;
-    color: var(--modulo-color) !important;
+    border-color: var(--modulo-primario) !important;
+    color: var(--modulo-primario) !important;
 }
 
 .tarjeta,
@@ -30,7 +30,6 @@
     border: 2px solid var(--modulo-borde);
     padding: 1.75rem;
     margin: 1.5rem 0;
-    border-radius: 0 !important;
     box-shadow: var(--sombra-recta);
 }
 .seccion{
@@ -38,14 +37,16 @@
 }
 .rejilla-2{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 2rem;
 }
+@media (min-width: 768px) {
+    .rejilla-2 { grid-template-columns: 1fr 1fr; }
+}
 .pregunta-cuestionario {
     background: var(--color-superficie);
-    border: 2px solid #86EFAC;
-    border-radius: 0;
+    border: 2px solid var(--color-borde);
     padding: 1.25rem;
     cursor: pointer;
     margin-bottom: 0.75rem;
@@ -54,8 +55,8 @@
 }
 
 .pregunta-cuestionario:hover {
-    background: var(--color-fondo);
-    border-color: #16A34A;
+    background: var(--color-superficie-variante);
+    border-color: var(--modulo-primario);
     transform: translateY(-2px);
 }
 
@@ -63,9 +64,9 @@
     display: none;
     margin-top: 0.75rem;
     padding: 0.75rem;
-    background: #F4FBF7; /* Verde muy suave */
-    border-left: 4px solid #16A34A;
-    color: #166534; /* Verde texto oscuro */
+    background: var(--color-superficie-contenedor);
+    border-left: 4px solid var(--modulo-primario);
+    color: var(--color-texto-principal);
     font-weight: 600;
 }
 
@@ -77,54 +78,54 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    color: #166534;
+    color: var(--color-primario);
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
 .tarjeta-titulo .material-symbols-outlined {
     font-size: 1.25rem;
-    color: #22C55E;
+    color: var(--modulo-primario);
 }
 
 .dark body {
-    background-color: #020617;
-    color: #f8fafc;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
 }
 
 .dark .tarjeta,
 .dark .simulador-gaming,
 .dark .pregunta-cuestionario {
-    background-color: #111827;
-    border-color: #334155;
-    color: #f8fafc;
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+    color: var(--color-texto-principal);
 }
 
 .dark .pregunta-cuestionario .respuesta-cuestionario {
-    background-color: #052e16;
-    color: #dcfce7;
-    border-left-color: #4ade80;
+    background-color: var(--color-superficie-contenedor);
+    color: var(--color-texto-principal);
+    border-left-color: var(--modulo-primario);
 }
 
 .dark .tarjeta-titulo {
-    color: #bbf7d0;
+    color: var(--color-texto-principal);
 }
 
 
 @media screen and (max-width: 768px) {
     .tarjeta, 
     .simulador-gaming { 
-        padding: 1.5rem 1.25rem !important; 
-        margin-left: 0 !important; 
-        margin-right: 0 !important; 
+        padding: 1.25rem 0.85rem !important; 
+        margin-left: -0.75rem !important; 
+        margin-right: -0.75rem !important; 
         border-left: none !important; 
         border-right: none !important; 
-        width: 100% !important; 
+        width: calc(100% + 1.5rem) !important; 
         box-shadow: none !important; 
     }
     
     .rejilla-2 { 
         display: flex !important; 
         flex-direction: column !important; 
-        gap: 1.25rem !important; 
+        gap: 1rem !important; 
     }
 }

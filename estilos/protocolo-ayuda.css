@@ -1,29 +1,24 @@
 /* ==========================================================================
-   MÓDULO 7: PROTOCOLO DE AYUDA - VERDE JADE (0 BORDES REDONDEADOS)
+   MÓDULO 7: PROTOCOLO DE AYUDA - ESTILOS CENTRALIZADOS
    ========================================================================== */
 :root {
-    --tinta: #0B2B26;
-    --tinta-suave: #3E5850;
-    --papel: var(--color-fondo);
-    --papel-alt: var(--color-superficie-variante);
-    --papel-tarjeta: var(--color-superficie);
-    --esmeralda: #0F766E;
-    --esmeralda-fuerte: #115E59;
-    --esmeralda-suave: #14B8A6;
-    --borde: var(--color-borde);
-    --radio: 0px !important;
+    --color-tinta: var(--color-texto-principal);
+    --color-tinta-suave: var(--color-texto-secundario);
+    --color-papel: var(--color-fondo);
+    --color-papel-alt: var(--color-superficie-variante);
+    --color-papel-tarjeta: var(--color-superficie);
+    --color-esmeralda: var(--color-primario);
+    --color-borde-ayuda: var(--color-borde);
 }
 
 .dark {
-    --tinta: #E7F1EC;
-    --tinta-suave: #A9C0B7;
-    --papel: #0A1815;
-    --papel-alt: #0F211C;
-    --papel-tarjeta: #122921;
-    --esmeralda: #5EEAD4;
-    --esmeralda-fuerte: #99F6E4;
-    --esmeralda-suave: #2DD4BF;
-    --borde: rgba(94, 234, 212, 0.3);
+    --color-tinta: var(--color-texto-principal);
+    --color-tinta-suave: var(--color-texto-secundario);
+    --color-papel: var(--color-fondo);
+    --color-papel-alt: var(--color-superficie-variante);
+    --color-papel-tarjeta: var(--color-superficie);
+    --color-esmeralda: var(--color-primario);
+    --color-borde-ayuda: var(--color-borde);
 }
 
 
@@ -33,11 +28,10 @@
 
 .tarjeta-protocolo,
 .paso-ayuda {
-    background-color: var(--papel-tarjeta);
-    border: 2px solid var(--esmeralda);
+    background-color: var(--color-papel-tarjeta);
+    border: 2px solid var(--color-esmeralda);
     padding: 1.75rem;
     margin: 0.7rem 0;
-    border-radius: 0 !important;
     box-shadow: var(--sombra-recta);
 }
 
@@ -46,16 +40,17 @@
    ========================================================================== */
 
 body {
-    background-color: var(--papel);
-    color: var(--tinta);
-    font-family: 'Public Sans', sans-serif;
+    background-color: var(--color-papel);
+    color: var(--color-tinta);
+    font-family: var(--fuente-principal);
     margin: 0;
     padding: 0;
 }
 
 .contenedor {
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 
@@ -65,8 +60,8 @@ body {
 }
 
 .intro-ayuda {
-    background-color: var(--papel-alt);
-    border: 2px solid var(--esmeralda);
+    background-color: var(--color-papel-alt);
+    border: 2px solid var(--color-esmeralda);
     padding: 1rem;
     display: flex;
     gap: 1.5rem;
@@ -76,15 +71,14 @@ body {
 
 .icono-sos {
     font-size: 3rem;
-    color: var(--esmeralda);
+    color: var(--color-esmeralda);
 }
 
 .titulo-subseccion {
-    font-family: 'Outfit', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 /* Rieles de protocolo y pasos */
@@ -95,8 +89,8 @@ body {
 }
 
 .paso-contenedor {
-    background-color: var(--papel-tarjeta);
-    border: 2px solid var(--borde);
+    background-color: var(--color-papel-tarjeta);
+    border: 2px solid var(--color-borde-ayuda);
     padding: 2rem;
     position: relative;
 }
@@ -105,16 +99,14 @@ body {
     position: absolute;
     top: -15px;
     left: 20px;
-    background-color: var(--esmeralda);
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
+    background-color: var(--color-esmeralda);
+    color: var(--color-texto-inverso);
     font-weight: 800;
     padding: 0.25rem 0.75rem;
     font-size: 1rem;
 }
 
 .paso-titulo {
-    font-family: 'Outfit', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     display: flex;
@@ -122,11 +114,11 @@ body {
     gap: 0.5rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 .paso-caja {
-    color: var(--tinta-suave);
+    color: var(--color-tinta-suave);
 }
 
 .texto-grande {
@@ -136,20 +128,14 @@ body {
 }
 
 .caja-info {
-    background-color: var(--papel-alt);
-    border-left: 4px solid var(--esmeralda);
+    background-color: var(--color-papel-alt);
+    border-left: 4px solid var(--color-esmeralda);
     padding: 1rem;
     display: flex;
     gap: 0.75rem;
     align-items: flex-start;
     margin-top: 1rem;
-    color: var(--tinta);
-}
-
-.lista-pasos {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+    color: var(--color-tinta);
 }
 
 .lista-pasos li {
@@ -157,28 +143,28 @@ body {
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.5rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 .icono-verificacion {
-    color: var(--esmeralda);
+    color: var(--color-esmeralda);
 }
 
 .texto-advertencia-silencio {
     font-style: italic;
-    color: var(--tinta-suave);
+    color: var(--color-tinta-suave);
     margin-top: 1rem;
 }
 
 .fondo-alerta-naranja {
-    background-color: rgba(245, 158, 11, 0.1);
-    border: 1px solid #f59e0b;
+    background-color: var(--color-naranja-fondo);
+    border: 1px solid var(--color-naranja-alerta);
     padding: 1rem;
     display: flex;
     gap: 0.75rem;
     align-items: center;
     margin-top: 1rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 /* Directorio */
@@ -187,12 +173,11 @@ body {
 }
 
 .titulo-directorio {
-    font-family: 'Outfit', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 .rejilla-directorio {
@@ -202,197 +187,98 @@ body {
 }
 
 .tarjeta-directorio {
-    background-color: var(--papel-tarjeta);
-    border: 2px solid var(--borde);
+    background-color: var(--color-papel-tarjeta);
+    border: 2px solid var(--color-borde-ayuda);
     padding: 1.5rem;
 }
 
 .titulo-cicpc, .titulo-recuperacion, .titulo-diagnostico {
-    font-family: 'Outfit', sans-serif;
     font-size: 1.15rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 .texto-descripcion-directorio {
     font-size: 0.95rem;
     margin-bottom: 1rem;
-    color: var(--tinta-suave);
-}
-
-.caja-contacto-oficial {
-    font-size: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    color: var(--color-tinta-suave);
 }
 
 .enlace-externo {
-    color: var(--esmeralda);
+    color: var(--color-esmeralda);
     text-decoration: underline;
     font-weight: 600;
 }
 
-.texto-ubicacion-sede {
-    font-size: 0.85rem;
-    color: var(--tinta-suave);
-}
-
-.lista-enlaces-oficiales {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.enlace-sub-externo {
-    display: block;
-    font-size: 0.9rem;
-    color: var(--esmeralda);
-    text-decoration: none;
-}
-
-.enlace-sub-externo:hover {
-    text-decoration: underline;
-}
-
 /* Guía rápida */
 .caja-guia-rapida {
-    background-color: var(--papel-alt);
-    border: 2px solid var(--esmeralda);
+    background-color: var(--color-papel-alt);
+    border: 2px solid var(--color-esmeralda);
     padding: 2rem;
     margin-top: 3rem;
 }
 
 .guia-rapida-titulo {
-    font-family: 'Outfit', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: var(--tinta);
+    color: var(--color-tinta);
 }
 
 .guia-rapida-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    color: var(--tinta-suave);
+    color: var(--color-tinta-suave);
     font-size: 0.95rem;
 }
 
 .guia-rapida-grid strong {
     display: block;
     margin-bottom: 0.5rem;
-    font-family: 'Outfit', sans-serif;
 }
-
-.texto-alerta-rojo { color: #dc2626; }
-.texto-alerta-azul { color: #2563eb; }
-.texto-alerta-verde { color: #16a34a; }
 
 /* Sección final */
 .seccion-final {
     text-align: center;
-    background-color: var(--papel-alt);
-    border: 2px solid var(--esmeralda);
+    background-color: var(--color-papel-alt);
+    border: 2px solid var(--color-esmeralda);
     padding: 3rem 1.5rem;
     margin-top: 4rem;
 }
 
 .seccion-final h2 {
-    font-family: 'Outfit', sans-serif;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--tinta);
-}
-
-.seccion-final p {
-    max-width: 700px;
-    margin: 0 auto 1.5rem auto;
-    color: var(--tinta-suave);
+    color: var(--color-tinta);
 }
 
 .boton-volver {
     display: inline-block;
-    background-color: var(--esmeralda);
-    color: #ffffff;
+    background-color: var(--color-esmeralda);
+    color: var(--color-texto-inverso);
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     font-weight: 700;
-    border: 2px solid var(--esmeralda-fuerte);
+    border: 2px solid var(--color-primario);
 }
 
 /* Pie de página */
 .pie-pagina {
-    background-color: var(--papel-tarjeta);
-    border-top: 2px solid var(--borde);
+    background-color: var(--color-papel-tarjeta);
+    border-top: 2px solid var(--color-borde-ayuda);
     padding: 3rem 0 1.5rem 0;
     margin-top: 4rem;
 }
 
-.cuadricula-pie {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.marca-pie {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.logo-pie {
-    color: var(--esmeralda);
-}
-
-.titulo-pie {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    color: var(--tinta);
-}
-
-.encabezado-pie {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--tinta);
-}
-
-.enlaces-pie {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.enlaces-pie a {
-    color: var(--tinta-suave);
-    text-decoration: none;
-}
-
-.enlaces-pie a:hover {
-    color: var(--esmeralda);
-}
-
-.texto-pie {
-    color: var(--tinta-suave);
-    font-size: 0.95rem;
-}
-
 .inferior-pie {
-    border-top: 1px solid var(--borde);
+    border-top: 1px solid var(--color-borde-ayuda);
     padding-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
@@ -400,10 +286,32 @@ body {
     align-items: center;
     gap: 1rem;
     font-size: 0.85rem;
-    color: var(--tinta-suave);
+    color: var(--color-tinta-suave);
 }
 
-.creditos-pie {
-    color: var(--esmeralda);
-    text-decoration: none;
+/* MODO OSCURO */
+.dark body { color: var(--color-tinta); }
+.dark .tarjeta-protocolo, .dark .paso-contenedor, .dark .tarjeta-directorio, .dark .caja-guia-rapida, .dark .pie-pagina {
+    background-color: var(--color-superficie);
+    border-color: var(--color-borde);
+    color: var(--color-texto-principal);
+}
+.dark .titulo-subseccion, .dark .paso-titulo, .dark .titulo-directorio, .dark .guia-rapida-titulo, .dark .seccion-final h2 {
+    color: var(--color-texto-principal) !important;
+}
+
+@media screen and (max-width: 768px) {
+    .tarjeta-protocolo,
+    .paso-ayuda,
+    .paso-contenedor,
+    .tarjeta-directorio,
+    .caja-guia-rapida,
+    .seccion-final {
+        padding: 1.25rem 0.85rem !important;
+        margin-left: -0.75rem !important;
+        margin-right: -0.75rem !important;
+        border-left: none !important;
+        border-right: none !important;
+        box-shadow: none;
+    }
 }
