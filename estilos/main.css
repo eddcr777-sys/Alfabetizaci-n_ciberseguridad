@@ -276,6 +276,7 @@ img {
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-fondo-variante);
+
 }
 
 .titulo-menu {
@@ -336,6 +337,7 @@ img {
   color: var(--color-primario);
   background-color: rgba(15, 81, 50, 0.08);
   border-color: var(--color-primario);
+
 }
 
 .dark .enlace-menu:hover,
@@ -852,7 +854,7 @@ img {
    ========================================================================== */
 @media (max-width: 767px) {
   .seccion-espaciada { padding: 4rem 0; }
-  .contenedor { padding: 0 1.25rem; }
+  .contenedor { padding: 0 1.25rem;  }
 
   .contenedor-navegacion { height: 4.5rem; }
   .marca-navegacion { gap: 0.6rem; min-width: 0; }
@@ -878,6 +880,8 @@ img {
     margin-left: calc(-50vw + 50%);
     flex: none;
   }
+
+
 
   .imagen-portada {
     max-width: none;
@@ -999,4 +1003,5 @@ img {
   .overlay-carrusel-cover p { font-size: 0.85rem; }
   .titulo-tarjeta { font-size: 1.45rem; }
   .tarjeta { padding: 1.5rem 1.25rem; }
+
 }

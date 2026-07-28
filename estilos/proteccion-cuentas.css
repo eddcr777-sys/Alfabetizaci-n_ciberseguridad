@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Variables de Entorno
-   ========================================================================== */
+
 :root {
     /* Paleta Institucional */
     --color-primario: #0F5132;
@@ -27,9 +25,7 @@
     --transicion-estandar: all 0.3s ease;
 }
 
-/* ==========================================================================
-   Reset Estructural
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -46,9 +42,6 @@ body {
 
 
 
-/* ==========================================================================
-   Contenedor Principal y Secciones
-   ========================================================================== */
 .contenedor-principal {
    
     margin: 3rem auto;
@@ -93,9 +86,7 @@ body {
     color: var(--color-primario);
 }
 
-/* ==========================================================================
-   Componentes Específicos
-   ========================================================================== */
+
 /* Alertas */
 .panel-alerta {
     display: flex;
@@ -227,10 +218,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Elementos de Evaluación (Quiz) */
-/* ==========================================================================
-   Elementos de Evaluación (Quiz)
-   ========================================================================== */
 .elemento-evaluacion {
     cursor: pointer;
     background-color: var(--color-fondo-superficie);
@@ -279,9 +266,6 @@ body {
 }
 
 
-/* ==========================================================================
-   Pie de Página
-   ========================================================================== */
 .pie-pagina {
     background-color: var(--color-fondo-superficie);
     border-top: 1px solid var(--color-borde);
@@ -402,4 +386,49 @@ body {
 .dark .estado-optimo {
     background-color: #064e3b;
     color: #d1fae5;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor-principal { 
+        padding: 0 !important; 
+        margin: 0.5rem 0 !important; 
+    }
+
+    h1, h2, h3, .titulo-seccion, .subtitulo-seccion, .cabecera-interactiva, .titulo-tarjeta, .cabecera-tarjeta {
+        font-size: 1.25rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+
+    .panel-interactivo, 
+    .tarjeta-informacion,
+    .elemento-evaluacion { 
+        padding: 1.1rem 1.25rem !important; 
+        margin-left: 0 !important; 
+        margin-right: 0 !important; 
+        border-left: none !important; 
+        border-right: none !important; 
+        width: 100% !important; 
+        box-shadow: none !important; 
+        border-radius: 0 !important; 
+    }
+    
+    .cuadricula-tarjetas, 
+    .lista-validacion { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        gap: 1.25rem !important; 
+    }
+
+    .seccion-contenido p{
+        padding: 0 1rem !important;
+    }
+    
+    .titulo-seccion { font-size: 1.4rem !important; }
+    .subtitulo-seccion { font-size: 1rem !important; }
+    
+    .pie-pagina { 
+        padding: 2rem 1.25rem 1.5rem !important; 
+    }
 }

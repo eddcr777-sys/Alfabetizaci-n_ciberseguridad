@@ -586,3 +586,56 @@ body {
     transform: translate(-2px, -2px);
     box-shadow: 6px 6px 0px #000;
 }
+
+@media screen and (max-width: 768px) {
+    .main-container { 
+        padding: 0 !important; 
+        margin: 1.5rem 0 !important; 
+    }
+    
+    .header { 
+        padding: 2rem 1.25rem !important; 
+    }
+    
+    .card-section,
+    .simulation-box,
+    .quiz-box { 
+        padding: 1.5rem 1.25rem !important; 
+        margin-left: 0 !important; 
+        margin-right: 0 !important; 
+        border-left: none !important; 
+        border-right: none !important; 
+        width: 100% !important; 
+        box-shadow: none !important; 
+    }
+    
+    .grid-2 { 
+        display: flex !important; 
+        flex-direction: column !important; 
+        gap: 1.25rem !important; 
+    }
+    
+    .main-title { font-size: 2rem !important; }
+    .subtitle { font-size: 1rem !important; }
+    
+    .simulation-bar { 
+        flex-direction: column; 
+        align-items: stretch; 
+        padding: 1rem !important; 
+    }
+    
+    .btn-trap, 
+    .btn-reset { 
+        width: 100%; 
+        justify-content: center; 
+    }
+    
+    .footer { 
+        padding: 2rem 1.25rem 1.5rem !important; 
+    }
+    
+    .footer-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 1.5rem !important; 
+    }
+}
