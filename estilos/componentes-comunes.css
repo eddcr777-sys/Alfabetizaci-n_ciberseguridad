@@ -224,7 +224,7 @@ p:last-child {
 }
 
 /* =====================================================================
-   MENÚ LATERAL MÓVIL — DISEÑO PREMIUM CON GLASSMORPHISM Y TRANSICIONES
+   MENÚ LATERAL MÓVIL — DISEÑO FLOTANTE MODERNO CON BORDES REDONDEADOS
    ===================================================================== */
 .capa-menu-movil {
     position: fixed;
@@ -232,9 +232,9 @@ p:last-child {
     z-index: 150;
     opacity: 0;
     pointer-events: none;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -245,20 +245,24 @@ p:last-child {
 
 .menu-lateral {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 85%;
-    max-width: 20rem;
+    /* Diseño de panel flotante (separado de los bordes) */
+    top: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    width: calc(100% - 4rem);
+    max-width: 22rem;
     background-color: var(--color-superficie);
-    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
+    box-shadow: -5px 10px 40px rgba(0, 0, 0, 0.2);
     z-index: 200;
     display: flex;
     flex-direction: column;
-    transform: translateX(100%);
+    transform: translateX(120%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: transform;
     overflow: hidden;
+    /* Sobrescribir el reseteo global de bordes rectos */
+    border-radius: 1.5rem !important; 
+    border: 1px solid var(--color-borde);
 }
 
 .menu-lateral.activo {
@@ -266,105 +270,126 @@ p:last-child {
 }
 
 .cabecera-menu {
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-primario-hover) 100%);
+    background: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
     position: relative;
-    color: var(--color-texto-inverso);
+    color: var(--color-texto-principal);
 }
 
 .titulo-menu {
     font-weight: 800;
-    color: var(--color-texto-inverso) !important;
+    color: var(--color-primario) !important;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.15em;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
 }
 
 .cerrar-menu {
     width: 38px;
     height: 38px;
-    color: var(--color-texto-inverso);
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--color-texto-secundario);
+    background: var(--color-superficie-variante);
+    border: 1px solid var(--color-borde);
+    border-radius: 50% !important; /* Botón perfectamente redondo */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
 }
 
 .cerrar-menu:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: var(--color-superficie-contenedor);
+    color: var(--color-primario);
+    border-color: var(--color-primario);
     transform: rotate(90deg);
 }
 
 .cuerpo-menu {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     flex: 1;
+    gap: 0.35rem; /* Espaciado moderno entre enlaces */
 }
 
 .enlace-menu {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.1rem 1.5rem;
-    color: var(--color-texto-principal);
+    padding: 0.85rem 1.25rem;
+    margin: 0 1rem; /* Separación de los bordes de la tarjeta */
+    color: var(--color-texto-secundario);
     font-weight: 600;
     font-size: 1rem;
-    border-left: 4px solid transparent;
+    border-radius: 0.85rem !important; /* Aspecto de botón píldora */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    border-bottom: 1px solid var(--color-borde);
-}
-
-.enlace-menu:last-child {
-    border-bottom: none;
+    border: none;
 }
 
 .enlace-menu:hover,
 .enlace-menu:focus {
     background-color: var(--color-superficie-variante);
     color: var(--color-primario);
-    border-left-color: var(--color-primario);
     transform: translateX(6px);
 }
 
 .enlace-menu.active {
-    background-color: var(--color-superficie-contenedor);
-    color: var(--color-primario);
-    border-left-color: var(--color-primario);
-    font-weight: 800;
-}
-
-.dark .cabecera-menu {
-    background: linear-gradient(135deg, var(--color-superficie-variante) 0%, var(--color-superficie-contenedor) 100%);
-}
-
-.dark .titulo-menu {
-    color: var(--color-primario) !important;
-}
-
-.dark .cerrar-menu {
-    background: var(--color-superficie-variante);
-    border-color: var(--color-borde);
-    color: var(--color-primario);
-}
-
-.dark .enlace-menu.active {
-    background-color: var(--color-superficie-variante);
+    background-color: var(--color-primario);
+    color: var(--color-texto-inverso);
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra sutil en el enlace activo */
 }
 
 /* Pie del Drawer con Toggle de Tema */
 .pie-menu {
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     border-top: 1px solid var(--color-borde);
-    background-color: var(--color-superficie-variante);
+    background-color: var(--color-superficie);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* Adaptaciones para Dark Mode */
+.dark .menu-lateral {
+    background-color: var(--color-superficie);
+    box-shadow: -5px 10px 40px rgba(0, 0, 0, 0.5);
+    border-color: var(--color-borde);
+}
+
+.dark .cabecera-menu {
+    background: var(--color-superficie);
+}
+
+.dark .cerrar-menu {
+    background: var(--color-superficie-contenedor);
+    color: var(--color-texto-secundario);
+}
+
+.dark .cerrar-menu:hover {
+    color: var(--color-texto-principal);
+    background: var(--color-superficie-variante);
+}
+
+.dark .enlace-menu:hover {
+    background-color: var(--color-superficie-contenedor);
+}
+
+.dark .enlace-menu.active {
+    background-color: var(--color-primario);
+    color: var(--color-texto-inverso);
+}
+
+.dark .pie-menu {
+    background-color: var(--color-superficie);
+}
+
 
 /* 4. CABECERA DESPEJADA DE MÓDULOS (SIN BOTONES REDUNDANTES) */
 .cabecera-pagina {
