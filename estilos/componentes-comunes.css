@@ -232,10 +232,6 @@ p:last-child {
     z-index: 150;
     opacity: 0;
     pointer-events: none;
-    background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .capa-menu-movil.activo {
@@ -250,7 +246,7 @@ p:last-child {
     right: 0.75rem;
     bottom: 0.75rem;
     width: calc(100% - 4rem);
-    max-width: 22rem;
+    max-width: 100%;
     background-color: var(--color-superficie);
     box-shadow: -5px 10px 40px rgba(0, 0, 0, 0.2);
     z-index: 200;
@@ -261,7 +257,7 @@ p:last-child {
     will-change: transform;
     overflow: hidden;
     /* Sobrescribir el reseteo global de bordes rectos */
-    border-radius: 1.5rem !important; 
+    border-radius: 0 !important; 
     border: 1px solid var(--color-borde);
 }
 
@@ -327,7 +323,7 @@ p:last-child {
     color: var(--color-texto-secundario);
     font-weight: 600;
     font-size: 1rem;
-    border-radius: 0.85rem !important; /* Aspecto de botón píldora */
+    border-radius: 0.15rem !important; /* Aspecto de botón píldora */
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
 }
@@ -348,7 +344,7 @@ p:last-child {
 
 /* Pie del Drawer con Toggle de Tema */
 .pie-menu {
-    padding: 1.25rem 1.5rem;
+    padding: 5.25rem 0.5rem;
     border-top: 1px solid var(--color-borde);
     background-color: var(--color-superficie);
     display: flex;
@@ -561,6 +557,7 @@ p:last-child {
     padding: 0.6rem 1.1rem;
     background-color: var(--color-superficie);
     border: 1px solid var(--color-borde);
+    border-radius: 10px;
     color: var(--color-primario);
     display: inline-flex;
     align-items: center;
@@ -599,6 +596,7 @@ p:last-child {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2.25rem;
+    padding: 2rem 0.354rem;
 }
 
 .rejilla-3 {
@@ -616,7 +614,7 @@ p:last-child {
 .caja-alerta {
     background-color: var(--color-superficie-variante);
     border: 2px solid var(--color-borde);
-    border-left: 6px solid var(--color-primario);
+
     padding: 2rem;
     margin: 2.25rem 0;
     display: flex;

@@ -1,6 +1,8 @@
 /* ==========================================================================
    1. PALABRAS CLAVE Y DEFINICIONES (CORREGIDO)
    ========================================================================== */
+
+
 .palabra-clave {
     background: var(--color-superficie-contenedor);
     color: var(--color-primario);
@@ -16,12 +18,13 @@
     gap: 0.75rem !important;
     width: 100% !important;
     height: auto !important;
-    padding: 1.25rem 1.5rem !important;
+    padding: 0.5rem  !important;
     background-color: var(--color-superficie-contenedor) !important;
     border: 1px solid var(--color-borde) !important;
-    border-left: 5px solid var(--color-primario) !important;
     box-sizing: border-box !important;
     margin-bottom: 1.5rem;
+
+    
 }
 
 .etiqueta-def {
@@ -134,9 +137,24 @@
     line-height: 1.4;
 }
 
+.rejilla-2 .tarjeta {
+    border: 1px solid var(--color-borde);
+
+    border-radius: 1rem;
+    background-color: var(--color-superficie);
+    box-shadow: var(--sombra-recta);
+
+}
+
+.icono-centrado {
+    color: #ffffff;
+}
+
 .item-regla:last-child {
     margin-bottom: 0;
 }
+
+
 
 .texto-def {
     font-size: 1rem !important;
@@ -180,6 +198,10 @@
    RESPONSIVIDAD NATIVA
    ========================================================================== */
 @media screen and (max-width: 768px) {
+
+    .seccion{
+        padding: 0.9rem;
+    }
     .taller-bloque,
     .bloque-definicion,
     .bloque-recuerda {
@@ -193,4 +215,13 @@
 
     .taller-titulo { font-size: 1.15rem; }
     .item-regla, .elemento-lista-verificacion span { font-size: 0.95rem; }
+
+    .tarjeta {
+    border: 1px solid var(--color-borde);
+
+    border-radius: 1rem;
+    background-color: var(--color-superficie);
+    box-shadow: var(--sombra-recta);
+    padding: 1rem;
+}
 }

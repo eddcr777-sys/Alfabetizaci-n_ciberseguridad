@@ -11,7 +11,7 @@
   --color-texto-claro: #64748b;
   --color-blanco: #ffffff;
   --color-fondo: #ffffff;
-  --color-fondo-variante: #F8F9FA;
+  --color-fondo-variante: #ffffffee;
   --color-fondo-tarjeta: #ffffff;
   --color-borde: rgba(0, 0, 0, 0.08);
   
@@ -195,6 +195,8 @@ img {
 }
 
 @media (min-width: 768px) {
+
+
   .enlaces-navegacion {
     display: flex;
   }
@@ -202,6 +204,8 @@ img {
     display: none;
   }
 }
+
+
 
 .enlace-nav {
   color: var(--color-texto-secundario);
@@ -414,6 +418,7 @@ img {
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
+
 
 .texto-tarjeta {
   font-size: 1.25rem;
@@ -726,7 +731,7 @@ img {
    RESPONSIVE / MÓVIL
    ========================================================================== */
 @media (max-width: 767px) {
-  .seccion-espaciada { padding: 2rem 0; }
+  .seccion-espaciada { padding: 1rem 1rem 0.3rem; }
   .contenedor { padding: 0 0.75rem; }
 
   .contenedor-navegacion { height: 3.5rem; }
@@ -746,6 +751,7 @@ img {
     align-items: stretch;
   }
 
+  
   .contenedor-imagen-portada {
     order: -1;
     width: 100vw;
@@ -769,9 +775,10 @@ img {
     z-index: 2;
     margin-top: -2rem;
     background: var(--color-fondo);
+   
     border-radius: 0;
     padding: 1.5rem 1rem 0.5rem;
-    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.742);
   }
 
   .titulo-portada { font-size: 1.65rem; }
@@ -779,15 +786,15 @@ img {
 
   /* Tarjetas edge-to-edge estilo nativo */
   .tarjeta { 
-    padding: 1.25rem 0.85rem; 
-    border-left: 4px solid var(--color-primario); 
+    padding: 2.25rem 2.85rem ; 
+   
     margin-left: -0.75rem;
     margin-right: -0.75rem;
     border-radius: 0;
     box-shadow: none !important;
   }
-  .tarjeta-oscura { border-left-color: rgba(255, 255, 255, 0.4); }
-  .tarjeta-icono { width: 3rem; height: 3rem; margin-bottom: 1rem; }
+  .tarjeta-oscura h2 { color: var(--color-blanco); font-size: 1.5rem;}
+  .tarjeta-icono { width: 3rem; height: 3rem; margin-bottom: 1rem;  }
   .titulo-tarjeta { font-size: 1.35rem; margin-bottom: 0.75rem; }
   .texto-tarjeta { font-size: 0.95rem; }
 

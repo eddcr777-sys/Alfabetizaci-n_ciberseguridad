@@ -147,6 +147,26 @@
     margin: 0;
 }
 
+/* ==========================================================================
+   CLASES DINÁMICAS PARA INTERACTIVIDAD (AÑADIR AL CSS)
+   ========================================================================== */
+.tarjeta-post.revelado {
+    border-color: var(--modulo-primario);
+    background-color: var(--color-superficie-contenedor);
+    /* Eliminamos el cursor de puntero para que no invite a hacer clic de nuevo */
+
+}
+
+.tarjeta-post.revelado .mensaje-explicativo {
+    display: block;
+    animation: aparecer 0.3s ease-in-out;
+    padding: 1rem;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 .mensaje-explicativo {
     display: none;
     font-size: 0.95rem;

@@ -35,6 +35,10 @@
     box-shadow: var(--sombra-recta);
 }
 
+.lista-enlaces-oficiales{
+    padding-left: 1rem;
+}
+
 /* ==========================================================================
    ESTILOS COMPLEMENTARIOS PARA LA ESTRUCTURA DEL MANUAL Y PROTOCOLO
    ========================================================================== */
@@ -306,12 +310,18 @@ body {
     .paso-contenedor,
     .tarjeta-directorio,
     .caja-guia-rapida,
-    .seccion-final {
-        padding: 1.25rem 0.85rem !important;
-        margin-left: -0.75rem !important;
-        margin-right: -0.75rem !important;
+    .seccion-final,
+    .intro-ayuda {
+        padding: 1.75rem 1.25rem !important;
+        margin-left: -0.5rem !important;
+        margin-right: -0.5rem !important;
         border-left: none !important;
         border-right: none !important;
         box-shadow: none;
+    }
+
+    .paso-contenedor {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
