@@ -1,47 +1,123 @@
-const CACHE_NAME = 'lbalp-cache-v3';
+/**
+ * Service Worker - Alfabetización Digital LBALP
+ * Estrategia: Cache-First con actualización en segundo plano.
+ * Al instalar, precachea TODOS los recursos del sitio para funcionamiento offline total.
+ */
 
-// Recursos críticos para la funcionalidad offline inicial
-const urlsToCache = [
+// Incrementar la versión cada vez que se agreguen o modifiquen recursos.
+const NOMBRE_CACHE = 'lbalp-cache-v5';
+
+// Lista completa de todos los recursos del sitio
+const RECURSOS_A_CACHEAR = [
+  // Raíz
   '/',
   '/index.html',
+  '/manifest.json',
+  '/sw.js',
+
+  // ── Páginas ──────────────────────────────────────────────────────────────
   '/paginas/index.html',
-  '/paginas/justificacion.html',
   '/paginas/index2.html',
   '/paginas/index3.html',
+  '/paginas/justificacion.html',
   '/paginas/nosotros.html',
+  '/paginas/manual-estudiante.html',
+  '/paginas/guia-completa.html',
+  '/paginas/guia-docentes.html',
+  '/paginas/guia-padres.html',
+  '/paginas/phishing.html',
+  '/paginas/auditoria-digital.html',
+  '/paginas/proteccion-cuentas.html',
+  '/paginas/protocolo-ayuda.html',
+  '/paginas/redes-sociales.html',
+  '/paginas/software-pirata.html',
+  '/paginas/videojuegos.html',
+
+  // ── Estilos ───────────────────────────────────────────────────────────────
   '/estilos/fuentes-locales.css',
   '/estilos/estilos-base.css',
   '/estilos/componentes-comunes.css',
+  '/estilos/componentes-premium.css',
   '/estilos/main.css',
   '/estilos/utilidades-espanol.css',
+  '/estilos/estilos-accesible.css',
+  '/estilos/manual-estudiante.css',
+  '/estilos/guia-completa.css',
+  '/estilos/guia-docentes.css',
+  '/estilos/guia-padres.css',
+  '/estilos/phishing.css',
+  '/estilos/estilos-phishing.css',
+  '/estilos/auditoria-digital.css',
+  '/estilos/proteccion-cuentas.css',
+  '/estilos/protocolo-ayuda.css',
+  '/estilos/redes-sociales.css',
+  '/estilos/software-pirata.css',
+  '/estilos/videojuegos.css',
+
+  // ── Scripts ───────────────────────────────────────────────────────────────
+  '/scripts/app.js',
   '/scripts/menu-movil.js',
   '/scripts/logica-tema.js',
-  '/scripts/app.js',
-  '/activos/iconos/icono.svg'
+  '/scripts/logica-manual.js',
+  '/scripts/logica-phishing.js',
+  '/scripts/logica-auditoria.js',
+  '/scripts/logica-proteccion.js',
+  '/scripts/logica-redes.js',
+  '/scripts/logica-pirateria.js',
+  '/scripts/logica-videojuegos.js',
+
+  // ── Activos: Iconos ───────────────────────────────────────────────────────
+  '/activos/iconos/icono.svg',
+  '/activos/iconos/favicon.svg',
+  '/activos/iconos/icons.svg',
+
+  // ── Activos: Fuentes locales ──────────────────────────────────────────────
+  '/activos/fuentes/manrope-latin.woff2',
+  '/activos/fuentes/manrope-latin-ext.woff2',
+  '/activos/fuentes/public-sans-latin.woff2',
+  '/activos/fuentes/public-sans-latin-ext.woff2',
+  '/activos/fuentes/material-symbols.woff2',
+
+  // ── Imágenes ──────────────────────────────────────────────────────────────
+  '/imagenes/images.jpeg',
+  '/imagenes/le.jpeg',
+  '/imagenes/lem.jpeg',
+  '/imagenes/lemu.jpeg',
 ];
 
-// 1. Fase de Instalación: Guardar recursos críticos
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        console.log('Caché abierto y cargando recursos esenciales.');
-        return cache.addAll(urlsToCache);
-      })
-      .then(() => self.skipWaiting())
+// ─────────────────────────────────────────────────────────────────────────────
+// 1. INSTALACIÓN: Pre-cachear todos los recursos críticos
+// ─────────────────────────────────────────────────────────────────────────────
+self.addEventListener('install', (evento) => {
+  console.log('[SW] Instalando y pre-cacheando recursos...');
+  evento.waitUntil(
+    caches.open(NOMBRE_CACHE).then((cache) => {
+      // Cachear cada recurso individualmente para que un fallo no detenga los demás
+      const promesas = RECURSOS_A_CACHEAR.map((url) =>
+        cache.add(url).catch((err) => {
+          console.warn('[SW] No se pudo cachear: ' + url, err);
+        })
+      );
+      return Promise.all(promesas);
+    }).then(() => {
+      console.log('[SW] Pre-caché completado. Activando de inmediato.');
+      return self.skipWaiting();
+    })
   );
 });
 
-// 2. Fase de Activación: Limpiar cachés antiguas inmediatamente
-self.addEventListener('activate', event => {
-  const cacheWhitelist = [CACHE_NAME];
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
+// ─────────────────────────────────────────────────────────────────────────────
+// 2. ACTIVACIÓN: Eliminar cachés antiguas y tomar control de clientes
+// ─────────────────────────────────────────────────────────────────────────────
+self.addEventListener('activate', (evento) => {
+  console.log('[SW] Activado. Limpiando cachés antiguas...');
+  evento.waitUntil(
+    caches.keys().then((nombresCaches) => {
       return Promise.all(
-        cacheNames.map(cacheName => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            console.log('Eliminando caché antigua:', cacheName);
-            return caches.delete(cacheName);
+        nombresCaches.map((nombre) => {
+          if (nombre !== NOMBRE_CACHE) {
+            console.log('[SW] Eliminando caché obsoleta:', nombre);
+            return caches.delete(nombre);
           }
         })
       );
@@ -49,48 +125,58 @@ self.addEventListener('activate', event => {
   );
 });
 
-// 3. Fase de Intercepción (Fetch): Estrategia Stale-While-Revalidate / Cache Dynamic
-self.addEventListener('fetch', event => {
-  // Ignorar peticiones que no sean GET (como extensiones del navegador, etc.)
-  if (event.request.method !== 'GET') return;
+// ─────────────────────────────────────────────────────────────────────────────
+// 3. FETCH: Estrategia Cache-First
+//    1° busca en caché (respuesta inmediata offline).
+//    2° si no está, busca en red y guarda en caché para el futuro.
+//    3° si no hay red y no hay caché, redirige al index principal.
+// ─────────────────────────────────────────────────────────────────────────────
+self.addEventListener('fetch', (evento) => {
+  // Solo interceptar peticiones GET
+  if (evento.request.method !== 'GET') return;
 
-  event.respondWith(
-    caches.match(event.request).then(cachedResponse => {
-      // Si el recurso está en caché, lo devolvemos de inmediato
-      if (cachedResponse) {
-        // Opcional: Actualizamos la caché en segundo plano si hay red
-        fetch(event.request).then(networkResponse => {
-          if (networkResponse && networkResponse.status === 200) {
-            caches.open(CACHE_NAME).then(cache => {
-              cache.put(event.request, networkResponse);
+  // Ignorar URLs de extensiones del navegador u otros esquemas
+  const url = new URL(evento.request.url);
+  if (!['http:', 'https:'].includes(url.protocol)) return;
+
+  evento.respondWith(
+    caches.match(evento.request).then((respuestaCache) => {
+
+      // ── Cache-Hit: servir desde caché ──────────────────────────────────
+      if (respuestaCache) {
+        // Revalidar en segundo plano si hay conexión
+        fetch(evento.request).then((respuestaRed) => {
+          if (respuestaRed && respuestaRed.ok) {
+            caches.open(NOMBRE_CACHE).then((cache) => {
+              cache.put(evento.request, respuestaRed);
             });
           }
-        }).catch(() => {/* Red no disponible, ignorar en segundo plano */});
+        }).catch(() => { /* Sin red, se queda con la copia en caché */ });
 
-        return cachedResponse;
+        return respuestaCache;
       }
 
-      // Si no está en caché, lo buscamos en la red y lo guardamos dinámicamente
-      return fetch(event.request)
-        .then(networkResponse => {
-          // Validar si la respuesta es correcta
-          if (!networkResponse || networkResponse.status !== 200 || networkResponse.type === 'error') {
-            return networkResponse;
-          }
+      // ── Cache-Miss: buscar en red y guardar ────────────────────────────
+      return fetch(evento.request).then((respuestaRed) => {
+        // Solo cachear respuestas válidas
+        if (!respuestaRed || !respuestaRed.ok) return respuestaRed;
 
-          // Clonar la respuesta ya que el stream solo se puede leer una vez
-          const responseToCache = networkResponse.clone();
-
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
-
-          return networkResponse;
-        })
-        .catch(() => {
-          // Si falla la red y no está en caché, puedes retornar una página de respaldo o sub-recurso si aplica.
-          console.fal('Fallo de red y recurso no cacheado:', event.request.url);
+        const copiaParaCache = respuestaRed.clone();
+        caches.open(NOMBRE_CACHE).then((cache) => {
+          cache.put(evento.request, copiaParaCache);
         });
+
+        return respuestaRed;
+      }).catch(() => {
+        // Sin red y sin caché: intentar servir el index principal
+        console.warn('[SW] Sin conexion y recurso no cacheado:', evento.request.url);
+
+        // Si el navegador pide una pagina HTML, devolver index principal como fallback
+        const aceptaHTML = evento.request.headers.get('accept') || '';
+        if (aceptaHTML.includes('text/html')) {
+          return caches.match('/paginas/index.html');
+        }
+      });
     })
   );
 });
